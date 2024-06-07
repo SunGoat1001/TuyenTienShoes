@@ -1,0 +1,11 @@
+{
+  "name": "web-project",
+  "version": "1.0.0",
+  "description": "Web bán giày\r Tiến\r Huỳnh\r Tuyên",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
