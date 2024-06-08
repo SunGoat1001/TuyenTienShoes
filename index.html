@@ -24,6 +24,16 @@
         .scrollbar-thumb:hover {
             height: 8px;
         }
+        .input-icon {
+            width: 24px;
+            height: 24px;
+        }
+        .hidden {
+            display: none;
+        }
+        .block {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-gray-200">
@@ -182,5 +192,68 @@
         window.addEventListener("resize", initSlider);
         window.addEventListener("load", initSlider);
     </script>
+    <div class="w-full overflow-hidden">
+        <img src="https://hoangsneaker.com/wp-content/uploads/2020/10/123241152_1402316109958377_3977760408248570571_n.jpg" alt="test" class="w-full max-h-72 object-cover">
+    </div>
+
+
+    <div class="container mx-auto p-6">
+        <div class="bg-white shadow-md rounded-lg p-6 mb-6 text-center">
+            <h1 class="text-3xl font-semibold mb-4">Support Centre</h1>
+            <p class="text-base mb-4">Welcome to our Support Centre. Please check our articles to find answers to common questions. Want to contact us directly? Please get in touch via our contact page.</p>
+        </div>
+    
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden" aria-label="Search and Sign in">
+                <form id="wf-form-Search-Form" name="wf-form-Search-Form" method="get" class="flex-grow flex items-center" aria-label="Search Form">
+                    <input class="flex-grow px-4  py-2 text-base border-none outline-none" maxlength="256" name="Search-Support-2" placeholder="Search support articles" type="text" id="Search-Support-2">
+                </form>
+                <div class="flex items-center space-x-1 px-3">
+
+                </div>
+            
+                <button class="bg-black  text-white py-2 px-5 rounded">Sign in</button>
+            </div>
+
+ 
+        </div>
+    </div>
+    
+
 </body>
+<footer class="custom-footer  min-h-[300px] pt-12 pb-12 flex flex-row justify-center items-center">
+    <style>
+      .custom-footer {
+        background-image: url('https://hoanghamobile.com/tin-tuc/wp-content/webp-express/webp-images/uploads/2023/08/hinh-nen-ngau-65.jpg.webp');
+        background-size: cover; /* Đảm bảo ảnh nền đầy đủ phủ toàn bộ phần footer */
+        background-position: center; /* Căn giữa ảnh nền */
+      }
+    </style>
+    <div class="w-[60%] flex flex-col justify-center items-center section-content" data-sr-id="9" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.5s;">
+      <ul class="flex flex-row">
+        <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
+          <a href="https://github.com/tuyenrickchoi" target="_blank">
+            <img class="w-10  hover:grayscale-0 transition-transform duration-300   transform hover:scale-50" src="https://nghuuquyen.github.io/imgs/github.svg" style="filter:hue-rotate(-0.25turn)">
+          </a>
+          <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
+            <a href="https://www.linkedin.com/in/nghuuquyen" target="_blank">
+              <img class="w-10  hover:grayscale-0 transition-transform rotate-45 transform hover:scale-50" src="https://nghuuquyen.github.io/imgs/linkedin.svg" style="filter: hue-rotate(-0.25turn);">
+            </a>
+          </li>
+        <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
+          <a href="https://twitter.com/nghuuquyen" target="_blank">
+            <img class="w-10 grayscale hover:grayscale-0 transition-transform rotate-45 transform hover:scale-50" src="https://nghuuquyen.github.io/imgs/twitter.svg" style="filter: invert(70);">
+          </a>
+        </li>
+
+    
+        </li>
+      </ul>
+
+      <hr class="w-1/2 border-white mt-10">
+      <p class="text-lg text-white mt-5">©2024 - Tuyen Tien Ti</p>
+    </div>
+
+  </footer>
+
 </html>
