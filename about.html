@@ -34,8 +34,37 @@
                 <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
                 <a href=""><i class="bx bx-shopping-bag p-3 text-xl "></i></a>
             </nav>
-        <button class="hover:underline underline-offset-4">Sign in</button>
+        <button class="hover:underline underline-offset-4 font-semibold">Sign in</button>
       </div>
     </header>
+    <section class="relative h-[520px] bg-cover bg-center bg-[url('./image/Shoes.jpg')] ">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-3">
+            <span class="text-6xl font-bold">Get in touch with us for</span>
+            <span class="text-6xl font-bold">more information</span>
+            <span>If you need help of have a question, we're here for you</span>
+        </div>
+    </section>
+    <div class="w-2/4 m-auto mt-20 flex justify-between  h-screen">
+        <form action="/action_page.php"> 
+            <div class="space-y-4 text-gray-500 text-sm">
+                <div class="space-x-4">
+                    <input type="text" value="" class="w-60 h-10 p-2 rounded-[4px] border-gray-500 border-2" placeholder="First Name">
+                    <input type="text" value="" class="w-60 h-10 p-2 rounded-[4px] border-gray-500 border-2" placeholder="Last Name">
+                </div>
+                <div class="space-x-4">
+                    <input type="tel" value="" class="w-60 h-10 p-2 rounded-[4px] border-gray-500 border-2" placeholder="Telephone">
+                    <input type="email" value="" required class="w-60 p-2 h-10 rounded-[4px] border-gray-500 border-2" placeholder="Email Address">
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <textarea name="" id="" class="h-40 p-2 rounded-[4px] border-gray-500 border-2" placeholder="Message"></textarea>
+                    <input type="submit" value="SUBMIT" class="h-12 rounded-[4px] bg-black text-white font-semibold cursor-pointer">
+                </div>
+            </div>
+        </form>
+        <div>
+            <span class="text-start">Phone Number</span>
+        </div>
+    </div>
   </body>
 </html>
