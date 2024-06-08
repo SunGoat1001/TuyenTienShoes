@@ -34,6 +34,25 @@
         .block {
             display: block;
         }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+      
+          #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+          }
+          .banner-cta:hover .text-xl {
+            transform: translateY(-5px); 
+          
+          }
+      
     </style>
 </head>
 <body class="bg-gray-200">
@@ -212,7 +231,7 @@
 
                 </div>
             
-                <button class="bg-black  text-white py-2 px-5 rounded">Sign in</button>
+                <button class="bg-black  text-white py-2 px-5  rounded">Sign in</button>
             </div>
 
  
@@ -221,39 +240,85 @@
     
 
 </body>
-<footer class="custom-footer  min-h-[300px] pt-12 pb-12 flex flex-row justify-center items-center">
+<footer 
+class="custom-footer min-h-[400px] pt-12 pb-12  flex-col items-center">
+    <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div class="textwidget mb-8 md:mb-0 md:mr-8">
+                <p>
+                    <img class="alignnone size-medium wp-image-21795" src="https://www.1min30.com/wp-content/uploads/2018/02/Embl%C3%A8me-Manchester-United.jpg" alt="" width="245" height="62.06">
+                </p>
+                <p class="text-white"><strong class="block mb-4">Website của Công ty Cổ Phần 3 Thành Viên TuyenTienShoes</strong></p>
+                <p class="text-white"><strong>Trụ sở chính:</strong> VNUK </p>
+                <p class="text-white"><strong>Company:</strong> SHOESS MU </p>
+                <p class="text-white"><strong>Number:</strong> + 84 24 3767 4686</p>
+                <p class="text-white"><strong>Email:</strong> Abc@vnuk.edu.vn</p>
+                <p class="text-white"><strong>Slogan:</strong> 22090003 To VNUK all Top – The world beneath your feet will be a success every step 08/06/2024 </p>
+                <p class="text-white"><strong>Chịu trách nhiệm nội dung:</strong> tuyenrickchoi</p>
+                <p class="text-white">
+                    <a href="#">
+                        <img class="alignnone wp-image-32657 size-full" src="https://img3.thuthuatphanmem.vn/uploads/2019/09/30/logo-hoa-nen-den_111809137.png" alt="" width="235" height="88">
+                    </a>
+                </p>
+            </div>
+            <div class="mb-8 md:mb-0 md:mr-8">
+                <ul class="text-white ">
+                    
+                    <ul class="sub-menu ml-4 " class="text-white "><strong  class="block mb-2">About Us</strong>
+                        
+                        <li class="menu-item text-white"><a href="">Contact</a></li>
+                        <li class="menu-item text-white"><a href="">Support</a></li>
+                        <li class="menu-item text-white"><a href="">Blog</a></li>
+                        <li class="menu-item text-white"><a href="">Company</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div>
+                <ul>
+               
+                    <ul class="sub-menu ml-4 text-white" class=" "><strong  class="block mb-2">Services</strong>
+                        <li class="menu-item text-white"><a href="">Pricing</a></li>
+                        <li class="menu-item text-white"><a href="">Feature</a></li>
+                        <li class="menu-item text-white"><a href="">Sig up</a></li>
+                        <li class="menu-item text-white"><a href="">Get Stated- YIM</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <style>
       .custom-footer {
-        background-image: url('https://hoanghamobile.com/tin-tuc/wp-content/webp-express/webp-images/uploads/2023/08/hinh-nen-ngau-65.jpg.webp');
-        background-size: cover; /* Đảm bảo ảnh nền đầy đủ phủ toàn bộ phần footer */
+        background-image: url('https://i.ytimg.com/vi/_S0miJ4py7g/maxresdefault.jpg');
+     /* Đảm bảo ảnh nền đầy đủ phủ toàn bộ phần footer */
         background-position: center; /* Căn giữa ảnh nền */
       }
     </style>
     <div class="w-[60%] flex flex-col justify-center items-center section-content" data-sr-id="9" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.5s;">
-      <ul class="flex flex-row">
-        <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
-          <a href="https://github.com/tuyenrickchoi" target="_blank">
-            <img class="w-10  hover:grayscale-0 transition-transform duration-300   transform hover:scale-50" src="https://nghuuquyen.github.io/imgs/github.svg" style="filter:hue-rotate(-0.25turn)">
-          </a>
-          <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
-            <a href="https://www.linkedin.com/in/nghuuquyen" target="_blank">
-              <img class="w-10  hover:grayscale-0 transition-transform rotate-45 transform hover:scale-50" src="https://nghuuquyen.github.io/imgs/linkedin.svg" style="filter: hue-rotate(-0.25turn);">
+        <hr class="w-1/2 border-white mt-10">
+        <p class="text-lg text-white mt-5">©2024 - TuyenTienShoes</p>
+        <ul class="flex flex-row items-center space-x-4">
+            
+            
+          <li class="cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+            <a href="https://github.com/tuyenrickchoi" target="_blank">
+              <img class="w-10 hover:grayscale-0 transform hover:scale-110" src="https://nghuuquyen.github.io/imgs/github.svg" style="filter:hue-rotate(-0.25turn)">
             </a>
           </li>
-        <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
-          <a href="https://twitter.com/nghuuquyen" target="_blank">
-            <img class="w-10 grayscale hover:grayscale-0 transition-transform rotate-45 transform hover:scale-50" src="https://nghuuquyen.github.io/imgs/twitter.svg" style="filter: invert(70);">
-          </a>
-        </li>
-
-    
-        </li>
-      </ul>
-
-      <hr class="w-1/2 border-white mt-10">
-      <p class="text-lg text-white mt-5">©2024 - Tuyen Tien Ti</p>
-    </div>
-
+          <li class="cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+            <a href="https://www.linkedin.com/in/nghuuquyen" target="_blank">
+              <img class="w-10 hover:grayscale-0 transform hover:scale-110" src="https://nghuuquyen.github.io/imgs/linkedin.svg" style="filter: hue-rotate(-0.25turn);">
+            </a>
+          </li>
+          <li class="cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+            <a href="https://twitter.com/nghuuquyen" target="_blank">
+              <img class="w-10 grayscale hover:grayscale-0 transform hover:scale-110" src="https://nghuuquyen.github.io/imgs/twitter.svg" style="filter: invert(70);">
+            </a>
+          </li>
+        </ul>
+       
+      </div>
   </footer>
 
+  
 </html>
