@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Slider</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="./font/boxicons-2.1.4/css/boxicons.css">
     <script src="script.js" defer></script>
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+        .col {
+            width: 95%;
+            margin: auto;
+            }
+          
+        body {
+            font-family: "Inter", Courier, monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         .image-list {
             display: flex;
             overflow-x: auto;
@@ -34,11 +46,6 @@
         .block {
             display: block;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
       
           #bg-video {
             position: fixed;
@@ -55,26 +62,20 @@
       
     </style>
 </head>
-<body class="bg-gray-200">
-    <header class="bg-black py-4">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <a href="#"><img src="https://www.1min30.com/wp-content/uploads/2018/02/Embl%C3%A8me-Manchester-United.jpg" alt="Logo" class="h-7"></a>
-            <nav class="flex space-x-7 text-right w-20 ">
-                <a href="#" class="text-white ">Model</a>
-                <a href="#" class="text-white">Motosport</a>
-                <a href="#" class="text-white">Store</a>
-                <a href="#" class="text-white">Contact</a>
+<body class="bg-[#F7F6F3]">
+    <header class="bg-white">
+        <div class="col flex justify-between items-center h-16">
+          <a href=""><div class="bg-red-600 h-6 w-6"></div></a>
+            <nav class="flex text-xs font-bold">
+                <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+                <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+                <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+                <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+                <a href=""><i class="bx bx-shopping-bag p-4 text-xl "></i></a>
             </nav>
-
-            <div class="flex items-center space-x-4">
-                <i class="bx bxs-cart text-white text-2xl"></i>
-                <i class="bx text-white bx-search-alt text-2xl"></i>
-                <button class="bg-white text-black py-1 px-3 rounded">Sign in</button>
-            </div>
+          <button class="hover:underline underline-offset-4 font-semibold">Sign in</button>
         </div>
     </header>
- 
-    
     <section class="relative h-screen bg-cover bg-center" style="background-image: url('https://pubcdn.ivymoda.com/files/news/2023/10/27/75b8112c1ced7fd71b7ce3055e5acef2.jpg');">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-4">
@@ -237,8 +238,6 @@
  
         </div>
     </div>
-    
-
 </body>
 <footer 
 class="custom-footer min-h-[400px] pt-12 pb-12  flex-col items-center">
@@ -319,6 +318,4 @@ class="custom-footer min-h-[400px] pt-12 pb-12  flex-col items-center">
        
       </div>
   </footer>
-
-  
 </html>
