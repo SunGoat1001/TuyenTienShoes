@@ -12,13 +12,50 @@
         .col {
             width: 95%;
             margin: auto;
-            }
-          
+        }
         body {
+            
+        }
+          
+        * {
             font-family: "Inter", Courier, monospace;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        
+        #wrapper {
+            animation: slide 20s infinite;
+        }
+
+        @keyframes slide {
+            0%{
+                transform: translateY(0);
+            }
+            25%{
+                transform: translateY(0);
+            }
+            35%{
+                transform: translateY(-100%);
+            }
+            45%{
+                transform: translateY(-100%);
+            }
+            55%{
+                transform: translateY(-200%);
+            }
+            75%{
+                transform: translateY(-200%);
+            }
+            85%{
+                transform: translateY(-100%);
+            }
+            90%{
+                transform: translateY(-100%);
+            }
+            100%{
+                transform: translateY(0);
+            }
         }
 
         .image-list {
@@ -76,7 +113,23 @@
           <button class="hover:underline underline-offset-4 font-semibold">Sign in</button>
         </div>
     </header>
-    <section class="relative h-screen bg-cover bg-center" style="background-image: url('https://pubcdn.ivymoda.com/files/news/2023/10/27/75b8112c1ced7fd71b7ce3055e5acef2.jpg');">
+    <section class="relative w-full" style="height: 927px;">
+        <div class="absolute w-full h-full overflow-hidden">
+            <div id="wrapper" class="w-full h-full">
+                <div class="flex w-full h-full">
+                    <img src="./image/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2 ">
+                    <img src="./image/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
+                </div>
+                <div class="flex w-full h-full">
+                    <img src="./image/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2">
+                    <img src="./image/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
+                </div>
+                <div class="flex w-full h-full">
+                    <img src="./image/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2">
+                    <img src="./image/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
+                </div>
+            </div>
+        </div>
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-4">
             <p class="text-xl">Model</p>
