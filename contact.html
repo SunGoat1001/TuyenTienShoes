@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./font/boxicons-2.1.4/css/boxicons.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+    body {
+      font-family: "Inter", Courier, monospace;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .col {
+      width: 95%;
+      margin: auto;
+    }
+    html {
+        height: 2000px;
+    }
+
+
+  </style>
+  <body class="bg-[#F7F6F3]">
+    <!-- NAV -->
+    <header class="bg-white">
+      <div class="col flex justify-between items-center h-16">
+      <a href="#"><div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16"></div></a>
+          <nav class="flex text-xs font-bold">
+              <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+              <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+              <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+              <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+              <a href=""><i class="bx bx-shopping-bag p-3 text-xl "></i></a>
+          </nav>
+        <button class="hover:underline underline-offset-4 font-semibold">Sign in</button>
+      </div>
+    </header>
+
+    <!-- HEADER -->
+    <section class="relative h-[600px] bg-cover bg-center bg-[url('./asset/img/about/Shoes.jpg')] ">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-3">
+            <span class="text-6xl font-bold">Get in touch with us for</span>
+            <span class="text-6xl font-bold">more information</span>
+            <span>If you need help of have a question, we're here for you</span>
+        </div>
+    </section>
+
+    <!-- GET IN TOUCH -->
+    <div class="w-2/4 m-auto mt-20 flex h-auto">
+        <form action="/action_page.php"> 
+            <div class="space-y-4 text-gray-500 text-sm">
+                <div class="space-x-4">
+                    <input type="text" value="" class="w-60 h-10 p-2 rounded-[4px] border-gray-400 border-2" placeholder="First Name">
+                    <input type="text" value="" class="w-60 h-10 p-2 rounded-[4px] border-gray-400 border-2" placeholder="Last Name">
+                </div>
+                <div class="space-x-4">
+                    <input type="tel" value="" class="w-60 h-10 p-2 rounded-[4px] border-gray-400 border-2" placeholder="Telephone">
+                    <input type="email" value="" required class="w-60 p-2 h-10 rounded-[4px] border-gray-400 border-2" placeholder="Email Address">
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <textarea name="" id="" class="h-40 p-2 rounded-[4px] border-gray-400 border-2" placeholder="Message"></textarea>
+                    <input type="submit" value="SUBMIT" class="h-12 rounded-[4px] bg-black text-white font-semibold cursor-pointer hover:bg-gray-500 transition ease-out delay-150 hover:border-black hover:border-2">
+                </div>
+            </div>
+        </form>
+        <div class="flex flex-col ml-14 space-y-3">
+            <div class="flex flex-col justify-center  p-2 w-80 h-16 bg-white rounded-lg">
+                <span class=" text-gray-500 text-xs">Phone Number</span>
+                <span class="">0905694164</span>
+            </div>
+            <div class="flex flex-col justify-center  p-2 w-80 h-16 bg-white rounded-lg">
+                <span class=" text-gray-500 text-xs">Email</span>
+                <span class="">TienTuyenShoes@gmail.com</span>
+            </div>
+            <div class="flex flex-col justify-center  p-2 w-80 h-16 bg-white rounded-lg">
+                <span class=" text-gray-500 text-xs">Address</span>
+                <span class="">158A Le Loi, Thanh Khe, Da Nang</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- GG MAP -->
+    <div class="relative w-full min-h-[800px] mt-20">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1521.4828350966045!2d108.21968189120025!3d16.070870641224527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218314984c6bd%3A0xb53a043f246ab8cb!2zMTU4YSBMw6ogTOG7o2ksIEjhuqNpIENow6J1IDEsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1717860396738!5m2!1sen!2s" class="relative w-full h-[800px]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <img src="./asset/img/about/address.png" alt="Ảnh địa chỉ" class="absolute top-0 left-0">
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="w-full h-96 bg-black">
+        <div class="col flex h-[332px]">
+          <div class="w-2/4 mt-10">
+            <img src="./asset/img/LogoFooter.png" alt="" class="w-28 h-28">
+            <ul class="text-[#CFCFCF] space-y-0 mt-1">
+              <li><a href="">158A Le loi, Thanh Khe, Da Nang</a></li>
+              <li><a href="">Company: TienTuyenShoes</a></li>
+              <li><a href="">Tel: + 84 24 3767 4686</a></li>
+              <li><a href="">Email: TienTuyenShoes@vnuk.edu.vn</a></li>
+              <li><a href="">Slogan: 22090003 To VNUK all Top – The world beneath<br>your feet will be a success every step 08/06/2024</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">About Us</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Contact</a></li>
+              <li><a href="" class="hover:text-white">FAQs</a></li>
+              <li><a href="" class="hover:text-white">Support</a></li>
+              <li><a href="" class="hover:text-white">Blog</a></li>
+              <li><a href="" class="hover:text-white">Team</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">Services</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Pricing</a></li>
+              <li><a href="" class="hover:text-white">Features</a></li>
+              <li><a href="" class="hover:text-white">Demo</a></li>
+              <li><a href="" class="hover:text-white">Get Started</a></li>
+              <li><a href="" class="hover:text-white">Sign Up</a></li>
+              <li><a href="" class="hover:text-white">Tutorials</a></li>
+              <li><a href="" class="hover:text-white">Forum</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">Resources</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Documentation</a></li>
+              <li><a href="" class="hover:text-white">Support Center</a></li>
+              <li><a href="" class="hover:text-white">Community</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">Get Help</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Help Center</a></li>
+              <li><a href="" class="hover:text-white">Contact Us</a></li>
+              <li><a href="" class="hover:text-white">Privacy Policy</a></li>
+              <li><a href="" class="hover:text-white">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col border-b-[0.1px] bg-[#C6C6C6] opacity-50"></div>
+        <div class="col flex justify-between mt-2">
+          <div class="text-[#C6C6C6] space-x-4 opacity-40">
+            <span class=""><i class='bx bx-copyright'></i>2024 SellShoes. All rights reserved</span>
+            <span class="underline"><a href="">Privacy Policy</a></span>
+            <span class="underline"><a href="">Terms and Conditions</a></span>
+            <span class="underline"><a href="">Cookies Policy</a></span>
+          </div>
+          <div class="text-[#C6C6C6] text-3xl space-x-3 opacity-50">
+            <a href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a href=""><i class='bx bxl-instagram' ></i></a>
+            <a href=""><i class='bx bxl-twitter' ></i></a>
+            <a href=""><i class='bx bxl-linkedin-square' ></i></a>
+          </div>
+        </div>
+    </footer>
+  </body>
+</html>
