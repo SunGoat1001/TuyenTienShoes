@@ -1,5 +1,4 @@
 # Homepage
-<<<<<<< HEAD
 	- A Header with the site logo, navigation, cart and button Sign In
 	- Slideshow show featured products of the websites
 	- The products's material is LIMITED to only appearing once
@@ -19,12 +18,4 @@
 	- Google Map
 	- Contact Form
 	- Social Media Links
-=======
-![alt text](<Shoes Website (1)_Page1.jpg>)
-
-# Details page
-![alt text](<Shoes Website (1)_Page2.jpg>)
-
-# Contact page
->>>>>>> 8f21c2b (add images and update README.md)
 ![alt text](<Shoes Website (1)_Page3.jpg>)
