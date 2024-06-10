@@ -3,130 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./asset/img/LogoNAV.png">
+    <title>TienTuyenShoes</title>
     <link rel="stylesheet" href="./font/boxicons-2.1.4/css/boxicons.css">
-    <script src="script.js" defer></script>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-        .col {
-            width: 95%;
-            margin: auto;
-        }
-        body {
-            
-        }
-          
-        * {
-            font-family: "Inter", Courier, monospace;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        #wrapper {
-            animation: slide 20s infinite;
-        }
-
-        @keyframes slide {
-            0%{
-                transform: translateY(0);
-            }
-            25%{
-                transform: translateY(0);
-            }
-            35%{
-                transform: translateY(-100%);
-            }
-            45%{
-                transform: translateY(-100%);
-            }
-            55%{
-                transform: translateY(-200%);
-            }
-            75%{
-                transform: translateY(-200%);
-            }
-            85%{
-                transform: translateY(-100%);
-            }
-            90%{
-                transform: translateY(-100%);
-            }
-            100%{
-                transform: translateY(0);
-            }
-        }
-
-        .image-list {
-            display: flex;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            scrollbar-width: none;
-        }
-        .image-list::-webkit-scrollbar {
-            display: none;
-        }
-        .scrollbar-thumb {
-            transition: height 0.3s ease;
-        }
-        .scrollbar-thumb:hover {
-            height: 8px;
-        }
-        .input-icon {
-            width: 24px;
-            height: 24px;
-        }
-        .hidden {
-            display: none;
-        }
-        .block {
-            display: block;
-        }
-      
-          #bg-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
-          }
-          .banner-cta:hover .text-xl {
-            transform: translateY(-5px); 
-          
-          }
-      
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+    .col {
+        width: 95%;
+        margin: auto;
+    }
+      
+    * {
+        font-family: "Inter", Courier, monospace;
+        margin: 0;
+        padding: 0; 
+        box-sizing: border-box;
+    }
+    
+    #wrapper {
+        animation: slide 20s infinite;
+    }
+
+    @keyframes slide {
+        0%{
+            transform: translateY(0);
+        }
+        25%{
+            transform: translateY(0);
+        }
+        35%{
+            transform: translateY(-100%);
+        }
+        45%{
+            transform: translateY(-100%);
+        }
+        55%{
+            transform: translateY(-200%);
+        }
+        75%{
+            transform: translateY(-200%);
+        }
+        85%{
+            transform: translateY(-100%);
+        }
+        90%{
+            transform: translateY(-100%);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+    .image-list {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+    .image-list::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-thumb {
+        transition: height 0.3s ease;
+    }
+    .scrollbar-thumb:hover {
+        height: 8px;
+    }
+</style>
 <body class="bg-[#F7F6F3]">
+    <!-- NAV -->
     <header class="bg-white">
         <div class="col flex justify-between items-center h-16">
-          <a href=""><div class="bg-red-600 h-6 w-6"></div></a>
+        <a href="#"><div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16"></div></a>
             <nav class="flex text-xs font-bold">
                 <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
                 <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
                 <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
                 <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
-                <a href=""><i class="bx bx-shopping-bag p-4 text-xl "></i></a>
+                <a href=""><i class="bx bx-shopping-bag p-3 text-xl "></i></a>
             </nav>
           <button class="hover:underline underline-offset-4 font-semibold">Sign in</button>
         </div>
-    </header>
+    </header> 
+
+    <!-- HEADER -->
     <section class="relative w-full" style="height: 927px;">
         <div class="absolute w-full h-full overflow-hidden">
             <div id="wrapper" class="w-full h-full">
                 <div class="flex w-full h-full">
-                    <img src="./image/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2 ">
-                    <img src="./image/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
                 </div>
                 <div class="flex w-full h-full">
-                    <img src="./image/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2">
-                    <img src="./image/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
                 </div>
                 <div class="flex w-full h-full">
-                    <img src="./image/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2">
-                    <img src="./image/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
                 </div>
             </div>
         </div>
@@ -138,237 +113,244 @@
             <button class="bg-red-500 text-white py-2 px-4 rounded">Start Free</button>
         </div>
     </section>
-    <body class="bg-gray-100 text-gray-900">
-        <section class="py-12">
-            <div class="container relative mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-6">How SHOESS <span class="italic">works</span></h2>
-                <p class="text-center mb-12">No complicated user settings. Simply press and restore.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="text-center">
-                        <img src="https://assets-global.website-files.com/6363cd29cebdd28be9d7e659/636bb93ca6bf2adb60e6f431_magnetic%20field.svg" loading="lazy" alt="" class="mx-auto mb-4 h-20 w-20">
-                        <p>Novel microcoil emitters create unique multidirectional magnetic fields</p>
+
+    <!-- PRODUCT -->
+    <section class="py-10 col">
+    <span class="font-bold text-3xl mb-5">New Arrials</span>
+      <div class="container1 container2">
+          <div class="relative ">
+              <button id="prev-slide" class="w-12 h-12 slide-button material-symbols-rounded hidden absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-white rounded-full z-10">
+                  <
+              </button>
+              <ul class="image-list space-x-4 overflow-hidden">
+                <li class="shadow-lg">
+                    <div class="w-[400px] h-[500px] flex flex-col">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                        <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="font-medium ml-2">$29.99</span>
                     </div>
-                    <div class="text-center">
-                        <img src="https://assets-global.website-files.com/6363cd29cebdd28be9d7e659/636bbb81fc681f236f9009db_shield.svg" loading="lazy" alt="" class="mx-auto mb-4 h-20 w-20">
-                        <p>Unique pulse trains and emitter sequencing algorithms yield a whole brain stimulation that is rapid and effective</p>
+                </li>
+                <li class="shadow-lg">
+                    <div class="w-[400px] h-[500px] flex flex-col">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                        <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="font-medium ml-2">$29.99</span>
                     </div>
-                    <div class="text-center">
-                        <img src="https://assets-global.website-files.com/6363cd29cebdd28be9d7e659/636bbb81528dc7ae75493e20_size.svg" loading="lazy" alt="" class="mx-auto mb-4 h-20 w-20">
-                        <p>SHIFT is fully adjustable, ensuring everyone gets the proper SHIFT experience</p>
+                </li>
+                <li class="shadow-lg">
+                    <div class="w-[400px] h-[500px] flex flex-col">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                        <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="font-medium ml-2">$29.99</span>
                     </div>
-                    <div class="text-center">
-                        <img src="https://assets-global.website-files.com/6363cd29cebdd28be9d7e659/636bbb81a6bf2ac6fce70df4_press.svg" loading="lazy" alt="" class="mx-auto mb-4 h-20 w-20">
-                        <p>A small, discrete controller allows users to access therapy with one press of a button</p>
+                </li>
+                <li class="shadow-lg">
+                    <div class="w-[400px] h-[500px] flex flex-col">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                        <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="font-medium ml-2">$29.99</span>
                     </div>
-                    
-                    <div class="text-center">
-                        <img src="https://assets-global.website-files.com/6363cd29cebdd28be9d7e659/636bbb82705d8e4d8648beba_easy.svg" loading="lazy" alt="" class="mx-auto mb-4 h-20 w-20">
-                        <p>Our proprietary stimulation protocol allows users to obtain the benefits of SHIFT without having to navigate multiple settings</p>
+                </li>
+                <li class="shadow-lg">
+                    <div class="w-[400px] h-[500px] flex flex-col">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                        <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="font-medium ml-2">$29.99</span>
                     </div>
-                     <div class="flex justify-center mt-8">
-                        <img src="https://vn-live-01.slatic.net/p/d82bec8c54c404d9e1afc6c6f369cd51.jpg" loading="lazy" id="w-node-daf3e4d3-0361-3599-b6ad-e39ac2d5b34b-a495209a" sizes="100vw" alt=""   srcset="https://vn-live-01.slatic.net/p/d82bec8c54c404d9e1afc6c6f369cd51.jpg 1080w, https://vn-live-01.slatic.net/p/d82bec8c54c404d9e1afc6c6f369cd51.jpg 1310w" class="image-3"></div>
-                </div>
-                </div>
-               
-                <a href="/learnmore" class="block text-center mt-8 bg-gray-800 text-white py-3 px-6 rounded-lg mx-auto w-max">Learn more</a>
-            </div>
-        </section>
-    </body>
-    <section class="py-10">
-        <div class="container mx-auto px-4">
-            <div class="relative">
-                <button id="prev-slide" class="slide-button material-symbols-rounded hidden absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-white p-4 rounded-full z-10">
-                    chevron_left
-                </button>
-                <ul class="image-list space-x-4">
-                    <li><img class="w-80 h-96 object-cover" src="" alt="img-1"></li>
-                    <li><img class="w-80 h-96 object-cover" src="" alt="img-2"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-3.jpg" alt="img-3"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-4.jpg" alt="img-4"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-5.jpg" alt="img-5"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-6.jpg" alt="img-6"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-7.jpg" alt="img-7"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-8.jpg" alt="img-8"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-9.jpg" alt="img-9"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-10.jpg" alt="img-10"></li>
-                </ul>
-                <button id="next-slide" class="slide-button material-symbols-rounded absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-white p-4 rounded-full z-10">
-                    chevron_right
-                </button>
-            </div>
-            <div class="mt-4 h-6 relative">
-                <div class="absolute inset-0  rounded-full flex items-center">
-                    <div class="scrollbar-thumb h-full rounded-full w-1/2"></div>
-                </div>
-            </div>
-        </div>
+                </li>
+                <li class="shadow-lg">
+                    <div class="w-[400px] h-[500px] flex flex-col">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                        <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="font-medium ml-2">$29.99</span>
+                    </div>
+                </li>
+                <li class="shadow-lg">
+                    <div class="w-[400px] h-[500px] flex flex-col">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                        <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="font-medium ml-2">$29.99</span>
+                    </div>
+                </li>
+                <li class="shadow-lg">
+                    <div class="w-[400px] h-[500px] flex flex-col">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                        <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="font-medium ml-2">$29.99</span>
+                    </div>
+                </li>
+                <li class="shadow-lg">
+                    <div class="w-[400px] h-[500px] flex flex-col">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                        <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="font-medium ml-2">$29.99</span>
+                    </div>
+                </li>
+                <li class="shadow-lg">
+                    <div class="w-[400px] h-[500px] flex flex-col">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                        <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="font-medium ml-2">$29.99</span>
+                    </div>
+                </li>
+              </ul>
+              <button id="next-slide" class="w-12 h-12 slide-button material-symbols-rounded absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-white rounded-full z-10">
+                  >
+              </button>
+          </div>
+          <div class="mt-4 h-6 relative">
+              <div class="absolute inset-0  rounded-full flex items-center">
+                  <div class="scrollbar-thumb h-full rounded-full w-1/2"></div>
+              </div>
+          </div>
+      </div>
     </section>
+
+    <!-- Email -->
+    <div class="w-full h-[40vh] flex flex-col justify-center items-center bg-white">
+        <span class="font-bold text-3xl mb-8">Want First Dibs?</span>
+        <span>Join our email list and be the first to know about new limited edition products, material </span>
+        <span class="mb-10">innovations, and lots of other fun updates</span>
+        <div class="mb-5">
+            <form action="/action_page.php">
+                <input type="email" value="" required class="w-96 p-2 h-12 rounded-[4px] border-black border-b-2 bg-gray-50" placeholder="Enter Your Email Address">
+                <input type="submit" value="Subscribe" class="h-12 px-5 ml-2 rounded-[4px] bg-black text-white font-semibold cursor-pointer hover:opacity-60 transition ease-out delay-50">
+            </form>
+        </div>
+        <span class="text-sm">Note: You can opt-out at any time. See our <strong>Privacy Policy</strong> and <strong>Terms.</strong></span>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="w-full h-96 bg-black">
+        <div class="col flex h-[332px]">
+          <div class="w-2/4 mt-10">
+            <img src="./asset/img/LogoFooter.png" alt="" class="w-28 h-28">
+            <ul class="text-[#CFCFCF] space-y-0 mt-1">
+              <li><a href="">158A Le loi, Thanh Khe, Da Nang</a></li>
+              <li><a href="">Company: TienTuyenShoes</a></li>
+              <li><a href="">Tel: + 84 24 3767 4686</a></li>
+              <li><a href="">Email: TienTuyenShoes@vnuk.edu.vn</a></li>
+              <li><a href="">Slogan: 22090003 To VNUK all Top – The world beneath<br>your feet will be a success every step 08/06/2024</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">About Us</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Contact</a></li>
+              <li><a href="" class="hover:text-white">FAQs</a></li>
+              <li><a href="" class="hover:text-white">Support</a></li>
+              <li><a href="" class="hover:text-white">Blog</a></li>
+              <li><a href="" class="hover:text-white">Team</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">Services</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Pricing</a></li>
+              <li><a href="" class="hover:text-white">Features</a></li>
+              <li><a href="" class="hover:text-white">Demo</a></li>
+              <li><a href="" class="hover:text-white">Get Started</a></li>
+              <li><a href="" class="hover:text-white">Sign Up</a></li>
+              <li><a href="" class="hover:text-white">Tutorials</a></li>
+              <li><a href="" class="hover:text-white">Forum</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">Resources</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Documentation</a></li>
+              <li><a href="" class="hover:text-white">Support Center</a></li>
+              <li><a href="" class="hover:text-white">Community</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">Get Help</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Help Center</a></li>
+              <li><a href="" class="hover:text-white">Contact Us</a></li>
+              <li><a href="" class="hover:text-white">Privacy Policy</a></li>
+              <li><a href="" class="hover:text-white">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col border-b-[0.1px] bg-[#C6C6C6] opacity-50"></div>
+        <div class="col flex justify-between mt-2">
+          <div class="text-[#C6C6C6] space-x-4 opacity-40">
+            <span class=""><i class='bx bx-copyright'></i>2024 SellShoes. All rights reserved</span>
+            <span class="underline"><a href="">Privacy Policy</a></span>
+            <span class="underline"><a href="">Terms and Conditions</a></span>
+            <span class="underline"><a href="">Cookies Policy</a></span>
+          </div>
+          <div class="text-[#C6C6C6] text-3xl space-x-3 opacity-50">
+            <a href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a href=""><i class='bx bxl-instagram' ></i></a>
+            <a href=""><i class='bx bxl-twitter' ></i></a>
+            <a href=""><i class='bx bxl-linkedin-square' ></i></a>
+          </div>
+        </div>
+    </footer>
+</body>
+    <!-- Slide bar -->
     <script>
         const initSlider = () => {
-            const imageList = document.querySelector(".image-list");
-            const slideButtons = document.querySelectorAll(".slide-button");
-            const sliderScrollbar = document.querySelector(".container .relative > div");
-            const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-            const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-
-            scrollbarThumb.addEventListener("mousedown", (e) => {
-                const startX = e.clientX;
-                const thumbPosition = scrollbarThumb.offsetLeft;
-                const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
-
-                const handleMouseMove = (e) => {
-                    const deltaX = e.clientX - startX;
-                    const newThumbPosition = thumbPosition + deltaX;
-                    const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-                    const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-
-                    scrollbarThumb.style.left = `${boundedPosition}px`;
-                    imageList.scrollLeft = scrollPosition;
-                };
-
-                const handleMouseUp = () => {
-                    document.removeEventListener("mousemove", handleMouseMove);
-                    document.removeEventListener("mouseup", handleMouseUp);
-                };
-
-                document.addEventListener("mousemove", handleMouseMove);
-                document.addEventListener("mouseup", handleMouseUp);
+        const imageList = document.querySelector(".image-list");
+        const slideButtons = document.querySelectorAll(".slide-button");
+        const sliderScrollbar = document.querySelector(".container1 .relative > div");
+        const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+        let startX = 0;
+        let thumbPosition = 0;
+    
+        scrollbarThumb.addEventListener("dragstart", (e) => {
+            startX = e.clientX;
+            thumbPosition = scrollbarThumb.offsetLeft;
+        });
+    
+        scrollbarThumb.addEventListener("drag", (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+            const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+    
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
+        });
+    
+        scrollbarThumb.addEventListener("dragend", () => {
+            startX = 0;
+            thumbPosition = 0;
+        });
+    
+        slideButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const direction = button.id === "prev-slide" ? -1 : 1;
+                const scrollAmount = imageList.clientWidth * direction;
+                imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
             });
-
-            slideButtons.forEach((button) => {
-                button.addEventListener("click", () => {
-                    const direction = button.id === "prev-slide" ? -1 : 1;
-                    const scrollAmount = imageList.clientWidth * direction;
-                    imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-                });
-            });
-
-            const handleSlideButtons = () => {
-                slideButtons[0].classList.toggle("hidden", imageList.scrollLeft <= 0);
-                slideButtons[1].classList.toggle("hidden", imageList.scrollLeft >= maxScrollLeft);
-            };
-
-            const updateScrollThumbPosition = () => {
-                const scrollPosition = imageList.scrollLeft;
-                const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-                scrollbarThumb.style.left = `${thumbPosition}px`;
-            };
-
-            imageList.addEventListener("scroll", () => {
-                updateScrollThumbPosition();
-                handleSlideButtons();
-            });
-
-            handleSlideButtons();
+        });
+    
+        const handleSlideButtons = () => {
+            slideButtons[0].classList.toggle("hidden", imageList.scrollLeft <= 0);
+            slideButtons[1].classList.toggle("hidden", imageList.scrollLeft >= maxScrollLeft);
         };
-
+    
+        const updateScrollThumbPosition = () => {
+            const scrollPosition = imageList.scrollLeft;
+            const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+            scrollbarThumb.style.left = `${thumbPosition}px`;
+        };
+    
+        imageList.addEventListener("scroll", () => {
+            updateScrollThumbPosition();
+            handleSlideButtons();
+        });
+    
+        handleSlideButtons();
+        };
+    
         window.addEventListener("resize", initSlider);
         window.addEventListener("load", initSlider);
-    </script>
-    <div class="w-full overflow-hidden">
-        <img src="https://hoangsneaker.com/wp-content/uploads/2020/10/123241152_1402316109958377_3977760408248570571_n.jpg" alt="test" class="w-full max-h-72 object-cover">
-    </div>
-
-
-    <div class="container mx-auto p-6">
-        <div class="bg-white shadow-md rounded-lg p-6 mb-6 text-center">
-            <h1 class="text-3xl font-semibold mb-4">Support Centre</h1>
-            <p class="text-base mb-4">Welcome to our Support Centre. Please check our articles to find answers to common questions. Want to contact us directly? Please get in touch via our contact page.</p>
-        </div>
     
-        <div class="bg-white shadow-md rounded-lg p-6">
-            <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden" aria-label="Search and Sign in">
-                <form id="wf-form-Search-Form" name="wf-form-Search-Form" method="get" class="flex-grow flex items-center" aria-label="Search Form">
-                    <input class="flex-grow px-4  py-2 text-base border-none outline-none" maxlength="256" name="Search-Support-2" placeholder="Search support articles" type="text" id="Search-Support-2">
-                </form>
-                <div class="flex items-center space-x-1 px-3">
-
-                </div>
-            
-                <button class="bg-black  text-white py-2 px-5  rounded">Sign in</button>
-            </div>
-
- 
-        </div>
-    </div>
-</body>
-<footer 
-class="custom-footer min-h-[400px] pt-12 pb-12  flex-col items-center">
-    <div class="container mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-            <div class="textwidget mb-8 md:mb-0 md:mr-8">
-                <p>
-                    <img class="alignnone size-medium wp-image-21795" src="https://www.1min30.com/wp-content/uploads/2018/02/Embl%C3%A8me-Manchester-United.jpg" alt="" width="245" height="62.06">
-                </p>
-                <p class="text-white"><strong class="block mb-4">Website của Công ty Cổ Phần 3 Thành Viên TuyenTienShoes</strong></p>
-                <p class="text-white"><strong>Trụ sở chính:</strong> VNUK </p>
-                <p class="text-white"><strong>Company:</strong> SHOESS MU </p>
-                <p class="text-white"><strong>Number:</strong> + 84 24 3767 4686</p>
-                <p class="text-white"><strong>Email:</strong> Abc@vnuk.edu.vn</p>
-                <p class="text-white"><strong>Slogan:</strong> 22090003 To VNUK all Top – The world beneath your feet will be a success every step 08/06/2024 </p>
-                <p class="text-white"><strong>Chịu trách nhiệm nội dung:</strong> tuyenrickchoi</p>
-                <p class="text-white">
-                    <a href="#">
-                        <img class="alignnone wp-image-32657 size-full" src="https://img3.thuthuatphanmem.vn/uploads/2019/09/30/logo-hoa-nen-den_111809137.png" alt="" width="235" height="88">
-                    </a>
-                </p>
-            </div>
-            <div class="mb-8 md:mb-0 md:mr-8">
-                <ul class="text-white ">
-                    
-                    <ul class="sub-menu ml-4 " class="text-white "><strong  class="block mb-2">About Us</strong>
-                        
-                        <li class="menu-item text-white"><a href="">Contact</a></li>
-                        <li class="menu-item text-white"><a href="">Support</a></li>
-                        <li class="menu-item text-white"><a href="">Blog</a></li>
-                        <li class="menu-item text-white"><a href="">Company</a></li>
-                    </ul>
-                </ul>
-            </div>
-            <div>
-                <ul>
-               
-                    <ul class="sub-menu ml-4 text-white" class=" "><strong  class="block mb-2">Services</strong>
-                        <li class="menu-item text-white"><a href="">Pricing</a></li>
-                        <li class="menu-item text-white"><a href="">Feature</a></li>
-                        <li class="menu-item text-white"><a href="">Sig up</a></li>
-                        <li class="menu-item text-white"><a href="">Get Stated- YIM</a></li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <style>
-      .custom-footer {
-        background-image: url('https://i.ytimg.com/vi/_S0miJ4py7g/maxresdefault.jpg');
-     /* Đảm bảo ảnh nền đầy đủ phủ toàn bộ phần footer */
-        background-position: center; /* Căn giữa ảnh nền */
-      }
-    </style>
-    <div class="w-[60%] flex flex-col justify-center items-center section-content" data-sr-id="9" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.5s;">
-        <hr class="w-1/2 border-white mt-10">
-        <p class="text-lg text-white mt-5">©2024 - TuyenTienShoes</p>
-        <ul class="flex flex-row items-center space-x-4">
-            
-            
-          <li class="cursor-pointer hover:-translate-y-2 transition-transform duration-300">
-            <a href="https://github.com/tuyenrickchoi" target="_blank">
-              <img class="w-10 hover:grayscale-0 transform hover:scale-110" src="https://nghuuquyen.github.io/imgs/github.svg" style="filter:hue-rotate(-0.25turn)">
-            </a>
-          </li>
-          <li class="cursor-pointer hover:-translate-y-2 transition-transform duration-300">
-            <a href="https://www.linkedin.com/in/nghuuquyen" target="_blank">
-              <img class="w-10 hover:grayscale-0 transform hover:scale-110" src="https://nghuuquyen.github.io/imgs/linkedin.svg" style="filter: hue-rotate(-0.25turn);">
-            </a>
-          </li>
-          <li class="cursor-pointer hover:-translate-y-2 transition-transform duration-300">
-            <a href="https://twitter.com/nghuuquyen" target="_blank">
-              <img class="w-10 grayscale hover:grayscale-0 transform hover:scale-110" src="https://nghuuquyen.github.io/imgs/twitter.svg" style="filter: invert(70);">
-            </a>
-          </li>
-        </ul>
-       
-      </div>
-  </footer>
+    </script>
 </html>
