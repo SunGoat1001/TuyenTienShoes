@@ -3,16 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
     <link rel="stylesheet" href="./font/boxicons-2.1.4/css/boxicons.css" />
-    <script src="script.js" defer></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+    .col {
+        width: 95%;
+        margin: auto;
+    }
+      
+    * {
+        font-family: "Inter", Courier, monospace;
+        margin: 0;
+        padding: 0; 
+        box-sizing: border-box;
+    }
+    
+    #wrapper {
+        animation: slide 20s infinite;
+    }
+
+    @keyframes slide {
+        0%{
+            transform: translateY(0);
+        }
+        25%{
+            transform: translateY(0);
+        }
+        35%{
+            transform: translateY(-100%);
+        }
+        45%{
+            transform: translateY(-100%);
+        }
+        55%{
+            transform: translateY(-200%);
+        }
+        75%{
+            transform: translateY(-200%);
+        }
+        85%{
+            transform: translateY(-100%);
+        }
+        90%{
+            transform: translateY(-100%);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+    .image-list {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+    .image-list::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-thumb {
+        transition: height 0.3s ease;
+    }
+    .scrollbar-thumb:hover {
+        height: 8px;
+    }
+</style>
 
   <body>
     <header class="bg-white">
@@ -104,7 +163,7 @@
             <i class="bx bxs-star text-yellow-400"></i>
             <i class="bx bxs-star-half text-yellow-400"></i>
           </div>
-          <h1>Air Jordan 1 Low</h1>
+          <h1 class="text-4xl font-bold">Air Jordan 1 Low</h1>
           <h3>
             <strong class="text-2xl">Price</strong><br />
             100,000,000₫
@@ -329,6 +388,7 @@
       </div>
       <div>
         <h4 class="text-lg">Related Products</h4>
+
       </div>
     </main>
 
@@ -408,5 +468,6 @@
         </div>
       </div>
     </footer>
+    <script type="module" src="/src/scripts/application.js"></script>
   </body>
 </html>
