@@ -1,162 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./font/boxicons-2.1.4/css/boxicons.css" />
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-  </head>
 
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-    .col {
-        width: 95%;
-        margin: auto;
-    }
-      
-    * {
-        font-family: "Inter", Courier, monospace;
-        margin: 0;
-        padding: 0; 
-        box-sizing: border-box;
-    }
-    
-    #wrapper {
-        animation: slide 20s infinite;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./font/boxicons-2.1.4/css/boxicons.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+  .col {
+    width: 95%;
+    margin: auto;
+  }
+
+  * {
+    font-family: "Inter", Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #wrapper {
+    animation: slide 20s infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
     }
 
-    @keyframes slide {
-        0%{
-            transform: translateY(0);
-        }
-        25%{
-            transform: translateY(0);
-        }
-        35%{
-            transform: translateY(-100%);
-        }
-        45%{
-            transform: translateY(-100%);
-        }
-        55%{
-            transform: translateY(-200%);
-        }
-        75%{
-            transform: translateY(-200%);
-        }
-        85%{
-            transform: translateY(-100%);
-        }
-        90%{
-            transform: translateY(-100%);
-        }
-        100%{
-            transform: translateY(0);
-        }
+    25% {
+      transform: translateY(0);
     }
-    .image-list {
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      scrollbar-width: none;
+
+    35% {
+      transform: translateY(-100%);
     }
-    .image-list::-webkit-scrollbar {
-        display: none;
+
+    45% {
+      transform: translateY(-100%);
     }
-    .scrollbar-thumb {
-        transition: height 0.3s ease;
+
+    55% {
+      transform: translateY(-200%);
     }
-    .scrollbar-thumb:hover {
-        height: 8px;
+
+    75% {
+      transform: translateY(-200%);
     }
+
+    85% {
+      transform: translateY(-100%);
+    }
+
+    90% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .image-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .image-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-thumb {
+    transition: height 0.3s ease;
+  }
+
+  .scrollbar-thumb:hover {
+    height: 8px;
+  }
 </style>
 
-  <body>
-    <header class="bg-white">
-      <div class="col flex justify-between items-center h-16">
-        <a href="#"
-          ><div
-            class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16"
-          ></div
-        ></a>
-        <nav class="flex text-xs font-bold">
-          <a
-            href="#"
-            class="p-5 hover:underline underline-offset-4 focus:underline"
-            >WOMAN</a
-          >
-          <a
-            href="#"
-            class="p-5 hover:underline underline-offset-4 focus:underline"
-            >MAN</a
-          >
-          <a
-            href="#"
-            class="p-5 hover:underline underline-offset-4 focus:underline"
-            >NEW ARRIVALS</a
-          >
-          <a
-            href="#"
-            class="p-5 hover:underline underline-offset-4 focus:underline"
-            >CONTACT</a
-          >
-        </nav>
-        <div>
-          <a href=""><i class="bx bx-shopping-bag p-3 text-xl"></i></a>
-          <button class="hover:underline underline-offset-4 font-semibold">
-            Sign in
-          </button>
+<body>
+  <header class="bg-white">
+    <div class="col flex justify-between items-center h-16">
+      <a href="#">
+        <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16"></div>
+      </a>
+      <nav class="flex text-xs font-bold">
+        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+      </nav>
+      <div>
+        <a href=""><i class="bx bx-shopping-bag p-3 text-xl"></i></a>
+        <button class="hover:underline underline-offset-4 font-semibold">
+          Sign in
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="h-20 bg-gray-100"></div>
+    <div class="md:flex md:justify-center max-w-[1200px]">
+      <div class="flex gap-4 pl-12 ml-2">
+        <div class="flex flex-col flex-grow min-w-[60px] max-w-[60px] h-fulls gap-2">
+          <div class="w-[60px] h-[60px]">
+            <label for="" class="w-full h-full"><img class="w-full h-full rounded"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                alt="Air Jordan 1" /></label>
+          </div>
+          <div class="w-[60px] h-[60px]">
+            <label for="" class="w-full h-full"><img class="w-full h-full rounded"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png"
+                alt="Air Jordan 1" /></label>
+          </div>
+          <div class="w-[60px] h-[60px]">
+            <label for="" class="w-full h-full"><img class="w-full h-full rounded"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png"
+                alt="Air Jordan 1" /></label>
+          </div>
+          <div class="w-[60px] h-[60px]">
+            <label for="" class="w-full h-full"><img class="w-full h-full rounded"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png"
+                alt="" /></label>
+          </div>
+          <div class="w-[60px] h-[60px]">
+            <label for="" class="w-full h-full"><img class="w-full h-full rounded"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png"
+                alt="" /></label>
+          </div>
+        </div>
+        <div class="w-[535px] max-w-[535px] h-[620px]">
+          <img
+            src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+            alt="" class="rounded w-[535px] h-[620px] object-cover" />
         </div>
       </div>
-    </header>
-    <main>
-      <div class="h-20 bg-gray-100"></div>
-      <div class="md:flex md:justify-center">
-        <div class="flex md:shrink-0">
-          <div class="flex flex-col gap-2">
-            <label for="" class=""
-              ><img
-                class="w-[60px] h-[60px]"
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
-                alt=""
-            /></label>
-            <label for="" class=""
-              ><img
-                class="w-[60px] h-[60px]"
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png"
-                alt=""
-            /></label>
-            <label for="" class=""
-              ><img
-                class="w-[60px] h-[60px]"
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png"
-                alt=""
-            /></label>
-            <label for="" class=""
-              ><img
-                class="w-[60px] h-[60px]"
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png"
-                alt=""
-            /></label>
-            <label for="" class=""
-              ><img
-                class="w-[60px] h-[60px]"
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png"
-                alt=""
-            /></label>
-          </div>
-          <div class="">
-            <img
-              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
-              alt=""
-              class="w-[535px] h-[650px] object-contain"
-            />
-          </div>
-        </div>
-        <div class="w-[455px]">
-          <div>
+
+      <div class="w-[455px]">
+        <div class="h-full pt-1 pr-12 pb-3 pl-6 w-full">
+          <div class="py-2 text-xl">
             <i class="bx bxs-star text-yellow-400"></i>
             <i class="bx bxs-star text-yellow-400"></i>
             <i class="bx bxs-star text-yellow-400"></i>
@@ -164,310 +157,329 @@
             <i class="bx bxs-star-half text-yellow-400"></i>
           </div>
           <h1 class="text-4xl font-bold">Air Jordan 1 Low</h1>
-          <h3>
-            <strong class="text-2xl">Price</strong><br />
-            100,000,000₫
-          </h3>
-          <hr class="m-2" />
-          <h3><strong class="text-2xl">Color</strong></h3>
-          <div class="flex">
-            <label for="" class="m-1 w-[30px] h-[30px] bg-red-500"></label>
-            <label for="" class="m-1 w-[30px] h-[30px] bg-blue-300"></label>
-            <label for="" class="m-1 w-[30px] h-[30px] bg-gray-300"></label>
-            <label for="" class="m-1 w-[30px] h-[30px] bg-orange-500"></label>
-          </div>
-          <h3><strong class="text-2xl">Select size:</strong></h3>
-          <div class="flex flex-wrap">
-            <div
-              class="border-solid border-2 rounded w-16 m-1 text-center font-bold hover:border-black"
-            >
-              <input
-                type="radio"
-                name="size-selected"
-                id="size37.5"
-                class="hidden"
-              />
-              <label for="size37.5" class="">37.5</label>
-            </div>
-            <div
-              class="border-solid border-2 rounded w-16 m-1 text-center font-bold hover:border-black"
-            >
-              <input
-                type="radio"
-                name="size-selected"
-                id="size38"
-                class="hidden"
-              />
-              <label for="size38" class="">38</label>
-            </div>
-            <div
-              class="border-solid border-2 rounded w-16 m-1 text-center font-bold hover:border-black"
-            >
-              <input
-                type="radio"
-                name="size-selected"
-                id="size38.5"
-                class="hidden"
-              />
-              <label for="size38.5" class="">38.5</label>
-            </div>
-            <div
-              class="border-solid border-2 rounded w-16 m-1 text-center font-bold hover:border-black"
-            >
-              <input
-                type="radio"
-                name="size-selected"
-                id="size39"
-                class="hidden"
-              />
-              <label for="size39" class="">39</label>
-            </div>
-            <div
-              class="border-solid border-2 rounded w-16 m-1 text-center font-bold hover:border-black"
-            >
-              <input
-                type="radio"
-                name="size-selected"
-                id="size40"
-                class="hidden"
-              />
-              <label for="size40" class="">40</label>
-            </div>
-            <div
-              class="border-solid border-2 rounded w-16 m-1 text-center font-bold hover:border-black"
-            >
-              <input
-                type="radio"
-                name="size-selected"
-                id="size40.5"
-                class="hidden"
-              />
-              <label for="size40.5" class="">40.5</label>
-            </div>
-            <div
-              class="border-solid border-2 rounded w-16 m-1 text-center font-bold hover:border-black"
-            >
-              <input
-                type="radio"
-                name="size-selected"
-                id="size41"
-                class="hidden"
-              />
-              <label for="size41" class="">41</label>
-            </div>
-            <div
-              class="border-solid border-2 rounded w-16 m-1 text-center font-bold hover:border-black"
-            >
-              <input
-                type="radio"
-                name="size-selected"
-                id="size42"
-                class="hidden"
-              />
-              <label for="size42" class="">42</label>
-            </div>
-            <div
-              class="border-solid border-2 rounded w-16 m-1 text-center font-bold hover:border-black"
-            >
-              <input
-                type="radio"
-                name="size-selected"
-                id="size42.5"
-                class="hidden"
-              />
-              <label for="size42.5" class="">42.5</label>
-            </div>
-            <div
-              class="border-solid border-2 rounded w-16 m-1 text-center font-bold hover:border-black"
-            >
-              <input
-                type="radio"
-                name="size-selected"
-                id="size43"
-                class="hidden"
-              />
-              <label for="size43" class="">43</label>
-            </div>
-          </div>
           <div>
-            <button class="w-60 rounded-full p-6 bg-black text-white font-bold">
+            <h3>
+              <strong class="text-sm">Price</strong><br />
+              100,000,000₫
+            </h3>
+          </div>
+          <hr class="m-2" />
+          <div>
+            <h3><strong class="text-sm">Color</strong></h3>
+            <div class="flex">
+              <label for="" class="m-1 w-[30px] h-[30px] bg-red-500"></label>
+              <label for="" class="m-1 w-[30px] h-[30px] bg-blue-300"></label>
+              <label for="" class="m-1 w-[30px] h-[30px] bg-gray-300"></label>
+              <label for="" class="m-1 w-[30px] h-[30px] bg-orange-500"></label>
+            </div>
+          </div>
+          <div class="mt-4">
+            <h3><strong class="text-sm">Select size:</strong></h3>
+            <div class="flex flex-wrap mb-3 gap-2">
+              <div class="border-solid border-2 rounded w-20 h-10 text-center content-center hover:border-black">
+                <input type="radio" name="size-selected" id="size37.5" class="hidden" />
+                <label for="size37.5" class="h-16">37.5</label>
+              </div>
+              <div class="border-solid border-2 rounded w-20 h-10 text-center content-center hover:border-black">
+                <input type="radio" name="size-selected" id="size38" class="hidden" />
+                <label for="size38" class="">38</label>
+              </div>
+              <div class="border-solid border-2 rounded w-20 h-10 text-center content-center hover:border-black">
+                <input type="radio" name="size-selected" id="size38.5" class="hidden" />
+                <label for="size38.5" class="">38.5</label>
+              </div>
+              <div class="border-solid border-2 rounded w-20 h-10 text-center content-center hover:border-black">
+                <input type="radio" name="size-selected" id="size39" class="hidden" />
+                <label for="size39" class="">39</label>
+              </div>
+              <div class="border-solid border-2 rounded w-20 h-10 text-center content-center hover:border-black">
+                <input type="radio" name="size-selected" id="size40" class="hidden" />
+                <label for="size40" class="">40</label>
+              </div>
+              <div class="border-solid border-2 rounded w-20 h-10 text-center content-center hover:border-black">
+                <input type="radio" name="size-selected" id="size40.5" class="hidden" />
+                <label for="size40.5" class="">40.5</label>
+              </div>
+              <div class="border-solid border-2 rounded w-20 h-10 text-center content-center hover:border-black">
+                <input type="radio" name="size-selected" id="size41" class="hidden" />
+                <label for="size41" class="">41</label>
+              </div>
+              <div class="border-solid border-2 rounded w-20 h-10 text-center content-center hover:border-black">
+                <input type="radio" name="size-selected" id="size42" class="hidden" />
+                <label for="size42" class="">42</label>
+              </div>
+              <div class="border-solid border-2 rounded w-20 h-10 text-center content-center hover:border-black">
+                <input type="radio" name="size-selected" id="size42.5" class="hidden" />
+                <label for="size42.5" class="">42.5</label>
+              </div>
+              <div class="border-solid border-2 rounded w-20 h-10 text-center content-center hover:border-black">
+                <input type="radio" name="size-selected" id="size43" class="hidden" />
+                <label for="size43" class="">43</label>
+              </div>
+            </div>
+          </div>
+          <div class="mt-2 w-full">
+            <button class="rounded-full w-full p-6 bg-black text-white font-bold">
               Add to cart
             </button>
           </div>
         </div>
       </div>
-      <div class="flex flex-col pt-5">
-        <label for="" class="font-bold self-center">Description</label>
-        <div class="border border-solid px-5 m-6">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            dolores ex adipisci earum iste, aliquam ipsum repellendus corporis,
-            ut repudiandae ducimus ullam autem. Tempore obcaecati nemo iusto
-            libero ipsa quae eligendi esse mollitia? Consectetur quae rerum
-            ullam, omnis hic nulla harum libero veritatis amet earum, ut,
-            laboriosam nesciunt? Expedita rerum totam, voluptates iste
-            voluptatum sint adipisci voluptatem esse autem. Neque nesciunt autem
-            aperiam sunt, quo nam omnis tenetur rem assumenda quaerat quod ea
-            cum dicta excepturi laudantium distinctio fugiat reiciendis iste
-            inventore adipisci eveniet culpa necessitatibus eum corrupti.
-            Eligendi debitis dolorum facilis totam laudantium ducimus aliquam
-            nulla commodi perferendis repudiandae?
-          </p>
+    </div>
+    <div class="md:flex flex-col md:justify-center pt-5 w-[1000px] m-auto"">
+      <label for="" class="font-bold self-center">Description</label>
+      <div class="border border-solid px-5 m-6">
+        <div class="px-4 py-6">
+          <p><b class="text-xl font-bold">ALWAYS FRESH.</b></p>
+          <br>
+          <p>Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's familiar yet always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks ensure you'll always be on point.</p>
+          <br>
+          <p><b class="text-xl font-bold">Benefits</b></p>
+          <ul class="list-disc pl-5">
+              <li>Encapsulated Air-Sole unit provides lightweight cushioning.</li>
+              <li>Genuine leather in the upper offers durability and a premium look.</li>
+              <li>Solid rubber outsole enhances traction on a variety of surfaces.</li>
+              <li>Colour Shown: White/Varsity Red/White/Black</li>
+              <li>Style: 553558-161</li>
+              <li>Country/Region of Origin: Vietnam, Indonesia</li>
+          </ul>
+          <p><b class="text-xl font-bold">Tried and True</b></p>
+          <p>A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day comfort. A rubber outsole supplies durable traction on a variety of surfaces.</p>
+          <br>
+      </div>
+      
+      </div>
+      <label for="" class="font-bold self-center">Reviews</label>
+      <div class="border border-solid px-5 m-6">
+        <div class="border border-solid p-5 m-6">
+          <article class="p-1">
+            <div class="text-yellow-400">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <h4 class="text-lg">Tốc độ giao hàng siêu ánh sáng</h4>
+            <span class="italic text-gray-400"><span class="font-medium">E lờn mớt</span> no
+              <span class="font-medium">Jun 14, 2024</span></span>
+            <p>
+              Tôi đang ở sao hoả và thật sự rất bất ngờ với tốc độ giao hàng
+              thần tốc của shop TuyenTien ở trái đất, hàng tới tiền tay trong
+              1 "block" sau khi vừa hoàn tất thanh toán. Thật sự rất hợp với
+              phong cách làm việc 5 phút của tôi. Quả thực CEO Ngọc Tiến là
+              một người văn võ song toàn, ngàn năm có 1
+            </p>
+            <hr />
+          </article>
+          <article class="p-1">
+            <div class="text-yellow-400">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half text-yellow-400"></i>
+            </div>
+            <h4 class="text-lg">Sản phẩm tốt và chuẩn như sách giáo khoa</h4>
+            <span class="italic text-gray-400"><span class="font-medium">Ngọc Tờ rinh</span> no
+              <span class="font-medium">Jun 12, 2024</span></span>
+            <p>
+              Sản phẩm tốt và đẹp, đeo rất thoải mái. Ngoài ra, CEO Ngọc Tiến
+              rất đẹp trai nữa. Tiếc là chỉ có thể đứng ngắm nhìn từ xa nên
+              đánh giá 4.5 thôi
+            </p>
+            <hr />
+          </article>
+          <article class="p-1">
+            <div class="text-yellow-400">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <h4 class="text-lg">
+              This is the greatest online shop that I've ever ordered!
+            </h4>
+            <span class="italic text-gray-400"><span class="font-medium">Son Goku</span> no
+              <span class="font-medium">Jun 15, 2024</span></span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+              tempore maiores id, illum sit sapiente a eum consectetur cum
+              natus ipsum officiis dolor praesentium non minima. Eius tempore
+              consequatur nobis, unde blanditiis, vel, deserunt cum facere
+              excepturi ratione reiciendis iste!
+            </p>
+            <hr />
+          </article>
         </div>
-        <label for="" class="font-bold self-center">Reviews</label>
-        <div class="border border-solid px-5 m-6">
-          <div class="border border-solid p-5 m-6">
-            <article class="p-1">
-              <div class="text-yellow-400">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-lg">Related Products</h4>
+      <section class="py-10">
+        <!-- <div class="container mx-auto px-4">
+              <div class="relative">
+                  <button id="prev-slide" class="slide-button material-symbols-rounded hidden absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-white p-4 rounded-full z-10">
+                      chevron_left
+                  </button>
+                  <ul class="image-list space-x-4">
+                      <li><img class="w-80 h-96 object-cover" src="" alt="img-1"></li>
+                      <li><img class="w-80 h-96 object-cover" src="" alt="img-2"></li>
+                      <li><img class="w-80 h-96 object-cover" src="" alt="img-3"></li>
+                      <li><img class="w-80 h-96 object-cover" src="" alt="img-4"></li>
+                      <li><img class="w-80 h-96 object-cover" src="" alt="img-5"></li>
+                      <li><img class="w-80 h-96 object-cover" src="" alt="img-6"></li>
+                      <li><img class="w-80 h-96 object-cover" src="" alt="img-7"></li>
+                      <li><img class="w-80 h-96 object-cover" src="" alt="img-8"></li>
+                      <li><img class="w-80 h-96 object-cover" src="" alt="img-9"></li>
+                      <li><img class="w-80 h-96 object-cover" src="" alt="img-10"></li>
+                  </ul>
+                  <button id="next-slide" class="slide-button material-symbols-rounded absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-white p-4 rounded-full z-10">
+                      chevron_right
+                  </button>
               </div>
-              <h4 class="text-lg">Tốc độ giao hàng siêu ánh sáng</h4>
-              <span class="italic text-gray-400"
-                ><span class="font-medium">E lờn mớt</span> no
-                <span class="font-medium">Jun 14, 2024</span></span
-              >
-              <p>
-                Tôi đang ở sao hoả và thật sự rất bất ngờ với tốc độ giao hàng
-                thần tốc của shop TuyenTien ở trái đất, hàng tới tiền tay trong
-                1 "block" sau khi vừa hoàn tất thanh toán. Thật sự rất hợp với
-                phong cách làm việc 5 phút của tôi. Quả thực CEO Ngọc Tiến là
-                một người văn võ song toàn, ngàn năm có 1
-              </p>
-              <hr />
-            </article>
-            <article class="p-1">
-              <div class="text-yellow-400">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star-half text-yellow-400"></i>
+              <div class="mt-4 h-6 relative">
+                  <div class="absolute inset-0  rounded-full flex items-center">
+                      <div class="scrollbar-thumb h-full rounded-full w-1/2"></div>
+                  </div>
               </div>
-              <h4 class="text-lg">Sản phẩm tốt và chuẩn như sách giáo khoa</h4>
-              <span class="italic text-gray-400"
-                ><span class="font-medium">Ngọc Tờ rinh</span> no
-                <span class="font-medium">Jun 12, 2024</span></span
-              >
-              <p>
-                Sản phẩm tốt và đẹp, đeo rất thoải mái. Ngoài ra, CEO Ngọc Tiến
-                rất đẹp trai nữa. Tiếc là chỉ có thể đứng ngắm nhìn từ xa nên
-                đánh giá 4.5 thôi
-              </p>
-              <hr />
-            </article>
-            <article class="p-1">
-              <div class="text-yellow-400">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-              </div>
-              <h4 class="text-lg">
-                This is the greatest online shop that I've ever ordered!
-              </h4>
-              <span class="italic text-gray-400"
-                ><span class="font-medium">Son Goku</span> no
-                <span class="font-medium">Jun 15, 2024</span></span
-              >
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
-                tempore maiores id, illum sit sapiente a eum consectetur cum
-                natus ipsum officiis dolor praesentium non minima. Eius tempore
-                consequatur nobis, unde blanditiis, vel, deserunt cum facere
-                excepturi ratione reiciendis iste!
-              </p>
-              <hr />
-            </article>
+          </div> -->
+        <div class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img
+                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                  alt="Image 1" />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                  alt="Image 2" />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                  alt="Image 3" />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                  alt="Image 4" />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                  alt="Image 5" />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                  alt="Image 6" />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                  alt="Image 7" />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                  alt="Image 8" />
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-      <div>
-        <h4 class="text-lg">Related Products</h4>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var splide = new Splide(".splide", {
+            perPage: 4,
+            focus: 0,
+            omitEnd: true,
+          });
 
-      </div>
-    </main>
+          splide.mount();
+        });
+      </script>
+    </div>
+  </main>
 
-    <footer class="w-full h-96 bg-black">
-      <div class="col flex h-[332px]">
-        <div class="w-2/4 mt-10">
-          <img src="./asset/img/LogoFooter.png" alt="" class="w-28 h-28" />
-          <ul class="text-[#CFCFCF] space-y-0 mt-1">
-            <li><a href="">158A Le loi, Thanh Khe, Da Nang</a></li>
-            <li><a href="">Company: TienTuyenShoes</a></li>
-            <li><a href="">Tel: + 84 24 3767 4686</a></li>
-            <li><a href="">Email: TienTuyenShoes@vnuk.edu.vn</a></li>
-            <li>
-              <a href=""
-                >Slogan: 22090003 To VNUK all Top – The world beneath<br />your
-                feet will be a success every step 08/06/2024</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="w-[15%] px-4 mt-10">
-          <span class="font-semibold text-white">About Us</span>
-          <ul class="text-[#CFCFCF] space-y-2 mt-4">
-            <li><a href="" class="hover:text-white">Contact</a></li>
-            <li><a href="" class="hover:text-white">FAQs</a></li>
-            <li><a href="" class="hover:text-white">Support</a></li>
-            <li><a href="" class="hover:text-white">Blog</a></li>
-            <li><a href="" class="hover:text-white">Team</a></li>
-          </ul>
-        </div>
-        <div class="w-[15%] px-4 mt-10">
-          <span class="font-semibold text-white">Services</span>
-          <ul class="text-[#CFCFCF] space-y-2 mt-4">
-            <li><a href="" class="hover:text-white">Pricing</a></li>
-            <li><a href="" class="hover:text-white">Features</a></li>
-            <li><a href="" class="hover:text-white">Demo</a></li>
-            <li><a href="" class="hover:text-white">Get Started</a></li>
-            <li><a href="" class="hover:text-white">Sign Up</a></li>
-            <li><a href="" class="hover:text-white">Tutorials</a></li>
-            <li><a href="" class="hover:text-white">Forum</a></li>
-          </ul>
-        </div>
-        <div class="w-[15%] px-4 mt-10">
-          <span class="font-semibold text-white">Resources</span>
-          <ul class="text-[#CFCFCF] space-y-2 mt-4">
-            <li><a href="" class="hover:text-white">Documentation</a></li>
-            <li><a href="" class="hover:text-white">Support Center</a></li>
-            <li><a href="" class="hover:text-white">Community</a></li>
-          </ul>
-        </div>
-        <div class="w-[15%] px-4 mt-10">
-          <span class="font-semibold text-white">Get Help</span>
-          <ul class="text-[#CFCFCF] space-y-2 mt-4">
-            <li><a href="" class="hover:text-white">Help Center</a></li>
-            <li><a href="" class="hover:text-white">Contact Us</a></li>
-            <li><a href="" class="hover:text-white">Privacy Policy</a></li>
-            <li><a href="" class="hover:text-white">Terms</a></li>
-          </ul>
-        </div>
+  <footer class="w-full h-96 bg-black">
+    <div class="col flex h-[332px]">
+      <div class="w-2/4 mt-10">
+        <img src="./asset/img/LogoFooter.png" alt="" class="w-28 h-28" />
+        <ul class="text-[#CFCFCF] space-y-0 mt-1">
+          <li><a href="">158A Le loi, Thanh Khe, Da Nang</a></li>
+          <li><a href="">Company: TienTuyenShoes</a></li>
+          <li><a href="">Tel: + 84 24 3767 4686</a></li>
+          <li><a href="">Email: TienTuyenShoes@vnuk.edu.vn</a></li>
+          <li>
+            <a href="">Slogan: 22090003 To VNUK all Top – The world beneath<br />your
+              feet will be a success every step 08/06/2024</a>
+          </li>
+        </ul>
       </div>
-      <div class="col border-b-[0.1px] bg-[#C6C6C6] opacity-50"></div>
-      <div class="col flex justify-between mt-2">
-        <div class="text-[#C6C6C6] space-x-4 opacity-40">
-          <span class=""
-            ><i class="bx bx-copyright"></i>2024 SellShoes. All rights
-            reserved</span
-          >
-          <span class="underline"><a href="">Privacy Policy</a></span>
-          <span class="underline"><a href="">Terms and Conditions</a></span>
-          <span class="underline"><a href="">Cookies Policy</a></span>
-        </div>
-        <div class="text-[#C6C6C6] text-3xl space-x-3 opacity-50">
-          <a href=""><i class="bx bxl-facebook-circle"></i></a>
-          <a href=""><i class="bx bxl-instagram"></i></a>
-          <a href=""><i class="bx bxl-twitter"></i></a>
-          <a href=""><i class="bx bxl-linkedin-square"></i></a>
-        </div>
+      <div class="w-[15%] px-4 mt-10">
+        <span class="font-semibold text-white">About Us</span>
+        <ul class="text-[#CFCFCF] space-y-2 mt-4">
+          <li><a href="" class="hover:text-white">Contact</a></li>
+          <li><a href="" class="hover:text-white">FAQs</a></li>
+          <li><a href="" class="hover:text-white">Support</a></li>
+          <li><a href="" class="hover:text-white">Blog</a></li>
+          <li><a href="" class="hover:text-white">Team</a></li>
+        </ul>
       </div>
-    </footer>
-    <script type="module" src="/src/scripts/application.js"></script>
-  </body>
+      <div class="w-[15%] px-4 mt-10">
+        <span class="font-semibold text-white">Services</span>
+        <ul class="text-[#CFCFCF] space-y-2 mt-4">
+          <li><a href="" class="hover:text-white">Pricing</a></li>
+          <li><a href="" class="hover:text-white">Features</a></li>
+          <li><a href="" class="hover:text-white">Demo</a></li>
+          <li><a href="" class="hover:text-white">Get Started</a></li>
+          <li><a href="" class="hover:text-white">Sign Up</a></li>
+          <li><a href="" class="hover:text-white">Tutorials</a></li>
+          <li><a href="" class="hover:text-white">Forum</a></li>
+        </ul>
+      </div>
+      <div class="w-[15%] px-4 mt-10">
+        <span class="font-semibold text-white">Resources</span>
+        <ul class="text-[#CFCFCF] space-y-2 mt-4">
+          <li><a href="" class="hover:text-white">Documentation</a></li>
+          <li><a href="" class="hover:text-white">Support Center</a></li>
+          <li><a href="" class="hover:text-white">Community</a></li>
+        </ul>
+      </div>
+      <div class="w-[15%] px-4 mt-10">
+        <span class="font-semibold text-white">Get Help</span>
+        <ul class="text-[#CFCFCF] space-y-2 mt-4">
+          <li><a href="" class="hover:text-white">Help Center</a></li>
+          <li><a href="" class="hover:text-white">Contact Us</a></li>
+          <li><a href="" class="hover:text-white">Privacy Policy</a></li>
+          <li><a href="" class="hover:text-white">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col border-b-[0.1px] bg-[#C6C6C6] opacity-50"></div>
+    <div class="col flex justify-between mt-2">
+      <div class="text-[#C6C6C6] space-x-4 opacity-40">
+        <span class=""><i class="bx bx-copyright"></i>2024 SellShoes. All rights
+          reserved</span>
+        <span class="underline"><a href="">Privacy Policy</a></span>
+        <span class="underline"><a href="">Terms and Conditions</a></span>
+        <span class="underline"><a href="">Cookies Policy</a></span>
+      </div>
+      <div class="text-[#C6C6C6] text-3xl space-x-3 opacity-50">
+        <a href=""><i class="bx bxl-facebook-circle"></i></a>
+        <a href=""><i class="bx bxl-instagram"></i></a>
+        <a href=""><i class="bx bxl-twitter"></i></a>
+        <a href=""><i class="bx bxl-linkedin-square"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/src/scripts/application.js"></script>
+</body>
+
 </html>
