@@ -10,12 +10,55 @@
 </head>
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-    .col{width:95%;margin:auto;}
-    *{font-family:"Inter",Courier,monospace;margin:0;padding:0;box-sizing:border-box;}
-    #wrapper{animation:slide 16s infinite;}
-    @keyframes slide{0%{transform:translateY(0);}25%{transform:translateY(0);}35%{transform:translateY(-100%);}45%{transform:translateY(-100%);}55%{transform:translateY(-200%);}75%{transform:translateY(-200%);}85%{transform:translateY(-100%);}90%{transform:translateY(-100%);}100%{transform:translateY(0);}}
-    .image-list{display:flex;overflow-x:auto;-ms-overflow-style: none}
-    .image-list::-webkit-scrollbar{display:none;}
+    .col{
+        width:95%;
+        margin:auto;
+    }
+    *{
+        font-family:"Inter",Courier,monospace;
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    #wrapper{
+        animation:slide 16s infinite;
+    }
+    @keyframes slide{
+        0%{
+            transform:translateY(0);
+        }
+        25%{
+            transform:translateY(0);
+        }
+        35%{
+            transform:translateY(-100%);
+        }
+        45%{
+            transform:translateY(-100%);
+        }
+        55%{
+            transform:translateY(-200%);
+        }
+        75%{
+            transform:translateY(-200%);
+        }
+        85%{
+            transform:translateY(-100%);
+        }
+        90%{
+            transform:translateY(-100%);
+        }
+        100%{transform:translateY(0);
+        }
+    }
+    .image-list{
+        display:flex;
+        overflow-x:auto;
+        -ms-overflow-style: none
+    }
+    .image-list::-webkit-scrollbar{
+        display:none;
+    }
 </style>
 <body class="bg-[#F7F6F3]">
     <!-- NAV -->
