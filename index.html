@@ -3,464 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="icon" type="image/x-icon" href="./asset/img/LogoNAV.png">
+    <title>TienTuyenShoes</title>
     <link rel="stylesheet" href="./font/boxicons-2.1.4/css/boxicons.css">
-    <script src="script.js" defer></script>
-    <style>
-        .image-list {
-            display: flex;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            scrollbar-width: none;
-        }
-        .image-list::-webkit-scrollbar {
-            display: none;
-        }
-        .scrollbar-thumb {
-            transition: height 0.3s ease;
-        }
-        .scrollbar-thumb:hover {
-            height: 8px;
-        }
-        .input-icon {
-            width: 24px;
-            height: 24px;
-        }
-        .hidden {
-            display: none;
-        }
-        .block {
-            display: block;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-      
-          #bg-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
-          }
-          .banner-cta:hover .text-xl {
-            transform: translateY(-5px); 
-          
-          }
-      
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-200">
-    <header class="bg-black py-4">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <a href="#"><img src="https://www.1min30.com/wp-content/uploads/2018/02/Embl%C3%A8me-Manchester-United.jpg" alt="Logo" class="h-7"></a>
-            <nav class="flex space-x-7 text-right w-20 ">
-                <a href="#" class="text-white ">Model</a>
-                <a href="#" class="text-white">Motosport</a>
-                <a href="#" class="text-white">Store</a>
-                <a href="#" class="text-white">Contact</a>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+    .col{
+        width:95%;
+        margin:auto;
+    }
+    *{
+        font-family:"Inter",Courier,monospace;
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    #wrapper{
+        animation:slide 16s infinite;
+    }
+    @keyframes slide{
+        0%{
+            transform:translateY(0);
+        }
+        25%{
+            transform:translateY(0);
+        }
+        35%{
+            transform:translateY(-100%);
+        }
+        45%{
+            transform:translateY(-100%);
+        }
+        55%{
+            transform:translateY(-200%);
+        }
+        75%{
+            transform:translateY(-200%);
+        }
+        85%{
+            transform:translateY(-100%);
+        }
+        90%{
+            transform:translateY(-100%);
+        }
+        100%{transform:translateY(0);
+        }
+    }
+    .image-list{
+        display:flex;
+        overflow-x:auto;
+        -ms-overflow-style: none
+    }
+    .image-list::-webkit-scrollbar{
+        display:none;
+    }
+</style>
+<body class="bg-[#F7F6F3]">
+    <!-- NAV -->
+    <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
+        <div class="col flex justify-between items-center h-16">
+        <a href="#"><div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div></a>
+            <nav class="flex text-xs font-bold">
+                <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+                <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+                <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+                <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+                <a href="" aria-label="Shopping Bag"><i class="bx bx-shopping-bag p-3 text-xl "></i></a>
             </nav>
-
-            <div class="flex items-center space-x-4">
-                <i class="bx bxs-cart text-white text-2xl"></i>
-                <i class="bx text-white bx-search-alt text-2xl"></i>
-                <button class="bg-white text-black py-1 px-3 rounded">Sign in</button>
+          <button class="hover:underline underline-offset-4 font-semibold">Sign in</button>
+        </div>
+    </header> 
+    <!-- HEADER -->
+    <section class="relative w-full mt-16" style="height: 927px;">
+        <div class="absolute w-full h-full overflow-hidden">
+            <div id="wrapper" class="w-full h-full">
+                <div class="flex w-full h-full">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2 object-cover">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
+                </div>
+                <div class="flex w-full h-full">
+                    <img src="./asset/img/homepage/NikeXanh1.jpg" alt="" class="w-1/2">
+                    <img src="./asset/img/homepage/NikeXanh2.jpg" alt="" class="w-1/2">
+                </div>
+                <div class="flex w-full h-full">
+                    <img src="./asset/img/homepage/NikeTrang.avif" alt="" class="w-1/2 object-cover">
+                    <img src="./asset/img/homepage/NikeTrang2.avif" alt="" class="w-1/2 object-cover">
+                </div>
             </div>
         </div>
-    </header>
- 
-    <section class="relative h-screen bg-cover bg-center" style="background-image: url('https://pubcdn.ivymoda.com/files/news/2023/10/27/75b8112c1ced7fd71b7ce3055e5acef2.jpg');">
-
-        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 bg-black opacity-15"></div>
         <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-4">
-            <p class="text-xl">Model</p>
-            <h1 class="text-4xl font-bold">Your Best Value Proposition</h1>
-            <p class="w-3/5">Our model is designed to provide you with the best value proposition for your money. We offer a wide range of products that are designed to meet your needs and exceed your expectations. Our team of experts is dedicated to providing you with the best possible service and support. We are committed to helping you find the perfect product for your needs, and we will work with you every step of the way to ensure that you are completely satisfied with your purchase.</p>
-            <button class="bg-red-500 text-white py-2 px-4 rounded">Start Free</button>
+            <p class="text-xl font-medium">TTS</p>
+            <h1 class="text-3xl font-bold">Unleash your potential with every step.</h1>
+            <p class="w-3/5 text-lg">Every world is on your feet</p>
+            <div class="absolute bottom-20 flex justify-between w-[250px]">
+                <div class="text-2xl underline underline-offset-4">
+                    <a href="">WOMEN</a>
+                </div>
+                <div class="px-7 text-2xl underline underline-offset-4">
+                    <a href="">MAN</a>
+                </div>
+            </div>
         </div>
     </section>
-    <body class="bg-gray-100 text-gray-900">
-        <section class="py-12">
-            <div class="container relative mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-6">How SHOESS <span class="italic">works</span></h2>
-                <p class="text-center mb-12">No complicated user settings. Simply press and restore.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="text-center">
-                        <img src="https://assets-global.website-files.com/6363cd29cebdd28be9d7e659/636bb93ca6bf2adb60e6f431_magnetic%20field.svg" loading="lazy" alt="" class="mx-auto mb-4 h-20 w-20">
-                        <p>Novel microcoil emitters create unique multidirectional magnetic fields</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="https://assets-global.website-files.com/6363cd29cebdd28be9d7e659/636bbb81fc681f236f9009db_shield.svg" loading="lazy" alt="" class="mx-auto mb-4 h-20 w-20">
-                        <p>Unique pulse trains and emitter sequencing algorithms yield a whole brain stimulation that is rapid and effective</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="https://assets-global.website-files.com/6363cd29cebdd28be9d7e659/636bbb81528dc7ae75493e20_size.svg" loading="lazy" alt="" class="mx-auto mb-4 h-20 w-20">
-                        <p>SHIFT is fully adjustable, ensuring everyone gets the proper SHIFT experience</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="https://assets-global.website-files.com/6363cd29cebdd28be9d7e659/636bbb81a6bf2ac6fce70df4_press.svg" loading="lazy" alt="" class="mx-auto mb-4 h-20 w-20">
-                        <p>A small, discrete controller allows users to access therapy with one press of a button</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <img src="https://assets-global.website-files.com/6363cd29cebdd28be9d7e659/636bbb82705d8e4d8648beba_easy.svg" loading="lazy" alt="" class="mx-auto mb-4 h-20 w-20">
-                        <p>Our proprietary stimulation protocol allows users to obtain the benefits of SHIFT without having to navigate multiple settings</p>
-                    </div>
-                     <div class="flex justify-center mt-8">
-                        <img src="https://vn-live-01.slatic.net/p/d82bec8c54c404d9e1afc6c6f369cd51.jpg" loading="lazy" id="w-node-daf3e4d3-0361-3599-b6ad-e39ac2d5b34b-a495209a" sizes="100vw" alt=""   srcset="https://vn-live-01.slatic.net/p/d82bec8c54c404d9e1afc6c6f369cd51.jpg 1080w, https://vn-live-01.slatic.net/p/d82bec8c54c404d9e1afc6c6f369cd51.jpg 1310w" class="image-3"></div>
+    <!-- PRODUC LIMITED -->
+    <section class="w-full flex flex-col items-center h-[40rem] mt-14">
+        <span class="font-bold text-3xl">LIMITED IN STOCK</span>
+        <div class="flex justify-between w-[70%] mx-auto">   
+            <div class="mt-16">
+                <div class="w-64 h-40 flex flex-col justify-center items-center mb-20">
+                    <span class="text-lg font-semibold mb-2">Upper</span>
+                    <span class="text-center">Cow print fabric in black and white, 
+                        yellow Nike Swoosh with green outline resembling melting ice cream.</span>
                 </div>
+                <div class="w-64 h-40 flex flex-col justify-center items-center">
+                    <span class="text-lg font-semibold mb-2">Midsole and Outsole</span>
+                    <span class="text-center">White midsole, green outsole for added traction and durability.</span>
                 </div>
-               
-                <a href="/learnmore" class="block text-center mt-8 bg-gray-800 text-white py-3 px-6 rounded-lg mx-auto w-max">Learn more</a>
             </div>
+            <img src="./asset/img/homepage/ShoesLIMITED.png" alt="" class="w-[35rem] h-[25rem]">
+            <div class="mt-16">
+                <div class="w-64 h-40 flex flex-col justify-center items-center mb-20">
+                    <span class="text-lg font-semibold mb-2">Tongue and Lining</span>
+                    <span class="text-center">The tongue features the iconic Ben & Jerry's logo,
+                         while the rainbow-patterned lining reflects the vibrant colors of their ice cream packaging.</span>
+                </div>
+                <div class="w-64 h-40 flex flex-col justify-center items-center">
+                    <span class="text-lg font-semibold mb-2">Heel</span>
+                    <span class="text-center">White cloud patterns on a blue background, prominent embroidered Nike logo.</span>
+                </div>
+            </div>
+        </div>
+        <span class="font-semibold text-xl">Nike Dunk Low x Ben & Jerry’s “Chunky Dunky”</span>
+        <button class="w-44 h-12 bg-black text-white font-semibold rounded-full mt-5 hover:opacity-70">BUY NOW</button>
+    </section>
+    <!-- PRODUCT -->
+    <section class="py-10 col">
+        <span class="font-bold text-3xl mb-5">NEW ARRIVALS</span>
+          <div class="container1 container2 mt-5">
+              <div class="relative ">
+                  <button id="prev-slide" class="w-12 h-12 slide-button material-symbols-rounded hidden absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-white rounded-full z-10">
+                      <
+                  </button>
+                  <ul class="image-list space-x-4 overflow-hidden">
+                    <a href="">
+                       <li class="shadow-lg">
+                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                                <span class="font-medium ml-2">$29.99</span>
+                            </div>
+                        </li> 
+                    </a>
+                    <a href="">
+                        <li class="shadow-lg">
+                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                                <span class="font-medium ml-2">$29.99</span>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="shadow-lg">
+                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                                <span class="font-medium ml-2">$29.99</span>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="shadow-lg">
+                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                                <span class="font-medium ml-2">$29.99</span>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="shadow-lg">
+                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                                <span class="font-medium ml-2">$29.99</span>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="shadow-lg">
+                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                                <span class="font-medium ml-2">$29.99</span>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="shadow-lg">
+                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                                <span class="font-medium ml-2">$29.99</span>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="shadow-lg">
+                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                                <span class="font-medium ml-2">$29.99</span>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="shadow-lg">
+                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                                <span class="font-medium ml-2">$29.99</span>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="shadow-lg">
+                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                                <span class="font-medium ml-2">$29.99</span>
+                            </div>
+                        </li>
+                    </a>
+                  </ul>
+                  <button id="next-slide" class="w-12 h-12 slide-button material-symbols-rounded absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-white rounded-full z-10">
+                      >
+                  </button>
+              </div>
+              <div class="mt-4 h-6 relative">
+                  <div class="absolute inset-0  rounded-full flex items-center">
+                      <div class="scrollbar-thumb h-full rounded-full w-1/2"></div>
+                  </div>
+              </div>
+          </div>
         </section>
-    </body>
-    <section class="py-10">
-        <div class="container mx-auto px-4">
-            <div class="relative">
-                <button id="prev-slide" class="slide-button material-symbols-rounded hidden absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-white p-4 rounded-full z-10">
-                    chevron_left
-                </button>
-                <ul class="image-list space-x-4">
-                    <li><img class="w-80 h-96 object-cover" src="" alt="img-1"></li>
-                    <li><img class="w-80 h-96 object-cover" src="" alt="img-2"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-3.jpg" alt="img-3"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-4.jpg" alt="img-4"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-5.jpg" alt="img-5"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-6.jpg" alt="img-6"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-7.jpg" alt="img-7"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-8.jpg" alt="img-8"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-9.jpg" alt="img-9"></li>
-                    <li><img class="w-80 h-96 object-cover" src="images/img-10.jpg" alt="img-10"></li>
-                </ul>
-                <button id="next-slide" class="slide-button material-symbols-rounded absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-white p-4 rounded-full z-10">
-                    chevron_right
-                </button>
+    <!-- Women, Man -->
+    <div class="relative w-full h-[800px]">
+        <div class="absolute flex w-full h-full bg-cover">
+            <img src="./asset/img/homepage/Women.jpg" alt="" class="w-1/2 object-cover">
+            <img src="./asset/img/homepage/Men.jpg" alt="" class="w-1/2 object-cover">
+        </div>
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-4">
+            <h1 class="text-5xl font-bold">GET TRAVEL READY</h1>
+            <p class="text-center">Versatile style plus packable design equals <br> shoes that are always good to go.</p>
+            <div class="absolute bottom-20 flex justify-between w-[250px]">
+                <div class="text-2xl underline underline-offset-4">
+                    <a href="">WOMEN</a>
+                </div>
+                <div class="px-7 text-2xl underline underline-offset-4">
+                    <a href="">MAN</a>
+                </div>
             </div>
-            <div class="mt-4 h-6 relative">
-                <div class="absolute inset-0  rounded-full flex items-center">
-                    <div class="scrollbar-thumb h-full rounded-full w-1/2"></div>
+        </div>
+    </div>
+    <!-- FEEBACK -->
+    <section class="col h-[30rem]">
+        <div class="flex flex-col items-center mt-9">
+            <span class="text-center text-4xl font-semibold">What our customers says</span>
+            <div class="flex space-x-6 mt-5">
+                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
+                    <img src="./asset/img/homepage/People2.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
+                    <span class="mt-4 ml-4 text-lg font-medium">Stephen Curry</span>
+                    <span class="mt-4 ml-4">Nike's products truly impress me with their quality and unique design. Will definitely continue to support!</span>
+                </div>
+                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
+                    <img src="./asset/img/homepage/People1.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
+                    <span class="mt-4 ml-4 text-lg font-medium">Emily Johnson</span>
+                    <span class="mt-4 ml-4">Nike's customer service is excellent. Friendly and helpful staff assisted me in finding the perfect pair of shoes.</span>
+                </div>
+                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
+                    <img src="./asset/img/homepage/People3.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
+                    <span class="mt-4 ml-4 text-lg font-medium">Alex Parker</span>
+                    <span class="mt-4 ml-4">Every time I purchase Nike shoes, it's a fantastic experience. 
+                        The products are not only stylish but also incredibly comfortable, suitable for all activities.</span>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Email -->
+    <div class="w-full h-[40vh] flex flex-col justify-center items-center bg-white">
+        <span class="font-bold text-3xl mb-8">Want First Dibs?</span>
+        <span>Join our email list and be the first to know about new limited edition products, material </span>
+        <span class="mb-10">innovations, and lots of other fun updates</span>
+        <div class="mb-5">
+            <form action="/action_page.php">
+                <input type="email" value="" required class="w-96 p-2 h-12 rounded-[4px] border-black border-b-2 bg-gray-50" placeholder="Enter Your Email Address">
+                <input type="submit" value="Subscribe" class="h-12 px-5 ml-2 rounded-[4px] bg-black text-white font-semibold cursor-pointer hover:opacity-60 transition ease-out delay-50">
+            </form>
+        </div>
+        <span class="text-sm">Note: You can opt-out at any time. See our <strong>Privacy Policy</strong> and <strong>Terms.</strong></span>
+    </div>
+    <!-- FOOTER -->
+    <footer class="w-full h-96 bg-black">
+        <div class="col flex h-[332px]">
+          <div class="w-2/4 mt-10">
+            <img src="./asset/img/LogoFooter.png" alt="" class="w-28 h-28">
+            <ul class="text-[#CFCFCF] space-y-0 mt-1">
+              <li><a href="">158A Le loi, Thanh Khe, Da Nang</a></li>
+              <li><a href="">Company: TienTuyenShoes</a></li>
+              <li><a href="">Tel: + 84 24 3767 4686</a></li>
+              <li><a href="">Email: TienTuyenShoes@vnuk.edu.vn</a></li>
+              <li><a href="">Slogan: 22090003 To VNUK all Top – The world beneath<br>your feet will be a success every step 08/06/2024</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">About Us</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Contact</a></li>
+              <li><a href="" class="hover:text-white">FAQs</a></li>
+              <li><a href="" class="hover:text-white">Support</a></li>
+              <li><a href="" class="hover:text-white">Blog</a></li>
+              <li><a href="" class="hover:text-white">Team</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">Services</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Pricing</a></li>
+              <li><a href="" class="hover:text-white">Features</a></li>
+              <li><a href="" class="hover:text-white">Demo</a></li>
+              <li><a href="" class="hover:text-white">Get Started</a></li>
+              <li><a href="" class="hover:text-white">Sign Up</a></li>
+              <li><a href="" class="hover:text-white">Tutorials</a></li>
+              <li><a href="" class="hover:text-white">Forum</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">Resources</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Documentation</a></li>
+              <li><a href="" class="hover:text-white">Support Center</a></li>
+              <li><a href="" class="hover:text-white">Community</a></li>
+            </ul>
+          </div>
+          <div class="w-[15%] px-4 mt-10">
+            <span class="font-semibold text-white">Get Help</span>
+            <ul class="text-[#CFCFCF] space-y-2 mt-4">
+              <li><a href="" class="hover:text-white">Help Center</a></li>
+              <li><a href="" class="hover:text-white">Contact Us</a></li>
+              <li><a href="" class="hover:text-white">Privacy Policy</a></li>
+              <li><a href="" class="hover:text-white">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col border-b-[0.1px] bg-[#C6C6C6] opacity-50"></div>
+        <div class="col flex justify-between mt-2">
+          <div class="text-[#C6C6C6] space-x-4 opacity-40">
+            <span class=""><i class='bx bx-copyright'></i>2024 SellShoes. All rights reserved</span>
+            <span class="underline"><a href="">Privacy Policy</a></span>
+            <span class="underline"><a href="">Terms and Conditions</a></span>
+            <span class="underline"><a href="">Cookies Policy</a></span>
+          </div>
+          <div class="text-[#C6C6C6] text-3xl space-x-3 opacity-50">
+            <a href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a href=""><i class='bx bxl-instagram' ></i></a>
+            <a href=""><i class='bx bxl-twitter' ></i></a>
+            <a href=""><i class='bx bxl-linkedin-square' ></i></a>
+          </div>
+        </div>
+    </footer>
+</body>
+    <!-- Slide bar -->
     <script>
         const initSlider = () => {
-            const imageList = document.querySelector(".image-list");
-            const slideButtons = document.querySelectorAll(".slide-button");
-            const sliderScrollbar = document.querySelector(".container .relative > div");
-            const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-            const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-
-            scrollbarThumb.addEventListener("mousedown", (e) => {
-                const startX = e.clientX;
-                const thumbPosition = scrollbarThumb.offsetLeft;
-                const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
-
-                const handleMouseMove = (e) => {
-                    const deltaX = e.clientX - startX;
-                    const newThumbPosition = thumbPosition + deltaX;
-                    const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-                    const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-
-                    scrollbarThumb.style.left = `${boundedPosition}px`;
-                    imageList.scrollLeft = scrollPosition;
-                };
-
-                const handleMouseUp = () => {
-                    document.removeEventListener("mousemove", handleMouseMove);
-                    document.removeEventListener("mouseup", handleMouseUp);
-                };
-
-                document.addEventListener("mousemove", handleMouseMove);
-                document.addEventListener("mouseup", handleMouseUp);
-            });
-
-            slideButtons.forEach((button) => {
-                button.addEventListener("click", () => {
-                    const direction = button.id === "prev-slide" ? -1 : 1;
-                    const scrollAmount = imageList.clientWidth * direction;
-                    imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-                });
-            });
-
-            const handleSlideButtons = () => {
-                slideButtons[0].classList.toggle("hidden", imageList.scrollLeft <= 0);
-                slideButtons[1].classList.toggle("hidden", imageList.scrollLeft >= maxScrollLeft);
-            };
-
-            const updateScrollThumbPosition = () => {
-                const scrollPosition = imageList.scrollLeft;
-                const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-                scrollbarThumb.style.left = `${thumbPosition}px`;
-            };
-
-            imageList.addEventListener("scroll", () => {
-                updateScrollThumbPosition();
-                handleSlideButtons();
-            });
-
-            handleSlideButtons();
-        };
-
-        window.addEventListener("resize", initSlider);
-        window.addEventListener("load", initSlider);
-    </script>
-    <div class="w-full overflow-hidden">
-        <img src="https://hoangsneaker.com/wp-content/uploads/2020/10/123241152_1402316109958377_3977760408248570571_n.jpg" alt="test" class="w-full max-h-72 object-cover">
-    </div>
-</body>
-<body>
-     <section class="elementor-section wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-        <div class="elementor-container mx-auto px-">
-            <div class="elementor-column elementor-col-100">
-                <div class="elementor-widget-wrap`">
-                    <div class="elementor-widget">
-                        <div class="elementor-widget-container">
-                            <div class="swiper-container eael-logo-carousel">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="eael-lc-logo-wrap">
-                                            <div class="eael-lc-logo">
-                                                <img class="eael-lc-img-src" src="https://th.bing.com/th/id/OIP.U0iukCZFmArRC7LDojMpawHaHa?w=2048&h=2048&rs=1&pid=ImgDetMain" alt="spaker">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="eael-lc-logo-wrap">
-                                            <div class="eael-lc-logo">
-                                                <img class="eael-lc-img-src" src="https://th.bing.com/th/id/OIP.IqIOeIqe_zvnMPU0uFRxsgAAAA?rs=1&pid=ImgDetMain" alt="Yokogawa">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="eael-lc-logo-wrap">
-                                            <div class="eael-lc-logo">
-                                                <img class="eael-lc-img-src" src="https://gigamall.com.vn/data/2019/09/05/15023424_LOGO-NIKE-500x500.jpg" alt="nike">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="eael-lc-logo-wrap">
-                                            <div class="eael-lc-logo">
-                                                <img class="eael-lc-img-src" src="https://th.bing.com/th/id/OIP.VJBQOd3XFKtthLaqXqYRsAAAAA?w=400&h=400&rs=1&pid=ImgDetMain" alt="ana">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="eael-lc-logo-wrap">
-                                            <div class="eael-lc-logo">
-                                                <img class="eael-lc-img-src" src="https://th.bing.com/th/id/OIP.Icrbvjl_HrFdgkCjfEhHRAAAAA?rs=1&pid=ImgDetMain" alt="Yadidas">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="eael-lc-logo-wrap">
-                                            <div class="eael-lc-logo">
-                                                <img class="eael-lc-img-src" src="https://www.thetrainingstationinc.com/wp-content/uploads/2019/02/puma-logo-F9E13B654C-seeklogo_com-1.png" alt="puma">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="eael-lc-logo-wrap">
-                                            <div class="eael-lc-logo">
-                                                <img class="eael-lc-img-src" src="https://th.bing.com/th/id/OIP.hmwhi4IHiABkRdfZSbxQ2AHaHa?rs=1&pid=ImgDetMain" alt="snaker">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="eael-lc-logo-wrap">
-                                            <div class="eael-lc-logo">
-                                                <img class="eael-lc-img-src" src="https://th.bing.com/th/id/OIP.vl7U3Jl95RWTy0Y6mvzCWgHaHZ?rs=1&pid=ImgDetMain" alt="jobdan">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="eael-lc-logo-wrap">
-                                            <div class="eael-lc-logo">
-                                                <img class="eael-lc-img-src" src="https://urbanfeetandskate.com/cdn/shop/collections/brand-square-vans_256x256_crop_center_18b9fa86-baf0-4122-9509-5a04c51053b1_1200x.webp?v=1677807058" alt="vansvans">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="eael-lc-logo-wrap">
-                                            <div class="eael-lc-logo">
-                                                <img class="eael-lc-img-src" src="https://th.bing.com/th/id/R.7b09777d5c1d6ec462e4a41ff7195ce8?rik=wFTORnuxMS0v%2bQ&pid=ImgRaw&r=0" alt="diamon">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="eael-lc-logo-wrap">
-                                            <div class="eael-lc-logo">
-                                                <img class="eael-lc-img-src" src="https://img.ws.mms.shopee.vn/81d82c237559e4acd65ee552e92e17cb" alt="bison">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    
-                                </div>
-                                <!-- Add Pagination -->
-                                <div class="swiper-pagination"></div>
-                                <!-- Add Navigation -->
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        const imageList = document.querySelector(".image-list");
+        const slideButtons = document.querySelectorAll(".slide-button");
+        const sliderScrollbar = document.querySelector(".container1 .relative > div");
+        const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+        let startX = 0;
+        let thumbPosition = 0;
     
-    <!-- Include Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 8,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 2000,
-                },
-
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 10,
-                    },
-                    1024: {
-                        slidesPerView: 8,
-                        spaceBetween: 20,
-                    },
-                },
+        scrollbarThumb.addEventListener("dragstart", (e) => {
+            startX = e.clientX;
+            thumbPosition = scrollbarThumb.offsetLeft;
+        });
+    
+        scrollbarThumb.addEventListener("drag", (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+            const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+    
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
+        });
+    
+        scrollbarThumb.addEventListener("dragend", () => {
+            startX = 0;
+            thumbPosition = 0;
+        });
+    
+        slideButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const direction = button.id === "prev-slide" ? -1 : 1;
+                const scrollAmount = imageList.clientWidth * direction;
+                imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
             });
         });
+    
+        const handleSlideButtons = () => {
+            slideButtons[0].classList.toggle("hidden", imageList.scrollLeft <= 0);
+            slideButtons[1].classList.toggle("hidden", imageList.scrollLeft >= maxScrollLeft);
+        };
+    
+        const updateScrollThumbPosition = () => {
+            const scrollPosition = imageList.scrollLeft;
+            const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+            scrollbarThumb.style.left = `${thumbPosition}px`;
+        };
+    
+        imageList.addEventListener("scroll", () => {
+            updateScrollThumbPosition();
+            handleSlideButtons();
+        });
+    
+        handleSlideButtons();
+        };
+    
+        window.addEventListener("resize", initSlider);
+        window.addEventListener("load", initSlider);
+    
     </script>
-    
-    </body>
-
-    <div class="container mx-auto p-6">
-        <div class="bg-white shadow-md rounded-lg p-6 mb-6 text-center">
-            <h1 class="text-3xl font-semibold mb-4">Support Centre</h1>
-            <p class="text-base mb-4">Welcome to our Support Centre. Please check our articles to find answers to common questions. Want to contact us directly? Please get in touch via our contact page.</p>
-        </div>
-    
-        <div class="bg-white shadow-md rounded-lg p-6">
-            <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden" aria-label="Search and Sign in">
-                <form id="wf-form-Search-Form" name="wf-form-Search-Form" method="get" class="flex-grow flex items-center" aria-label="Search Form">
-                    <input class="flex-grow px-4  py-2 text-base border-none outline-none" maxlength="256" name="Search-Support-2" placeholder="Search support articles" type="text" id="Search-Support-2">
-                </form>
-                <div class="flex items-center space-x-1 px-3">
-
-                </div>
-            
-                <button class="bg-black  text-white py-2 px-5  rounded">Sign in</button>
-            </div>
-
- 
-        </div>
-    </div>
-    
-
-</body>
-<footer 
-class="custom-footer min-h-[400px] pt-12 pb-12  flex-col items-center">
-    <div class="container mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-            <div class="textwidget mb-8 md:mb-0 md:mr-8">
-                <p>
-                    <img class="alignnone size-medium wp-image-21795" src="https://www.1min30.com/wp-content/uploads/2018/02/Embl%C3%A8me-Manchester-United.jpg" alt="" width="245" height="62.06">
-                </p>
-                <p class="text-white"><strong class="block mb-4">Website của Công ty Cổ Phần 3 Thành Viên TuyenTienShoes</strong></p>
-                <p class="text-white"><strong>Trụ sở chính:</strong> VNUK </p>
-                <p class="text-white"><strong>Company:</strong> SHOESS MU </p>
-                <p class="text-white"><strong>Number:</strong> + 84 24 3767 4686</p>
-                <p class="text-white"><strong>Email:</strong> Abc@vnuk.edu.vn</p>
-                <p class="text-white"><strong>Slogan:</strong> 22090003 To VNUK all Top – The world beneath your feet will be a success every step 08/06/2024 </p>
-                <p class="text-white"><strong>Chịu trách nhiệm nội dung:</strong> tuyenrickchoi</p>
-                <p class="text-white">
-                    <a href="#">
-                        <img class="alignnone wp-image-32657 size-full" src="https://img3.thuthuatphanmem.vn/uploads/2019/09/30/logo-hoa-nen-den_111809137.png" alt="" width="235" height="88">
-                    </a>
-                </p>
-            </div>
-            <div class="mb-8 md:mb-0 md:mr-8">
-                <ul class="text-white ">
-                    
-                    <ul class="sub-menu ml-4 " class="text-white "><strong  class="block mb-2">About Us</strong>
-                        
-                        <li class="menu-item text-white"><a href="">Contact</a></li>
-                        <li class="menu-item text-white"><a href="">Support</a></li>
-                        <li class="menu-item text-white"><a href="">Blog</a></li>
-                        <li class="menu-item text-white"><a href="">Company</a></li>
-                    </ul>
-                </ul>
-            </div>
-            <div>
-                <ul>
-               
-                    <ul class="sub-menu ml-4 text-white" class=" "><strong  class="block mb-2">Services</strong>
-                        <li class="menu-item text-white"><a href="">Pricing</a></li>
-                        <li class="menu-item text-white"><a href="">Feature</a></li>
-                        <li class="menu-item text-white"><a href="">Sig up</a></li>
-                        <li class="menu-item text-white"><a href="">Get Stated- YIM</a></li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <style>
-      .custom-footer {
-        background-image: url('https://i.ytimg.com/vi/_S0miJ4py7g/maxresdefault.jpg');
-    
-        background-position: center; 
-      }
-    </style>
-    <div class="w-[60%] flex flex-col justify-center items-center section-content" data-sr-id="9" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.5s;">
-        <hr class="w-11/12 border-white mt-10">
-      
-        <ul class="flex flex-row items-center space-x-4 ">
-            <p class="text-lg text-white mt-0">©2024 - TuyenTienShoes</p>
-           
-
-        </ul>
-   
-        <div class="footer_social-links flex flex-col items-end space-y-4 col-m-6 col-t-6 col-d-6 col-t-last col-d-last">
-            <li class="cursor-pointer hover:-translate-y-2 transition-transform duration-300">
-              <a href="https://github.com/tuyenrickchoi" target="_blank">
-                <img class="w-10 hover:grayscale-0 transform hover:scale-110" src="https://nghuuquyen.github.io/imgs/github.svg" style="filter:hue-rotate(-0.25turn)">
-              </a>
-            </li>
-            <li class="cursor-pointer hover:-translate-y-2 transition-transform duration-300">
-              <a href="https://www.linkedin.com/in/nghuuquyen" target="_blank">
-                <img class="w-10 hover:grayscale-0 transform hover:scale-110" src="https://nghuuquyen.github.io/imgs/linkedin.svg" style="filter: hue-rotate(-0.25turn);">
-              </a>
-            </li>
-            <li class="cursor-pointer hover:-translate-y-2 transition-transform duration-300">
-              <a href="https://twitter.com/nghuuquyen" target="_blank">
-                <img class="w-10 grayscale hover:grayscale-0 transform hover:scale-110" src="https://nghuuquyen.github.io/imgs/twitter.svg" style="filter: invert(70);">
-              </a>
-            </li>
-          </div>
-  </footer>
 </html>
