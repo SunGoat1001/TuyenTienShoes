@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="./src/css/style.css">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="./asset/img/LogoNAV.png">
+  <title>TienTuyenShoes</title>
   <style>
     .tab_btn.active {
       color: #7360ff
@@ -111,52 +112,85 @@
   }
 </style>
 
-<body>
-  <header class="bg-white fixed top-0 w-full z-50 shadow-md">
+<body class="bg-[#F7F6F3] overflow-x-hidden">
+  <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
     <div class="col flex justify-between items-center h-16">
-    <a href="#"><div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div></a>
-        <nav class="flex text-xs font-bold">
+    <a href="./index.html"><div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div></a>
+        <nav class="flex text-sm font-bold">
             <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
             <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
             <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
-            <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
-            <a href="" aria-label="Shopping Bag"><i class="bx bx-shopping-bag p-3 text-xl "></i></a>
+            <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+            <button class="drawer-toggle p-3 text-xl" onclick="toggleDrawer()"><i class='bx bx-shopping-bag'></i></button>
         </nav>
-      <button class="hover:underline underline-offset-4 font-semibold">Sign in</button>
+        <!-- CART -->
+        <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out" onclick="toggleDrawer()"></div>
+        <div id="drawer" class="fixed top-0 right-[-500px] w-[500px] h-full bg-white  transition-all duration-500 z-10">
+            <div class="p-5 flex flex-col justify-center items-center ">
+                <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i class='bx bx-x'></i></button>
+                <h2 class="text-3xl font-semibold mb-2">CART</h2>
+                <p>You're <strong>300.000 VND</strong> away from free shipping!</p>
+                <div id="productContainer" class="relative flex w-full h-[8.25rem] mt-5 border-b-2 border-gray-200">
+                    <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
+                    <div class="flex flex-col mt-3 ml-3">
+                        <span class="font-semibold text-xl">Product</span>
+                        <span>Color: </span>
+                        <span>Size: </span>
+                        <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i class='bx bx-x'></i></button>
+                        <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" class="h-7 w-10"></span> 
+                        <span class="absolute right-0 bottom-3">90.000 VND</span>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0">
+                    <div class="flex flex-col justify-between items-center border-t border-gray-300 p-5">
+                        <div class="flex justify-between w-full">
+                            <span class="text-lg font-semibold">Total</span>
+                            <span class="text-lg">90.000 VND</span>
+                        </div>
+                        <div class="flex justify-between w-full">
+                            <span class="text-lg font-semibold">Shipping</span>
+                            <span class="text-lg">FREE</span>
+                        </div>
+                    </div>
+                    <button class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button>
+                </div>
+            </div>
+        </div>
+      <button class="hover:underline underline-offset-4 font-semibold text-lg">Sign in</button>
     </div>
-  </header> 
+</header>
   <main>
     <div class="w-full h-auto flex justify-center mt-36">
       <div class="flex justify-center md:flex md:justify-center max-w-[1200px] ml-6">
         <div class="flex gap-4 pl-12 ml-2">
           <div class="flex flex-col flex-grow min-w-[60px] max-w-[60px] h-fulls gap-2">
-            <div class="w-[60px] h-[60px]">
+            <div class="w-[80px] h-[80px]">
               <label for="" class="w-full h-full"><img class="w-full h-full rounded"
                   src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
                   alt="Air Jordan 1" /></label>
             </div>
-            <div class="w-[60px] h-[60px]">
+            <div class="w-[80px] h-[80px]">
               <label for="" class="w-full h-full"><img class="w-full h-full rounded"
                   src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png"
                   alt="Air Jordan 1" /></label>
             </div>
-            <div class="w-[60px] h-[60px]">
+            <div class="w-[80px] h-[80px]">
               <label for="" class="w-full h-full"><img class="w-full h-full rounded"
                   src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png"
                   alt="Air Jordan 1" /></label>
             </div>
-            <div class="w-[60px] h-[60px]">
+            <div class="w-[80px] h-[80px]">
               <label for="" class="w-full h-full"><img class="w-full h-full rounded"
                   src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png"
                   alt="" /></label>
             </div>
-            <div class="w-[60px] h-[60px]">
+            <div class="w-[80px] h-[80px]">
               <label for="" class="w-full h-full"><img class="w-full h-full rounded"
                   src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png"
                   alt="" /></label>
             </div>
           </div>
-          <div class="w-[535px] max-w-[535px] h-[620px]">
+          <div class="w-[535px] max-w-[535px] h-[620px] ml-5">
             <img
               src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
               alt="" class="rounded w-[535px] h-[620px] object-cover" />
@@ -175,15 +209,15 @@
             <h1 class="text-4xl font-bold">Air Jordan 1 Low</h1>
             <div>
               <h3 class="my-3">
-                <strong class="text-sm">Price</strong><br />
-                100,000,000₫
+                <strong class="text-lg">Price</strong><br />
+                100.000.000 VND
               </h3>
             </div>
             <hr class="my-2" />
             <div>
-              <h3 class="mb-2"><strong class="text-sm">Color</strong></h3>
+              <h3 class="mb-2"><strong class="text-base">Color</strong></h3>
               <div class="flex space-x-2 ">
-                <label for="" class="w-[30px] h-[30px] bg-red-500 cursor-pointer"></label>
+                <label for="" class="w-[30px] h-[30px] bg-red-500 cursor-pointer focus:border-5 border-black"></label>
                 <label for="" class="w-[30px] h-[30px] bg-blue-300 cursor-pointer"></label>
                 <label for="" class="w-[30px] h-[30px] bg-gray-300 cursor-pointer"></label>
                 <label for="" class="w-[30px] h-[30px] bg-orange-500 cursor-pointer"></label>
@@ -277,7 +311,7 @@
               </div>
             </div>
             <div class="mt-2 w-full">
-              <button class="rounded-full w-full p-5 mt-3 bg-black text-white font-bold">
+              <button class="rounded-full w-full p-5 mt-3 bg-black text-white font-bold hover:bg-opacity-80">
                 Add to cart
               </button>
             </div>
@@ -285,7 +319,7 @@
         </div>
       </div>
     </div>
-    <div class="md:flex flex-col md:justify-center pt-5 w-[1000px] m-auto mt-6">
+    <div class="md:flex flex-col md:justify-center pt-5 w-[1110px] m-auto mt-6">
       <div class=" flex justify-evenly border-b-2 border-solid rgba(229,229,229) relative font-bold text-lg p-3">
         <button class="tab_btn active">Description</button>
         <button class="tab_btn">Reviews</button>
@@ -404,8 +438,8 @@
         })
       })
     </script>
-    <div class="max-w-screen-lg mx-auto p-6">
-      <h4 class="text-lg font-semibold mb-4">Related Products</h4>
+    <div class="max-w-[1160px] mx-auto p-6">
+      <h4 class="text-3xl font-semibold mb-3">Related Products</h4>
       <section class="py-10">
         <div class="splide">
           <div class="splide__track">
@@ -556,5 +590,24 @@
   </footer>
   <script type="module" src="/src/scripts/application.js"></script>
 </body>
-
+  <!-- CART -->
+  <script>
+    function toggleDrawer() {
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('overlay');
+        drawer.classList.toggle('right-0');
+        drawer.classList.toggle('right-[-500px]');
+        overlay.classList.toggle('hidden');
+        overlay.classList.toggle('opacity-0');
+        overlay.classList.toggle('opacity-100');
+    }
+  </script>
+  <!-- REMOVE PRODUCT FROM CART -->
+  <script>
+      var deleteButton = document.getElementById('deleteProductBtn');
+      deleteButton.addEventListener('click', function() {
+      var productContainer = document.getElementById('productContainer');
+      productContainer.remove();
+  });
+  </script>
 </html>
