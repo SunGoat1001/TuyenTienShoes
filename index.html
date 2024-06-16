@@ -1,92 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./asset/img/LogoNAV.png">
     <title>TienTuyenShoes</title>
-    <link rel="stylesheet" href="./font/boxicons-2.1.4/css/boxicons.css">
+    <!-- <link rel="stylesheet" href="./font/boxicons-2.1.4/css/boxicons.css"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-    .col{
-        width:95%;
-        margin:auto;
+
+    .col {
+        width: 95%;
+        margin: auto;
     }
-    *{
-        font-family:"Inter",Courier,monospace;
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
+
+    * {
+        font-family: "Inter", Courier, monospace;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    #wrapper{
-        animation:slide 16s infinite;
+
+    #wrapper {
+        animation: slide 16s infinite;
     }
-    @keyframes slide{
-        0%{
-            transform:translateY(0);
+
+    @keyframes slide {
+        0% {
+            transform: translateY(0);
         }
-        25%{
-            transform:translateY(0);
+
+        25% {
+            transform: translateY(0);
         }
-        35%{
-            transform:translateY(-100%);
+
+        35% {
+            transform: translateY(-100%);
         }
-        45%{
-            transform:translateY(-100%);
+
+        45% {
+            transform: translateY(-100%);
         }
-        55%{
-            transform:translateY(-200%);
+
+        55% {
+            transform: translateY(-200%);
         }
-        75%{
-            transform:translateY(-200%);
+
+        75% {
+            transform: translateY(-200%);
         }
-        85%{
-            transform:translateY(-100%);
+
+        85% {
+            transform: translateY(-100%);
         }
-        90%{
-            transform:translateY(-100%);
+
+        90% {
+            transform: translateY(-100%);
         }
-        100%{transform:translateY(0);
+
+        100% {
+            transform: translateY(0);
         }
     }
-    .image-list{
-        display:flex;
-        overflow-x:auto;
+
+    .image-list {
+        display: flex;
+        overflow-x: auto;
         -ms-overflow-style: none
     }
-    .image-list::-webkit-scrollbar{
-        display:none;
+
+    .image-list::-webkit-scrollbar {
+        display: none;
     }
 </style>
+
 <body class="bg-[#F7F6F3] overflow-x-hidden">
     <!-- NAV -->
     <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
         <div class="col flex justify-between items-center h-16">
-        <a href="#"><div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div></a>
+            <a href="#">
+                <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div>
+            </a>
             <nav class="flex text-sm font-bold">
                 <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
                 <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
                 <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
                 <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
-                <button class="drawer-toggle p-3 text-xl" onclick="toggleDrawer()"><i class='bx bx-shopping-bag'></i></button>
+                <button class="drawer-toggle p-3 text-xl" onclick="toggleDrawer()"><i
+                        class='bx bx-shopping-bag'></i></button>
             </nav>
             <!-- CART -->
-            <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out" onclick="toggleDrawer()"></div>
-            <div id="drawer" class="fixed top-0 right-[-500px] w-[500px] h-full bg-white  transition-all duration-500 z-10">
+            <div id="overlay"
+                class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out"
+                onclick="toggleDrawer()"></div>
+            <div id="drawer"
+                class="fixed top-0 right-[-500px] w-[500px] h-full bg-white  transition-all duration-500 z-10">
                 <div class="p-5 flex flex-col justify-center items-center ">
-                    <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i class='bx bx-x'></i></button>
+                    <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
+                            class='bx bx-x'></i></button>
                     <h2 class="text-3xl font-semibold mb-2">CART</h2>
                     <p>You're <strong>300.000 VND</strong> away from free shipping!</p>
                     <div id="productContainer" class="relative flex w-full h-[8.25rem] mt-5 border-b-2 border-gray-200">
-                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
+                            class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
                         <div class="flex flex-col mt-3 ml-3">
                             <span class="font-semibold text-xl">Product</span>
                             <span>Color: </span>
                             <span>Size: </span>
-                            <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i class='bx bx-x'></i></button>
-                            <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" class="h-7 w-10"></span> 
+                            <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i
+                                    class='bx bx-x'></i></button>
+                            <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99"
+                                    value="1" class="h-7 w-10"></span>
                             <span class="absolute right-0 bottom-3">90.000 VND</span>
                         </div>
                     </div>
@@ -105,9 +134,9 @@
                     </div>
                 </div>
             </div>
-          <button class="hover:underline underline-offset-4 font-semibold text-lg">Sign in</button>
+            <button class="hover:underline underline-offset-4 font-semibold text-lg">Sign in</button>
         </div>
-    </header> 
+    </header>
     <!-- HEADER -->
     <section class="relative w-full mt-16" style="height: 927px;">
         <div class="absolute w-full h-full overflow-hidden">
@@ -144,11 +173,11 @@
     <!-- PRODUC LIMITED -->
     <section class="w-full flex flex-col items-center h-[40rem] mt-14">
         <span class="font-bold text-3xl">LIMITED IN STOCK</span>
-        <div class="flex justify-between w-[70%] mx-auto">   
+        <div class="flex justify-between w-[70%] mx-auto">
             <div class="mt-16">
                 <div class="w-64 h-40 flex flex-col justify-center items-center mb-20">
                     <span class="text-xl font-semibold mb-2">UPPER</span>
-                    <span class="text-center">Cow print fabric in black and white, 
+                    <span class="text-center">Cow print fabric in black and white,
                         yellow Nike Swoosh with green outline resembling melting ice cream.</span>
                 </div>
                 <div class="w-64 h-40 flex flex-col justify-center items-center">
@@ -161,11 +190,13 @@
                 <div class="w-64 h-40 flex flex-col justify-center items-center mb-20">
                     <span class="text-xl font-semibold mb-2">TONGUE AND LINING</span>
                     <span class="text-center">The tongue features the iconic Ben & Jerry's logo,
-                         while the rainbow-patterned lining reflects the vibrant colors of their ice cream packaging.</span>
+                        while the rainbow-patterned lining reflects the vibrant colors of their ice cream
+                        packaging.</span>
                 </div>
                 <div class="w-64 h-40 flex flex-col justify-center items-center">
                     <span class="text-xl font-semibold mb-2">HEEL</span>
-                    <span class="text-center">White cloud patterns on a blue background, prominent embroidered Nike logo.</span>
+                    <span class="text-center">White cloud patterns on a blue background, prominent embroidered Nike
+                        logo.</span>
                 </div>
             </div>
         </div>
@@ -175,24 +206,17 @@
     <!-- PRODUCT -->
     <section class="py-10 col">
         <span class="font-bold text-3xl mb-5">NEW ARRIVALS</span>
-          <div class="container1 container2 mt-5">
-              <div class="relative ">
-                  <button id="prev-slide" class="w-12 h-12 slide-button material-symbols-rounded hidden absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-white rounded-full z-10">
-                  </button>
-                  <ul class="image-list space-x-4 overflow-hidden">
+        <div class="container1 container2 mt-5">
+            <div class="relative ">
+                <button id="prev-slide"
+                    class="w-12 h-12 slide-button material-symbols-rounded hidden absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-white rounded-full z-10">
+                </button>
+                <ul class="image-list space-x-4 overflow-hidden">
                     <a href="./details.html">
-                       <li class="shadow-lg">
-                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
-                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
-                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
-                                <span class="font-medium ml-2">$29.99</span>
-                            </div>
-                        </li> 
-                    </a>
-                    <a href="">
                         <li class="shadow-lg">
                             <div class="w-[400px] h-[500px] flex flex-col bg-white">
-                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg"
+                                    alt="">
                                 <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
                                 <span class="font-medium ml-2">$29.99</span>
                             </div>
@@ -201,7 +225,8 @@
                     <a href="">
                         <li class="shadow-lg">
                             <div class="w-[400px] h-[500px] flex flex-col bg-white">
-                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg"
+                                    alt="">
                                 <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
                                 <span class="font-medium ml-2">$29.99</span>
                             </div>
@@ -210,7 +235,8 @@
                     <a href="">
                         <li class="shadow-lg">
                             <div class="w-[400px] h-[500px] flex flex-col bg-white">
-                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg"
+                                    alt="">
                                 <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
                                 <span class="font-medium ml-2">$29.99</span>
                             </div>
@@ -219,7 +245,8 @@
                     <a href="">
                         <li class="shadow-lg">
                             <div class="w-[400px] h-[500px] flex flex-col bg-white">
-                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg"
+                                    alt="">
                                 <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
                                 <span class="font-medium ml-2">$29.99</span>
                             </div>
@@ -228,7 +255,8 @@
                     <a href="">
                         <li class="shadow-lg">
                             <div class="w-[400px] h-[500px] flex flex-col bg-white">
-                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg"
+                                    alt="">
                                 <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
                                 <span class="font-medium ml-2">$29.99</span>
                             </div>
@@ -237,7 +265,8 @@
                     <a href="">
                         <li class="shadow-lg">
                             <div class="w-[400px] h-[500px] flex flex-col bg-white">
-                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg"
+                                    alt="">
                                 <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
                                 <span class="font-medium ml-2">$29.99</span>
                             </div>
@@ -246,7 +275,8 @@
                     <a href="">
                         <li class="shadow-lg">
                             <div class="w-[400px] h-[500px] flex flex-col bg-white">
-                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg"
+                                    alt="">
                                 <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
                                 <span class="font-medium ml-2">$29.99</span>
                             </div>
@@ -255,7 +285,8 @@
                     <a href="">
                         <li class="shadow-lg">
                             <div class="w-[400px] h-[500px] flex flex-col bg-white">
-                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg"
+                                    alt="">
                                 <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
                                 <span class="font-medium ml-2">$29.99</span>
                             </div>
@@ -264,24 +295,36 @@
                     <a href="">
                         <li class="shadow-lg">
                             <div class="w-[400px] h-[500px] flex flex-col bg-white">
-                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg"
+                                    alt="">
                                 <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
                                 <span class="font-medium ml-2">$29.99</span>
                             </div>
                         </li>
                     </a>
-                  </ul>
-                  <button id="next-slide" class="w-12 h-12 slide-button material-symbols-rounded absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-white rounded-full z-10">
-                      >
-                  </button>
-              </div>
-              <div class="mt-4 h-6 relative">
-                  <div class="absolute inset-0  rounded-full flex items-center">
-                      <div class="scrollbar-thumb h-full rounded-full w-1/2"></div>
-                  </div>
-              </div>
-          </div>
-        </section>
+                    <a href="">
+                        <li class="shadow-lg">
+                            <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg"
+                                    alt="">
+                                <span class="font-bold text-xl m-2">Air Jordan 1 Low Guava Ice</span>
+                                <span class="font-medium ml-2">$29.99</span>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+                <button id="next-slide"
+                    class="w-12 h-12 slide-button material-symbols-rounded absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-white rounded-full z-10">
+                    >
+                </button>
+            </div>
+            <div class="mt-4 h-6 relative">
+                <div class="absolute inset-0  rounded-full flex items-center">
+                    <div class="scrollbar-thumb h-full rounded-full w-1/2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Women, Man -->
     <div class="relative w-full h-[800px]">
         <div class="absolute flex w-full h-full bg-cover">
@@ -291,7 +334,8 @@
         <div class="absolute inset-0 bg-black opacity-20"></div>
         <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-4">
             <h1 class="text-5xl font-bold">GET TRAVEL READY</h1>
-            <p class="text-center text-lg">Versatile style plus packable design equals <br> shoes that are always good to go.</p>
+            <p class="text-center text-lg">Versatile style plus packable design equals <br> shoes that are always good
+                to go.</p>
             <div class="absolute bottom-20 flex justify-between w-[250px]">
                 <div class="text-2xl underline underline-offset-4">
                     <a href="">WOMEN</a>
@@ -310,18 +354,21 @@
                 <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
                     <img src="./asset/img/homepage/People2.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
                     <span class="mt-4 ml-4 text-lg font-semibold">Stephen Curry</span>
-                    <span class="mt-4 ml-4">Nike's products truly impress me with their quality and unique design. Will definitely continue to support!</span>
+                    <span class="mt-4 ml-4">Nike's products truly impress me with their quality and unique design. Will
+                        definitely continue to support!</span>
                 </div>
                 <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
                     <img src="./asset/img/homepage/People1.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
                     <span class="mt-4 ml-4 text-lg font-semibold">Emily Johnson</span>
-                    <span class="mt-4 ml-4">Nike's customer service is excellent. Friendly and helpful staff assisted me in finding the perfect pair of shoes.</span>
+                    <span class="mt-4 ml-4">Nike's customer service is excellent. Friendly and helpful staff assisted me
+                        in finding the perfect pair of shoes.</span>
                 </div>
                 <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
                     <img src="./asset/img/homepage/People3.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
                     <span class="mt-4 ml-4 text-lg font-semibold">Alex Parker</span>
-                    <span class="mt-4 ml-4">Every time I purchase Nike shoes, it's a fantastic experience. 
-                        The products are not only stylish but also incredibly comfortable, suitable for all activities.</span>
+                    <span class="mt-4 ml-4">Every time I purchase Nike shoes, it's a fantastic experience.
+                        The products are not only stylish but also incredibly comfortable, suitable for all
+                        activities.</span>
                 </div>
             </div>
         </div>
@@ -333,85 +380,90 @@
         <span class="mb-10">innovations, and lots of other fun updates</span>
         <div class="mb-5">
             <form action="/action_page.php">
-                <input type="email" value="" required class="w-96 p-2 h-12 rounded-[4px] border-black border-b-2 bg-gray-50" placeholder="Enter Your Email Address">
-                <input type="submit" value="Subscribe" class="h-12 px-5 ml-2 rounded-[4px] bg-black text-white font-semibold cursor-pointer hover:opacity-60 transition ease-out delay-50">
+                <input type="email" value="" required
+                    class="w-96 p-2 h-12 rounded-[4px] border-black border-b-2 bg-gray-50"
+                    placeholder="Enter Your Email Address">
+                <input type="submit" value="Subscribe"
+                    class="h-12 px-5 ml-2 rounded-[4px] bg-black text-white font-semibold cursor-pointer hover:opacity-60 transition ease-out delay-50">
             </form>
         </div>
-        <span class="text-sm">Note: You can opt-out at any time. See our <strong>Privacy Policy</strong> and <strong>Terms.</strong></span>
+        <span class="text-sm">Note: You can opt-out at any time. See our <strong>Privacy Policy</strong> and
+            <strong>Terms.</strong></span>
     </div>
     <!-- FOOTER -->
     <footer class="w-full h-96 bg-black">
         <div class="col flex h-[332px]">
-          <div class="w-2/4 mt-10">
-            <img src="./asset/img/LogoFooter.png" alt="" class="w-28 h-28">
-            <ul class="text-[#CFCFCF] space-y-0 mt-1">
-              <li><a href="">158A Le loi, Thanh Khe, Da Nang</a></li>
-              <li><a href="">Company: TienTuyenShoes</a></li>
-              <li><a href="">Tel: + 84 24 3767 4686</a></li>
-              <li><a href="">Email: TienTuyenShoes@vnuk.edu.vn</a></li>
-              <li><a href="">Slogan: 22090003 To VNUK all Top – The world beneath<br>your feet will be a success every step 08/06/2024</a></li>
-            </ul>
-          </div>
-          <div class="w-[15%] px-4 mt-10">
-            <span class="font-semibold text-white">About Us</span>
-            <ul class="text-[#CFCFCF] space-y-2 mt-4">
-              <li><a href="" class="hover:text-white">Contact</a></li>
-              <li><a href="" class="hover:text-white">FAQs</a></li>
-              <li><a href="" class="hover:text-white">Support</a></li>
-              <li><a href="" class="hover:text-white">Blog</a></li>
-              <li><a href="" class="hover:text-white">Team</a></li>
-            </ul>
-          </div>
-          <div class="w-[15%] px-4 mt-10">
-            <span class="font-semibold text-white">Services</span>
-            <ul class="text-[#CFCFCF] space-y-2 mt-4">
-              <li><a href="" class="hover:text-white">Pricing</a></li>
-              <li><a href="" class="hover:text-white">Features</a></li>
-              <li><a href="" class="hover:text-white">Demo</a></li>
-              <li><a href="" class="hover:text-white">Get Started</a></li>
-              <li><a href="" class="hover:text-white">Sign Up</a></li>
-              <li><a href="" class="hover:text-white">Tutorials</a></li>
-              <li><a href="" class="hover:text-white">Forum</a></li>
-            </ul>
-          </div>
-          <div class="w-[15%] px-4 mt-10">
-            <span class="font-semibold text-white">Resources</span>
-            <ul class="text-[#CFCFCF] space-y-2 mt-4">
-              <li><a href="" class="hover:text-white">Documentation</a></li>
-              <li><a href="" class="hover:text-white">Support Center</a></li>
-              <li><a href="" class="hover:text-white">Community</a></li>
-            </ul>
-          </div>
-          <div class="w-[15%] px-4 mt-10">
-            <span class="font-semibold text-white">Get Help</span>
-            <ul class="text-[#CFCFCF] space-y-2 mt-4">
-              <li><a href="" class="hover:text-white">Help Center</a></li>
-              <li><a href="" class="hover:text-white">Contact Us</a></li>
-              <li><a href="" class="hover:text-white">Privacy Policy</a></li>
-              <li><a href="" class="hover:text-white">Terms</a></li>
-            </ul>
-          </div>
+            <div class="w-2/4 mt-10">
+                <img src="./asset/img/LogoFooter.png" alt="" class="w-28 h-28">
+                <ul class="text-[#CFCFCF] space-y-0 mt-1">
+                    <li><a href="">158A Le loi, Thanh Khe, Da Nang</a></li>
+                    <li><a href="">Company: TienTuyenShoes</a></li>
+                    <li><a href="">Tel: + 84 24 3767 4686</a></li>
+                    <li><a href="">Email: TienTuyenShoes@vnuk.edu.vn</a></li>
+                    <li><a href="">Slogan: 22090003 To VNUK all Top – The world beneath<br>your feet will be a success
+                            every step 08/06/2024</a></li>
+                </ul>
+            </div>
+            <div class="w-[15%] px-4 mt-10">
+                <span class="font-semibold text-white">About Us</span>
+                <ul class="text-[#CFCFCF] space-y-2 mt-4">
+                    <li><a href="" class="hover:text-white">Contact</a></li>
+                    <li><a href="" class="hover:text-white">FAQs</a></li>
+                    <li><a href="" class="hover:text-white">Support</a></li>
+                    <li><a href="" class="hover:text-white">Blog</a></li>
+                    <li><a href="" class="hover:text-white">Team</a></li>
+                </ul>
+            </div>
+            <div class="w-[15%] px-4 mt-10">
+                <span class="font-semibold text-white">Services</span>
+                <ul class="text-[#CFCFCF] space-y-2 mt-4">
+                    <li><a href="" class="hover:text-white">Pricing</a></li>
+                    <li><a href="" class="hover:text-white">Features</a></li>
+                    <li><a href="" class="hover:text-white">Demo</a></li>
+                    <li><a href="" class="hover:text-white">Get Started</a></li>
+                    <li><a href="" class="hover:text-white">Sign Up</a></li>
+                    <li><a href="" class="hover:text-white">Tutorials</a></li>
+                    <li><a href="" class="hover:text-white">Forum</a></li>
+                </ul>
+            </div>
+            <div class="w-[15%] px-4 mt-10">
+                <span class="font-semibold text-white">Resources</span>
+                <ul class="text-[#CFCFCF] space-y-2 mt-4">
+                    <li><a href="" class="hover:text-white">Documentation</a></li>
+                    <li><a href="" class="hover:text-white">Support Center</a></li>
+                    <li><a href="" class="hover:text-white">Community</a></li>
+                </ul>
+            </div>
+            <div class="w-[15%] px-4 mt-10">
+                <span class="font-semibold text-white">Get Help</span>
+                <ul class="text-[#CFCFCF] space-y-2 mt-4">
+                    <li><a href="" class="hover:text-white">Help Center</a></li>
+                    <li><a href="" class="hover:text-white">Contact Us</a></li>
+                    <li><a href="" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="" class="hover:text-white">Terms</a></li>
+                </ul>
+            </div>
         </div>
         <div class="col border-b-[0.1px] bg-[#C6C6C6] opacity-50"></div>
         <div class="col flex justify-between mt-2">
-          <div class="text-[#C6C6C6] space-x-4 opacity-40">
-            <span class=""><i class='bx bx-copyright'></i>2024 SellShoes. All rights reserved</span>
-            <span class="underline"><a href="">Privacy Policy</a></span>
-            <span class="underline"><a href="">Terms and Conditions</a></span>
-            <span class="underline"><a href="">Cookies Policy</a></span>
-          </div>
-          <div class="text-[#C6C6C6] text-3xl space-x-3 opacity-50">
-            <a href=""><i class='bx bxl-facebook-circle'></i></a>
-            <a href=""><i class='bx bxl-instagram' ></i></a>
-            <a href=""><i class='bx bxl-twitter' ></i></a>
-            <a href=""><i class='bx bxl-linkedin-square' ></i></a>
-          </div>
+            <div class="text-[#C6C6C6] space-x-4 opacity-40">
+                <span class=""><i class='bx bx-copyright'></i>2024 SellShoes. All rights reserved</span>
+                <span class="underline"><a href="">Privacy Policy</a></span>
+                <span class="underline"><a href="">Terms and Conditions</a></span>
+                <span class="underline"><a href="">Cookies Policy</a></span>
+            </div>
+            <div class="text-[#C6C6C6] text-3xl space-x-3 opacity-50">
+                <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+                <a href=""><i class='bx bxl-linkedin-square'></i></a>
+            </div>
         </div>
     </footer>
 </body>
-    <!-- Slide bar -->
-    <script>
-        const initSlider = () => {
+<!-- Slide bar -->
+<script>
+    const initSlider = () => {
         const imageList = document.querySelector(".image-list");
         const slideButtons = document.querySelectorAll(".slide-button");
         const sliderScrollbar = document.querySelector(".container1 .relative > div");
@@ -419,28 +471,28 @@
         const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
         let startX = 0;
         let thumbPosition = 0;
-    
+
         scrollbarThumb.addEventListener("dragstart", (e) => {
             startX = e.clientX;
             thumbPosition = scrollbarThumb.offsetLeft;
         });
-    
+
         scrollbarThumb.addEventListener("drag", (e) => {
             const deltaX = e.clientX - startX;
             const newThumbPosition = thumbPosition + deltaX;
             const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
             const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
             const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-    
+
             scrollbarThumb.style.left = `${boundedPosition}px`;
             imageList.scrollLeft = scrollPosition;
         });
-    
+
         scrollbarThumb.addEventListener("dragend", () => {
             startX = 0;
             thumbPosition = 0;
         });
-    
+
         slideButtons.forEach((button) => {
             button.addEventListener("click", () => {
                 const direction = button.id === "prev-slide" ? -1 : 1;
@@ -448,48 +500,49 @@
                 imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
             });
         });
-    
+
         const handleSlideButtons = () => {
             slideButtons[0].classList.toggle("hidden", imageList.scrollLeft <= 0);
             slideButtons[1].classList.toggle("hidden", imageList.scrollLeft >= maxScrollLeft);
         };
-    
+
         const updateScrollThumbPosition = () => {
             const scrollPosition = imageList.scrollLeft;
             const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
             scrollbarThumb.style.left = `${thumbPosition}px`;
         };
-    
+
         imageList.addEventListener("scroll", () => {
             updateScrollThumbPosition();
             handleSlideButtons();
         });
-    
+
         handleSlideButtons();
-        };
-    
-        window.addEventListener("resize", initSlider);
-        window.addEventListener("load", initSlider);
-    
-    </script>
-    <!-- CART -->
-    <script>
-        function toggleDrawer() {
-            const drawer = document.getElementById('drawer');
-            const overlay = document.getElementById('overlay');
-            drawer.classList.toggle('right-0');
-            drawer.classList.toggle('right-[-500px]');
-            overlay.classList.toggle('hidden');
-            overlay.classList.toggle('opacity-0');
-            overlay.classList.toggle('opacity-100');
-        }
-    </script>
-    <!-- REMOVE PRODUCT FROM CART -->
-    <script>
-        var deleteButton = document.getElementById('deleteProductBtn');
-        deleteButton.addEventListener('click', function() {
+    };
+
+    window.addEventListener("resize", initSlider);
+    window.addEventListener("load", initSlider);
+
+</script>
+<!-- CART -->
+<script>
+    function toggleDrawer() {
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('overlay');
+        drawer.classList.toggle('right-0');
+        drawer.classList.toggle('right-[-500px]');
+        overlay.classList.toggle('hidden');
+        overlay.classList.toggle('opacity-0');
+        overlay.classList.toggle('opacity-100');
+    }
+</script>
+<!-- REMOVE PRODUCT FROM CART -->
+<script>
+    var deleteButton = document.getElementById('deleteProductBtn');
+    deleteButton.addEventListener('click', function () {
         var productContainer = document.getElementById('productContainer');
         productContainer.remove();
     });
-    </script>
+</script>
+
 </html>
