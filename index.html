@@ -86,7 +86,7 @@
             <a href="#">
                 <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div>
             </a>
-            <nav class="flex text-sm font-bold">
+            <nav class="flex text-sm font-bold max-sm:hidden">
                 <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
                 <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
                 <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
@@ -100,7 +100,7 @@
                 onclick="toggleDrawer()"></div>
             <div id="drawer"
                 class="fixed top-0 right-[-500px] w-[500px] h-full bg-white  transition-all duration-500 z-10">
-                <div class="p-5 flex flex-col justify-center items-center ">
+                <div class="p-5 flex flex-col justify-center items-center max-sm:hidden">
                     <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
                             class='bx bx-x'></i></button>
                     <h2 class="text-3xl font-semibold mb-2">CART</h2>
@@ -133,8 +133,22 @@
                         <button class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button>
                     </div>
                 </div>
+                <!-- Responsive Navbar mobile -->
+                <div class="p-5 flex flex-col justify-center items-center">
+                    <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
+                            class='bx bx-x'></i></button>
+                    <nav class="flex text-sm font-bold xl:hidden max-sm:flex-col max-sm:text-center max-sm:space-y-3 max-sm:text-xl">
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">HOME</a>
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+                        <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+                    </nav>
+                </div>
             </div>
-            <button class="hover:underline underline-offset-4 font-semibold text-lg">Sign in</button>
+            <button class="hover:underline underline-offset-4 font-semibold text-lg max-sm:hidden">Sign in</button>
+            <!-- Menu Mobile -->
+            <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
         </div>
     </header>
     <!-- HEADER -->
@@ -142,23 +156,23 @@
         <div class="absolute w-full h-full overflow-hidden">
             <div id="wrapper" class="w-full h-full">
                 <div class="flex w-full h-full">
-                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2 object-cover">
-                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2 object-cover max-lg:object-cover max-xl:object-cover max-sm:w-full">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2 max-lg:object-cover max-xl:object-cover max-sm:hidden">
                 </div>
                 <div class="flex w-full h-full">
-                    <img src="./asset/img/homepage/NikeXanh1.jpg" alt="" class="w-1/2">
-                    <img src="./asset/img/homepage/NikeXanh2.jpg" alt="" class="w-1/2">
+                    <img src="./asset/img/homepage/NikeXanh1.jpg" alt="" class="w-1/2 max-lg:object-cover max-xl:object-cover max-sm:w-full">
+                    <img src="./asset/img/homepage/NikeXanh2.jpg" alt="" class="w-1/2 max-lg:object-cover max-xl:object-cover max-sm:hidden">
                 </div>
                 <div class="flex w-full h-full">
-                    <img src="./asset/img/homepage/NikeTrang.avif" alt="" class="w-1/2 object-cover">
-                    <img src="./asset/img/homepage/NikeTrang2.avif" alt="" class="w-1/2 object-cover">
+                    <img src="./asset/img/homepage/NikeTrang.avif" alt="" class="w-1/2 object-cover max-lg:object-cover max-sm:w-full">
+                    <img src="./asset/img/homepage/NikeTrang2.avif" alt="" class="w-1/2 object-cover max-lg:object-cover max-sm:hidden">
                 </div>
             </div>
         </div>
         <div class="absolute inset-0 bg-black opacity-15"></div>
         <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-4">
             <p class="text-2xl font-medium">TTS</p>
-            <h1 class="text-3xl font-bold">UNLEASH YOUR POTENTIAL WITH EVERY STEP</h1>
+            <h1 class="text-3xl font-bold max-sm:text-xl">UNLEASH YOUR POTENTIAL WITH EVERY STEP</h1>
             <p class="w-3/5 text-xl">Every world is on your feet</p>
             <div class="absolute bottom-20 flex justify-between w-[250px]">
                 <div class="text-2xl underline underline-offset-4">
@@ -173,8 +187,8 @@
     <!-- PRODUC LIMITED -->
     <section class="w-full flex flex-col items-center h-[40rem] mt-14">
         <span class="font-bold text-3xl">LIMITED IN STOCK</span>
-        <div class="flex justify-between w-[70%] mx-auto">
-            <div class="mt-16">
+        <div class="flex justify-between w-[70%] mx-auto max-lg:w-full max-xl:w-[90%]">
+            <div class="mt-16 max-sm:hidden">
                 <div class="w-64 h-40 flex flex-col justify-center items-center mb-20">
                     <span class="text-xl font-semibold mb-2">UPPER</span>
                     <span class="text-center">Cow print fabric in black and white,
@@ -185,8 +199,8 @@
                     <span class="text-center">White midsole, green outsole for added traction and durability.</span>
                 </div>
             </div>
-            <img src="./asset/img/homepage/ShoesLIMITED.png" alt="" class="w-[35rem] h-[25rem]">
-            <div class="mt-16">
+            <img src="./asset/img/homepage/ShoesLIMITED.png" alt="" class="w-[35rem] h-[25rem] max-lg:w-[31rem] max-sm:ml-14">
+            <div class="mt-16 max-sm:hidden">
                 <div class="w-64 h-40 flex flex-col justify-center items-center mb-20">
                     <span class="text-xl font-semibold mb-2">TONGUE AND LINING</span>
                     <span class="text-center">The tongue features the iconic Ben & Jerry's logo,
@@ -328,8 +342,8 @@
     <!-- Women, Man -->
     <div class="relative w-full h-[800px]">
         <div class="absolute flex w-full h-full bg-cover">
-            <img src="./asset/img/homepage/Women.jpg" alt="" class="w-1/2 object-cover">
-            <img src="./asset/img/homepage/Men.jpg" alt="" class="w-1/2 object-cover">
+            <img src="./asset/img/homepage/Women.jpg" alt="" class="w-1/2 object-cover max-sm:hidden">
+            <img src="./asset/img/homepage/Men.jpg" alt="" class="w-1/2 object-cover max-sm:w-full">
         </div>
         <div class="absolute inset-0 bg-black opacity-20"></div>
         <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-4">
@@ -347,23 +361,23 @@
         </div>
     </div>
     <!-- FEEBACK -->
-    <section class="col h-[30rem]">
+    <section class="col h-[30rem] max-sm:h-[65rem]">
         <div class="flex flex-col items-center mt-9">
             <span class="text-center text-3xl font-semibold">WHAT OUR CUSTOMERS SAYS</span>
-            <div class="flex space-x-6 mt-5">
-                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
+            <div class="flex space-x-6 mt-5 max-sm:flex-col max-sm:space-x-0">
+                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg max-lg:w-[19rem]">
                     <img src="./asset/img/homepage/People2.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
                     <span class="mt-4 ml-4 text-lg font-semibold">Stephen Curry</span>
                     <span class="mt-4 ml-4">Nike's products truly impress me with their quality and unique design. Will
                         definitely continue to support!</span>
                 </div>
-                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
+                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg max-lg:w-[19rem]">
                     <img src="./asset/img/homepage/People1.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
                     <span class="mt-4 ml-4 text-lg font-semibold">Emily Johnson</span>
                     <span class="mt-4 ml-4">Nike's customer service is excellent. Friendly and helpful staff assisted me
                         in finding the perfect pair of shoes.</span>
                 </div>
-                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
+                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg max-lg:w-[19rem]">
                     <img src="./asset/img/homepage/People3.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
                     <span class="mt-4 ml-4 text-lg font-semibold">Alex Parker</span>
                     <span class="mt-4 ml-4">Every time I purchase Nike shoes, it's a fantastic experience.
@@ -376,7 +390,7 @@
     <!-- Email -->
     <div class="w-full h-[40vh] flex flex-col justify-center items-center bg-white">
         <span class="font-bold text-3xl mb-8">Want First Dibs?</span>
-        <span>Join our email list and be the first to know about new limited edition products, material </span>
+        <span class="max-sm:text-center">Join our email list and be the first to know about new limited edition products, material </span>
         <span class="mb-10">innovations, and lots of other fun updates</span>
         <div class="mb-5">
             <form action="/action_page.php">
@@ -391,9 +405,9 @@
             <strong>Terms.</strong></span>
     </div>
     <!-- FOOTER -->
-    <footer class="w-full h-96 bg-black">
-        <div class="col flex h-[332px]">
-            <div class="w-2/4 mt-10">
+    <footer class="w-full h-96 bg-black max-sm:h-[85rem]">
+        <div class="col flex h-[332px] max-sm:flex-col max-sm:items-center max-sm:justify-start">
+            <div class="w-2/4 mt-10 max-sm:flex max-sm:flex-col max-sm:items-center">
                 <img src="./asset/img/LogoFooter.png" alt="" class="w-28 h-28">
                 <ul class="text-[#CFCFCF] space-y-0 mt-1">
                     <li><a href="">158A Le loi, Thanh Khe, Da Nang</a></li>
@@ -404,7 +418,7 @@
                             every step 08/06/2024</a></li>
                 </ul>
             </div>
-            <div class="w-[15%] px-4 mt-10">
+            <div class="w-[15%] px-4 mt-10 max-sm:w-[20%]">
                 <span class="font-semibold text-white">About Us</span>
                 <ul class="text-[#CFCFCF] space-y-2 mt-4">
                     <li><a href="" class="hover:text-white">Contact</a></li>
@@ -414,7 +428,7 @@
                     <li><a href="" class="hover:text-white">Team</a></li>
                 </ul>
             </div>
-            <div class="w-[15%] px-4 mt-10">
+            <div class="w-[15%] px-4 mt-10 max-sm:w-[20%]">
                 <span class="font-semibold text-white">Services</span>
                 <ul class="text-[#CFCFCF] space-y-2 mt-4">
                     <li><a href="" class="hover:text-white">Pricing</a></li>
@@ -426,7 +440,7 @@
                     <li><a href="" class="hover:text-white">Forum</a></li>
                 </ul>
             </div>
-            <div class="w-[15%] px-4 mt-10">
+            <div class="w-[15%] px-4 mt-10 max-sm:w-[20%]">
                 <span class="font-semibold text-white">Resources</span>
                 <ul class="text-[#CFCFCF] space-y-2 mt-4">
                     <li><a href="" class="hover:text-white">Documentation</a></li>
@@ -434,7 +448,7 @@
                     <li><a href="" class="hover:text-white">Community</a></li>
                 </ul>
             </div>
-            <div class="w-[15%] px-4 mt-10">
+            <div class="w-[15%] px-4 mt-10 max-sm:w-[20%]">
                 <span class="font-semibold text-white">Get Help</span>
                 <ul class="text-[#CFCFCF] space-y-2 mt-4">
                     <li><a href="" class="hover:text-white">Help Center</a></li>
@@ -444,8 +458,8 @@
                 </ul>
             </div>
         </div>
-        <div class="col border-b-[0.1px] bg-[#C6C6C6] opacity-50"></div>
-        <div class="col flex justify-between mt-2">
+        <div class="col border-b-[0.1px] bg-[#C6C6C6] opacity-50 max-sm:hidden"></div>
+        <div class="col flex justify-between mt-2 max-sm:hidden">
             <div class="text-[#C6C6C6] space-x-4 opacity-40">
                 <span class=""><i class='bx bx-copyright'></i>2024 SellShoes. All rights reserved</span>
                 <span class="underline"><a href="">Privacy Policy</a></span>
