@@ -20,8 +20,4 @@ Our project utilizes advanced technologies to ensure optimal performance and use
 
 1. [wireframe](./wireframe/README.md)
 2. [planning](./planning/README.md)
-<<<<<<< HEAD
 3. [mockup](./mockup/)
-=======
-3. [mockup](./mockup/)
->>>>>>> 932b569 (update README.md)
