@@ -195,212 +195,315 @@
 </style>
 
 <body class="bg-[#F7F6F3] overflow-x-hidden">
+  <!-- NAV -->
   <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
-    <div class="col flex justify-between items-center h-16">
-    <a href="./index.html"><div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div></a>
-        <nav class="flex text-sm font-bold">
-            <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
-            <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
-            <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
-            <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
-            <button class="drawer-toggle p-3 text-xl" onclick="toggleDrawer()"><i class='bx bx-shopping-bag'></i></button>
-        </nav>
-        <!-- CART -->
-        <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out" onclick="toggleDrawer()"></div>
-        <div id="drawer" class="fixed top-0 right-[-500px] w-[500px] h-full bg-white  transition-all duration-500 z-10">
-            <div class="p-5 flex flex-col justify-center items-center ">
-                <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i class='bx bx-x'></i></button>
-                <h2 class="text-3xl font-semibold mb-2">CART</h2>
-                <p>You're <strong>300.000 VND</strong> away from free shipping!</p>
-                <div id="productContainer" class="relative flex w-full h-[8.25rem] mt-5 border-b-2 border-gray-200">
-                    <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
-                    <div class="flex flex-col mt-3 ml-3">
-                        <span class="font-semibold text-xl">Product</span>
-                        <span>Color: </span>
-                        <span>Size: </span>
-                        <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i class='bx bx-x'></i></button>
-                        <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" class="h-7 w-10"></span> 
-                        <span class="absolute right-0 bottom-3">90.000 VND</span>
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 right-0">
-                    <div class="flex flex-col justify-between items-center border-t border-gray-300 p-5">
-                        <div class="flex justify-between w-full">
-                            <span class="text-lg font-semibold">Total</span>
-                            <span class="text-lg">90.000 VND</span>
-                        </div>
-                        <div class="flex justify-between w-full">
-                            <span class="text-lg font-semibold">Shipping</span>
-                            <span class="text-lg">FREE</span>
-                        </div>
-                    </div>
-                    <button class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button>
-                </div>
-            </div>
-        </div>
-      <button class="hover:underline underline-offset-4 font-semibold text-lg">Sign in</button>
-    </div>
-</header>
+      <div class="col flex justify-between items-center h-16">
+          <a href="#">
+              <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div>
+          </a>
+          <nav class="flex text-sm font-bold">
+              <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+              <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+              <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+              <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+              <button class="drawer-toggle p-3 text-xl" onclick="toggleDrawer()"><i
+                      class='bx bx-shopping-bag'></i></button>
+          </nav>
+          <!-- CART -->
+          <div id="overlay"
+              class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out"
+              onclick="toggleDrawer()"></div>
+          <div id="drawer"
+              class="fixed top-0 right-[-500px] w-[500px] h-full bg-white  transition-all duration-500 z-10">
+              <div class="p-5 flex flex-col justify-center items-center ">
+                  <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
+                          class='bx bx-x'></i></button>
+                  <h2 class="text-3xl font-semibold mb-2">CART</h2>
+                  <p>You're <strong>300.000 VND</strong> away from free shipping!</p>
+                  <div id="productContainer" class="relative flex w-full h-[8.25rem] mt-5 border-b-2 border-gray-200">
+                      <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
+                          class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
+                      <div class="flex flex-col mt-3 ml-3">
+                          <span class="font-semibold text-xl">Product</span>
+                          <span>Color: </span>
+                          <span>Size: </span>
+                          <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i
+                                  class='bx bx-x'></i></button>
+                          <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99"
+                                  value="1" class="h-7 w-10"></span>
+                          <span class="absolute right-0 bottom-3">90.000 VND</span>
+                      </div>
+                  </div>
+                  <div class="absolute bottom-0 left-0 right-0">
+                      <div class="flex flex-col justify-between items-center border-t border-gray-300 p-5">
+                          <div class="flex justify-between w-full">
+                              <span class="text-lg font-semibold">Total</span>
+                              <span class="text-lg">90.000 VND</span>
+                          </div>
+                          <div class="flex justify-between w-full">
+                              <span class="text-lg font-semibold">Shipping</span>
+                              <span class="text-lg">FREE</span>
+                          </div>
+                      </div>
+                      <button class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button>
+                  </div>
+              </div>
+          </div>
+          <button class="hover:underline underline-offset-4 font-semibold text-lg">Sign in</button>
+      </div>
+  </header>
   <main>
-    <div class="w-full h-auto flex justify-center mt-36">
-      <div class="flex justify-center md:flex md:justify-center max-w-[1200px] ml-6">
-        <div class="flex gap-4 pl-12 ml-2">
-          <div class="flex flex-col flex-grow min-w-[60px] max-w-[60px] h-fulls gap-2">
-            <div class="w-[80px] h-[80px]">
-              <label for="" class="w-full h-full"><img class="w-full h-full rounded"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
-                  alt="Air Jordan 1" /></label>
-            </div>
-            <div class="w-[80px] h-[80px]">
-              <label for="" class="w-full h-full"><img class="w-full h-full rounded"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png"
-                  alt="Air Jordan 1" /></label>
-            </div>
-            <div class="w-[80px] h-[80px]">
-              <label for="" class="w-full h-full"><img class="w-full h-full rounded"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png"
-                  alt="Air Jordan 1" /></label>
-            </div>
-            <div class="w-[80px] h-[80px]">
-              <label for="" class="w-full h-full"><img class="w-full h-full rounded"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png"
-                  alt="" /></label>
-            </div>
-            <div class="w-[80px] h-[80px]">
-              <label for="" class="w-full h-full"><img class="w-full h-full rounded"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png"
-                  alt="" /></label>
-            </div>
+    <div class="container">
+      <div class="product-display">
+        <div class="product-images">
+          <div class="thumbnail">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png" alt="Air Jordan 1" />
           </div>
-          <div class="w-[535px] max-w-[535px] h-[620px] ml-5">
-            <img
-              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
-              alt="" class="rounded w-[535px] h-[620px] object-cover" />
+          <div class="thumbnail">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png" alt="Air Jordan 1" />
+          </div>
+          <div class="thumbnail">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png" alt="Air Jordan 1" />
+          </div>
+          <div class="thumbnail">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png" alt="" />
           </div>
         </div>
-  
-        <div class="w-[455px] ml-16">
-          <div class="h-full pt-1 pr-12 pb-3 pl-6 w-full">
-            <div class="py-2 text-xl">
-              <i class="bx bxs-star text-yellow-400"></i>
-              <i class="bx bxs-star text-yellow-400"></i>
-              <i class="bx bxs-star text-yellow-400"></i>
-              <i class="bx bxs-star text-yellow-400"></i>
-              <i class="bx bxs-star-half text-yellow-400"></i>
-            </div>
-            <h1 class="text-4xl font-bold">Air Jordan 1 Low</h1>
-            <div>
-              <h3 class="my-3">
-                <strong class="text-lg">Price</strong><br />
-                100.000.000 VND
-              </h3>
-            </div>
-            <hr class="my-2" />
-            <div>
-              <h3 class="mb-2"><strong class="text-base">Color</strong></h3>
-              <div class="flex space-x-2 ">
-                <label for="" class="w-[30px] h-[30px] bg-red-500 cursor-pointer focus:border-5 border-black"></label>
-                <label for="" class="w-[30px] h-[30px] bg-blue-300 cursor-pointer"></label>
-                <label for="" class="w-[30px] h-[30px] bg-gray-300 cursor-pointer"></label>
-                <label for="" class="w-[30px] h-[30px] bg-orange-500 cursor-pointer"></label>
-              </div>
-            </div>
-            <div class="mt-4">
-              <h3 class="mb-3"><strong class="text-sm">Select size:</strong></h3>
-              <div class="w-full mx-auto">
-                <div class="flex flex-wrap mb-3 gap-2">
-                  <label for="size37.5" class="flex cursor-pointer ">
-                    <input type="radio" name="size-selected" id="size37.5" class="peer sr-only">
-                    <div class="w-20 h-10 border-2 border-solid rounded hover:border-black peer-checked:border-black">
-                      <div class="flex w-full h-full justify-center items-center">
-                        <span>37.5</span>
-                      </div>
-                    </div>
-                  </label>
-                  <label for="size38" class="flex cursor-pointer ">
-                    <input type="radio" name="size-selected" id="size38" class="peer sr-only">
-                    <div class="w-20 h-10 border-2 border-solid rounded hover:border-black peer-checked:border-black">
-                      <div class="flex w-full h-full justify-center items-center">
-                        <span>38</span>
-                      </div>
-                    </div>
-                  </label>
-                  <label for="size38.5" class="flex cursor-pointer ">
-                    <input type="radio" name="size-selected" id="size38.5" class="peer sr-only">
-                    <div class="w-20 h-10 border-2 border-solid rounded hover:border-black peer-checked:border-black">
-                      <div class="flex w-full h-full justify-center items-center">
-                        <span>38.5</span>
-                      </div>
-                    </div>
-                  </label>
-                  <label for="size39" class="flex cursor-pointer ">
-                    <input type="radio" name="size-selected" id="size39" class="peer sr-only">
-                    <div class="w-20 h-10 border-2 border-solid rounded hover:border-black peer-checked:border-black">
-                      <div class="flex w-full h-full justify-center items-center">
-                        <span>39</span>
-                      </div>
-                    </div>
-                  </label>
-                  <label for="size40" class="flex cursor-pointer">
-                    <input type="radio" name="size-selected" id="size40" class="peer sr-only">
-                    <div class="w-20 h-10 border-2 border-solid rounded hover:border-black peer-checked:border-black">
-                      <div class="flex w-full h-full justify-center items-center">
-                        <span>40</span>
-                      </div>
-                    </div>
-                  </label>
-                  <label for="size40.5" class="flex cursor-pointer">
-                    <input type="radio" name="size-selected" id="size40.5" class="peer sr-only">
-                    <div class="w-20 h-10 border-2 border-solid rounded hover:border-black peer-checked:border-black">
-                      <div class="flex w-full h-full justify-center items-center">
-                        <span>40.5</span>
-                      </div>
-                    </div>
-                  </label>
-                  <label for="size41" class="flex cursor-pointer">
-                    <input type="radio" name="size-selected" id="size41" class="peer sr-only">
-                    <div class="w-20 h-10 border-2 border-solid rounded hover:border-black peer-checked:border-black">
-                      <div class="flex w-full h-full justify-center items-center">
-                        <span>41</span>
-                      </div>
-                    </div>
-                  </label>
-                  <label for="size42" class="flex cursor-pointer">
-                    <input type="radio" name="size-selected" id="size42" class="peer sr-only">
-                    <div class="w-20 h-10 border-2 border-solid rounded hover:border-black peer-checked:border-black">
-                      <div class="flex w-full h-full justify-center items-center">
-                        <span>42</span>
-                      </div>
-                    </div>
-                  </label>
-                  <label for="size42.5" class="flex cursor-pointer">
-                    <input type="radio" name="size-selected" id="size42.5" class="peer sr-only">
-                    <div class="w-20 h-10 border-2 border-solid rounded hover:border-black peer-checked:border-black">
-                      <div class="flex w-full h-full justify-center items-center">
-                        <span>42.5</span>
-                      </div>
-                    </div>
-                  </label>
-                  <label for="size43" class="flex cursor-pointer">
-                    <input type="radio" name="size-selected" id="size43" class="peer sr-only">
-                    <div class="w-20 h-10 border-2 border-solid rounded hover:border-black peer-checked:border-black">
-                      <div class="flex w-full h-full justify-center items-center">
-                        <span>43</span>
-                      </div>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="mt-2 w-full">
-              <button class="rounded-full w-full p-5 mt-3 bg-black text-white font-bold hover:bg-opacity-80">
-                Add to cart
-              </button>
+        <div class="main-image">
+          <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png" alt="" />
+        </div>
+        <div class="product-details">
+          <div class="rating">
+            <i class="bx bxs-star text-yellow-400"></i>
+            <i class="bx bxs-star text-yellow-400"></i>
+            <i class="bx bxs-star text-yellow-400"></i>
+            <i class="bx bxs-star text-yellow-400"></i>
+            <i class="bx bxs-star-half text-yellow-400"></i>
+          </div>
+          <h1 class="product-title">Air Jordan 1 Low</h1>
+          <div class="price">
+            <strong>Price</strong><br />
+            100.000.000 VND
+          </div>
+          <hr />
+          <div class="color-selection">
+            <strong>Color</strong>
+            <div class="colors">
+              <div class="color bg-red-500"></div>
+              <div class="color bg-blue-300"></div>
+              <div class="color bg-gray-300"></div>
+              <div class="color bg-orange-500"></div>
             </div>
           </div>
+          <div class="size-selection">
+            <strong>Select size:</strong>
+            <div class="sizes">
+              <label>
+                <input type="radio" name="size" value="37.5" />
+                <span>37.5</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="38" />
+                <span>38</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="38.5" />
+                <span>38.5</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="39" />
+                <span>39</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="40" />
+                <span>40</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="40.5" />
+                <span>40.5</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="41" />
+                <span>41</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="42" />
+                <span>42</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="42.5" />
+                <span>42.5</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="43" />
+                <span>43</span>
+              </label>
+            </div>
+          </div>
+          <button class="add-to-cart">Add to cart</button>
         </div>
       </div>
     </div>
+  </main>
+  
+  <style>
+    .container {
+    
+      justify-content: center;
+      margin-top: 36px;
+      padding: 0 16px;
+    }
+  
+    .product-display {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      gap: 16px;
+    }
+  
+    .product-images {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-left: 12px;
+      margin-left: 2px;
+    }
+  
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+  
+    .main-image {
+      width: 100%;
+      max-width: 535px;
+      height: 620px;
+      margin-left: 5px;
+    }
+  
+    .main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  
+    .product-details {
+      width: 100%;
+      max-width: 455px;
+      margin-left: 16px;
+    }
+  
+    .rating {
+      padding: 2px 0;
+      font-size: 1.25rem;
+    }
+  
+    .product-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  
+    .price {
+      margin: 12px 0;
+      font-size: 1.125rem;
+    }
+  
+    .color-selection {
+      margin-bottom: 16px;
+    }
+  
+    .colors {
+      display: flex;
+      gap: 8px;
+    }
+  
+    .color {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  
+    .size-selection {
+      margin-top: 16px;
+    }
+  
+    .sizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  
+    .sizes label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  
+    .sizes input {
+      display: none;
+    }
+  
+    .sizes span {
+      display: inline-block;
+      width: 80px;
+      height: 40px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .sizes input:checked + span {
+      border-color: black;
+    }
+  
+    .add-to-cart {
+      width: 100%;
+      padding: 16px;
+      margin-top: 16px;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  
+    @media (min-width: 768px) {
+      .product-display {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+  
+      .product-images {
+        padding-left: 0;
+        margin-left: 0;
+      }
+  
+      .main-image {
+        margin-left: 0;
+      }
+  
+      .product-details {
+        margin-top: 0;
+      }
+    }
+  </style>
+  
    
 
       <div class="container">
@@ -678,6 +781,69 @@
       </div>
     </footer>
     </body>
+    <!-- Slide bar -->
+<script>
+    const initSlider = () => {
+        const imageList = document.querySelector(".image-list");
+        const slideButtons = document.querySelectorAll(".slide-button");
+        const sliderScrollbar = document.querySelector(".container1 .relative > div");
+        const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+        let startX = 0;
+        let thumbPosition = 0;
+
+        scrollbarThumb.addEventListener("dragstart", (e) => {
+            startX = e.clientX;
+            thumbPosition = scrollbarThumb.offsetLeft;
+        });
+
+        scrollbarThumb.addEventListener("drag", (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+            const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
+        });
+
+        scrollbarThumb.addEventListener("dragend", () => {
+            startX = 0;
+            thumbPosition = 0;
+        });
+
+        slideButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const direction = button.id === "prev-slide" ? -1 : 1;
+                const scrollAmount = imageList.clientWidth * direction;
+                imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            });
+        });
+
+        const handleSlideButtons = () => {
+            slideButtons[0].classList.toggle("hidden", imageList.scrollLeft <= 0);
+            slideButtons[1].classList.toggle("hidden", imageList.scrollLeft >= maxScrollLeft);
+        };
+
+        const updateScrollThumbPosition = () => {
+            const scrollPosition = imageList.scrollLeft;
+            const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+            scrollbarThumb.style.left = `${thumbPosition}px`;
+        };
+
+        imageList.addEventListener("scroll", () => {
+            updateScrollThumbPosition();
+            handleSlideButtons();
+        });
+
+        handleSlideButtons();
+    };
+
+    window.addEventListener("resize", initSlider);
+    window.addEventListener("load", initSlider);
+
+</script>
   <!-- CART -->
   <script>
     function toggleDrawer() {
