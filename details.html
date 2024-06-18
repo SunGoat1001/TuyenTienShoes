@@ -90,6 +90,7 @@
     100% {
       transform: translateY(0);
     }
+    
   }
 
   .image-list {
@@ -110,6 +111,87 @@
   .scrollbar-thumb:hover {
     height: 8px;
   }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 1110px;
+      margin: auto;
+      padding: 0 15px;
+    }
+    .tabs {
+      display: flex;
+      justify-content: space-evenly;
+      border-bottom: 2px solid rgba(229, 229, 229, 1);
+      position: relative;
+      font-weight: bold;
+      font-size: 1.125rem; /* 18px */
+      padding: 15px;
+    }
+    .tab_btn {
+      cursor: pointer;
+      padding: 10px 15px;
+      transition: color 0.3s;
+    }
+    .tab_btn.active {
+      color: #7360ff;
+    }
+    .line {
+      position: absolute;
+      top: 52px;
+      left: 0;
+      height: 5px;
+      background-color: #7360ff;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+    .content {
+      display: none;
+      border: 1px solid #e5e5e5;
+      padding: 24px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      margin: 24px 0;
+    }
+    .content.active {
+      display: block;
+    }
+    .reviews article {
+      padding: 16px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .reviews .last {
+      border-bottom: none;
+    }
+    .star {
+      color: #ffc107;
+    }
+
+    @media (max-width: 768px) {
+      .tabs {
+        flex-direction: column;
+        align-items: center;
+      }
+      .tab_btn {
+        width: 100%;
+        text-align: center;
+      }
+      .line {
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tabs {
+        font-size: 1rem; /* 16px */
+      }
+    }
+  
 </style>
 
 <body class="bg-[#F7F6F3] overflow-x-hidden">
@@ -319,24 +401,21 @@
         </div>
       </div>
     </div>
-    <div class="md:flex flex-col md:justify-center pt-5 w-[1110px] m-auto mt-6">
-      <div class=" flex justify-evenly border-b-2 border-solid rgba(229,229,229) relative font-bold text-lg p-3">
-        <button class="tab_btn active">Description</button>
-        <button class="tab_btn">Reviews</button>
-        <div
-          class="line absolute top-[52px] left-0 w-[90px] h-[5px] bg-[#7360ff] rounded-[10px] transition-all duration-300 ease-in-out">
+   
+
+      <div class="container">
+        <div class="tabs">
+          <button class="tab_btn active">Description</button>
+          <button class="tab_btn">Reviews</button>
+          <div class="line" style="width: 90px;"></div>
         </div>
-      </div>
-      <div class="px-5 m-6">
-        <div class="content active border border-solid px-4 py-6 hidden bg-white rounded-lg shadow-md">
+        <div class="content active">
           <p class="mb-4">
             <b class="text-xl font-bold">ALWAYS FRESH.</b>
           </p>
           <p class="mb-4">
             Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's
-            familiar yet
-            always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks ensure you'll always be
-            on point.
+            familiar yet always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks ensure you'll always be on point.
           </p>
           <p class="mb-4">
             <b class="text-xl font-bold">Benefits</b>
@@ -354,13 +433,12 @@
           </p>
           <p>
             A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
-            comfort. A
-            rubber outsole supplies durable traction on a variety of surfaces.
+            comfort. A rubber outsole supplies durable traction on a variety of surfaces.
           </p>
         </div>
-        <div class="content border border-solid px-4 py-6 hidden bg-white rounded-lg shadow-md">
+        <div class="content reviews">
           <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-            <div class="text-yellow-400 mb-2">
+            <div class="star mb-2">
               <i class="bx bxs-star"></i>
               <i class="bx bxs-star"></i>
               <i class="bx bxs-star"></i>
@@ -379,7 +457,7 @@
             </p>
           </article>
           <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-            <div class="text-yellow-400 mb-2">
+            <div class="star mb-2">
               <i class="bx bxs-star"></i>
               <i class="bx bxs-star"></i>
               <i class="bx bxs-star"></i>
@@ -396,7 +474,7 @@
             </p>
           </article>
           <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-            <div class="text-yellow-400 mb-2">
+            <div class="star mb-2">
               <i class="bx bxs-star"></i>
               <i class="bx bxs-star"></i>
               <i class="bx bxs-star"></i>
@@ -418,26 +496,39 @@
           </article>
         </div>
       </div>
+    
+      <script>
+        const tabs = document.querySelectorAll('.tab_btn');
+        const all_content = document.querySelectorAll('.content');
+        const line = document.querySelector('.line');
+    
+        tabs.forEach((tab, index) => {
+          tab.addEventListener('click', (e) => {
+            tabs.forEach(tab => { tab.classList.remove('active') });
+            tab.classList.add('active');
+    
+            line.style.width = tab.offsetWidth + "px";
+            line.style.left = tab.offsetLeft + "px";
+    
+            all_content.forEach(content => { content.classList.remove('active') });
+            all_content[index].classList.add('active');
+          });
+        });
+    
+        window.addEventListener('resize', () => {
+          const activeTab = document.querySelector('.tab_btn.active');
+          line.style.width = activeTab.offsetWidth + "px";
+          line.style.left = activeTab.offsetLeft + "px";
+        });
+    
+        document.addEventListener('DOMContentLoaded', () => {
+          const activeTab = document.querySelector('.tab_btn.active');
+          line.style.width = activeTab.offsetWidth + "px";
+          line.style.left = activeTab.offsetLeft + "px";
+        });
+      </script>
 
-    </div>
-    <script>
-      const tabs = document.querySelectorAll('.tab_btn');
-      const all_content = document.querySelectorAll('.content')
 
-      tabs.forEach((tab, index) => {
-        tab.addEventListener('click', (e) => {
-          tabs.forEach(tab => { tab.classList.remove('active') });
-          tab.classList.add('active');
-
-          var line = document.querySelector('.line');
-          line.style.width = e.target.offsetWidth + "px";
-          line.style.left = e.target.offsetLeft + "px";
-
-          all_content.forEach(content => { content.classList.remove('active') })
-          all_content[index].classList.add('active');
-        })
-      })
-    </script>
     <div class="max-w-[1160px] mx-auto p-6">
       <h4 class="text-3xl font-semibold mb-3">Related Products</h4>
       <section class="py-10">
@@ -458,7 +549,7 @@
                 <img class="w-full h-auto object-cover rounded-lg"
                   src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b587cf81-b49a-4200-9a7c-8daa033ed393/air-jordan-1-low-shoes-459b4T.png"
                   alt="Image 3" />
-                  
+
               </li>
               <li class="splide__slide mx-2 flex-shrink-0">
                 <img class="w-full h-auto object-cover rounded-lg"
