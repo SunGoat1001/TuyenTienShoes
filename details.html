@@ -645,39 +645,6 @@
           </article>
         </div>
       </div>
-    
-      <script>
-        const tabs = document.querySelectorAll('.tab_btn');
-        const all_content = document.querySelectorAll('.content');
-        const line = document.querySelector('.line');
-    
-        tabs.forEach((tab, index) => {
-          tab.addEventListener('click', (e) => {
-            tabs.forEach(tab => { tab.classList.remove('active') });
-            tab.classList.add('active');
-    
-            line.style.width = tab.offsetWidth + "px";
-            line.style.left = tab.offsetLeft + "px";
-    
-            all_content.forEach(content => { content.classList.remove('active') });
-            all_content[index].classList.add('active');
-          });
-        });
-    
-        window.addEventListener('resize', () => {
-          const activeTab = document.querySelector('.tab_btn.active');
-          line.style.width = activeTab.offsetWidth + "px";
-          line.style.left = activeTab.offsetLeft + "px";
-        });
-    
-        document.addEventListener('DOMContentLoaded', () => {
-          const activeTab = document.querySelector('.tab_btn.active');
-          line.style.width = activeTab.offsetWidth + "px";
-          line.style.left = activeTab.offsetLeft + "px";
-        });
-      </script>
-
-
     <div class="max-w-[1160px] mx-auto p-6">
       <h4 class="text-3xl font-semibold mb-3">Related Products</h4>
       <section class="py-10">

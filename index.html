@@ -11,17 +11,6 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MKQ73MXKTN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MKQ73MXKTN');
-</script>
-
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
@@ -94,13 +83,13 @@
     <!-- NAV -->
     <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
         <div class="col flex justify-between items-center h-16">
-            <a href="#">
+            <a href="./index.html">
                 <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div>
             </a>
-            <nav class="flex text-sm font-bold">
-                <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
-                <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
-                <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+            <nav class="flex text-sm font-bold max-sm:hidden">
+                <a href="./women.html" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+                <a href="./man.html" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+                <a href="./newarrivals.html" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
                 <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
                 <button class="drawer-toggle p-3 text-xl" onclick="toggleDrawer()"><i
                         class='bx bx-shopping-bag'></i></button>
@@ -110,12 +99,12 @@
                 class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out"
                 onclick="toggleDrawer()"></div>
             <div id="drawer"
-                class="fixed top-0 right-[-500px] w-[500px] h-full bg-white  transition-all duration-500 z-10">
-                <div class="p-5 flex flex-col justify-center items-center ">
+                class="fixed top-0 right-[-500px] w-[500px] h-full bg-white transition-all duration-500 z-10 max-[431px]:w-[300px]">
+                <div class="p-5 flex flex-col justify-center items-center max-sm:hidden">
                     <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
                             class='bx bx-x'></i></button>
                     <h2 class="text-3xl font-semibold mb-2">CART</h2>
-                    <p>You're <strong>300.000 VND</strong> away from free shipping!</p>
+                    <p>You're <strong>$49.99</strong> away from free shipping!</p>
                     <div id="productContainer" class="relative flex w-full h-[8.25rem] mt-5 border-b-2 border-gray-200">
                         <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
                             class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
@@ -144,8 +133,22 @@
                         <a href="./payment.html"><button class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button></a>
                     </div>
                 </div>
+                <!-- Responsive Navbar mobile -->
+                <div class="p-5 flex flex-col justify-center items-center">
+                    <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
+                            class='bx bx-x'></i></button>
+                    <nav class="flex text-sm font-bold xl:hidden max-sm:flex-col max-sm:text-center max-sm:space-y-3 max-sm:text-xl">
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">HOME</a>
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+                        <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+                    </nav>
+                </div>
             </div>
-            <button class="hover:underline underline-offset-4 font-semibold text-lg">Sign in</button>
+            <a href="./sigin.html"  class="hover:underline underline-offset-4 font-semibold text-lg max-sm:hidden">Sign in</a>
+            <!-- Menu Mobile -->
+            <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
         </div>
     </header>
     <!-- HEADER -->
@@ -153,30 +156,30 @@
         <div class="absolute w-full h-full overflow-hidden">
             <div id="wrapper" class="w-full h-full">
                 <div class="flex w-full h-full">
-                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2 object-cover">
-                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Female.jpg" alt="" class="w-1/2 object-cover max-lg:object-cover max-xl:object-cover max-sm:w-full">
+                    <img src="./asset/img/homepage/Nike-Air-Jordan-1-Male.jpg" alt="" class="w1/2 max-lg:object-cover max-xl:object-cover max-sm:hidden">
                 </div>
                 <div class="flex w-full h-full">
-                    <img src="./asset/img/homepage/NikeXanh1.jpg" alt="" class="w-1/2">
-                    <img src="./asset/img/homepage/NikeXanh2.jpg" alt="" class="w-1/2">
+                    <img src="./asset/img/homepage/NikeXanh1.jpg" alt="" class="w-1/2 max-lg:object-cover max-xl:object-cover max-sm:w-full">
+                    <img src="./asset/img/homepage/NikeXanh2.jpg" alt="" class="w-1/2 max-lg:object-cover max-xl:object-cover max-sm:hidden">
                 </div>
                 <div class="flex w-full h-full">
-                    <img src="./asset/img/homepage/NikeTrang.avif" alt="" class="w-1/2 object-cover">
-                    <img src="./asset/img/homepage/NikeTrang2.avif" alt="" class="w-1/2 object-cover">
+                    <img src="./asset/img/homepage/NikeTrang.avif" alt="" class="w-1/2 object-cover max-lg:object-cover max-sm:w-full">
+                    <img src="./asset/img/homepage/NikeTrang2.avif" alt="" class="w-1/2 object-cover max-lg:object-cover max-sm:hidden">
                 </div>
             </div>
         </div>
         <div class="absolute inset-0 bg-black opacity-15"></div>
         <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-4">
             <p class="text-2xl font-medium">TTS</p>
-            <h1 class="text-3xl font-bold">UNLEASH YOUR POTENTIAL WITH EVERY STEP</h1>
+            <h1 class="text-3xl font-bold max-sm:text-xl">UNLEASH YOUR POTENTIAL WITH EVERY STEP</h1>
             <p class="w-3/5 text-xl">Every world is on your feet</p>
             <div class="absolute bottom-20 flex justify-between w-[250px]">
                 <div class="text-2xl underline underline-offset-4">
-                    <a href="">WOMEN</a>
+                    <a href="./women.html">WOMEN</a>
                 </div>
                 <div class="px-7 text-2xl underline underline-offset-4">
-                    <a href="">MAN</a>
+                    <a href="./man.html">MAN</a>
                 </div>
             </div>
         </div>
@@ -184,8 +187,8 @@
     <!-- PRODUC LIMITED -->
     <section class="w-full flex flex-col items-center h-[40rem] mt-14">
         <span class="font-bold text-3xl">LIMITED IN STOCK</span>
-        <div class="flex justify-between w-[70%] mx-auto">
-            <div class="mt-16">
+        <div class="flex justify-between mx-auto max-lg:w-full max-xl:w-[90%]">
+            <div class="mt-16 max-sm:hidden">
                 <div class="w-64 h-40 flex flex-col justify-center items-center mb-20">
                     <span class="text-xl font-semibold mb-2">UPPER</span>
                     <span class="text-center">Cow print fabric in black and white,
@@ -196,8 +199,8 @@
                     <span class="text-center">White midsole, green outsole for added traction and durability.</span>
                 </div>
             </div>
-            <img src="./asset/img/homepage/ShoesLIMITED.png" alt="" class="w-[35rem] h-[25rem]">
-            <div class="mt-16">
+            <img src="./asset/img/homepage/ShoesLIMITED.png" alt="" class="w-[35rem] h-[25rem] max-lg:w-[31rem] max-sm:ml-14 max-[431px]:ml-0 max-[431px]:h-[22rem]">
+            <div class="mt-16 max-sm:hidden">
                 <div class="w-64 h-40 flex flex-col justify-center items-center mb-20">
                     <span class="text-xl font-semibold mb-2">TONGUE AND LINING</span>
                     <span class="text-center">The tongue features the iconic Ben & Jerry's logo,
@@ -211,7 +214,7 @@
                 </div>
             </div>
         </div>
-        <span class="font-semibold text-xl">Nike Dunk Low x Ben & Jerry’s “Chunky Dunky”</span>
+        <span class="font-semibold text-xl max-[431px]:text-center">Nike Dunk Low x Ben & Jerry’s “Chunky Dunky”</span>
         <button class="w-44 h-12 bg-black text-white font-semibold rounded-full mt-5 hover:opacity-70">BUY NOW</button>
     </section>
     <!-- PRODUCT -->
@@ -339,8 +342,8 @@
     <!-- Women, Man -->
     <div class="relative w-full h-[800px]">
         <div class="absolute flex w-full h-full bg-cover">
-            <img src="./asset/img/homepage/Women.jpg" alt="" class="w-1/2 object-cover">
-            <img src="./asset/img/homepage/Men.jpg" alt="" class="w-1/2 object-cover">
+            <img src="./asset/img/homepage/Women.jpg" alt="" class="w-1/2 object-cover max-sm:hidden">
+            <img src="./asset/img/homepage/Men.jpg" alt="" class="w-1/2 object-cover max-sm:w-full">
         </div>
         <div class="absolute inset-0 bg-black opacity-20"></div>
         <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-4">
@@ -358,24 +361,24 @@
         </div>
     </div>
     <!-- FEEBACK -->
-    <section class="col h-[30rem]">
+    <section class="col h-[30rem] max-sm:h-[65rem]">
         <div class="flex flex-col items-center mt-9">
             <span class="text-center text-3xl font-semibold">WHAT OUR CUSTOMERS SAYS</span>
-            <div class="flex space-x-6 mt-5">
-                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
-                    <img src="./asset/img/homepage/People2.svg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
+            <div class="flex space-x-6 mt-5 max-sm:flex-col max-sm:space-x-0">
+                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg max-lg:w-[19rem]">
+                    <img src="./asset/img/homepage/People2.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
                     <span class="mt-4 ml-4 text-lg font-semibold">Stephen Curry</span>
                     <span class="mt-4 ml-4">Nike's products truly impress me with their quality and unique design. Will
                         definitely continue to support!</span>
                 </div>
-                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
-                    <img src="asset/img/homepage/People1.svg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
+                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg max-lg:w-[19rem]">
+                    <img src="./asset/img/homepage/People1.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
                     <span class="mt-4 ml-4 text-lg font-semibold">Emily Johnson</span>
                     <span class="mt-4 ml-4">Nike's customer service is excellent. Friendly and helpful staff assisted me
                         in finding the perfect pair of shoes.</span>
                 </div>
-                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg">
-                    <img src="./asset/img/homepage/People3.svg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
+                <div class="flex flex-col w-80 h-72 bg-white rounded-lg space-y-3 mt-6 shadow-lg max-lg:w-[19rem]">
+                    <img src="./asset/img/homepage/People3.jpg" alt="" class="w-16 h-16 rounded-full mt-4 ml-4">
                     <span class="mt-4 ml-4 text-lg font-semibold">Alex Parker</span>
                     <span class="mt-4 ml-4">Every time I purchase Nike shoes, it's a fantastic experience.
                         The products are not only stylish but also incredibly comfortable, suitable for all
@@ -386,27 +389,27 @@
     </section>
     <!-- Email -->
     <div class="w-full h-[40vh] flex flex-col justify-center items-center bg-white">
-        <span class="font-bold text-3xl mb-8">Want First Dibs?</span>
-        <span>Join our email list and be the first to know about new limited edition products, material </span>
+        <span class="font-bold text-4xl mb-8">Want First Dibs?</span>
+        <span class="max-sm:text-center text-lg">Join our email list and be the first to know about new limited edition products, material </span>
         <span class="mb-10">innovations, and lots of other fun updates</span>
-        <div class="mb-5">
+        <div class="mb-5 ">
             <form action="/action_page.php">
                 <input type="email" value="" required
-                    class="w-96 p-2 h-12 rounded-[4px] border-black border-b-2 bg-gray-50"
+                    class="w-96 p-2 h-12 rounded-[4px] border-black border-b-2 bg-gray-50 max-[431px]:w-full"
                     placeholder="Enter Your Email Address">
                 <input type="submit" value="Subscribe"
-                    class="h-12 px-5 ml-2 rounded-[4px] bg-black text-white font-semibold cursor-pointer hover:opacity-60 transition ease-out delay-50">
+                    class="h-12 px-5 ml-2 rounded-[4px] bg-black text-white font-semibold cursor-pointer hover:opacity-60 transition ease-out delay-50 max-[431px]:mt-4 max-[431px]:w-full max-[431px]:ml-0">
             </form>
         </div>
-        <span class="text-sm">Note: You can opt-out at any time. See our <strong>Privacy Policy</strong> and
+        <span class="text-sm max-[431px]:text-center">Note: You can opt-out at any time. See our <strong>Privacy Policy</strong> and
             <strong>Terms.</strong></span>
     </div>
     <!-- FOOTER -->
-    <footer class="w-full h-96 bg-black">
-        <div class="col flex h-[332px]">
-            <div class="w-2/4 mt-10">
+    <footer class="w-full h-96 bg-black max-sm:h-[85rem] max-[431px]:h-[80rem]">
+        <div class="col flex h-[332px] max-sm:flex-col max-sm:items-center max-sm:justify-start">
+            <div class="w-2/4 mt-10 max-sm:flex max-sm:flex-col max-sm:items-center max-[431px]:w-full">
                 <img src="./asset/img/LogoFooter.png" alt="" class="w-28 h-28">
-                <ul class="text-[#CFCFCF] space-y-0 mt-1">
+                <ul class="text-[#CFCFCF] space-y-0 mt-1 max-sm:w-full max-sm:text-center">
                     <li><a href="">158A Le loi, Thanh Khe, Da Nang</a></li>
                     <li><a href="">Company: TienTuyenShoes</a></li>
                     <li><a href="">Tel: + 84 24 3767 4686</a></li>
@@ -415,7 +418,7 @@
                             every step 08/06/2024</a></li>
                 </ul>
             </div>
-            <div class="w-[15%] px-4 mt-10">
+            <div class="w-[15%] px-4 mt-10 max-sm:w-[20%] max-sm:text-center max-[431px]:w-full">
                 <span class="font-semibold text-white">About Us</span>
                 <ul class="text-[#CFCFCF] space-y-2 mt-4">
                     <li><a href="" class="hover:text-white">Contact</a></li>
@@ -425,7 +428,7 @@
                     <li><a href="" class="hover:text-white">Team</a></li>
                 </ul>
             </div>
-            <div class="w-[15%] px-4 mt-10">
+            <div class="w-[15%] px-4 mt-10 max-sm:w-[20%] max-sm:text-center max-[431px]:w-full">
                 <span class="font-semibold text-white">Services</span>
                 <ul class="text-[#CFCFCF] space-y-2 mt-4">
                     <li><a href="" class="hover:text-white">Pricing</a></li>
@@ -437,7 +440,7 @@
                     <li><a href="" class="hover:text-white">Forum</a></li>
                 </ul>
             </div>
-            <div class="w-[15%] px-4 mt-10">
+            <div class="w-[15%] px-4 mt-10 max-sm:w-[20%] max-sm:text-center max-[431px]:w-full">
                 <span class="font-semibold text-white">Resources</span>
                 <ul class="text-[#CFCFCF] space-y-2 mt-4">
                     <li><a href="" class="hover:text-white">Documentation</a></li>
@@ -445,7 +448,7 @@
                     <li><a href="" class="hover:text-white">Community</a></li>
                 </ul>
             </div>
-            <div class="w-[15%] px-4 mt-10">
+            <div class="w-[15%] px-4 mt-10 max-sm:w-[20%] max-sm:text-center max-[431px]:w-full">
                 <span class="font-semibold text-white">Get Help</span>
                 <ul class="text-[#CFCFCF] space-y-2 mt-4">
                     <li><a href="" class="hover:text-white">Help Center</a></li>
@@ -455,8 +458,8 @@
                 </ul>
             </div>
         </div>
-        <div class="col border-b-[0.1px] bg-[#C6C6C6] opacity-50"></div>
-        <div class="col flex justify-between mt-2">
+        <div class="col border-b-[0.1px] bg-[#C6C6C6] opacity-50 max-sm:hidden"></div>
+        <div class="col flex justify-between mt-2 max-sm:hidden">
             <div class="text-[#C6C6C6] space-x-4 opacity-40">
                 <span class=""><i class='bx bx-copyright'></i>2024 SellShoes. All rights reserved</span>
                 <span class="underline"><a href="">Privacy Policy</a></span>
@@ -471,7 +474,6 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="/src/scripts/application.js"></script>
 </body>
 <!-- Slide bar -->
 <script>
