@@ -25,13 +25,13 @@
 </style>
 <body class="overflow-x-hidden pt-16">
     <!-- NAV -->
-    <header class="bg-white fixed top-0 w-full z-50 shadow-md">
+    <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
         <div class="col flex justify-between items-center h-16">
             <a href="./index.html">
                 <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div>
             </a>
             <nav class="flex text-sm font-bold max-sm:hidden">
-                <a href="./women.html" class="p-5 underline underline-offset-4 focus:underline">WOMAN</a>
+                <a href="./women.html" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
                 <a href="./man.html" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
                 <a href="./newarrivals.html" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
                 <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
@@ -43,12 +43,12 @@
                 class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out"
                 onclick="toggleDrawer()"></div>
             <div id="drawer"
-                class="fixed top-0 right-[-500px] w-[500px] h-full bg-white  transition-all duration-500 z-10">
+                class="fixed top-0 right-[-500px] w-[500px] h-full bg-white transition-all duration-500 z-10 max-[431px]:w-[300px]">
                 <div class="p-5 flex flex-col justify-center items-center max-sm:hidden">
                     <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
                             class='bx bx-x'></i></button>
                     <h2 class="text-3xl font-semibold mb-2">CART</h2>
-                    <p>You're <strong>300.000 VND</strong> away from free shipping!</p>
+                    <p>You're <strong>$49.99</strong> away from free shipping!</p>
                     <div id="productContainer" class="relative flex w-full h-[8.25rem] mt-5 border-b-2 border-gray-200">
                         <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
                             class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
@@ -57,24 +57,24 @@
                             <span>Color: </span>
                             <span>Size: </span>
                             <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i
-                                    class='bx bx-x'></i></button>
+                                    class='bx bx-x' onclick="deleteProduct()"></i></button>
                             <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99"
-                                    value="1" class="h-7 w-10"></span>
-                            <span class="absolute right-0 bottom-3">90.000 VND</span>
+                                    value="1" class="h-7 w-10" onchange="updateTotal()"></span>
+                            <span class="absolute right-0 bottom-3" id="productPrice">$29.99</span>
                         </div>
                     </div>
                     <div class="absolute bottom-0 left-0 right-0">
                         <div class="flex flex-col justify-between items-center border-t border-gray-300 p-5">
                             <div class="flex justify-between w-full">
                                 <span class="text-lg font-semibold">Total</span>
-                                <span class="text-lg">90.000 VND</span>
+                                <span class="text-lg" id="subtotal">$29.99</span>
                             </div>
                             <div class="flex justify-between w-full">
                                 <span class="text-lg font-semibold">Shipping</span>
-                                <span class="text-lg">FREE</span>
+                                <span class="text-lg" id="shipping">FREE</span>
                             </div>
                         </div>
-                        <button class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button>
+                        <a href="./payment.html"><button class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button></a>
                     </div>
                 </div>
                 <!-- Responsive Navbar mobile -->
@@ -90,7 +90,7 @@
                     </nav>
                 </div>
             </div>
-            <button class="hover:underline underline-offset-4 font-semibold text-lg max-sm:hidden">Sign in</button>
+            <a href="./sigin.html"  class="hover:underline underline-offset-4 font-semibold text-lg max-sm:hidden">Sign in</a>
             <!-- Menu Mobile -->
             <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
         </div>
@@ -413,5 +413,34 @@
             });
         });
     });
+</script>
+<!-- AUTO CALC -->
+<script>
+    function updateTotal() {
+        const quantityInput = document.getElementById('quantity');
+        const productPriceElement = document.getElementById('productPrice');
+        const subtotalElement = document.getElementById('subtotal');
+        const totalElement = document.getElementById('total');
+    
+        const productPrice = parseFloat(productPriceElement.innerText.replace('$', ''));
+        const quantity = parseInt(quantityInput.value);
+        const subtotal = productPrice * quantity;
+    
+        subtotalElement.innerText = `$${subtotal.toFixed(2)}`;
+        totalElement.innerText = `$${subtotal.toFixed(2)}`;
+    }
+
+    function deleteProduct() {
+        const productContainer = document.getElementById('productContainer');
+        productContainer.remove();
+    
+        const subtotalElement = document.getElementById('subtotal');
+        const totalElement = document.getElementById('total');
+        subtotalElement.innerText = `$0.00`;
+        totalElement.innerText = `$0.00`;
+    }
+    
+    document.getElementById('quantity').addEventListener('input', updateTotal);
+    document.getElementById('deleteProductBtn').addEventListener('click', deleteProduct);
 </script>
 </html>
