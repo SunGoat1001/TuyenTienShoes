@@ -124,24 +124,24 @@
                             <span>Color: </span>
                             <span>Size: </span>
                             <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i
-                                    class='bx bx-x'></i></button>
+                                    class='bx bx-x' onclick="deleteProduct()"></i></button>
                             <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99"
-                                    value="1" class="h-7 w-10"></span>
-                            <span class="absolute right-0 bottom-3">90.000 VND</span>
+                                    value="1" class="h-7 w-10" onchange="updateTotal()"></span>
+                            <span class="absolute right-0 bottom-3" id="productPrice">$29.99</span>
                         </div>
                     </div>
                     <div class="absolute bottom-0 left-0 right-0">
                         <div class="flex flex-col justify-between items-center border-t border-gray-300 p-5">
                             <div class="flex justify-between w-full">
                                 <span class="text-lg font-semibold">Total</span>
-                                <span class="text-lg">90.000 VND</span>
+                                <span class="text-lg" id="subtotal">$29.99</span>
                             </div>
                             <div class="flex justify-between w-full">
                                 <span class="text-lg font-semibold">Shipping</span>
-                                <span class="text-lg">FREE</span>
+                                <span class="text-lg" id="shipping">FREE</span>
                             </div>
                         </div>
-                        <button class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button>
+                        <a href="./payment.html"><button class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button></a>
                     </div>
                 </div>
             </div>
@@ -556,5 +556,33 @@
         productContainer.remove();
     });
 </script>
+<!-- AUTO CALC -->
+<script>
+    function updateTotal() {
+        const quantityInput = document.getElementById('quantity');
+        const productPriceElement = document.getElementById('productPrice');
+        const subtotalElement = document.getElementById('subtotal');
+        const totalElement = document.getElementById('total');
+    
+        const productPrice = parseFloat(productPriceElement.innerText.replace('$', ''));
+        const quantity = parseInt(quantityInput.value);
+        const subtotal = productPrice * quantity;
+    
+        subtotalElement.innerText = `$${subtotal.toFixed(2)}`;
+        totalElement.innerText = `$${subtotal.toFixed(2)}`;
+    }
 
+    function deleteProduct() {
+        const productContainer = document.getElementById('productContainer');
+        productContainer.remove();
+    
+        const subtotalElement = document.getElementById('subtotal');
+        const totalElement = document.getElementById('total');
+        subtotalElement.innerText = `$0.00`;
+        totalElement.innerText = `$0.00`;
+    }
+    
+    document.getElementById('quantity').addEventListener('input', updateTotal);
+    document.getElementById('deleteProductBtn').addEventListener('click', deleteProduct);
+</script>
 </html>
