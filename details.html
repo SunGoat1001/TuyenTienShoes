@@ -90,6 +90,7 @@
     100% {
       transform: translateY(0);
     }
+    
   }
 
   .image-list {
@@ -110,6 +111,7 @@
   .scrollbar-thumb:hover {
     height: 8px;
   }
+
     body {
       font-family: Arial, sans-serif;
     }
@@ -643,6 +645,39 @@
           </article>
         </div>
       </div>
+    
+      <script>
+        const tabs = document.querySelectorAll('.tab_btn');
+        const all_content = document.querySelectorAll('.content');
+        const line = document.querySelector('.line');
+    
+        tabs.forEach((tab, index) => {
+          tab.addEventListener('click', (e) => {
+            tabs.forEach(tab => { tab.classList.remove('active') });
+            tab.classList.add('active');
+    
+            line.style.width = tab.offsetWidth + "px";
+            line.style.left = tab.offsetLeft + "px";
+    
+            all_content.forEach(content => { content.classList.remove('active') });
+            all_content[index].classList.add('active');
+          });
+        });
+    
+        window.addEventListener('resize', () => {
+          const activeTab = document.querySelector('.tab_btn.active');
+          line.style.width = activeTab.offsetWidth + "px";
+          line.style.left = activeTab.offsetLeft + "px";
+        });
+    
+        document.addEventListener('DOMContentLoaded', () => {
+          const activeTab = document.querySelector('.tab_btn.active');
+          line.style.width = activeTab.offsetWidth + "px";
+          line.style.left = activeTab.offsetLeft + "px";
+        });
+      </script>
+
+
     <div class="max-w-[1160px] mx-auto p-6">
       <h4 class="text-3xl font-semibold mb-3">Related Products</h4>
       <section class="py-10">
@@ -663,6 +698,7 @@
                 <img class="w-full h-auto object-cover rounded-lg"
                   src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b587cf81-b49a-4200-9a7c-8daa033ed393/air-jordan-1-low-shoes-459b4T.png"
                   alt="Image 3" />
+
               </li>
               <li class="splide__slide mx-2 flex-shrink-0">
                 <img class="w-full h-auto object-cover rounded-lg"
