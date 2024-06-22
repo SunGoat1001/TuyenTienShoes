@@ -110,196 +110,227 @@
   .scrollbar-thumb:hover {
     height: 8px;
   }
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      max-width: 1110px;
-      margin: auto;
-      padding: 0 15px;
-    }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    max-width: 1110px;
+    margin: auto;
+    padding: 0 15px;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid rgba(229, 229, 229, 1);
+    position: relative;
+    font-weight: bold;
+    font-size: 1.125rem;
+    /* 18px */
+    padding: 15px;
+  }
+
+  .tab_btn {
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: color 0.3s;
+  }
+
+  .tab_btn.active {
+    color: #7360ff;
+  }
+
+  .line {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    height: 5px;
+    background-color: #7360ff;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .content {
+    display: none;
+    border: 1px solid #e5e5e5;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 24px 0;
+  }
+
+  .content.active {
+    display: block;
+  }
+
+  .reviews article {
+    padding: 16px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .reviews .last {
+    border-bottom: none;
+  }
+
+  .star {
+    color: #ffc107;
+  }
+
+  @media (max-width: 768px) {
     .tabs {
-      display: flex;
-      justify-content: space-evenly;
-      border-bottom: 2px solid rgba(229, 229, 229, 1);
-      position: relative;
-      font-weight: bold;
-      font-size: 1.125rem; /* 18px */
-      padding: 15px;
+      flex-direction: column;
+      align-items: center;
     }
+
     .tab_btn {
-      cursor: pointer;
-      padding: 10px 15px;
-      transition: color 0.3s;
+      width: 100%;
+      text-align: center;
     }
-    .tab_btn.active {
-      color: #7360ff;
-    }
+
     .line {
-      position: absolute;
-      top: 52px;
+      top: 100%;
       left: 0;
-      height: 5px;
-      background-color: #7360ff;
-      border-radius: 10px;
-      transition: all 0.3s ease-in-out;
+      width: 100%;
+      height: 3px;
     }
-    .content {
-      display: none;
-      border: 1px solid #e5e5e5;
-      padding: 24px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      margin: 24px 0;
-    }
-    .content.active {
-      display: block;
-    }
-    .reviews article {
-      padding: 16px;
-      border-bottom: 1px solid #e5e5e5;
-    }
-    .reviews .last {
-      border-bottom: none;
-    }
-    .star {
-      color: #ffc107;
-    }
-
-    @media (max-width: 768px) {
-      .tabs {
-        flex-direction: column;
-        align-items: center;
-      }
-      .tab_btn {
-        width: 100%;
-        text-align: center;
-      }
-      .line {
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 3px;
-      }
-    }
-
- 
-  
+  }
 </style>
 
 <body class="bg-[#F7F6F3] overflow-x-hidden">
- <!-- NAV -->
- <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
-  <div class="col flex justify-between items-center h-16">
+  <!-- NAV -->
+  <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
+    <div class="col flex justify-between items-center h-16">
       <a href="./index.html">
-          <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div>
+        <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div>
       </a>
       <nav class="flex text-sm font-bold max-sm:hidden">
-          <a href="./women.html" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
-          <a href="./man.html" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
-          <a href="./newarrivals.html" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
-          <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
-          <button class="drawer-toggle p-3 text-xl" onclick="toggleDrawer()"><i
-                  class='bx bx-shopping-bag'></i></button>
+        <a href="./women.html" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+        <a href="./man.html" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+        <a href="./newarrivals.html" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+        <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+        <button class="drawer-toggle p-3 text-xl" onclick="toggleDrawer()"><i class='bx bx-shopping-bag'></i></button>
       </nav>
       <!-- CART -->
-      <div id="overlay"
-          class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out"
-          onclick="toggleDrawer()"></div>
+      <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out"
+        onclick="toggleDrawer()"></div>
       <div id="drawer"
-          class="fixed top-0 right-[-500px] w-[500px] h-full bg-white transition-all duration-500 z-10 max-[431px]:w-[300px]">
-          <div class="p-5 flex flex-col justify-center items-center max-sm:hidden">
-              <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
-                      class='bx bx-x'></i></button>
-              <h2 class="text-3xl font-semibold mb-2">CART</h2>
-              <p>You're <strong>$49.99</strong> away from free shipping!</p>
-              <div id="productContainer" class="relative flex w-full h-[8.25rem] mt-5 border-b-2 border-gray-200">
-                  <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
-                      class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
-                  <div class="flex flex-col mt-3 ml-3">
-                      <span class="font-semibold text-xl">Product</span>
-                      <span>Color: </span>
-                      <span>Size: </span>
-                      <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i
-                              class='bx bx-x' onclick="deleteProduct()"></i></button>
-                      <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99"
-                              value="1" class="h-7 w-10" onchange="updateTotal()"></span>
-                      <span class="absolute right-0 bottom-3" id="productPrice">$29.99</span>
-                  </div>
-              </div>
-              <div class="absolute bottom-0 left-0 right-0">
-                  <div class="flex flex-col justify-between items-center border-t border-gray-300 p-5">
-                      <div class="flex justify-between w-full">
-                          <span class="text-lg font-semibold">Total</span>
-                          <span class="text-lg" id="subtotal">$29.99</span>
-                      </div>
-                      <div class="flex justify-between w-full">
-                          <span class="text-lg font-semibold">Shipping</span>
-                          <span class="text-lg" id="shipping">FREE</span>
-                      </div>
-                  </div>
-                  <a href="./payment.html"><button class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button></a>
-              </div>
+        class="fixed top-0 right-[-500px] w-[500px] h-full bg-white transition-all duration-500 z-10 max-[431px]:w-[300px]">
+        <div class="p-5 flex flex-col justify-center items-center max-sm:hidden">
+          <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i class='bx bx-x'></i></button>
+          <h2 class="text-3xl font-semibold mb-2">CART</h2>
+          <p>You're <strong>$49.99</strong> away from free shipping!</p>
+          <div id="productContainer" class="relative flex w-full h-[8.25rem] mt-5 border-b-2 border-gray-200">
+            <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
+              class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
+            <div class="flex flex-col mt-3 ml-3">
+              <span class="font-semibold text-xl">Product</span>
+              <span>Color: </span>
+              <span>Size: </span>
+              <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i class='bx bx-x'
+                  onclick="deleteProduct()"></i></button>
+              <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99" value="1"
+                  class="h-7 w-10" onchange="updateTotal()"></span>
+              <span class="absolute right-0 bottom-3" id="productPrice">$29.99</span>
+            </div>
           </div>
-          <!-- Responsive Navbar mobile -->
-          <div class="p-5 flex flex-col justify-center items-center">
-              <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
-                      class='bx bx-x'></i></button>
-              <nav class="flex text-sm font-bold xl:hidden max-sm:flex-col max-sm:text-center max-sm:space-y-3 max-sm:text-xl">
-                  <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">HOME</a>
-                  <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
-                  <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
-                  <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
-                  <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
-              </nav>
+          <div class="absolute bottom-0 left-0 right-0">
+            <div class="flex flex-col justify-between items-center border-t border-gray-300 p-5">
+              <div class="flex justify-between w-full">
+                <span class="text-lg font-semibold">Total</span>
+                <span class="text-lg" id="subtotal">$29.99</span>
+              </div>
+              <div class="flex justify-between w-full">
+                <span class="text-lg font-semibold">Shipping</span>
+                <span class="text-lg" id="shipping">FREE</span>
+              </div>
+            </div>
+            <a href="./payment.html"><button
+                class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button></a>
           </div>
+        </div>
+        <!-- Responsive Navbar mobile -->
+        <div class="p-5 flex flex-col justify-center items-center">
+          <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i class='bx bx-x'></i></button>
+          <nav
+            class="flex text-sm font-bold xl:hidden max-sm:flex-col max-sm:text-center max-sm:space-y-3 max-sm:text-xl">
+            <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">HOME</a>
+            <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+            <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+            <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+            <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+          </nav>
+        </div>
       </div>
-      <a href="./sigin.html"  class="hover:underline underline-offset-4 font-semibold text-lg max-sm:hidden">Sign in</a>
+      <a href="./sigin.html" class="hover:underline underline-offset-4 font-semibold text-lg max-sm:hidden">Sign in</a>
       <!-- Menu Mobile -->
       <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
-  </div>
-</header>
+    </div>
+  </header>
   <main>
     <div class="flex justify-center max-[431px]:container mt-36 max-[431px]:mt-28">
       <div class="product-display">
         <div class="product-images">
           <div class="thumbnail">
-            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png" alt="Air Jordan 1" />
+            <img
+              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+              alt="Air Jordan 1" />
           </div>
           <div class="thumbnail">
-            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png" alt="Air Jordan 1" />
+            <img
+              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png"
+              alt="Air Jordan 1" />
           </div>
           <div class="thumbnail">
-            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png" alt="Air Jordan 1" />
+            <img
+              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png"
+              alt="Air Jordan 1" />
           </div>
           <div class="thumbnail">
-            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png" alt="" />
+            <img
+              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png"
+              alt="" />
           </div>
           <div class="thumbnail">
-            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png" alt="" />
+            <img
+              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png"
+              alt="" />
           </div>
         </div>
 
         <div class="main-image">
-          <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png" alt="" />
+          <img
+            src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+            alt="" />
         </div>
         <!-- responsive mobile -->
         <div class="product-images-mobile">
           <div class="thumbnail">
-            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png" alt="Air Jordan 1" />
+            <img
+              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+              alt="Air Jordan 1" />
           </div>
           <div class="thumbnail">
-            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png" alt="Air Jordan 1" />
+            <img
+              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png"
+              alt="Air Jordan 1" />
           </div>
           <div class="thumbnail">
-            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png" alt="Air Jordan 1" />
+            <img
+              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png"
+              alt="Air Jordan 1" />
           </div>
           <div class="thumbnail">
-            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png" alt="" />
+            <img
+              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png"
+              alt="" />
           </div>
           <div class="thumbnail">
-            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png" alt="" />
+            <img
+              src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png"
+              alt="" />
           </div>
         </div>
         <div class="product-details">
@@ -375,15 +406,15 @@
       </div>
     </div>
   </main>
-  
+
   <style>
     .container {
-    
+
       justify-content: center;
       margin-top: 36px;
       padding: 0 16px;
     }
-  
+
     .product-display {
       display: flex;
       flex-direction: column;
@@ -392,7 +423,7 @@
       width: 100%;
       gap: 16px;
     }
-  
+
     .product-images {
       display: flex;
       flex-direction: column;
@@ -400,31 +431,31 @@
       padding-left: 12px;
       margin-left: 2px;
     }
-  
+
     .thumbnail {
       width: 80px;
       height: 80px;
     }
-  
+
     .thumbnail img {
       width: 100%;
       height: 100%;
       border-radius: 8px;
     }
-  
+
     .main-image {
       width: 100%;
       max-width: 535px;
       height: 620px;
     }
-  
+
     .main-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 8px;
     }
-  
+
     .product-details {
       width: 100%;
       max-width: 455px;
@@ -451,58 +482,58 @@
         display: none;
       }
     }
-  
+
     .rating {
       padding: 2px 0;
       font-size: 1.25rem;
     }
-  
+
     .product-title {
       font-size: 2.5rem;
       font-weight: bold;
     }
-  
+
     .price {
       margin: 12px 0;
       font-size: 1.125rem;
     }
-  
+
     .color-selection {
       margin-bottom: 16px;
     }
-  
+
     .colors {
       display: flex;
       gap: 8px;
     }
-  
+
     .color {
       width: 30px;
       height: 30px;
       border-radius: 50%;
       cursor: pointer;
     }
-  
+
     .size-selection {
       margin-top: 16px;
     }
-  
+
     .sizes {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
-  
+
     .sizes label {
       display: flex;
       align-items: center;
       cursor: pointer;
     }
-  
+
     .sizes input {
       display: none;
     }
-  
+
     .sizes span {
       display: inline-block;
       width: 80px;
@@ -513,11 +544,11 @@
       justify-content: center;
       align-items: center;
     }
-  
-    .sizes input:checked + span {
+
+    .sizes input:checked+span {
       border-color: black;
     }
-  
+
     .add-to-cart {
       width: 100%;
       padding: 16px;
@@ -529,199 +560,200 @@
       cursor: pointer;
       border-radius: 8px;
     }
-  
+
     @media (min-width: 768px) {
       .product-display {
         flex-direction: row;
         align-items: flex-start;
       }
-  
+
       .product-images {
         padding-left: 0;
         margin-left: 0;
       }
-  
+
       .main-image {
         margin-left: 0;
       }
-  
+
       .product-details {
         margin-top: 0;
       }
     }
   </style>
-      <div class="w-[1280px] m-auto max-[431px]:container">
-        <div class="tabs">
-          <button class="tab_btn active">Description</button>
-          <button class="tab_btn">Reviews</button>
-          <div class="line" style="width: 90px;"></div>
+  <div class="w-[1280px] m-auto max-[431px]:container">
+    <div class="tabs">
+      <button class="tab_btn active">Description</button>
+      <button class="tab_btn">Reviews</button>
+      <div class="line" style="width: 90px;"></div>
+    </div>
+    <div class="content active">
+      <p class="mb-4">
+        <b class="text-xl font-bold">ALWAYS FRESH.</b>
+      </p>
+      <p class="mb-4">
+        Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's
+        familiar yet always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks ensure you'll
+        always be on point.
+      </p>
+      <p class="mb-4">
+        <b class="text-xl font-bold">Benefits</b>
+      </p>
+      <ul class="list-disc pl-5 mb-4">
+        <li class="mb-2">Encapsulated Air-Sole unit provides lightweight cushioning.</li>
+        <li class="mb-2">Genuine leather in the upper offers durability and a premium look.</li>
+        <li class="mb-2">Solid rubber outsole enhances traction on a variety of surfaces.</li>
+        <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+        <li class="mb-2">Style: 553558-161</li>
+        <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+      </ul>
+      <p class="mb-4">
+        <b class="text-xl font-bold">Tried and True</b>
+      </p>
+      <p>
+        A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
+        comfort. A rubber outsole supplies durable traction on a variety of surfaces.
+      </p>
+    </div>
+    <div class="content reviews">
+      <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
+        <div class="star mb-2">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
         </div>
-        <div class="content active">
-          <p class="mb-4">
-            <b class="text-xl font-bold">ALWAYS FRESH.</b>
-          </p>
-          <p class="mb-4">
-            Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's
-            familiar yet always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks ensure you'll always be on point.
-          </p>
-          <p class="mb-4">
-            <b class="text-xl font-bold">Benefits</b>
-          </p>
-          <ul class="list-disc pl-5 mb-4">
-            <li class="mb-2">Encapsulated Air-Sole unit provides lightweight cushioning.</li>
-            <li class="mb-2">Genuine leather in the upper offers durability and a premium look.</li>
-            <li class="mb-2">Solid rubber outsole enhances traction on a variety of surfaces.</li>
-            <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
-            <li class="mb-2">Style: 553558-161</li>
-            <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+        <h4 class="text-lg font-semibold mb-2">Tốc độ giao hàng siêu ánh sáng</h4>
+        <span class="italic text-gray-400 mb-4 block"><span class="font-medium">E lờn mớt</span> no
+          <span class="font-medium">Jun 14, 2024</span></span>
+        <p class="mb-4">
+          Tôi đang ở sao hoả và thật sự rất bất ngờ với tốc độ giao hàng
+          thần tốc của shop TuyenTien ở trái đất, hàng tới tiền tay trong
+          1 "block" sau khi vừa hoàn tất thanh toán. Thật sự rất hợp với
+          phong cách làm việc 5 phút của tôi. Quả thực CEO Ngọc Tiến là
+          một người văn võ song toàn, ngàn năm có 1
+        </p>
+      </article>
+      <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
+        <div class="star mb-2">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half text-yellow-400"></i>
+        </div>
+        <h4 class="text-lg font-semibold mb-2">Sản phẩm tốt và chuẩn như sách giáo khoa</h4>
+        <span class="italic text-gray-400 mb-4 block"><span class="font-medium">Ngọc Tờ rinh</span> no
+          <span class="font-medium">Jun 12, 2024</span></span>
+        <p class="mb-4">
+          Sản phẩm tốt và đẹp, đeo rất thoải mái. Ngoài ra, CEO Ngọc Tiến
+          rất đẹp trai nữa. Tiếc là chỉ có thể đứng ngắm nhìn từ xa nên
+          đánh giá 4.5 thôi
+        </p>
+      </article>
+      <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
+        <div class="star mb-2">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <h4 class="text-lg font-semibold mb-2">
+          This is the greatest online shop that I've ever ordered!
+        </h4>
+        <span class="italic text-gray-400 mb-4 block"><span class="font-medium">Son Goku</span> no
+          <span class="font-medium">Jun 15, 2024</span></span>
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+          tempore maiores id, illum sit sapiente a eum consectetur cum
+          natus ipsum officiis dolor praesentium non minima. Eius tempore
+          consequatur nobis, unde blanditiis, vel, deserunt cum facere
+          excepturi ratione reiciendis iste!
+        </p>
+      </article>
+    </div>
+  </div>
+  <div class="max-w-[1160px] mx-auto p-6">
+    <h4 class="text-3xl font-semibold mb-3">Related Products</h4>
+    <section class="py-10">
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list flex">
+            <li class="splide__slide mx-2 flex-shrink-0">
+              <img class="w-full h-auto object-cover rounded-lg"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/i1-7b457df1-d698-455e-ba39-694868991933/air-jordan-1-low-shoes-nGLZR9.png"
+                alt="Image 1" />
+            </li>
+            <li class="splide__slide mx-2 flex-shrink-0">
+              <img class="w-full h-auto object-cover rounded-lg"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1fcccc5c-b4ee-4765-9ba1-d2a9a6c08bc6/air-jordan-1-low-shoes-459b4T.png"
+                alt="Image 2" />
+            </li>
+            <li class="splide__slide mx-2 flex-shrink-0">
+              <img class="w-full h-auto object-cover rounded-lg"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b587cf81-b49a-4200-9a7c-8daa033ed393/air-jordan-1-low-shoes-459b4T.png"
+                alt="Image 3" />
+            </li>
+            <li class="splide__slide mx-2 flex-shrink-0">
+              <img class="w-full h-auto object-cover rounded-lg"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/13580661-54fd-4a68-8e2f-c8207e3026eb/air-jordan-1-low-shoes-ZHhKk2.png"
+                alt="Image 4" />
+            </li>
+            <li class="splide__slide mx-2 flex-shrink-0">
+              <img class="w-full h-auto object-cover rounded-lg"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b95033d3-2b18-4e8e-b386-56e4209b3352/air-jordan-1-low-shoes-zTWr01.png"
+                alt="Image 5" />
+            </li>
+            <li class="splide__slide mx-2 flex-shrink-0">
+              <img class="w-full h-auto object-cover rounded-lg"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/36a0198b-3c7b-4013-87fd-69ae4f35975f/air-jordan-1-low-se-shoes-xmgzfl.png"
+                alt="Image 6" />
+            </li>
+            <li class="splide__slide mx-2 flex-shrink-0">
+              <img class="w-full h-auto object-cover rounded-lg"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8e2656f4-79b6-4d37-93c1-ea558a1c6a6d/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T.png"
+                alt="Image 7" />
+            </li>
+            <li class="splide__slide mx-2 flex-shrink-0">
+              <img class="w-full h-auto object-cover rounded-lg"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/73d20ad4-26ef-49d7-b79c-80042b084b5b/air-jordan-1-low-older-shoes-xLzJc6.png"
+                alt="Image 8" />
+            </li>
           </ul>
-          <p class="mb-4">
-            <b class="text-xl font-bold">Tried and True</b>
-          </p>
-          <p>
-            A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
-            comfort. A rubber outsole supplies durable traction on a variety of surfaces.
-          </p>
-        </div>
-        <div class="content reviews">
-          <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-            <div class="star mb-2">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-            </div>
-            <h4 class="text-lg font-semibold mb-2">Tốc độ giao hàng siêu ánh sáng</h4>
-            <span class="italic text-gray-400 mb-4 block"><span class="font-medium">E lờn mớt</span> no
-              <span class="font-medium">Jun 14, 2024</span></span>
-            <p class="mb-4">
-              Tôi đang ở sao hoả và thật sự rất bất ngờ với tốc độ giao hàng
-              thần tốc của shop TuyenTien ở trái đất, hàng tới tiền tay trong
-              1 "block" sau khi vừa hoàn tất thanh toán. Thật sự rất hợp với
-              phong cách làm việc 5 phút của tôi. Quả thực CEO Ngọc Tiến là
-              một người văn võ song toàn, ngàn năm có 1
-            </p>
-          </article>
-          <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-            <div class="star mb-2">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star-half text-yellow-400"></i>
-            </div>
-            <h4 class="text-lg font-semibold mb-2">Sản phẩm tốt và chuẩn như sách giáo khoa</h4>
-            <span class="italic text-gray-400 mb-4 block"><span class="font-medium">Ngọc Tờ rinh</span> no
-              <span class="font-medium">Jun 12, 2024</span></span>
-            <p class="mb-4">
-              Sản phẩm tốt và đẹp, đeo rất thoải mái. Ngoài ra, CEO Ngọc Tiến
-              rất đẹp trai nữa. Tiếc là chỉ có thể đứng ngắm nhìn từ xa nên
-              đánh giá 4.5 thôi
-            </p>
-          </article>
-          <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-            <div class="star mb-2">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-            </div>
-            <h4 class="text-lg font-semibold mb-2">
-              This is the greatest online shop that I've ever ordered!
-            </h4>
-            <span class="italic text-gray-400 mb-4 block"><span class="font-medium">Son Goku</span> no
-              <span class="font-medium">Jun 15, 2024</span></span>
-            <p class="mb-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
-              tempore maiores id, illum sit sapiente a eum consectetur cum
-              natus ipsum officiis dolor praesentium non minima. Eius tempore
-              consequatur nobis, unde blanditiis, vel, deserunt cum facere
-              excepturi ratione reiciendis iste!
-            </p>
-          </article>
         </div>
       </div>
-    <div class="max-w-[1160px] mx-auto p-6">
-      <h4 class="text-3xl font-semibold mb-3">Related Products</h4>
-      <section class="py-10">
-        <div class="splide">
-          <div class="splide__track">
-            <ul class="splide__list flex">
-              <li class="splide__slide mx-2 flex-shrink-0">
-                <img class="w-full h-auto object-cover rounded-lg"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/i1-7b457df1-d698-455e-ba39-694868991933/air-jordan-1-low-shoes-nGLZR9.png"
-                  alt="Image 1" />
-              </li>
-              <li class="splide__slide mx-2 flex-shrink-0">
-                <img class="w-full h-auto object-cover rounded-lg"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1fcccc5c-b4ee-4765-9ba1-d2a9a6c08bc6/air-jordan-1-low-shoes-459b4T.png"
-                  alt="Image 2" />
-              </li>
-              <li class="splide__slide mx-2 flex-shrink-0">
-                <img class="w-full h-auto object-cover rounded-lg"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b587cf81-b49a-4200-9a7c-8daa033ed393/air-jordan-1-low-shoes-459b4T.png"
-                  alt="Image 3" />
-              </li>
-              <li class="splide__slide mx-2 flex-shrink-0">
-                <img class="w-full h-auto object-cover rounded-lg"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/13580661-54fd-4a68-8e2f-c8207e3026eb/air-jordan-1-low-shoes-ZHhKk2.png"
-                  alt="Image 4" />
-              </li>
-              <li class="splide__slide mx-2 flex-shrink-0">
-                <img class="w-full h-auto object-cover rounded-lg"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b95033d3-2b18-4e8e-b386-56e4209b3352/air-jordan-1-low-shoes-zTWr01.png"
-                  alt="Image 5" />
-              </li>
-              <li class="splide__slide mx-2 flex-shrink-0">
-                <img class="w-full h-auto object-cover rounded-lg"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/36a0198b-3c7b-4013-87fd-69ae4f35975f/air-jordan-1-low-se-shoes-xmgzfl.png"
-                  alt="Image 6" />
-              </li>
-              <li class="splide__slide mx-2 flex-shrink-0">
-                <img class="w-full h-auto object-cover rounded-lg"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8e2656f4-79b6-4d37-93c1-ea558a1c6a6d/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T.png"
-                  alt="Image 7" />
-              </li>
-              <li class="splide__slide mx-2 flex-shrink-0">
-                <img class="w-full h-auto object-cover rounded-lg"
-                  src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/73d20ad4-26ef-49d7-b79c-80042b084b5b/air-jordan-1-low-older-shoes-xLzJc6.png"
-                  alt="Image 8" />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var splide = new Splide(".splide", {
-            perPage: 4,
-            focus: 0,
-            omitEnd: true,
-            gap: '1rem',
-            breakpoints: {
-              640: {
-                perPage: 1,
-              },
-              768: {
-                perPage: 2,
-              },
-              1024: {
-                perPage: 3,
-              }
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var splide = new Splide(".splide", {
+          perPage: 4,
+          focus: 0,
+          omitEnd: true,
+          gap: '1rem',
+          breakpoints: {
+            640: {
+              perPage: 1,
+            },
+            768: {
+              perPage: 2,
+            },
+            1024: {
+              perPage: 3,
             }
-          });
-
-          splide.mount();
+          }
         });
-      </script>
-    </div>
+
+        splide.mount();
+      });
+    </script>
+  </div>
 
   </main>
 
-         <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer class="w-full h-96 max-[431px]:h-auto bg-black">
     <div class="col flex max-[431px]:flex-col h-[332px] max-[431px]:h-full ">
       <div class="max-[431px]:w-full w-2/4 mt-10">
@@ -731,7 +763,8 @@
           <li><a href="">Company: TienTuyenShoes</a></li>
           <li><a href="">Tel: + 84 24 3767 4686</a></li>
           <li><a href="">Email: TienTuyenShoes@vnuk.edu.vn</a></li>
-          <li><a href="">Slogan: 22090003 To VNUK all Top – The world beneath <br> your feet will be a success every step 08/06/2024</a></li>
+          <li><a href="">Slogan: 22090003 To VNUK all Top – The world beneath <br> your feet will be a success every
+              step 08/06/2024</a></li>
         </ul>
       </div>
       <div class="max-[431px]:w-full w-[15%] px-4 mt-10 max-[431px]:text-center">
@@ -790,163 +823,165 @@
       </div>
     </div>
   </footer>
-    <!-- Slide bar -->
-<script>
+  <!-- Slide bar -->
+  <script>
     const initSlider = () => {
-        const imageList = document.querySelector(".image-list");
-        const slideButtons = document.querySelectorAll(".slide-button");
-        const sliderScrollbar = document.querySelector(".container1 .relative > div");
-        const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-        let startX = 0;
-        let thumbPosition = 0;
+      const imageList = document.querySelector(".image-list");
+      const slideButtons = document.querySelectorAll(".slide-button");
+      const sliderScrollbar = document.querySelector(".container1 .relative > div");
+      const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+      const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+      let startX = 0;
+      let thumbPosition = 0;
 
-        scrollbarThumb.addEventListener("dragstart", (e) => {
-            startX = e.clientX;
-            thumbPosition = scrollbarThumb.offsetLeft;
+      scrollbarThumb.addEventListener("dragstart", (e) => {
+        startX = e.clientX;
+        thumbPosition = scrollbarThumb.offsetLeft;
+      });
+
+      scrollbarThumb.addEventListener("drag", (e) => {
+        const deltaX = e.clientX - startX;
+        const newThumbPosition = thumbPosition + deltaX;
+        const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
+        const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+        const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+        scrollbarThumb.style.left = `${boundedPosition}px`;
+        imageList.scrollLeft = scrollPosition;
+      });
+
+      scrollbarThumb.addEventListener("dragend", () => {
+        startX = 0;
+        thumbPosition = 0;
+      });
+
+      slideButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const direction = button.id === "prev-slide" ? -1 : 1;
+          const scrollAmount = imageList.clientWidth * direction;
+          imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
         });
+      });
 
-        scrollbarThumb.addEventListener("drag", (e) => {
-            const deltaX = e.clientX - startX;
-            const newThumbPosition = thumbPosition + deltaX;
-            const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
-            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+      const handleSlideButtons = () => {
+        slideButtons[0].classList.toggle("hidden", imageList.scrollLeft <= 0);
+        slideButtons[1].classList.toggle("hidden", imageList.scrollLeft >= maxScrollLeft);
+      };
 
-            scrollbarThumb.style.left = `${boundedPosition}px`;
-            imageList.scrollLeft = scrollPosition;
-        });
+      const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        scrollbarThumb.style.left = `${thumbPosition}px`;
+      };
 
-        scrollbarThumb.addEventListener("dragend", () => {
-            startX = 0;
-            thumbPosition = 0;
-        });
-
-        slideButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                const direction = button.id === "prev-slide" ? -1 : 1;
-                const scrollAmount = imageList.clientWidth * direction;
-                imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-            });
-        });
-
-        const handleSlideButtons = () => {
-            slideButtons[0].classList.toggle("hidden", imageList.scrollLeft <= 0);
-            slideButtons[1].classList.toggle("hidden", imageList.scrollLeft >= maxScrollLeft);
-        };
-
-        const updateScrollThumbPosition = () => {
-            const scrollPosition = imageList.scrollLeft;
-            const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-            scrollbarThumb.style.left = `${thumbPosition}px`;
-        };
-
-        imageList.addEventListener("scroll", () => {
-            updateScrollThumbPosition();
-            handleSlideButtons();
-        });
-
+      imageList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
         handleSlideButtons();
+      });
+
+      handleSlideButtons();
     };
 
     window.addEventListener("resize", initSlider);
     window.addEventListener("load", initSlider);
 
-</script>
+  </script>
   <!-- CART -->
   <script>
     function toggleDrawer() {
-        const drawer = document.getElementById('drawer');
-        const overlay = document.getElementById('overlay');
-        drawer.classList.toggle('right-0');
-        drawer.classList.toggle('right-[-500px]');
-        overlay.classList.toggle('hidden');
-        overlay.classList.toggle('opacity-0');
-        overlay.classList.toggle('opacity-100');
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('overlay');
+      drawer.classList.toggle('right-0');
+      drawer.classList.toggle('right-[-500px]');
+      overlay.classList.toggle('hidden');
+      overlay.classList.toggle('opacity-0');
+      overlay.classList.toggle('opacity-100');
     }
   </script>
   <!-- REMOVE PRODUCT FROM CART -->
   <script>
-      var deleteButton = document.getElementById('deleteProductBtn');
-      deleteButton.addEventListener('click', function() {
+    var deleteButton = document.getElementById('deleteProductBtn');
+    deleteButton.addEventListener('click', function () {
       var productContainer = document.getElementById('productContainer');
       productContainer.remove();
-  });
+    });
   </script>
+
   <!-- CHANGE IMAGE WHEN MOVEOVER -->
   <script>
-    // Get all thumbnails
     const thumbnails = document.querySelectorAll('.thumbnail img');
-    // Get the main image
     const mainImage = document.querySelector('.main-image img');
 
-    // Loop through each thumbnail and add event listener
     thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('mouseover', function() {
-            // Change the main image source to the thumbnail source
-            mainImage.src = this.src;
-        });
+      thumbnail.addEventListener('mouseover', function () {
+        mainImage.src = this.src;
+
+        thumbnails.forEach(thumb => thumb.style.border = 'none');
+
+        this.style.border = 'solid 3px #33ccff';
+      });
     });
-</script>
+  </script>
 
-<!-- NAV TAB DESCRIBE + REVIEWS -->
-<script>
-  const tabs = document.querySelectorAll('.tab_btn');
-  const all_content = document.querySelectorAll('.content');
-  const line = document.querySelector('.line');
+  <!-- NAV TAB DESCRIBE + REVIEWS -->
+  <script>
+    const tabs = document.querySelectorAll('.tab_btn');
+    const all_content = document.querySelectorAll('.content');
+    const line = document.querySelector('.line');
 
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', (e) => {
-      tabs.forEach(tab => { tab.classList.remove('active') });
-      tab.classList.add('active');
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', (e) => {
+        tabs.forEach(tab => { tab.classList.remove('active') });
+        tab.classList.add('active');
 
-      line.style.width = tab.offsetWidth + "px";
-      line.style.left = tab.offsetLeft + "px";
+        line.style.width = tab.offsetWidth + "px";
+        line.style.left = tab.offsetLeft + "px";
 
-      all_content.forEach(content => { content.classList.remove('active') });
-      all_content[index].classList.add('active');
+        all_content.forEach(content => { content.classList.remove('active') });
+        all_content[index].classList.add('active');
+      });
     });
-  });
 
-  window.addEventListener('resize', () => {
-    const activeTab = document.querySelector('.tab_btn.active');
-    line.style.width = activeTab.offsetWidth + "px";
-    line.style.left = activeTab.offsetLeft + "px";
-  });
+    window.addEventListener('resize', () => {
+      const activeTab = document.querySelector('.tab_btn.active');
+      line.style.width = activeTab.offsetWidth + "px";
+      line.style.left = activeTab.offsetLeft + "px";
+    });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const activeTab = document.querySelector('.tab_btn.active');
-    line.style.width = activeTab.offsetWidth + "px";
-    line.style.left = activeTab.offsetLeft + "px";
-  });
-</script>
-<!-- AUTO CALC -->
-<script>
-  function updateTotal() {
+    document.addEventListener('DOMContentLoaded', () => {
+      const activeTab = document.querySelector('.tab_btn.active');
+      line.style.width = activeTab.offsetWidth + "px";
+      line.style.left = activeTab.offsetLeft + "px";
+    });
+  </script>
+  <!-- AUTO CALC -->
+  <script>
+    function updateTotal() {
       const quantityInput = document.getElementById('quantity');
       const productPriceElement = document.getElementById('productPrice');
       const subtotalElement = document.getElementById('subtotal');
       const totalElement = document.getElementById('total');
-  
+
       const productPrice = parseFloat(productPriceElement.innerText.replace('$', ''));
       const quantity = parseInt(quantityInput.value);
       const subtotal = productPrice * quantity;
-  
+
       subtotalElement.innerText = `$${subtotal.toFixed(2)}`;
       totalElement.innerText = `$${subtotal.toFixed(2)}`;
-  }
+    }
 
-  function deleteProduct() {
+    function deleteProduct() {
       const productContainer = document.getElementById('productContainer');
       productContainer.remove();
-  
+
       const subtotalElement = document.getElementById('subtotal');
       const totalElement = document.getElementById('total');
       subtotalElement.innerText = `$0.00`;
       totalElement.innerText = `$0.00`;
-  }
-  
-  document.getElementById('quantity').addEventListener('input', updateTotal);
-  document.getElementById('deleteProductBtn').addEventListener('click', deleteProduct);
-</script>
+    }
+
+    document.getElementById('quantity').addEventListener('input', updateTotal);
+    document.getElementById('deleteProductBtn').addEventListener('click', deleteProduct);
+  </script>
+
 </html>
