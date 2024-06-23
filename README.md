@@ -7,8 +7,11 @@ Our Nike shoe sales project offers authentic products like Air Max, Air Jordan, 
 Our project utilizes advanced technologies to ensure optimal performance and user experience:
   - **NodeJS**: is used on the server side to handle requests quickly and efficiently.
   - **Vite**: supports fast development and building of the user interface with instant module reloading.
-    **Tailwind CSS**: enables the creation of modern, responsive UI designs without extensive custom CSS.
+  - **Tailwind CSS**: enables the creation of modern, responsive UI designs without extensive custom CSS.
   - **XAMPP**: provides a comprehensive development environment for PHP and MySQL, making it easy to set up and use.
+
+# Our production
+https://sungoat1001.github.io/TuyenTienShoes/
 
 # Team member
 
