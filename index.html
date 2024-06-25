@@ -90,8 +90,6 @@
                 <a href="./man.html" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
                 <a href="./newarrivals.html" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
                 <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
-                <button class="drawer-toggle p-3 text-xl" onclick="toggleDrawer()"><i
-                        class='bx bx-shopping-bag'></i></button>
             </nav>
             <!-- CART -->
             <div id="overlay"
@@ -145,11 +143,22 @@
                     </nav>
                 </div>
             </div>
-            <a href="./sigin.html"  class="hover:underline underline-offset-4 font-semibold text-lg max-sm:hidden">Sign in</a>
+            <button class="drawer-toggle p-3 text-2xl" onclick="toggleDrawer()"><i
+                class='bx bx-shopping-bag'></i></button>
             <!-- Menu Mobile -->
             <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
         </div>
     </header>
+    <div class="fixed top-16 z-40 w-full h-7 flex justify-center items-center bg-black">
+        <marquee behavior="" direction="" class="space-x-40 text-nowrap">
+            <strong class="text-white text-xs">FREE SHIPPING ON ORDERS OVER $50!</strong>
+            <strong class="text-white text-xs">EXCITING PROMOTIONS - LIMITED QUANTITIES!</strong>
+            <strong class="text-white text-xs">FREE SHIPPING ON ORDERS OVER $50!</strong>
+            <strong class="text-white text-xs">EXCITING PROMOTIONS - LIMITED QUANTITIES!</strong>
+            <strong class="text-white text-xs">FREE SHIPPING ON ORDERS OVER $50!</strong>
+            <strong class="text-white text-xs">EXCITING PROMOTIONS - LIMITED QUANTITIES!</strong>
+        </marquee>  
+    </div>
     <!-- HEADER -->
     <section class="relative w-full mt-16" style="height: 927px;">
         <div class="absolute w-full h-full overflow-hidden">
