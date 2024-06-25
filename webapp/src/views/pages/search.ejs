@@ -1,0 +1,296 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+    .col {
+        width: 95%;
+        margin: auto;
+    }
+
+    * {
+        font-family: "Inter", Courier, monospace;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
+
+<main class="overflow-x-hidden pt-16">
+    <!-- Background -->
+    <img src="/asset/img/background.jpg" alt="" class="relative w-full h-96 object-cover">
+    <div class="absolute top-52 z-40 w-full text-center text-white flex flex-col items-center justify-center space-y-4">
+        <p class="text-3xl font-medium">NEW ARRIVALS</p>
+    </div>
+    <!-- PRODUCT -->
+    <div class="w-[80%] m-auto h-14 flex border-[1.5px] border-gray-300 mt-5">
+        <div class="h-full w-60 px-2 flex items-center font-medium justify-between border-r-[1.5px] border-gray-300 bg-white">
+            <span id="filterText">Hide Filters</span>
+            <button><i class='bx bx-filter text-3xl' ></i></button>
+        </div>
+        <div class="w-[1100px] h-full px-2 flex items-center font-medium border-r-[1.5px] border-gray-300 bg-white">
+            <span>20 Results</span>
+        </div>
+        <select name="" id="" class="w-60 px-2 h-full flex items-center font-medium">
+            <option value="revevance">REVEANCE</option>
+            <option value="lowestprice">LOWEST PRICE</option>
+            <option value="highestprice">HIGHEST PRICE</option>
+            <option value="newestfirst">NEWEST FIRST</option>
+        </select>
+    </div>
+    <section class="w-[80%] h-full m-auto flex max-[431px]:m-0">
+        <div id="filterPanel" class="w-60 h-full mt-3 max-[431px]:hidden">
+            <div class="w-full flex flex-col border-y-[1.5px] border-black">
+                <div class="toggle-button flex justify-between cursor-pointer">
+                    <span class="text-xl font-medium my-3">Shoes</span>
+                    <i class='bx bx-chevron-up text-3xl my-2'></i>
+                </div>
+                <div class="w-full h-auto flex flex-col text-lg font-medium mb-2 hidden">
+                    <a href="">Jordan</a>
+                    <a href="">Running</a>
+                    <a href="">Skate</a>
+                    <a href="">Vertebrae</a>
+                    <a href="">MVP</a>
+                    <a href="">Golf</a>
+                    <a href="">Court</a>
+                    <a href="">Sandals</a>
+                    <a href="">Excee</a>
+                </div>
+            </div>
+            <div class="w-full flex flex-col border-b-[1.5px] border-black">
+                <div class="toggle-button flex justify-between cursor-pointer">
+                    <span class="text-xl font-medium my-3">Gender</span>
+                    <i class='bx bx-chevron-up text-3xl my-2'></i>
+                </div>
+                <div class="w-full h-auto text-lg font-medium mb-2 hidden">
+                    <input type="checkbox" id="men" name="men" value="Men" class="h-6 w-6">
+                    <label for="men"> Men</label><br>
+                    <input type="checkbox" id="women" name="women" value="Women" class="h-6 w-6">
+                    <label for="women"> Women</label><br>
+                    <input type="checkbox" id="unisex" name="unisex" value="Unisex" class="h-6 w-6">
+                    <label for="unisex"> Unisex</label><br>
+                </div>
+            </div>
+            <div class="w-full flex flex-col border-b-[1.5px] border-black">
+                <div class="toggle-button flex justify-between cursor-pointer">
+                    <span class="text-xl font-medium my-3">Size</span>
+                    <i class='bx bx-chevron-up text-3xl my-2'></i>
+                </div>
+                <div class="w-full h-auto text-lg font-medium mb-2 hidden">
+                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">37.5</button>
+                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">38</button>
+                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">38.5</button>
+                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">39</button>
+                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">40</button>
+                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">40.5</button>
+                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">41</button>
+                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">42</button>
+                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">42.5</button>
+                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">43</button>
+                </div>
+            </div>
+            <div class="w-full flex flex-col border-b-[1.5px] border-black">
+                <div class="toggle-button flex justify-between cursor-pointer">
+                    <span class="text-xl font-medium my-3">Color</span>
+                    <i class='bx bx-chevron-up text-3xl my-2'></i>
+                </div>
+                <div class="w-full h-auto text-lg font-medium mb-2 hidden">
+                    <input type="checkbox" id="black" name="black" value="Black" class="h-6 w-6">
+                    <label for="black"> Black</label><br>
+                    <input type="checkbox" id="white" name="white" value="White" class="h-6 w-6">
+                    <label for="white"> White</label><br>
+                    <input type="checkbox" id="blue" name="blue" value="Blue" class="h-6 w-6">
+                    <label for="blue"> Blue</label><br>
+                    <input type="checkbox" id="brown" name="brown" value="Brown" class="h-6 w-6">
+                    <label for="brown"> Brown</label><br>
+                    <input type="checkbox" id="green" name="green" value="Green" class="h-6 w-6">
+                    <label for="green"> Green</label><br>
+                    <input type="checkbox" id="gray" name="gray" value="Gray" class="h-6 w-6">
+                    <label for="gray"> Gray</label><br>
+                </div>
+            </div>
+            <div class="w-full flex flex-col border-b-[1.5px] border-black">
+                <div class="toggle-button flex justify-between cursor-pointer">
+                    <span class="text-xl font-medium my-3">Price</span>
+                    <i class='bx bx-chevron-up text-3xl my-2'></i>
+                </div>
+                <div class="w-full h-auto text-lg font-medium mb-2 hidden">
+                    <input type="checkbox" id="low" name="low" value="Low" class="h-6 w-6">
+                    <label for="low"> $50 - $100</label><br>
+                    <input type="checkbox" id="average" name="average" value="Average" class="h-6 w-6">
+                    <label for="average"> $100 - $150</label><br>
+                    <input type="checkbox" id="high" name="high" value="High" class="h-6 w-6">
+                    <label for="high"> Over $150</label><br>
+                </div>
+            </div>
+        </div>
+        <div class="w-[80.5rem] h-full block ml-1 space-y-2 max-[431px]:m-0">
+            <div class="w-[80.5rem] flex space-x-2 max-[431px]:flex-col max-[431px]:w-0 max-[431px]:space-x-0">
+                <a href="" class="flex flex-col">
+                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[27.5rem] h-[28.5rem] object-cover">
+                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="text-gray-500">Men's / Women's Shoes</span>
+                        <a href=""><span class="underline text-gray-500">More color</span></a>
+                        <span class="font-semibold text-lg mt-3">$29.99</span>
+                    </div>
+                </a>
+                <a href="" class="flex flex-col">
+                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[27.5rem] h-[28.5rem] object-cover">
+                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="text-gray-500">Men's / Women's Shoes</span>
+                        <a href=""><span class="underline text-gray-500">More color</span></a>
+                        <span class="font-semibold text-lg mt-3">$29.99</span>
+                    </div>
+                </a>
+                <a href="" class="flex flex-col">
+                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[27.5rem] h-[28.5rem] object-cover">
+                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="text-gray-500">Men's / Women's Shoes</span>
+                        <a href=""><span class="underline text-gray-500">More color</span></a>
+                        <span class="font-semibold text-lg mt-3">$29.99</span>
+                    </div>
+                </a>
+            </div>
+            <div class="w-[80.5rem] flex space-x-2 max-[431px]:flex-col max-[431px]:w-0 max-[431px]:space-x-0">
+                <a href="" class="flex flex-col">
+                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[27.5rem] h-[28.5rem] object-cover">
+                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="text-gray-500">Men's / Women's Shoes</span>
+                        <a href=""><span class="underline text-gray-500">More color</span></a>
+                        <span class="font-semibold text-lg mt-3">$29.99</span>
+                    </div>
+                </a>
+                <a href="" class="flex flex-col">
+                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[27.5rem] h-[28.5rem] object-cover">
+                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="text-gray-500">Men's / Women's Shoes</span>
+                        <a href=""><span class="underline text-gray-500">More color</span></a>
+                        <span class="font-semibold text-lg mt-3">$29.99</span>
+                    </div>
+                </a>
+                <a href="" class="flex flex-col">
+                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[27.5rem] h-[28.5rem] object-cover">
+                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="text-gray-500">Men's / Women's Shoes</span>
+                        <a href=""><span class="underline text-gray-500">More color</span></a>
+                        <span class="font-semibold text-lg mt-3">$29.99</span>
+                    </div>
+                </a>
+            </div>
+            <div class="w-[80.5rem] flex space-x-2 max-[431px]:flex-col max-[431px]:w-0 max-[431px]:space-x-0">
+                <a href="" class="flex flex-col">
+                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[27.5rem] h-[28.5rem] object-cover">
+                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="text-gray-500">Men's / Women's Shoes</span>
+                        <a href=""><span class="underline text-gray-500">More color</span></a>
+                        <span class="font-semibold text-lg mt-3">$29.99</span>
+                    </div>
+                </a>
+                <a href="" class="flex flex-col">
+                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[27.5rem] h-[28.5rem] object-cover">
+                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="text-gray-500">Men's / Women's Shoes</span>
+                        <a href=""><span class="underline text-gray-500">More color</span></a>
+                        <span class="font-semibold text-lg mt-3">$29.99</span>
+                    </div>
+                </a>
+                <a href="" class="flex flex-col">
+                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[27.5rem] h-[28.5rem] object-cover">
+                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
+                        <span class="text-gray-500">Men's / Women's Shoes</span>
+                        <a href=""><span class="underline text-gray-500">More color</span></a>
+                        <span class="font-semibold text-lg mt-3">$29.99</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- CART -->
+<script>
+    function toggleDrawer() {
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('overlay');
+        drawer.classList.toggle('right-0');
+        drawer.classList.toggle('right-[-500px]');
+        overlay.classList.toggle('hidden');
+        overlay.classList.toggle('opacity-0');
+        overlay.classList.toggle('opacity-100');
+    }
+</script>
+<!-- REMOVE PRODUCT FROM CART -->
+<script>
+    var deleteButton = document.getElementById('deleteProductBtn');
+    deleteButton.addEventListener('click', function () {
+        var productContainer = document.getElementById('productContainer');
+        productContainer.remove();
+    });
+</script>
+<!-- Filter hidden -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const filterButton = document.querySelector('.bx-filter');
+        const filterPanel = document.getElementById('filterPanel');
+        const filterText = document.getElementById('filterText');
+
+        filterButton.addEventListener('click', function() {
+            if (filterPanel.style.display === 'none') {
+                filterPanel.style.display = 'block';
+                filterText.textContent = 'Hide Filters';
+            } else {
+                filterPanel.style.display = 'none';
+                filterText.textContent = 'Show Filters';
+            }
+        });
+    });
+</script>
+<!-- Accordion hidden -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButtons = document.querySelectorAll('.toggle-button');
+
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                content.classList.toggle('hidden');
+            });
+        });
+    });
+</script>
+<!-- AUTO CALC -->
+<script>
+    function updateTotal() {
+        const quantityInput = document.getElementById('quantity');
+        const productPriceElement = document.getElementById('productPrice');
+        const subtotalElement = document.getElementById('subtotal');
+        const totalElement = document.getElementById('total');
+
+        const productPrice = parseFloat(productPriceElement.innerText.replace('$', ''));
+        const quantity = parseInt(quantityInput.value);
+        const subtotal = productPrice * quantity;
+
+        subtotalElement.innerText = `$${subtotal.toFixed(2)}`;
+        totalElement.innerText = `$${subtotal.toFixed(2)}`;
+    }
+
+    function deleteProduct() {
+        const productContainer = document.getElementById('productContainer');
+        productContainer.remove();
+
+        const subtotalElement = document.getElementById('subtotal');
+        const totalElement = document.getElementById('total');
+        subtotalElement.innerText = `$0.00`;
+        totalElement.innerText = `$0.00`;
+    }
+
+    document.getElementById('quantity').addEventListener('input', updateTotal);
+    document.getElementById('deleteProductBtn').addEventListener('click', deleteProduct);
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= siteName %></title>
+    <meta name="csrf-token" content="<%= typeof csrfToken !== 'undefined' ? csrfToken : '' %>">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <% styles.forEach(function(file) { %>
+        <link rel="stylesheet" href="<%= file.path %>">
+    <% }); %>
+
+    <%- style %>
+</head>
+<body>
+
+<% if (isPaymentPage || isThankYouPage) { %>
+    <%- header %>
+<% } else { %>
+    <%- include('../partials/header'); %>
+<% } %>
+
+<%- body %>
+
+<% if (isThankYouPage) { %>
+    <%- footer %>
+<% } else { %>
+    <%- include('../partials/footer'); %>
+<% } %>
+
+
+<% scripts.forEach(function(file) { %>
+    <script type="<%= file.type %>" src="<%= file.path %>"></script>
+<% }); %>
+
+<!-- Additional scripts customized for specific screens -->
+<%- script %>
+</body>
+</html>
