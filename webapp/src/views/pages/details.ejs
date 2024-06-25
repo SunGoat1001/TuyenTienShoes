@@ -21,6 +21,282 @@
             opacity: 1;
         }
     }
+
+    .image-list {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+
+    .image-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-thumb {
+        transition: height 0.3s ease;
+    }
+
+    .scrollbar-thumb:hover {
+        height: 8px;
+    }
+
+    .container {
+        max-width: 1110px;
+        margin: auto;
+        padding: 0 15px;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: space-evenly;
+        border-bottom: 2px solid rgba(229, 229, 229, 1);
+        position: relative;
+        font-weight: bold;
+        font-size: 1.125rem;
+        /* 18px */
+        padding: 15px;
+    }
+
+    .tab_btn {
+        cursor: pointer;
+        padding: 10px 15px;
+        transition: color 0.3s;
+    }
+
+    .tab_btn.active {
+        color: #7360ff;
+    }
+
+    .line {
+        position: absolute;
+        top: 52px;
+        left: 0;
+        height: 5px;
+        background-color: #7360ff;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .content {
+        display: none;
+        border: 1px solid #e5e5e5;
+        padding: 24px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin: 24px 0;
+    }
+
+    .content.active {
+        display: block;
+    }
+
+    .reviews article {
+        padding: 16px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .reviews .last {
+        border-bottom: none;
+    }
+
+    .star {
+        color: #ffc107;
+    }
+
+    @media (max-width: 768px) {
+        .tabs {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tab_btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        .line {
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 3px;
+        }
+    }
+
+    .container {
+
+        justify-content: center;
+        margin-top: 36px;
+        padding: 0 16px;
+    }
+
+    .product-display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        gap: 16px;
+    }
+
+    .product-images {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 12px;
+        margin-left: 2px;
+        cursor: pointer;
+    }
+
+    .thumbnail {
+        width: 80px;
+        height: 80px;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    .main-image {
+        width: 100%;
+        max-width: 535px;
+        height: 620px;
+    }
+
+    .main-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .product-details {
+        width: 100%;
+        max-width: 455px;
+        margin-left: 16px;
+    }
+
+    @media (max-width: 431px) {
+        .product-details {
+            margin-left: 0px;
+        }
+
+        .product-images-mobile {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .product-images {
+            display: none;
+        }
+    }
+
+    @media (min-width: 431px) {
+        .product-images-mobile {
+            display: none;
+        }
+    }
+
+    .rating {
+        padding: 2px 0;
+        font-size: 1.25rem;
+    }
+
+    .product-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .price {
+        margin: 12px 0;
+        font-size: 1.125rem;
+    }
+
+    .color-selection {
+        margin-bottom: 16px;
+    }
+
+    .colors {
+        display: flex;
+        gap: 8px;
+    }
+
+    .color {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .size-selection {
+        margin-top: 16px;
+    }
+
+    .sizes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .sizes label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .sizes input {
+        display: none;
+    }
+
+    .sizes span {
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sizes input:checked+span {
+        border-color: black;
+    }
+
+    .add-to-cart {
+        width: 100%;
+        padding: 16px;
+        margin-top: 16px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    @media (min-width: 768px) {
+        .product-display {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .product-images {
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        .main-image {
+            margin-left: 0;
+        }
+
+        .product-details {
+            margin-top: 0;
+        }
+    }
 </style>
 
 <style>
@@ -187,506 +463,330 @@
     }
 </style>
 
-<main class="overflow-x-hidden">
-        <div class="flex justify-center max-[431px]:container mt-36 max-[431px]:mt-28">
-            <div class="product-display">
-                <div class="product-images">
-                    <div class="thumbnail">
-                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
-                            alt="Air Jordan 1" />
-                    </div>
-                    <div class="thumbnail">
-                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png"
-                            alt="Air Jordan 1" />
-                    </div>
-                    <div class="thumbnail">
-                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png"
-                            alt="Air Jordan 1" />
-                    </div>
-                    <div class="thumbnail">
-                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png"
-                            alt="" />
-                    </div>
-                    <div class="thumbnail">
-                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png"
-                            alt="" />
-                    </div>
-                </div>
 
-                <div class="main-image max-[431px]:p-4">
+
+<main class="overflow-x-hidden">
+    <div class="flex justify-center max-[431px]:container mt-36 max-[431px]:mt-28">
+        <div class="product-display">
+            <div class="product-images">
+                <div class="thumbnail">
                     <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                        alt="Air Jordan 1" />
+                </div>
+                <div class="thumbnail">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png"
+                        alt="Air Jordan 1" />
+                </div>
+                <div class="thumbnail">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png"
+                        alt="Air Jordan 1" />
+                </div>
+                <div class="thumbnail">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png"
                         alt="" />
                 </div>
-                <!-- responsive mobile -->
-                <div class="product-images-mobile">
-                    <div class="thumbnail max-[431px]:mr-1">
-                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
-                            alt="Air Jordan 1" />
-                    </div>
-                    <div class="thumbnail max-[431px]:mr-1">
-                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png"
-                            alt="Air Jordan 1" />
-                    </div>
-                    <div class="thumbnail max-[431px]:mr-1">
-                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png"
-                            alt="Air Jordan 1" />
-                    </div>
-                    <div class="thumbnail max-[431px]:mr-1">
-                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png"
-                            alt="" />
-                    </div>
-                    <div class="thumbnail">
-                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png"
-                            alt="" />
-                    </div>
-                </div>
-                <div class="product-details max-[431px]:p-4">
-                    <div class="rating">
-                        <i class="bx bxs-star text-yellow-400"></i>
-                        <i class="bx bxs-star text-yellow-400"></i>
-                        <i class="bx bxs-star text-yellow-400"></i>
-                        <i class="bx bxs-star text-yellow-400"></i>
-                        <i class="bx bxs-star-half text-yellow-400"></i>
-                    </div>
-                    <h1 class="product-title">Air Jordan 1 Low</h1>
-                    <div class="price">
-                        <strong>Price</strong><br />
-                        100.000.000 VND
-                    </div>
-                    <hr />
-                    <div class="color-selection">
-                        <strong>Color</strong>
-                        <div class="colors">
-                            <div class="color bg-red-500"></div>
-                            <div class="color bg-blue-300"></div>
-                            <div class="color bg-gray-300"></div>
-                            <div class="color bg-orange-500"></div>
-                        </div>
-                    </div>
-                    <div class="size-selection">
-                        <strong>Select size:</strong>
-                        <div class="sizes">
-                            <label>
-                                <input type="radio" name="size" value="37.5" />
-                                <span>37.5</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="38" />
-                                <span>38</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="38.5" />
-                                <span>38.5</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="39" />
-                                <span>39</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="40" />
-                                <span>40</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="40.5" />
-                                <span>40.5</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="41" />
-                                <span>41</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="42" />
-                                <span>42</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="42.5" />
-                                <span>42.5</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="size" value="43" />
-                                <span>43</span>
-                            </label>
-                        </div>
-                    </div>
-                    <button class="add-to-cart">Add to cart</button>
+                <div class="thumbnail">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png"
+                        alt="" />
                 </div>
             </div>
-        </div>
 
-        <style>
-            .container {
-
-                justify-content: center;
-                margin-top: 36px;
-                padding: 0 16px;
-            }
-
-            .product-display {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                max-width: 1200px;
-                width: 100%;
-                gap: 16px;
-            }
-
-            .product-images {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-                padding-left: 12px;
-                margin-left: 2px;
-                cursor: pointer;
-            }
-
-            .thumbnail {
-                width: 80px;
-                height: 80px;
-            }
-
-            .thumbnail img {
-                width: 100%;
-                height: 100%;
-                border-radius: 8px;
-            }
-
-            .main-image {
-                width: 100%;
-                max-width: 535px;
-                height: 620px;
-            }
-
-            .main-image img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 8px;
-            }
-
-            .product-details {
-                width: 100%;
-                max-width: 455px;
-                margin-left: 16px;
-            }
-
-            @media (max-width: 431px) {
-                .product-details {
-                    margin-left: 0px;
-                }
-
-                .product-images-mobile {
-                    display: flex;
-                    flex-direction: row;
-                }
-
-                .product-images {
-                    display: none;
-                }
-            }
-
-            @media (min-width: 431px) {
-                .product-images-mobile {
-                    display: none;
-                }
-            }
-
-            .rating {
-                padding: 2px 0;
-                font-size: 1.25rem;
-            }
-
-            .product-title {
-                font-size: 2.5rem;
-                font-weight: bold;
-            }
-
-            .price {
-                margin: 12px 0;
-                font-size: 1.125rem;
-            }
-
-            .color-selection {
-                margin-bottom: 16px;
-            }
-
-            .colors {
-                display: flex;
-                gap: 8px;
-            }
-
-            .color {
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                cursor: pointer;
-            }
-
-            .size-selection {
-                margin-top: 16px;
-            }
-
-            .sizes {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 8px;
-            }
-
-            .sizes label {
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-            }
-
-            .sizes input {
-                display: none;
-            }
-
-            .sizes span {
-                display: inline-block;
-                width: 80px;
-                height: 40px;
-                border: 2px solid #ccc;
-                border-radius: 8px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .sizes input:checked+span {
-                border-color: black;
-            }
-
-            .add-to-cart {
-                width: 100%;
-                padding: 16px;
-                margin-top: 16px;
-                background-color: black;
-                color: white;
-                font-weight: bold;
-                border: none;
-                cursor: pointer;
-                border-radius: 8px;
-            }
-
-            @media (min-width: 768px) {
-                .product-display {
-                    flex-direction: row;
-                    align-items: flex-start;
-                }
-
-                .product-images {
-                    padding-left: 0;
-                    margin-left: 0;
-                }
-
-                .main-image {
-                    margin-left: 0;
-                }
-
-                .product-details {
-                    margin-top: 0;
-                }
-            }
-        </style>
-
-        <div class="w-[1280px] m-auto max-[431px]:container">
-            <div class="tabs max-[431px]:flex-row">
-                <button class="tab_btn active">Description</button>
-                <button class="tab_btn">Reviews</button>
-                <div class="line" style="width: 90px;"></div>
+            <div class="main-image max-[431px]:p-4">
+                <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                    alt="" />
             </div>
-            <div class="content active">
-                <p class="mb-4">
-                    <b class="text-xl font-bold">ALWAYS FRESH.</b>
-                </p>
-                <p class="mb-4">
-                    Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look
-                    that's
-                    familiar yet always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks
-                    ensure you'll
-                    always be on point.
-                </p>
-                <p class="mb-4">
-                    <b class="text-xl font-bold">Benefits</b>
-                </p>
-                <ul class="list-disc pl-5 mb-4">
-                    <li class="mb-2">Encapsulated Air-Sole unit provides lightweight cushioning.</li>
-                    <li class="mb-2">Genuine leather in the upper offers durability and a premium look.</li>
-                    <li class="mb-2">Solid rubber outsole enhances traction on a variety of surfaces.</li>
-                    <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
-                    <li class="mb-2">Style: 553558-161</li>
-                    <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
-                </ul>
-                <p class="mb-4">
-                    <b class="text-xl font-bold">Tried and True</b>
-                </p>
-                <p>
-                    A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for
-                    all-day
-                    comfort. A rubber outsole supplies durable traction on a variety of surfaces.
-                </p>
+            <!-- responsive mobile -->
+            <div class="product-images-mobile">
+                <div class="thumbnail max-[431px]:mr-1">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png"
+                        alt="Air Jordan 1" />
+                </div>
+                <div class="thumbnail max-[431px]:mr-1">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png"
+                        alt="Air Jordan 1" />
+                </div>
+                <div class="thumbnail max-[431px]:mr-1">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png"
+                        alt="Air Jordan 1" />
+                </div>
+                <div class="thumbnail max-[431px]:mr-1">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png"
+                        alt="" />
+                </div>
+                <div class="thumbnail">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png"
+                        alt="" />
+                </div>
             </div>
-            <div class="content reviews">
-                <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-                    <div class="star mb-2">
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                    </div>
-                    <h4 class="text-lg font-semibold mb-2">Tốc độ giao hàng siêu ánh sáng</h4>
-                    <span class="italic text-gray-400 mb-4 block"><span class="font-medium">E lờn mớt</span> no
-                        <span class="font-medium">Jun 14, 2024</span></span>
-                    <p class="mb-4">
-                        Tôi đang ở sao hoả và thật sự rất bất ngờ với tốc độ giao hàng
-                        thần tốc của shop TuyenTien ở trái đất, hàng tới tiền tay trong
-                        1 "block" sau khi vừa hoàn tất thanh toán. Thật sự rất hợp với
-                        phong cách làm việc 5 phút của tôi. Quả thực CEO Ngọc Tiến là
-                        một người văn võ song toàn, ngàn năm có 1
-                    </p>
-                </article>
-                <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-                    <div class="star mb-2">
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star-half text-yellow-400"></i>
-                    </div>
-                    <h4 class="text-lg font-semibold mb-2">Sản phẩm tốt và chuẩn như sách giáo khoa</h4>
-                    <span class="italic text-gray-400 mb-4 block"><span class="font-medium">Ngọc Tờ rinh</span> no
-                        <span class="font-medium">Jun 12, 2024</span></span>
-                    <p class="mb-4">
-                        Sản phẩm tốt và đẹp, đeo rất thoải mái. Ngoài ra, CEO Ngọc Tiến
-                        rất đẹp trai nữa. Tiếc là chỉ có thể đứng ngắm nhìn từ xa nên
-                        đánh giá 4.5 thôi
-                    </p>
-                </article>
-                <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-                    <div class="star mb-2">
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                    </div>
-                    <h4 class="text-lg font-semibold mb-2">
-                        This is the greatest online shop that I've ever ordered!
-                    </h4>
-                    <span class="italic text-gray-400 mb-4 block"><span class="font-medium">Son Goku</span> no
-                        <span class="font-medium">Jun 15, 2024</span></span>
-                    <p class="mb-4">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
-                        tempore maiores id, illum sit sapiente a eum consectetur cum
-                        natus ipsum officiis dolor praesentium non minima. Eius tempore
-                        consequatur nobis, unde blanditiis, vel, deserunt cum facere
-                        excepturi ratione reiciendis iste!
-                    </p>
-                </article>
-            </div>
-        </div>
-        <div class="max-w-[1160px] mx-auto p-6">
-            <h4 class="text-3xl font-semibold mb-3">Related Products</h4>
-            <section class="py-10">
-                <div class="splide">
-                    <div class="splide__track">
-                        <ul class="splide__list flex">
-                            <li class="splide__slide mx-2 mb-8 flex-shrink-0">
-                                <div>
-                                    <img class="w-full h-auto object-cover rounded-lg"
-                                        src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/i1-7b457df1-d698-455e-ba39-694868991933/air-jordan-1-low-shoes-nGLZR9.png"
-                                        alt="Image 1" />
-                                </div>
-                                <div class="mt-2">
-                                    <h4 class="font-semibold text-lg">Air Jordan 1 Low</h4>
-                                    <h4 class="font-medium text-lg">$80.3</h4>
-                                </div>
-                            </li>
-                            <li class="splide__slide mx-2 flex-shrink-0">
-                                <div>
-                                    <img class="w-full h-auto object-cover rounded-lg"
-                                        src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1fcccc5c-b4ee-4765-9ba1-d2a9a6c08bc6/air-jordan-1-low-shoes-459b4T.png"
-                                        alt="Image 2" />
-                                </div>
-                                <div class="mt-2">
-                                    <h4 class="font-semibold text-lg">Air Jordan 1 Low</h4>
-                                    <h4 class="font-medium text-lg">$80.3</h4>
-                                </div>
-                            </li>
-                            <li class="splide__slide mx-2 flex-shrink-0">
-                                <div>
-                                    <img class="w-full h-auto object-cover rounded-lg"
-                                        src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b587cf81-b49a-4200-9a7c-8daa033ed393/air-jordan-1-low-shoes-459b4T.png"
-                                        alt="Image 3" />
-                                </div>
-                                <div class="mt-2">
-                                    <h4 class="font-semibold text-lg">Air Jordan 1 Low</h4>
-                                    <h4 class="font-medium text-lg">$80.3</h4>
-                                </div>
-                            </li>
-                            <li class="splide__slide mx-2 flex-shrink-0">
-                                <div>
-                                    <img class="w-full h-auto object-cover rounded-lg"
-                                        src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/13580661-54fd-4a68-8e2f-c8207e3026eb/air-jordan-1-low-shoes-ZHhKk2.png"
-                                        alt="Image 4" />
-                                </div>
-                                <div class="mt-2">
-                                    <h4 class="font-semibold text-lg">Air Jordan 1 Low</h4>
-                                    <h4 class="font-medium text-lg">$80.3</h4>
-                                </div>
-                            </li>
-                            <li class="splide__slide mx-2 flex-shrink-0">
-                                <div>
-                                    <img class="w-full h-auto object-cover rounded-lg"
-                                        src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b95033d3-2b18-4e8e-b386-56e4209b3352/air-jordan-1-low-shoes-zTWr01.png"
-                                        alt="Image 5" />
-                                </div>
-                                <div class="mt-2">
-                                    <h4 class="font-semibold text-lg">Air Jordan 1 Low</h4>
-                                    <h4 class="font-medium text-lg">$80.3</h4>
-                                </div>
-                            </li>
-                            <li class="splide__slide mx-2 flex-shrink-0">
-                                <div>
-                                    <img class="w-full h-auto object-cover rounded-lg"
-                                        src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/36a0198b-3c7b-4013-87fd-69ae4f35975f/air-jordan-1-low-se-shoes-xmgzfl.png"
-                                        alt="Image 6" />
-                                </div>
-                                <div class="mt-2">
-                                    <h4 class="font-semibold text-lg">Air Jordan 1 Low SE</h4>
-                                    <h4 class="font-medium text-lg">$90.3</h4>
-                                </div>
-                            </li>
-                            <li class="splide__slide mx-2 flex-shrink-0">
-                                <div>
-                                    <img class="w-full h-auto object-cover rounded-lg"
-                                        src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8e2656f4-79b6-4d37-93c1-ea558a1c6a6d/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T.png"
-                                        alt="Image 7" />
-                                </div>
-                                <div class="mt-2">
-                                    <h4 class="font-semibold text-lg">Air Jordan 1 Low G NRG</h4>
-                                    <h4 class="font-medium text-lg">$120.3</h4>
-                                </div>
-                            </li>
-                            <li class="splide__slide mx-2 flex-shrink-0">
-                                <div>
-                                    <img class="w-full h-auto object-cover rounded-lg"
-                                        src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/73d20ad4-26ef-49d7-b79c-80042b084b5b/air-jordan-1-low-older-shoes-xLzJc6.png"
-                                        alt="Image 8" />
-                                </div>
-                                <div class="mt-2">
-                                    <h4 class="font-semibold text-lg">Air Jordan 1 Low Older</h4>
-                                    <h4 class="font-medium text-lg">$70.3</h4>
-                                </div>
-                            </li>
-
-                        </ul>
+            <div class="product-details max-[431px]:p-4">
+                <div class="rating">
+                    <i class="bx bxs-star text-yellow-400"></i>
+                    <i class="bx bxs-star text-yellow-400"></i>
+                    <i class="bx bxs-star text-yellow-400"></i>
+                    <i class="bx bxs-star text-yellow-400"></i>
+                    <i class="bx bxs-star-half text-yellow-400"></i>
+                </div>
+                <h1 class="product-title">Air Jordan 1 Low</h1>
+                <div class="price">
+                    <strong>Price</strong><br />
+                    100.000.000 VND
+                </div>
+                <hr />
+                <div class="color-selection">
+                    <strong>Color</strong>
+                    <div class="colors">
+                        <div class="color bg-red-500"></div>
+                        <div class="color bg-blue-300"></div>
+                        <div class="color bg-gray-300"></div>
+                        <div class="color bg-orange-500"></div>
                     </div>
                 </div>
-            </section>
+                <div class="size-selection">
+                    <strong>Select size:</strong>
+                    <div class="sizes">
+                        <label>
+                            <input type="radio" name="size" value="37.5" />
+                            <span>37.5</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="38" />
+                            <span>38</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="38.5" />
+                            <span>38.5</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="39" />
+                            <span>39</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="40" />
+                            <span>40</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="40.5" />
+                            <span>40.5</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="41" />
+                            <span>41</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="42" />
+                            <span>42</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="42.5" />
+                            <span>42.5</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="43" />
+                            <span>43</span>
+                        </label>
+                    </div>
+                </div>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
         </div>
-    </main>
+    </div>
+    <div class="w-[1280px] m-auto max-[431px]:container">
+        <div class="tabs max-[431px]:flex-row">
+            <button class="tab_btn active">Description</button>
+            <button class="tab_btn">Reviews</button>
+            <div class="line" style="width: 90px;"></div>
+        </div>
+        <div class="content active">
+            <p class="mb-4">
+                <b class="text-xl font-bold">ALWAYS FRESH.</b>
+            </p>
+            <p class="mb-4">
+                Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's
+                familiar yet always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks ensure
+                you'll
+                always be on point.
+            </p>
+            <p class="mb-4">
+                <b class="text-xl font-bold">Benefits</b>
+            </p>
+            <ul class="list-disc pl-5 mb-4">
+                <li class="mb-2">Encapsulated Air-Sole unit provides lightweight cushioning.</li>
+                <li class="mb-2">Genuine leather in the upper offers durability and a premium look.</li>
+                <li class="mb-2">Solid rubber outsole enhances traction on a variety of surfaces.</li>
+                <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+                <li class="mb-2">Style: 553558-161</li>
+                <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+            </ul>
+            <p class="mb-4">
+                <b class="text-xl font-bold">Tried and True</b>
+            </p>
+            <p>
+                A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for
+                all-day
+                comfort. A rubber outsole supplies durable traction on a variety of surfaces.
+            </p>
+        </div>
+        <div class="content reviews">
+            <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
+                <div class="star mb-2">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                </div>
+                <h4 class="text-lg font-semibold mb-2">Tốc độ giao hàng siêu ánh sáng</h4>
+                <span class="italic text-gray-400 mb-4 block"><span class="font-medium">E lờn mớt</span> no
+                    <span class="font-medium">Jun 14, 2024</span></span>
+                <p class="mb-4">
+                    Tôi đang ở sao hoả và thật sự rất bất ngờ với tốc độ giao hàng
+                    thần tốc của shop TuyenTien ở trái đất, hàng tới tiền tay trong
+                    1 "block" sau khi vừa hoàn tất thanh toán. Thật sự rất hợp với
+                    phong cách làm việc 5 phút của tôi. Quả thực CEO Ngọc Tiến là
+                    một người văn võ song toàn, ngàn năm có 1
+                </p>
+            </article>
+            <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
+                <div class="star mb-2">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half text-yellow-400"></i>
+                </div>
+                <h4 class="text-lg font-semibold mb-2">Sản phẩm tốt và chuẩn như sách giáo khoa</h4>
+                <span class="italic text-gray-400 mb-4 block"><span class="font-medium">Ngọc Tờ rinh</span> no
+                    <span class="font-medium">Jun 12, 2024</span></span>
+                <p class="mb-4">
+                    Sản phẩm tốt và đẹp, đeo rất thoải mái. Ngoài ra, CEO Ngọc Tiến
+                    rất đẹp trai nữa. Tiếc là chỉ có thể đứng ngắm nhìn từ xa nên
+                    đánh giá 4.5 thôi
+                </p>
+            </article>
+            <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
+                <div class="star mb-2">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                </div>
+                <h4 class="text-lg font-semibold mb-2">
+                    This is the greatest online shop that I've ever ordered!
+                </h4>
+                <span class="italic text-gray-400 mb-4 block"><span class="font-medium">Son Goku</span> no
+                    <span class="font-medium">Jun 15, 2024</span></span>
+                <p class="mb-4">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+                    tempore maiores id, illum sit sapiente a eum consectetur cum
+                    natus ipsum officiis dolor praesentium non minima. Eius tempore
+                    consequatur nobis, unde blanditiis, vel, deserunt cum facere
+                    excepturi ratione reiciendis iste!
+                </p>
+            </article>
+        </div>
+    </div>
+    <div class="max-w-[1160px] mx-auto p-6">
+        <h4 class="text-3xl font-semibold mb-3">Related Products</h4>
+        <section class="py-10">
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list flex">
+                        <li class="splide__slide mx-2 mb-8 flex-shrink-0">
+                            <div>
+                                <img class="w-full h-auto object-cover rounded-lg"
+                                    src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/i1-7b457df1-d698-455e-ba39-694868991933/air-jordan-1-low-shoes-nGLZR9.png"
+                                    alt="Image 1" />
+                            </div>
+                            <div class="mt-2">
+                                <h4 class="font-semibold text-lg">Air Jordan 1 Low</h4>
+                                <h4 class="font-medium text-lg">$80.3</h4>
+                            </div>
+                        </li>
+                        <li class="splide__slide mx-2 flex-shrink-0">
+                            <div>
+                                <img class="w-full h-auto object-cover rounded-lg"
+                                    src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1fcccc5c-b4ee-4765-9ba1-d2a9a6c08bc6/air-jordan-1-low-shoes-459b4T.png"
+                                    alt="Image 2" />
+                            </div>
+                            <div class="mt-2">
+                                <h4 class="font-semibold text-lg">Air Jordan 1 Low</h4>
+                                <h4 class="font-medium text-lg">$80.3</h4>
+                            </div>
+                        </li>
+                        <li class="splide__slide mx-2 flex-shrink-0">
+                            <div>
+                                <img class="w-full h-auto object-cover rounded-lg"
+                                    src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b587cf81-b49a-4200-9a7c-8daa033ed393/air-jordan-1-low-shoes-459b4T.png"
+                                    alt="Image 3" />
+                            </div>
+                            <div class="mt-2">
+                                <h4 class="font-semibold text-lg">Air Jordan 1 Low</h4>
+                                <h4 class="font-medium text-lg">$80.3</h4>
+                            </div>
+                        </li>
+                        <li class="splide__slide mx-2 flex-shrink-0">
+                            <div>
+                                <img class="w-full h-auto object-cover rounded-lg"
+                                    src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/13580661-54fd-4a68-8e2f-c8207e3026eb/air-jordan-1-low-shoes-ZHhKk2.png"
+                                    alt="Image 4" />
+                            </div>
+                            <div class="mt-2">
+                                <h4 class="font-semibold text-lg">Air Jordan 1 Low</h4>
+                                <h4 class="font-medium text-lg">$80.3</h4>
+                            </div>
+                        </li>
+                        <li class="splide__slide mx-2 flex-shrink-0">
+                            <div>
+                                <img class="w-full h-auto object-cover rounded-lg"
+                                    src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b95033d3-2b18-4e8e-b386-56e4209b3352/air-jordan-1-low-shoes-zTWr01.png"
+                                    alt="Image 5" />
+                            </div>
+                            <div class="mt-2">
+                                <h4 class="font-semibold text-lg">Air Jordan 1 Low</h4>
+                                <h4 class="font-medium text-lg">$80.3</h4>
+                            </div>
+                        </li>
+                        <li class="splide__slide mx-2 flex-shrink-0">
+                            <div>
+                                <img class="w-full h-auto object-cover rounded-lg"
+                                    src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/36a0198b-3c7b-4013-87fd-69ae4f35975f/air-jordan-1-low-se-shoes-xmgzfl.png"
+                                    alt="Image 6" />
+                            </div>
+                            <div class="mt-2">
+                                <h4 class="font-semibold text-lg">Air Jordan 1 Low SE</h4>
+                                <h4 class="font-medium text-lg">$90.3</h4>
+                            </div>
+                        </li>
+                        <li class="splide__slide mx-2 flex-shrink-0">
+                            <div>
+                                <img class="w-full h-auto object-cover rounded-lg"
+                                    src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8e2656f4-79b6-4d37-93c1-ea558a1c6a6d/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T.png"
+                                    alt="Image 7" />
+                            </div>
+                            <div class="mt-2">
+                                <h4 class="font-semibold text-lg">Air Jordan 1 Low G NRG</h4>
+                                <h4 class="font-medium text-lg">$120.3</h4>
+                            </div>
+                        </li>
+                        <li class="splide__slide mx-2 flex-shrink-0">
+                            <div>
+                                <img class="w-full h-auto object-cover rounded-lg"
+                                    src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/73d20ad4-26ef-49d7-b79c-80042b084b5b/air-jordan-1-low-older-shoes-xLzJc6.png"
+                                    alt="Image 8" />
+                            </div>
+                            <div class="mt-2">
+                                <h4 class="font-semibold text-lg">Air Jordan 1 Low Older</h4>
+                                <h4 class="font-medium text-lg">$70.3</h4>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
 
 <!-- Slide bar -->
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
