@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,12 +26,79 @@
         box-sizing: border-box;
     }
 </style>
+
 <body>
-    <header class="bg-white">
-        <div class="flex justify-between items-center h-24 border-b-2 border-[#e3e3e3]">
-            <a href="/index.html">
-                <div class="bg-[url('/asset/img/LogoNAV.png')] bg-cover h-28 w-28 ml-[460px]" aria-label="Home"></div>
+    <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
+        <div class="col flex justify-between items-center h-16">
+            <a href="./index.html">
+                <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div>
             </a>
+            <nav class="flex text-sm font-bold max-sm:hidden">
+                <a href="./women.html" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+                <a href="./man.html" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+                <a href="./newarrivals.html" class="p-5 hover:underline underline-offset-4 focus:underline">NEW
+                    ARRIVALS</a>
+                <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+            </nav>
+            <!-- CART -->
+            <div id="overlay"
+                class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out"
+                onclick="toggleDrawer()"></div>
+            <div id="drawer"
+                class="fixed top-0 right-[-500px] w-[500px] h-full bg-white transition-all duration-500 z-10 max-[431px]:w-[300px]">
+                <div class="p-5 flex flex-col justify-center items-center max-sm:hidden">
+                    <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
+                            class='bx bx-x'></i></button>
+                    <h2 class="text-3xl font-semibold mb-2">CART</h2>
+                    <p>You're <strong>$49.99</strong> away from free shipping!</p>
+                    <div id="productContainer" class="relative flex w-full h-[8.25rem] mt-5 border-b-2 border-gray-200">
+                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
+                            class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
+                        <div class="flex flex-col mt-3 ml-3">
+                            <span class="font-semibold text-xl">Product</span>
+                            <span>Color: </span>
+                            <span>Size: </span>
+                            <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i class='bx bx-x'
+                                    onclick="deleteProduct()"></i></button>
+                            <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99"
+                                    value="1" class="h-7 w-10" onchange="updateTotal()"></span>
+                            <span class="absolute right-0 bottom-3" id="productPrice">$29.99</span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0">
+                        <div class="flex flex-col justify-between items-center border-t border-gray-300 p-5">
+                            <div class="flex justify-between w-full">
+                                <span class="text-lg font-semibold">Total</span>
+                                <span class="text-lg" id="subtotal">$29.99</span>
+                            </div>
+                            <div class="flex justify-between w-full">
+                                <span class="text-lg font-semibold">Shipping</span>
+                                <span class="text-lg" id="shipping">FREE</span>
+                            </div>
+                        </div>
+                        <a href="#"><button
+                                class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button></a>
+                    </div>
+                </div>
+                <!-- Responsive Navbar mobile -->
+                <div class="p-5 flex flex-col justify-center items-center">
+                    <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
+                            class='bx bx-x'></i></button>
+                    <nav
+                        class="flex text-sm font-bold xl:hidden max-sm:flex-col max-sm:text-center max-sm:space-y-3 max-sm:text-xl">
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">HOME</a>
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+                        <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+                        <a href="./contact.html"
+                            class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+                    </nav>
+                </div>
+            </div>
+            <button class="drawer-toggle p-3 text-2xl" onclick="toggleDrawer()"><i
+                    class='bx bx-shopping-bag'></i></button>
+            <!-- Menu Mobile -->
+            <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
         </div>
     </header>
     <div class="w-full h-screen flex">
@@ -40,20 +108,27 @@
                     <span class="text-xl font-semibold">Contact</span>
                     <a href="/sigin.html" class="underline">Sign in</a>
                 </div>
-                <input type="email" id="Email" name="" placeholder="Email Address" class="h-12 w-full p-2 rounded-[4px] border-[1.5px] border-gray-300">
+                <input type="email" id="Email" name="" placeholder="Email Address"
+                    class="h-12 w-full p-2 rounded-[4px] border-[1.5px] border-gray-300">
                 <div class="mb-7">
                     <input type="checkbox" id="" name="" value="" class="h-5 w-5 mt-2 cursor-pointer">
                     <label for="" class="text-gray-500">Email me with news and offers</label>
                 </div>
                 <span class="text-xl font-semibold">Transport</span>
                 <span class="text-sm text-gray-500 mt-2 mb-1">Country/Region</span>
-                <label for="" class="h-12 w-full p-2 rounded border-[1.5px] border-gray-300 flex items-center">VietNam</label>
+                <label for=""
+                    class="h-12 w-full p-2 rounded border-[1.5px] border-gray-300 flex items-center">VietNam</label>
                 <form action="./thankyou.html" class="mt-4">
-                    <input type="text" name="fname" required placeholder="First Name" class="h-12 p-2 w-1/2 rounded border-[1.5px] border-gray-300">
-                    <input type="text" name="lname" required placeholder="Last Name" class="h-12 p-2 w-64 rounded border-[1.5px] border-gray-300">
-                    <input type="text" name="" id="" required placeholder="Address" class="h-12 p-2 w-full mt-4 rounded border-[1.5px] border-gray-300">
-                    <input type="tel" name="" id="" required placeholder="Telephone" class="h-12 p-2 w-full mt-4 rounded border-[1.5px] border-gray-300">
-                    <input type="submit" value="Pay Now" class="w-full h-14 rounded mt-4 bg-black text-white cursor-pointer text-lg font-semibold hover:opacity-80">
+                    <input type="text" name="fname" required placeholder="First Name"
+                        class="h-12 p-2 w-1/2 rounded border-[1.5px] border-gray-300">
+                    <input type="text" name="lname" required placeholder="Last Name"
+                        class="h-12 p-2 w-64 rounded border-[1.5px] border-gray-300">
+                    <input type="text" name="" id="" required placeholder="Address"
+                        class="h-12 p-2 w-full mt-4 rounded border-[1.5px] border-gray-300">
+                    <input type="tel" name="" id="" required placeholder="Telephone"
+                        class="h-12 p-2 w-full mt-4 rounded border-[1.5px] border-gray-300">
+                    <input type="submit" value="Pay Now"
+                        class="w-full h-14 rounded mt-4 bg-black text-white cursor-pointer text-lg font-semibold hover:opacity-80">
                 </form>
             </div>
         </div>
@@ -66,10 +141,10 @@
                         <span class="font-semibold text-xl">Product</span>
                         <span>Color: </span>
                         <span>Size: </span>
-                        <button id="deleteProductBtn" class="absolute right-0 top-0 text-2xl"><i
-                                class='bx bx-x' onclick="deleteProduct()"></i></button>
-                        <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99"
-                                value="1" class="h-7 w-10" onchange="updateTotal()"></span>
+                        <button id="deleteProductBtn" class="absolute right-0 top-0 text-2xl"><i class='bx bx-x'
+                                onclick="deleteProduct()"></i></button>
+                        <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99" value="1"
+                                class="h-7 w-10" onchange="updateTotal()"></span>
                         <span class="absolute right-0 bottom-2" id="productPrice">$29.99</span>
                     </div>
                 </div>
@@ -130,4 +205,5 @@
     document.getElementById('quantity').addEventListener('input', updateTotal);
     document.getElementById('deleteProductBtn').addEventListener('click', deleteProduct);
 </script>
+
 </html>

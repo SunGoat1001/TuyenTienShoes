@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +24,7 @@
         box-sizing: border-box;
     }
 </style>
+
 <body class="overflow-x-hidden pt-16">
     <!-- NAV -->
     <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
@@ -33,10 +35,9 @@
             <nav class="flex text-sm font-bold max-sm:hidden">
                 <a href="./women.html" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
                 <a href="./man.html" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
-                <a href="./newarrivals.html" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+                <a href="./newarrivals.html" class="p-5 hover:underline underline-offset-4 focus:underline">NEW
+                    ARRIVALS</a>
                 <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
-                <button class="drawer-toggle p-3 text-xl" onclick="toggleDrawer()"><i
-                        class='bx bx-shopping-bag'></i></button>
             </nav>
             <!-- CART -->
             <div id="overlay"
@@ -56,8 +57,8 @@
                             <span class="font-semibold text-xl">Product</span>
                             <span>Color: </span>
                             <span>Size: </span>
-                            <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i
-                                    class='bx bx-x' onclick="deleteProduct()"></i></button>
+                            <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i class='bx bx-x'
+                                    onclick="deleteProduct()"></i></button>
                             <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99"
                                     value="1" class="h-7 w-10" onchange="updateTotal()"></span>
                             <span class="absolute right-0 bottom-3" id="productPrice">$29.99</span>
@@ -74,23 +75,27 @@
                                 <span class="text-lg" id="shipping">FREE</span>
                             </div>
                         </div>
-                        <a href="#"><button class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button></a>
+                        <a href="#"><button
+                                class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button></a>
                     </div>
                 </div>
                 <!-- Responsive Navbar mobile -->
                 <div class="p-5 flex flex-col justify-center items-center">
                     <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
                             class='bx bx-x'></i></button>
-                    <nav class="flex text-sm font-bold xl:hidden max-sm:flex-col max-sm:text-center max-sm:space-y-3 max-sm:text-xl">
+                    <nav
+                        class="flex text-sm font-bold xl:hidden max-sm:flex-col max-sm:text-center max-sm:space-y-3 max-sm:text-xl">
                         <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">HOME</a>
                         <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
                         <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
                         <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
-                        <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+                        <a href="./contact.html"
+                            class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
                     </nav>
                 </div>
             </div>
-            <a href="./sigin.html"  class="hover:underline underline-offset-4 font-semibold text-lg max-sm:hidden">Sign in</a>
+            <button class="drawer-toggle p-3 text-2xl" onclick="toggleDrawer()"><i
+                    class='bx bx-shopping-bag'></i></button>
             <!-- Menu Mobile -->
             <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
         </div>
@@ -102,19 +107,21 @@
     <div class="w-full h-80 mt-7">
         <div class="h-full w-1/2 m-auto flex flex-col justify-center items-center">
             <span class="text-7xl my-6 font-bold">NEW ARRIVALS</span>
-            <span class="text-center text-lg px-16 font-medium text-gray-500">Explore our latest arrivals! We've just updated with fresh fashion trends,
-                 from everyday outfits to stylish accessories, ready to make you stand out anywhere, anytime.</span>
+            <span class="text-center text-lg px-16 font-medium text-gray-500">Explore our latest arrivals! We've just
+                updated with fresh fashion trends,
+                from everyday outfits to stylish accessories, ready to make you stand out anywhere, anytime.</span>
         </div>
     </div>
     <!-- PRODUCT -->
     <div class="col h-14 flex justify-between mt-5">
         <div id="filterContainer" class="h-full flex items-center font-medium justify-between cursor-pointer">
-            <button><i class='bx bx-filter text-2xl' ></i></button>
+            <button><i class='bx bx-filter text-2xl'></i></button>
             <strong id="filterText" class="text-sm">SHOW FILTERS</strong>
         </div>
         <div class="h-full flex items-center space-x-2">
             <input id="searchInput" type="text" placeholder="Search..." class="w-[450px] border rounded p-3 text-sm">
-            <button id="searchButton"><i class='bx bx-search p-3 rounded-full text-white text-center bg-black'></i></button>
+            <button id="searchButton"><i
+                    class='bx bx-search p-3 rounded-full text-white text-center bg-black'></i></button>
         </div>
         <select name="" id="" class="h-full flex items-center font-bold">
             <option value="revevance">SORT BY</option>
@@ -164,18 +171,28 @@
                     <i class='bx bx-chevron-up text-3xl my-2'></i>
                 </div>
                 <div class="w-full h-auto text-lg font-medium mb-2 hidden">
-                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">37.5</button>
-                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">38</button>
-                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">38.5</button>
-                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">39</button>
-                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">40</button>
-                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">40.5</button>
-                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">41</button>
-                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">42</button>
-                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">42.5</button>
-                    <button class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">43</button>
+                    <button
+                        class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">37.5</button>
+                    <button
+                        class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">38</button>
+                    <button
+                        class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">38.5</button>
+                    <button
+                        class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">39</button>
+                    <button
+                        class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">40</button>
+                    <button
+                        class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">40.5</button>
+                    <button
+                        class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">41</button>
+                    <button
+                        class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">42</button>
+                    <button
+                        class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">42.5</button>
+                    <button
+                        class="w-14 h-14 mb-2 border-[1.5px] border-black hover:border-2 rounded-md focus:bg-black focus:text-white">43</button>
                 </div>
-            </div>    
+            </div>
             <div class="w-full flex flex-col border-b-[1.5px] border-black">
                 <div class="toggle-button flex justify-between cursor-pointer">
                     <span class="text-xl font-medium my-3">Color</span>
@@ -195,7 +212,7 @@
                     <input type="checkbox" id="gray" name="gray" value="Gray" class="h-6 w-6">
                     <label for="gray"> Gray</label><br>
                 </div>
-            </div> 
+            </div>
             <div class="w-full flex flex-col border-b-[1.5px] border-black">
                 <div class="toggle-button flex justify-between cursor-pointer">
                     <span class="text-xl font-medium my-3">Price</span>
@@ -209,15 +226,17 @@
                     <input type="checkbox" id="high" name="high" value="High" class="h-6 w-6">
                     <label for="high"> Over $150</label><br>
                 </div>
-            </div>       
+            </div>
         </div>
         <div id="productContainer" class="w-full h-full mb-20 space-y-10 max-[431px]:m-0">
             <div class="w-full h-auto flex max-[431px]:flex-col max-[431px]:w-0 max-[431px]:space-x-0">
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9.jpg" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9 (4).jpg" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9.jpg" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9 (4).jpg" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -228,8 +247,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-zTWr01.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-zTWr01 (2).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-zTWr01.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-zTWr01 (2).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -240,8 +261,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-lFCSjp.jpg" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-lFCSjp (1).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-lFCSjp.jpg" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-lFCSjp (1).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -252,8 +275,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T (4).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T (4).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -266,8 +291,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T.jpg" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T (7).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T.jpg" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T (7).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -278,8 +305,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-xmgzfl.jpg" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-xmgzfl (1).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-xmgzfl.jpg" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-xmgzfl (1).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -295,8 +324,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-older-shoes-xLzJc6.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-older-shoes-xLzJc6 (4).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-older-shoes-xLzJc6.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-older-shoes-xLzJc6 (4).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Jordan 1 Low Older</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -307,8 +338,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T.jpg" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T (1).jpg" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T.jpg" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T (1).jpg" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Jordan 1 Low Golf</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -319,8 +352,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-WSkjPL.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-WSkjPL (3).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-WSkjPL.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-WSkjPL (3).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -331,8 +366,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-jordan-9-g-golf-shoes-nNqtwL.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-jordan-9-g-golf-shoes-nNqtwL (4).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-jordan-9-g-golf-shoes-nNqtwL.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-jordan-9-g-golf-shoes-nNqtwL (4).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Jordan 9 G Golf</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -348,8 +385,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-jordan-i-high-g-golf-shoes-qKzTBg (1).png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-jordan-i-high-g-golf-shoes-qKzTBg (1).jpg" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-jordan-i-high-g-golf-shoes-qKzTBg (1).png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-jordan-i-high-g-golf-shoes-qKzTBg (1).jpg" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Jordan High Golf</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -360,8 +399,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-max-270-shoes-2V5C4p.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-max-270-shoes-2V5C4p (3).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-max-270-shoes-2V5C4p.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-max-270-shoes-2V5C4p (3).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Max 270</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -374,8 +415,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-max-dn-shoes-FtLNfm.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-max-dn-shoes-FtLNfm (3).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-max-dn-shoes-FtLNfm.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-max-dn-shoes-FtLNfm (3).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Max DN</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -386,8 +429,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-max-excee-shoes-Q4cpDM.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-max-excee-shoes-Q4cpDM (4).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-max-excee-shoes-Q4cpDM.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-max-excee-shoes-Q4cpDM (4).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air Max Excee</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -398,8 +443,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/air-max-koko-sandals-w4Xp4m.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/air-max-koko-sandals-w4Xp4m (4).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/air-max-koko-sandals-w4Xp4m.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/air-max-koko-sandals-w4Xp4m (4).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Air max Koko Sandals</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -410,8 +457,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/calm-sandals-50k77d (8).png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/calm-sandals-50k77d (4).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/calm-sandals-50k77d (8).png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/calm-sandals-50k77d (4).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Calm sandals 50K77D</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -419,13 +468,15 @@
                         <span class="font-semibold text-lg mt-3">$109.99</span>
                     </div>
                 </a>
-            </div> 
+            </div>
             <div class="w-full h-auto flex max-[431px]:flex-col max-[431px]:w-0 max-[431px]:space-x-0">
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/calm-sandals-t1BKK6.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/calm-sandals-t1BKK6 (4).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/calm-sandals-t1BKK6.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/calm-sandals-t1BKK6 (4).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Calm sandal T1BKK6</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -436,8 +487,11 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/court-vision-low-next-nature-shoes-N2fFHb.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/court-vision-low-next-nature-shoes-N2fFHb (4).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/court-vision-low-next-nature-shoes-N2fFHb.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/court-vision-low-next-nature-shoes-N2fFHb (4).png"
+                                alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Court Vision Low Next Nature</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -448,8 +502,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/infinity-g-nn-golf-shoes-VrmKHn.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/infinity-g-nn-golf-shoes-VrmKHn (4).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/infinity-g-nn-golf-shoes-VrmKHn.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/infinity-g-nn-golf-shoes-VrmKHn (4).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Infinity G NN Golf</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -460,8 +516,10 @@
                 <a href="./details.html" class="flex flex-col">
                     <div class="w-[40%] h-[40%] flex flex-col max-[431px]:p-4 mr-3">
                         <div class="relative w-full h-auto">
-                            <img src="./asset/img/product/Shoes/sb-vertebrae-shoes-Zlnwhs.png" alt="" class="w-full h-auto object-cover">
-                            <img src="./asset/img/product/Shoes/sb-vertebrae-shoes-Zlnwhs (4).png" alt="" class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <img src="./asset/img/product/Shoes/sb-vertebrae-shoes-Zlnwhs.png" alt=""
+                                class="w-full h-auto object-cover">
+                            <img src="./asset/img/product/Shoes/sb-vertebrae-shoes-Zlnwhs (4).png" alt=""
+                                class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <span class="text-xl font-bold mt-2">Vertebrae</span>
                         <span class="text-gray-500">Men's / Women's Shoes</span>
@@ -469,22 +527,23 @@
                         <span class="font-semibold text-lg mt-3">$79.99</span>
                     </div>
                 </a>
-            </div> 
+            </div>
         </div>
     </section>
     <!-- FOOTER -->
     <footer class="w-full h-96 max-[431px]:h-auto bg-black">
         <div class="col flex max-[431px]:flex-col h-[332px] max-[431px]:h-full ">
             <div class="max-[431px]:w-full w-2/4 mt-10">
-                    <img src="./asset/img/LogoFooter.png" alt="" class="w-28 h-28 max-[431px]:ml-[150px]">
-                    <ul class="text-[#CFCFCF] space-y-0 mt-1 max-[431px]:text-center ">
-                        <li><a href="">158A Le loi, Thanh Khe, Da Nang</a></li>
-                        <li><a href="">Company: TienTuyenShoes</a></li>
-                        <li><a href="">Tel: + 84 24 3767 4686</a></li>
-                        <li><a href="">Email: TienTuyenShoes@vnuk.edu.vn</a></li>
-                        <li><a href="">Slogan: 22090003 To VNUK all Top – The world beneath <br> your feet will be a success every
+                <img src="./asset/img/LogoFooter.png" alt="" class="w-28 h-28 max-[431px]:ml-[150px]">
+                <ul class="text-[#CFCFCF] space-y-0 mt-1 max-[431px]:text-center ">
+                    <li><a href="">158A Le loi, Thanh Khe, Da Nang</a></li>
+                    <li><a href="">Company: TienTuyenShoes</a></li>
+                    <li><a href="">Tel: + 84 24 3767 4686</a></li>
+                    <li><a href="">Email: TienTuyenShoes@vnuk.edu.vn</a></li>
+                    <li><a href="">Slogan: 22090003 To VNUK all Top – The world beneath <br> your feet will be a success
+                            every
                             step 08/06/2024</a></li>
-                    </ul>
+                </ul>
             </div>
             <div class="w-full flex justify-around mt-10 max-[431px]:flex-wrap">
                 <div class="w-[15%] px-4 max-sm:w-[20%] max-sm:text-center max-[431px]:w-[45%] max-[431px]:mb-4">
@@ -567,12 +626,12 @@
 </script>
 <!-- Filter hidden -->
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         const filterContainer = document.getElementById('filterContainer');
         const filterPanel = document.getElementById('filterPanel');
-        const filterText = document.getElementById('filterText'); 
-    
-        filterContainer.addEventListener('click', function() {
+        const filterText = document.getElementById('filterText');
+
+        filterContainer.addEventListener('click', function () {
             if (filterPanel.style.display === 'none') {
                 filterPanel.style.display = 'block';
                 filterText.textContent = 'HIDE FILTERS';
@@ -582,15 +641,15 @@
             }
         });
     });
-    
+
 </script>
 <!-- Accordion hidden -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const toggleButtons = document.querySelectorAll('.toggle-button');
-        
+
         toggleButtons.forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const content = this.nextElementSibling;
                 content.classList.toggle('hidden');
             });
@@ -604,11 +663,11 @@
         const productPriceElement = document.getElementById('productPrice');
         const subtotalElement = document.getElementById('subtotal');
         const totalElement = document.getElementById('total');
-    
+
         const productPrice = parseFloat(productPriceElement.innerText.replace('$', ''));
         const quantity = parseInt(quantityInput.value);
         const subtotal = productPrice * quantity;
-    
+
         subtotalElement.innerText = `$${subtotal.toFixed(2)}`;
         totalElement.innerText = `$${subtotal.toFixed(2)}`;
     }
@@ -616,14 +675,15 @@
     function deleteProduct() {
         const productContainer = document.getElementById('productContainer');
         productContainer.remove();
-    
+
         const subtotalElement = document.getElementById('subtotal');
         const totalElement = document.getElementById('total');
         subtotalElement.innerText = `$0.00`;
         totalElement.innerText = `$0.00`;
     }
-    
+
     document.getElementById('quantity').addEventListener('input', updateTotal);
     document.getElementById('deleteProductBtn').addEventListener('click', deleteProduct);
 </script>
+
 </html>
