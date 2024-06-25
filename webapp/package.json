@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "cross-env NODE_ENV=production & node src/server.js",
-    "dev": "cross-env NODE_ENV=development & nodemon src/server.js",
+    "start": "cross-env NODE_ENV=production node src/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
     "build": "vite build",
     "lint": "eslint '**/*.js' --fix",
     "format": "prettier --write '**/*.js'",
@@ -21,7 +21,6 @@
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "cross-env": "^7.0.3",
     "csurf": "^1.11.0",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
@@ -45,10 +44,11 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
     "eslint": "^9.4.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "nodemon": "^3.1.3",
+    "nodemon": "^3.1.4",
     "prettier": "^3.3.1"
   }
 }
