@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./asset/img/LogoNAV.png">
+    <link rel="icon" type="image/x-icon" href="/asset/img/LogoNAV.png">
     <title>TienTuyenShoes</title>
-    <!-- <link rel="stylesheet" href="./font/boxicons-2.1.4/css/boxicons.css"> -->
+    <!-- <link rel="stylesheet" href="/font/boxicons-2.1.4/css/boxicons.css"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,8 +28,8 @@
 <body>
     <header class="bg-white">
         <div class="flex justify-between items-center h-24 border-b-2 border-[#e3e3e3]">
-            <a href="./index.html">
-                <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-28 w-28 ml-[460px]" aria-label="Home"></div>
+            <a href="/index.html">
+                <div class="bg-[url('/asset/img/LogoNAV.png')] bg-cover h-28 w-28 ml-[460px]" aria-label="Home"></div>
             </a>
         </div>
     </header>
@@ -38,7 +38,7 @@
             <div class="h-full w-[50%] flex flex-col float-right mt-20 mr-12">
                 <div class="w-full h-auto flex justify-between mb-1">
                     <span class="text-xl font-semibold">Contact</span>
-                    <a href="./sigin.html" class="underline">Sign in</a>
+                    <a href="/sigin.html" class="underline">Sign in</a>
                 </div>
                 <input type="email" id="Email" name="" placeholder="Email Address" class="h-12 w-full p-2 rounded-[4px] border-[1.5px] border-gray-300">
                 <div class="mb-7">
@@ -88,8 +88,8 @@
                         <span class="text-lg font-semibold">Total</span>
                         <span class="text-lg font-semibold" id="total">$29.99</span>
                     </div>
-                </div>  
-            </div>            
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -108,11 +108,11 @@
         const productPriceElement = document.getElementById('productPrice');
         const subtotalElement = document.getElementById('subtotal');
         const totalElement = document.getElementById('total');
-    
+
         const productPrice = parseFloat(productPriceElement.innerText.replace('$', ''));
         const quantity = parseInt(quantityInput.value);
         const subtotal = productPrice * quantity;
-    
+
         subtotalElement.innerText = `$${subtotal.toFixed(2)}`;
         totalElement.innerText = `$${subtotal.toFixed(2)}`;
     }
@@ -120,13 +120,13 @@
     function deleteProduct() {
         const productContainer = document.getElementById('productContainer');
         productContainer.remove();
-    
+
         const subtotalElement = document.getElementById('subtotal');
         const totalElement = document.getElementById('total');
         subtotalElement.innerText = `$0.00`;
         totalElement.innerText = `$0.00`;
     }
-    
+
     document.getElementById('quantity').addEventListener('input', updateTotal);
     document.getElementById('deleteProductBtn').addEventListener('click', deleteProduct);
 </script>
