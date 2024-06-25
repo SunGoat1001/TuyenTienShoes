@@ -36,17 +36,20 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
+          cache-dependency-path: mockup/package-lock.json
+      - name: Load environment variables
+        run: echo "VITE_BASE_PATH=${{ vars.VITE_BASE_PATH }}" >> $GITHUB_ENV
       - name: Install dependencies
-        run: npm install
+        run: cd mockup && npm install
       - name: Build
-        run: npm run build
+        run: cd mockup && npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload entire repository
-          path: './dist'
+          path: './mockup/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
