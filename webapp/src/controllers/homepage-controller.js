@@ -19,7 +19,7 @@ const getHomepage = async (req, res) => {
             take: 8
         });
 
-        console.log(products);
+        // console.log(products);
         return res.render('pages/homepage', { products });
     } catch (error) {
         console.error(error);

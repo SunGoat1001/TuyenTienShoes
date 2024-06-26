@@ -60,7 +60,7 @@ async function main() {
             {
                 name: 'Air Jordan 1 Low',
                 shortDesc: 'Short description',
-                cartDesc: 'White',
+                cartDesc: '',
                 longDesc: '',
                 price: 120.00,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b95033d3-2b18-4e8e-b386-56e4209b3352/air-jordan-1-low-shoes-zTWr01.png',
@@ -71,7 +71,7 @@ async function main() {
             {
                 name: 'Air Jordan 1 Low',
                 shortDesc: 'Short description',
-                cartDesc: 'Black',
+                cartDesc: '',
                 longDesc: '',
                 price: 120.00,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/25dfd854-eb11-45db-984d-24721d8c34cc/air-jordan-1-low-shoes-6Q1tFM.png',
@@ -82,7 +82,7 @@ async function main() {
             {
                 name: 'Air Jordan 1 Low',
                 shortDesc: 'Short description',
-                cartDesc: 'Blue',
+                cartDesc: '',
                 longDesc: '',
                 price: 120.00,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/i1-7b457df1-d698-455e-ba39-694868991933/air-jordan-1-low-shoes-nGLZR9.png',
@@ -247,24 +247,24 @@ async function main() {
             { productId: createdProducts[0].id, size: 43, color: 'red', stockQuantity: 10 },
 
             // Sizes for Air Jordan 1 Low - White
-            { productId: createdProducts[1].id, size: 37.5, color: 'White', stockQuantity: 10 },
-            { productId: createdProducts[1].id, size: 38, color: 'White', stockQuantity: 10 },
-            { productId: createdProducts[1].id, size: 39, color: 'White', stockQuantity: 10 },
-            { productId: createdProducts[1].id, size: 40, color: 'White', stockQuantity: 10 },
-            { productId: createdProducts[1].id, size: 38.5, color: 'White', stockQuantity: 10 },
-            { productId: createdProducts[1].id, size: 40.5, color: 'White', stockQuantity: 10 },
+            { productId: createdProducts[1].id, size: 37.5, color: 'white', stockQuantity: 10 },
+            { productId: createdProducts[1].id, size: 38, color: 'white', stockQuantity: 10 },
+            { productId: createdProducts[1].id, size: 39, color: 'white', stockQuantity: 10 },
+            { productId: createdProducts[1].id, size: 40, color: 'white', stockQuantity: 10 },
+            { productId: createdProducts[1].id, size: 38.5, color: 'white', stockQuantity: 10 },
+            { productId: createdProducts[1].id, size: 40.5, color: 'white', stockQuantity: 10 },
 
             // Sizes for Air Jordan 1 Low - Black
-            { productId: createdProducts[2].id, size: 37.5, color: 'Black', stockQuantity: 10 },
-            { productId: createdProducts[2].id, size: 38, color: 'Black', stockQuantity: 10 },
-            { productId: createdProducts[2].id, size: 39, color: 'Black', stockQuantity: 10 },
-            { productId: createdProducts[2].id, size: 40, color: 'Black', stockQuantity: 10 },
-            { productId: createdProducts[2].id, size: 42.5, color: 'Black', stockQuantity: 10 },
+            { productId: createdProducts[2].id, size: 37.5, color: 'black', stockQuantity: 10 },
+            { productId: createdProducts[2].id, size: 38, color: 'black', stockQuantity: 10 },
+            { productId: createdProducts[2].id, size: 39, color: 'black', stockQuantity: 10 },
+            { productId: createdProducts[2].id, size: 40, color: 'black', stockQuantity: 10 },
+            { productId: createdProducts[2].id, size: 42.5, color: 'black', stockQuantity: 10 },
 
             // Sizes for Air Jordan 1 Low - Blue
-            { productId: createdProducts[3].id, size: 37.5, color: 'Blue', stockQuantity: 10 },
-            { productId: createdProducts[3].id, size: 38, color: 'Blue', stockQuantity: 10 },
-            { productId: createdProducts[3].id, size: 39, color: 'Blue', stockQuantity: 10 },
+            { productId: createdProducts[3].id, size: 37.5, color: 'blue', stockQuantity: 10 },
+            { productId: createdProducts[3].id, size: 38, color: 'blue', stockQuantity: 10 },
+            { productId: createdProducts[3].id, size: 39, color: 'blue', stockQuantity: 10 },
             {
                 productId: createdProducts[4].id,
                 size: 38,

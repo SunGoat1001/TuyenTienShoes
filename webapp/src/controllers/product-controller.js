@@ -43,54 +43,76 @@ const getProductById = async (req, res) => {
         where: { id: parseInt(id) },
         include: {
             variants: true,
-            images: true, // Assuming 'images' is correctly defined in your schema.prisma
+            images: true,
             reviews: true,
+            related: {
+                include: {
+                    related_product: true,  // Correctly referencing the related_product field
+                },
+            },
+            related_from: {
+                include: {
+                    product: true,  // Correctly referencing the product field
+                },
+            },
         },
     });
 
     if (!product) {
-        throw new Error('Product not found');
+        return res.status(404).send('Product not found');
     }
 
-    // Fetch associated images from 'productimage' table
-    const imageObjects = await prisma.productImage.findMany({
-        where: { productId: parseInt(id, 10) },
-    });
-
     // Extract image URLs from image objects
-    const images = imageObjects.map((image) => image.imageUrl); // 'imageUrl' should match the property in your productImage model
+    const images = product.images.map((image) => image.imageUrl);
 
-    // Combine product and image data
-    const productWithImages = {
-        ...product,
-        images: images, // Replace the existing images property with the URLs
-    };
-
-    // Extract unique colors and sizes from product data
-    const colors = [...new Set(productWithImages.images.map(image => image.color))];
+    // Extract unique sizes from product data
     const sizes = product.variants.map(variant => variant.size);
 
-    // Lấy tất cả các sản phẩm
+    // Fetch related product colors
+    const relatedColors = await prisma.relatedProduct.findMany({
+        where: { productId: parseInt(id) },
+        include: {
+            related_product: {
+                include: {
+                    variants: true
+                }
+            }
+        }
+    });
+
+    // Extract color information
+    const relatedColorsInfo = relatedColors.map(rel => {
+        return {
+            productId: rel.relatedProductId,
+            color: rel.related_product.variants[0]?.color || 'default' // Assuming each related product has at least one variant
+        };
+    });
+
+
+    // Get all products for the random selection
     const allProducts = await prisma.product.findMany();
 
-    // Hàm tiện ích để lấy các phần tử ngẫu nhiên từ mảng
+    // Utility function to get random items from an array
     function getRandomItems(arr, count) {
         const shuffled = arr.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, count);
     }
 
-    // Lấy 4 sản phẩm ngẫu nhiên
+    // Get 10 random products
     const randomProducts = getRandomItems(allProducts, 10);
 
-    // Tính toán trung bình tổng điểm và số lượng đánh giá
+    // Calculate average rating
     const totalReviews = product.reviews.length;
     const averageRating = totalReviews > 0 ? product.reviews.reduce((sum, review) => sum + review.rating, 0) / totalReviews : 0;
 
     if (req.xhr) {
-        return res.json(productWithImages);
+        return res.json({ ...product, images, sizes, relatedColors, randomProducts, totalReviews, averageRating });
     }
 
-    return res.render('pages/details', { product: productWithImages, colors, sizes, randomProducts, totalReviews, averageRating  });
+    // console.log(relatedColors);
+    return res.render('pages/details', { product: { ...product, images }, sizes, randomProducts, totalReviews, averageRating, relatedColors: relatedColorsInfo });
 };
+
+
 
 export { getNewArrivals, getMan, getWomen, getProductById };
