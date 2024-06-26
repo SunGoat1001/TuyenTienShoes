@@ -11,7 +11,7 @@ const getHomepage = async (req, res) => {
                 reviews: true,
                 related: true,
                 order_items: true,
-                related_from: true
+                related_from: true,
             },
             orderBy: {
                 importedDate: "desc"
