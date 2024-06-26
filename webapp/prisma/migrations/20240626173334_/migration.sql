@@ -65,7 +65,7 @@ CREATE TABLE `product_images` (
 CREATE TABLE `product_variants` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `product_id` INTEGER NULL,
-    `size` VARCHAR(10) NULL,
+    `size` DOUBLE NULL,
     `color` VARCHAR(50) NULL,
     `stock_quantity` INTEGER NULL,
     `created_at` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),

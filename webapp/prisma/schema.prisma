@@ -83,9 +83,9 @@ model ProductImage {
 model ProductVariant {
   id              Int       @id @default(autoincrement())
   productId       Int?      @map("product_id")
-  size            String?   @db.VarChar(10)
+  size            Float?
   color           String?   @db.VarChar(50)
-  stockQuantity  Int?       @map("stock_quantity")
+  stockQuantity   Int?      @map("stock_quantity")
   createdAT       DateTime  @map("created_at")  @default(now())
   updatedAt       DateTime  @map("updated_at")  @updatedAt
 
