@@ -6,7 +6,7 @@ const getHomepage = async (req, res) => {
         const products = await prisma.product.findMany({
             include: {
                 images: true,
-                category: true,  // Example: include other related models if needed
+                category: true,
                 variants: true,
                 reviews: true,
                 related: true,
