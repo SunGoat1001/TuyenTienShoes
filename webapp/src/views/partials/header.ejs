@@ -4,10 +4,9 @@
             <div class="bg-[url('/asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div>
         </a>
         <nav class="flex text-sm font-bold max-sm:hidden">
-            <a href="/women" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
-            <a href="/man" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
-            <a href="/newarrivals" class="p-5 hover:underline underline-offset-4 focus:underline">NEW
-                ARRIVALS</a>
+            <a href="./women.html" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+            <a href="./man.html" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+            <a href="/newarrivals" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
             <a href="/contact" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
         </nav>
         <!-- CART -->
@@ -17,57 +16,150 @@
         <div id="drawer"
             class="fixed top-0 right-[-500px] w-[500px] h-full bg-white transition-all duration-500 z-10 max-[431px]:w-[300px]">
             <div class="p-5 flex flex-col justify-center items-center max-sm:hidden">
-                <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
-                        class='bx bx-x'></i></button>
+                <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i class='bx bx-x'></i></button>
                 <h2 class="text-3xl font-semibold mb-2">CART</h2>
-                <p>You're <strong>$49.99</strong> away from free shipping!</p>
-                <div id="productContainer" class="relative flex w-full h-[8.25rem] mt-5 border-b-2 border-gray-200">
-                    <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
-                        class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
-                    <div class="flex flex-col mt-3 ml-3">
-                        <span class="font-semibold text-xl">Product</span>
-                        <span>Color: </span>
-                        <span>Size: </span>
-                        <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i class='bx bx-x'
-                                onclick="deleteProduct()"></i></button>
-                        <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99"
-                                value="1" class="h-7 w-10" onchange="updateTotal()"></span>
-                        <span class="absolute right-0 bottom-3" id="productPrice">$29.99</span>
-                    </div>
+                <p>You're <strong>$0</strong> away from free shipping!</p>
+                <div id="productContainer" class="relative grid-cols-1 w-full h-[8.25rem] mt-5">
+                    <!-- <div class="flex">
+              <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
+                class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
+              <div class="flex flex-col mt-3 ml-3">
+                <span class="font-semibold text-xl">Product</span>
+                <span>Color: </span>
+                <span>Size: </span>
+                <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl"><i class='bx bx-x'
+                    onclick="deleteProduct()"></i></button>
+                <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99" value="1"
+                    class="h-7 w-10" onchange="updateTotal()"></span>
+                <span class="absolute right-0 bottom-3" id="productPrice">$29.99</span>
+              </div>
+            </div> -->
                 </div>
                 <div class="absolute bottom-0 left-0 right-0">
                     <div class="flex flex-col justify-between items-center border-t border-gray-300 p-5">
                         <div class="flex justify-between w-full">
                             <span class="text-lg font-semibold">Total</span>
-                            <span class="text-lg" id="subtotal">$29.99</span>
+                            <span class="text-lg" id="subtotal">$0</span>
                         </div>
                         <div class="flex justify-between w-full">
                             <span class="text-lg font-semibold">Shipping</span>
                             <span class="text-lg" id="shipping">FREE</span>
                         </div>
                     </div>
-                    <a href="/payment"><button
+                    <a href="#"><button
                             class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button></a>
                 </div>
             </div>
             <!-- Responsive Navbar mobile -->
             <div class="p-5 flex flex-col justify-center items-center">
-                <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
-                        class='bx bx-x'></i></button>
+                <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i class='bx bx-x'></i></button>
                 <nav
                     class="flex text-sm font-bold xl:hidden max-sm:flex-col max-sm:text-center max-sm:space-y-3 max-sm:text-xl">
                     <a href="/" class="p-5 hover:underline underline-offset-4 focus:underline">HOME</a>
-                    <a href="/women" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
-                    <a href="/man" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
-                    <a href="/newarrivals" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
-                    <a href="/contact"
-                        class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+                    <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+                    <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+                    <a href="#" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
+                    <a href="/contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
                 </nav>
             </div>
         </div>
-        <button class="drawer-toggle p-3 text-2xl" onclick="toggleDrawer()"><i
-                class='bx bx-shopping-bag'></i></button>
+        <button class="drawer-toggle p-3 text-2xl" onclick="toggleDrawer()"><i class='bx bx-shopping-bag'></i></button>
         <!-- Menu Mobile -->
         <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
     </div>
 </header>
+
+<!-- CART -->
+<script>
+    function toggleDrawer() {
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('overlay');
+        drawer.classList.toggle('right-0');
+        drawer.classList.toggle('right-[-500px]');
+        overlay.classList.toggle('hidden');
+        overlay.classList.toggle('opacity-0');
+        overlay.classList.toggle('opacity-100');
+    }
+</script>
+
+<!-- REMOVE PRODUCT FROM CART -->
+<script>
+    var deleteButton = document.getElementById('deleteProductBtn');
+    deleteButton.addEventListener('click', function () {
+        var productContainer = document.getElementById('productContainer');
+        productContainer.remove();
+    });
+</script>
+
+<!-- AUTO CALC -->
+<script>
+    function addToCart() {
+      // Lấy thông tin sản phẩm
+      const productTitle = document.querySelector('.product-title').innerText;
+      const productPrice = document.querySelector('.price').innerText.split('\n')[1].trim();
+      const selectedColorElement = document.querySelector('.color.bg-red-500') || document.querySelector('.color-selected');
+      const selectedColor = selectedColorElement ? selectedColorElement.getAttribute('data-color') : '';
+      const selectedSizeElement = document.querySelector('input[name="size"]:checked');
+      const selectedSize = selectedSizeElement ? selectedSizeElement.value : '';
+    
+      // Kiểm tra nếu không chọn màu hoặc kích thước
+      if (!selectedColor || !selectedSize) {
+        alert('Please select a color and size.');
+        return;
+      }
+    
+      // Tạo phần tử mới cho sản phẩm trong giỏ hàng
+      const productContainer = document.getElementById('productContainer');
+      const productElement = document.createElement('div');
+      productElement.classList.add('relative', 'flex', 'w-full', 'h-[8.25rem]', 'mt-5', 'border-b-2', 'border-gray-200');
+    
+      productElement.innerHTML = `
+        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
+        <div class="flex flex-col mt-3 ml-3">
+          <span class="font-semibold text-xl">${productTitle}</span>
+          <span>Color: ${selectedColor}</span>
+          <span>Size: ${selectedSize}</span>
+          <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl" onclick="deleteProduct(this)"><i class='bx bx-x'></i></button>
+          <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" class="h-7 w-10" onchange="updateTotal()"></span>
+          <span class="absolute right-0 bottom-3" id="productPrice">${productPrice}</span>
+        </div>
+      `;
+    
+      // Thêm phần tử mới vào giỏ hàng
+      productContainer.appendChild(productElement);
+    
+      // Cập nhật tổng giá trị giỏ hàng
+      updateTotal();
+    
+      // Mở giỏ hàng
+      toggleDrawer();
+    }
+    
+    function deleteProduct(element) {
+      // Xóa sản phẩm khỏi giỏ hàng
+      const productElement = element.parentElement.parentElement;
+      productElement.remove();
+    
+      // Cập nhật tổng giá trị giỏ hàng
+      updateTotal();
+    }
+    
+    function updateTotal() {
+      const productElements = document.querySelectorAll('#productContainer > div');
+      let totalPrice = 0;
+    
+      productElements.forEach(element => {
+        const priceElement = element.querySelector('#productPrice');
+        const quantityElement = element.querySelector('#quantity');
+        
+        if (priceElement && quantityElement) {
+          const price = parseFloat(priceElement.innerText.replace('$', '').trim());
+          const quantity = parseInt(quantityElement.value);
+          totalPrice += price * quantity;
+        }
+      });
+    
+      // Hiển thị tổng giá trị
+      document.getElementById('subtotal').innerText = `$${totalPrice.toFixed(2)}`;
+    }
+  </script>

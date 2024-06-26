@@ -146,24 +146,25 @@
             <div id="productContainer" class="w-full h-full mb-20 max-[431px]:m-0 grid grid-cols-4 gap-3">
                 <% products.forEach(function(product) { %>
                     <div class="w-full h-auto flex-col max-[431px]:p-4">
-                        <div class="relative w-full h-auto">
-                            <a href="/products/<%= product.id %>">
+                        <a href="/products/<%= product.id %>">
+                            <div class="relative w-full h-auto">
+
                                 <img src="<%= product.mainImageUrl %>" alt="" class="w-full h-auto object-cover">
                                 <% if (product.images.length> 4) { %>
                                     <img src="<%= product.images[4].imageUrl %>" alt=""
                                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                                     <% } %>
-                            </a>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="text-xl font-bold mt-2">
-                                <%= product.name %>
-                            </span>
-                            <span class="text-gray-500">
-                                <%= product.shortDesc %>
-                            </span>
-                            <span class="font-semibold text-lg mt-3">$<%= product.price %></span>
-                        </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xl font-bold mt-2">
+                                    <%= product.name %>
+                                </span>
+                                <span class="text-gray-500">
+                                    <%= product.shortDesc %>
+                                </span>
+                                <span class="font-semibold text-lg mt-3">$<%= product.price %></span>
+                            </div>
+                        </a>
                     </div>
                     <% }); %>
             </div>
