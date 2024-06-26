@@ -13,3 +13,148 @@ datasource db {
 }
 
 // TODO: Add the User model here
+model Category {
+  id          Int       @id @default(autoincrement())
+  name        String    @db.VarChar(50)
+  createdAT   DateTime  @map("created_at")  @default(now())
+  updatedAt   DateTime  @map("updated_at")  @updatedAt
+
+  products    Product[]
+  @@map("categories")
+}
+
+model Contact {
+  id           Int       @id @default(autoincrement())
+  customerName String    @map("customer_name")    @db.VarChar(100)
+  phone        String?   @db.VarChar(15)
+  email        String    @db.VarChar(100)
+  message      String?   @db.Text
+  createdAT    DateTime  @map("created_at") @default(now())
+  updatedAt    DateTime  @map("updated_at") @updatedAt
+
+  @@map("contacts")
+}
+
+model OrderItem {
+  id                 Int       @id @default(autoincrement())
+  orderId            Int?      @map("order_items")
+  productId          Int?      @map("product_id")
+  productVariantId   Int?      @map("product_variant_id")
+  quantity           Int?
+  price              Float?
+  createdAT          DateTime  @map("created_at") @default(now())
+  updatedAt          DateTime  @map("updated_at") @updatedAt
+
+  order              Order?    @relation(fields: [orderId], references: [id])
+  product            Product?  @relation(fields: [productId], references: [id])
+  product_variant    ProductVariant?  @relation(fields: [productVariantId], references: [id])
+
+  @@map("order_items")
+}
+
+model Order {
+  id               Int        @id @default(autoincrement())
+  customerName     String     @map("customer_name")    @db.VarChar(100)
+  customerPhone    String?    @map("customer_phone")   @db.VarChar(15)
+  customerAddress  String?    @map("customer_address") @db.VarChar(100)
+  customerEmail    String?    @map("customer_email")   @db.VarChar(100)
+  orderDate        DateTime?  @map("order_date")
+  totalAmount      Decimal?   @map("total_amount")     @db.Decimal(10, 2)
+  createdAT        DateTime   @map("created_at")     @default(now())
+  updatedAt        DateTime   @map("updated_at")     @updatedAt
+
+  items            OrderItem[]
+
+  @@map("orders")
+}
+
+model ProductImage {
+  id          Int       @id @default(autoincrement())
+  productId   Int?      @map("product_id")
+  imageUrl    String?   @map("image_url")   @db.VarChar(255)
+  createdAT   DateTime  @map("created_at")  @default(now())
+  updatedAt   DateTime  @map("updated_at")  @updatedAt
+
+  product     Product?  @relation(fields: [productId], references: [id])
+  
+  @@map("product_images")
+}
+
+model ProductVariant {
+  id              Int       @id @default(autoincrement())
+  productId       Int?      @map("product_id")
+  size            String?   @db.VarChar(10)
+  color           String?   @db.VarChar(50)
+  stockQuantity  Int?       @map("stock_quantity")
+  createdAT       DateTime  @map("created_at")  @default(now())
+  updatedAt       DateTime  @map("updated_at")  @updatedAt
+
+  product         Product?  @relation(fields: [productId], references: [id])
+  order_items     OrderItem[]
+
+  @@map("product_variants")
+}
+
+model Product {
+  id            Int        @id @default(autoincrement())
+  name          String     @db.VarChar(100)
+  shortDesc     String?    @map("short_desc")      @db.VarChar(255)
+  cartDesc      String?    @map("cart_desc")       @db.VarChar(255)
+  longDesc      String?    @map("long_desc")       @db.Text
+  price         Float
+  mainImageUrl  String?    @map("main_image_url")  @db.VarChar(255)
+  categoryId    Int?       @map("category_id")
+  gender        Int?
+  importedDate  DateTime?  @map("imported_date")
+  createdAT     DateTime   @map("created_at")       @default(now())
+  updatedAt     DateTime   @map("updated_at")      @updatedAt
+
+  category      Category?  @relation(fields: [categoryId], references: [id])
+  variants      ProductVariant[]
+  images        ProductImage[]
+  reviews       Review[]
+  related       RelatedProduct[]
+  order_items   OrderItem[]
+
+  related_from  RelatedProduct[] @relation("RelatedProductRelated")
+
+  @@map("products")
+}
+
+model RelatedProduct {
+  id                  Int       @id @default(autoincrement())
+  productId           Int?      @map("product_id")
+  relatedProductId    Int?      @map("related_product_id")
+  createdAT           DateTime  @map("created_at")  @default(now())
+  updatedAt           DateTime  @map("updated_at")  @updatedAt
+
+  product             Product?  @relation(fields: [productId], references: [id], map: "RelatedProduct_product_id_fk")
+  related_product     Product?  @relation("RelatedProductRelated", fields: [relatedProductId], references: [id], map: "RelatedProduct_related_product_id_fk")
+
+  @@map("related_products")
+}
+
+model Review {
+  id            Int        @id @default(autoincrement())
+  productId     Int?       @map("product_id")
+  rating        Int?
+  title         String?    @db.VarChar(255)
+  reviewerName  String?    @map("reviewer_name")   @db.VarChar(100)
+  reviewDate    DateTime?  @map("review_date")
+  reviewDesc    String?    @map("review_desc")     @db.Text
+  createdAT     DateTime   @map("created_at")      @default(now())
+  updatedAt     DateTime   @map("updated_at")      @updatedAt
+
+  product       Product?  @relation(fields: [productId], references: [id])
+
+  @@map("reviews")
+}
+
+model Subscribe {
+  id          Int       @id @default(autoincrement())
+  email       String    @unique @db.VarChar(100)
+  createdAT   DateTime  @map("created_at")  @default(now())
+  updatedAt   DateTime  @map("updated_at")  @updatedAt
+
+  @@map("subscribe")
+}
