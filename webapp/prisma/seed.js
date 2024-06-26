@@ -62,12 +62,13 @@ async function main() {
     // Insert ProductImages data
     await prisma.productImage.createMany({
         data: [
+            { productId: createdProducts[0].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c0c434c-9802-4556-89c7-a8600b2828d8/air-jordan-1-low-shoes-lFCSjp.png' },
             { productId: createdProducts[0].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fe657d71-ee16-43ca-b7de-3e9313b288a1/air-jordan-1-low-shoes-lFCSjp.png' },
-            { productId: createdProducts[0].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png' },
             { productId: createdProducts[0].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7ce75f02-661e-4726-a940-bdcaff08caab/air-jordan-1-low-shoes-lFCSjp.png' },
             { productId: createdProducts[0].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a21d548e-eb3d-4a1b-a086-fffc780f0e0a/air-jordan-1-low-shoes-lFCSjp.png' },
             { productId: createdProducts[0].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/398bd28b-18d5-4a79-9433-a3b80a564dc7/air-jordan-1-low-shoes-lFCSjp.png' },
             { productId: createdProducts[0].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ade1053d-9b68-49dc-9eeb-278b29daa5d7/air-jordan-1-low-shoes-lFCSjp.png' },
+            { productId: createdProducts[1].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/96bb6586-fe27-44a5-b4d7-b13f500ea206/react-infinity-3-womens-road-running-shoes-XpNmlR.png' },
             { productId: createdProducts[1].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ef0f4114-40cc-4574-ab23-2fd8107519f2/react-infinity-3-womens-road-running-shoes-XpNmlR.png' },
             { productId: createdProducts[1].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f7671589-00a1-46bb-acc4-77d6ab7cf4fa/react-infinity-3-womens-road-running-shoes-XpNmlR.png' },
             { productId: createdProducts[1].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3876b452-79a4-4837-8d3e-21a5b353653f/react-infinity-3-womens-road-running-shoes-XpNmlR.png' },
@@ -78,7 +79,6 @@ async function main() {
             { productId: createdProducts[2].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/492a846d-9a10-45f6-9c84-594d1deb10a6/sb-zoom-pogo-plus-premium-skate-shoes-RvSjsf.png' },
             { productId: createdProducts[2].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c65cb12b-36f9-49b8-aab8-041bf9db924d/sb-zoom-pogo-plus-premium-skate-shoes-RvSjsf.png' },
             { productId: createdProducts[2].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/141f7c51-47a5-4708-b6c8-77eee3a1517f/sb-zoom-pogo-plus-premium-skate-shoes-RvSjsf.png' },
-            { productId: createdProducts[3].id, imageUrl: '' },
         ],
     });
 
@@ -87,58 +87,38 @@ async function main() {
     await prisma.productVariant.createMany({
         data: [
             {
-                productId: 1,
+                productId: createdProducts[0].id,
                 size: '41',
                 color: 'red',
                 stockQuantity: 50,
             },
             {
-                productId: 1,
+                productId: createdProducts[0].id,
                 size: '42',
                 color: 'red',
                 stockQuantity: 20,
             },
             {
-                productId: 1,
+                productId: createdProducts[0].id,
                 size: '43',
                 color: 'red',
                 stockQuantity: 30,
             },
             {
-                productId: 2,
+                productId: createdProducts[1].id,
                 size: '38',
                 color: 'black',
                 stockQuantity: 30,
             },
             {
-                productId: 3,
-                size: '433',
+                productId: createdProducts[2].id,
+                size: '43',
                 color: 'white',
                 stockQuantity: 30,
             },
         ],
     });
 
-    // // Insert Orders data
-    // await prisma.order.createMany({
-    //     data: [
-    //         {
-    //             customerName: 'John Doe',
-    //             customer_phone: '123456789',
-    //             customer_address: '123 Elm Street',
-    //             customer_email: 'john.doe@example.com',
-    //             orderDate: new Date(),
-    //             total_amount: 259.98,
-    //         },
-    //     ],
-    // });
-
-    // // Insert OrderItems data
-    // await prisma.orderItem.createMany({
-    //     data: [
-    //         { orderId: 1, productId: 1, product_variantId: 1, quantity: 2, price: 129.99 },
-    //     ],
-    // });
 
     // Insert Reviews data
     await prisma.review.createMany({
@@ -159,25 +139,6 @@ async function main() {
                 reviewDate: new Date('2024-06-10'),
                 reviewDesc: 'Sản phẩm tốt và đẹp, đeo rất thoải mái. Ngoài ra, CEO Ngọc Tiến rất đẹp trai nữa. Tiếc là chỉ có thể đứng ngắm nhìn từ xa nên đánh giá 4 sao thôi',
             },
-        ],
-    });
-
-    // Insert Contact data
-    await prisma.contact.createMany({
-        data: [
-            {
-                customerName: 'Jane Doe',
-                phone: '987654321',
-                email: 'jane.doe1123@example.com',
-                message: 'I have a question about my order.',
-            },
-        ],
-    });
-
-    // Insert Subscribe data
-    await prisma.subscribe.createMany({
-        data: [
-            { email: 'subscriber@example.com' },
         ],
     });
 }
