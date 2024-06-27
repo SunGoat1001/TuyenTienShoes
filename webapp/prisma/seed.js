@@ -20,6 +20,7 @@ async function main() {
     // Insert Products data
     const products = await prisma.product.createMany({
         data: [
+            // Id 1: red
             {
                 name: 'Air Jordan 1 Low',
                 shortDesc: 'Comfortable sports shoes',
@@ -57,6 +58,8 @@ async function main() {
                 gender: 0,
                 importedDate: new Date('2024-06-01'),
             },
+
+            // Id 2: white
             {
                 name: 'Air Jordan 1 Low',
                 shortDesc: 'Short description',
@@ -93,6 +96,8 @@ async function main() {
                 gender: 0,
                 importedDate: new Date('2024-06-26'),
             },
+
+            // Id 3:black
             {
                 name: 'Air Jordan 1 Low',
                 shortDesc: 'Short description',
@@ -129,6 +134,8 @@ async function main() {
                 gender: 0,
                 importedDate: new Date('2024-06-26'),
             },
+
+            // Id 4: blue
             {
                 name: 'Air Jordan 1 Low',
                 shortDesc: 'Short description',
@@ -165,6 +172,8 @@ async function main() {
                 gender: 0,
                 importedDate: new Date('2024-06-26'),
             },
+
+            // Id 5:
             {
                 name: 'Nike React Infinity 3',
                 shortDesc: 'short desc',
@@ -176,6 +185,8 @@ async function main() {
                 gender: 0,
                 importedDate: new Date('2024-06-15'),
             },
+
+            // Id 6:
             {
                 name: 'Nike SB Zoom Pogo Plus Premium',
                 shortDesc: 'short desc',
@@ -187,6 +198,8 @@ async function main() {
                 gender: 0,
                 importedDate: new Date('2024-06-11'),
             },
+
+            // Id 7:
             {
                 name: 'Air Jordan XXXVIII Low PF',
                 shortDesc: 'short desc',
@@ -198,6 +211,8 @@ async function main() {
                 gender: 1,
                 importedDate: new Date('2024-06-14'),
             },
+
+            // Id 8:
             {
                 name: 'Nike Go Flyase',
                 shortDesc: 'short desc',
@@ -209,6 +224,8 @@ async function main() {
                 gender: 1,
                 importedDate: new Date('2024-06-05'),
             },
+
+            // Id 9:
             {
                 name: 'InfinityRN4',
                 shortDesc: 'short desc',
@@ -221,7 +238,7 @@ async function main() {
                 importedDate: new Date('2024-06-25'),
             },
 
-            // Yellow
+            // Id 10: Yellow
             {
                 name: 'Jumpman MVP',
                 shortDesc: 'short desc',
@@ -252,7 +269,7 @@ async function main() {
                 importedDate: new Date('2024-06-17'),
             },
 
-            // Green
+            // Id 11: Green
             {
                 name: 'Jumpman MVP',
                 shortDesc: 'short desc',
@@ -283,7 +300,7 @@ async function main() {
                 importedDate: new Date('2024-06-22'),
             },
 
-            
+            // Id 12:
             {
                 name: 'Nike Go Flyase',
                 shortDesc: 'short desc',
