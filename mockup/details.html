@@ -138,7 +138,10 @@
           </nav>
         </div>
       </div>
-      <button class="drawer-toggle p-3 text-2xl" onclick="toggleDrawer()"><i class='bx bx-shopping-bag'></i></button>
+      <button class="drawer-toggle p-3 text-2xl" onclick="toggleDrawer()">
+        <i class='bx bx-shopping-bag'></i>
+        <span id="cart-count" class="absolute top-1 right-10 bg-black text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">0</span>
+      </button>
       <!-- Menu Mobile -->
       <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
     </div>
@@ -656,7 +659,13 @@
 </script>
 <!-- AUTO CALC -->
 <script>
+  let cartCount = 0;
+
   function addToCart() {
+    // Cập nhât con số trên giỏ hàng
+    cartCount++;
+    document.getElementById('cart-count').innerText = cartCount;
+
     // Lấy thông tin sản phẩm
     const productTitle = document.querySelector('.product-title').innerText;
     const productPrice = document.querySelector('.price').innerText.split('\n')[1].trim();
@@ -702,10 +711,19 @@
     // Xóa sản phẩm khỏi giỏ hàng
     const productElement = element.parentElement.parentElement;
     productElement.remove();
+
+    if (cartCount > 0) {
+      cartCount--;
+      updateCartCount();
+    }
   
     // Cập nhật tổng giá trị giỏ hàng
     updateTotal();
   }
+
+  function updateCartCount() {
+    document.getElementById('cart-count').innerText = cartCount;
+}
   
   function updateTotal() {
     const productElements = document.querySelectorAll('#productContainer > div');
