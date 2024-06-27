@@ -61,7 +61,32 @@ async function main() {
                 name: 'Air Jordan 1 Low',
                 shortDesc: 'Short description',
                 cartDesc: '',
-                longDesc: '',
+                longDesc: `<p class="mb-4">
+          <b class="text-xl font-bold">ALWAYS FRESH.</b>
+        </p>
+        <p class="mb-4">
+          Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's
+          familiar yet always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks ensure you'll
+          always be on point.
+        </p>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Benefits</b>
+        </p>
+        <ul class="list-disc pl-5 mb-4">
+          <li class="mb-2">Encapsulated Air-Sole unit provides lightweight cushioning.</li>
+          <li class="mb-2">Genuine leather in the upper offers durability and a premium look.</li>
+          <li class="mb-2">Solid rubber outsole enhances traction on a variety of surfaces.</li>
+          <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+          <li class="mb-2">Style: 553558-161</li>
+          <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+        </ul>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Tried and True</b>
+        </p>
+        <p>
+          A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
+          comfort. A rubber outsole supplies durable traction on a variety of surfaces.
+        </p>`,
                 price: 120.00,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b95033d3-2b18-4e8e-b386-56e4209b3352/air-jordan-1-low-shoes-zTWr01.png',
                 categoryId: 1,
@@ -72,7 +97,32 @@ async function main() {
                 name: 'Air Jordan 1 Low',
                 shortDesc: 'Short description',
                 cartDesc: '',
-                longDesc: '',
+                longDesc: `<p class="mb-4">
+          <b class="text-xl font-bold">ALWAYS FRESH.</b>
+        </p>
+        <p class="mb-4">
+          Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's
+          familiar yet always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks ensure you'll
+          always be on point.
+        </p>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Benefits</b>
+        </p>
+        <ul class="list-disc pl-5 mb-4">
+          <li class="mb-2">Encapsulated Air-Sole unit provides lightweight cushioning.</li>
+          <li class="mb-2">Genuine leather in the upper offers durability and a premium look.</li>
+          <li class="mb-2">Solid rubber outsole enhances traction on a variety of surfaces.</li>
+          <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+          <li class="mb-2">Style: 553558-161</li>
+          <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+        </ul>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Tried and True</b>
+        </p>
+        <p>
+          A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
+          comfort. A rubber outsole supplies durable traction on a variety of surfaces.
+        </p>`,
                 price: 120.00,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/25dfd854-eb11-45db-984d-24721d8c34cc/air-jordan-1-low-shoes-6Q1tFM.png',
                 categoryId: 1,
@@ -83,7 +133,32 @@ async function main() {
                 name: 'Air Jordan 1 Low',
                 shortDesc: 'Short description',
                 cartDesc: '',
-                longDesc: '',
+                longDesc: `<p class="mb-4">
+                    <b class="text-xl font-bold">ALWAYS FRESH.</b>
+                    </p>
+                    <p class="mb-4">
+                    Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's
+                    familiar yet always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks ensure you'll
+                    always be on point.
+                    </p>
+                    <p class="mb-4">
+                    <b class="text-xl font-bold">Benefits</b>
+                    </p>
+                    <ul class="list-disc pl-5 mb-4">
+                    <li class="mb-2">Encapsulated Air-Sole unit provides lightweight cushioning.</li>
+                    <li class="mb-2">Genuine leather in the upper offers durability and a premium look.</li>
+                    <li class="mb-2">Solid rubber outsole enhances traction on a variety of surfaces.</li>
+                    <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+                    <li class="mb-2">Style: 553558-161</li>
+                    <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+                    </ul>
+                    <p class="mb-4">
+                    <b class="text-xl font-bold">Tried and True</b>
+                    </p>
+                    <p>
+                    A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
+                    comfort. A rubber outsole supplies durable traction on a variety of surfaces.
+                    </p>`,
                 price: 120.00,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/i1-7b457df1-d698-455e-ba39-694868991933/air-jordan-1-low-shoes-nGLZR9.png',
                 categoryId: 1,
@@ -145,17 +220,70 @@ async function main() {
                 gender: 1,
                 importedDate: new Date('2024-06-25'),
             },
+
+            // Yellow
             {
                 name: 'Jumpman MVP',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                longDesc: `<p class="mb-4">
+                    We didn't invent the remix—but considering the material we get to sample, this one's a no-brainer. We took elements from the AJ6, 7, and 8, making them into a completely new shoe that celebrates MJ's first 3-peat championship run. With leather, textile, and nubuck details, these sneakers honour one legacy while encouraging you to cement your own.
+                    </p>
+                    <p class="mb-4">
+                    <b class="text-xl font-bold">Benefits</b>
+                    </p>
+                    <ul class="list-disc pl-5 mb-4">
+                    <li class="mb-2">The upper is a mix of AJ6 and AJ7 elements: The tongue top and modified overlay reference the AJ6 while the semi-bootie lining homages the AJ7.</li>
+                    <li class="mb-2">The embroidered Nike Air heel logo references the AJ6 and the moulded heel detail comes from the AJ8.</li>
+                    <li class="mb-2">The outsole design is a nod to the AJ6.</li>
+                    <li class="mb-2">Encapsulated Nike Air-Sole unit provides lightweight cushioning.</li>
+                    </ul>
+                    <p class="mb-4">
+                    <b class="text-xl font-bold">Product details</b>
+                    </p>
+                    <ul class="list-disc pl-5 mb-4">
+                    <li class="mb-2">Embroidered Jumpman logo</li>
+                    <li class="mb-2">Colour Shown: White/Black/Yellow Ochre</li>
+                    </ul>`,
                 price: 82.83,
-                mainImageUrl: '',
+                mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d97678bb-9f78-4df6-a45a-7810508450c7/jumpman-mvp-shoes-JV1HCs.png',
                 categoryId: 1,
                 gender: 1,
-                importedDate: new Date('2024-06-25'),
+                importedDate: new Date('2024-06-17'),
             },
+
+            // Green
+            {
+                name: 'Jumpman MVP',
+                shortDesc: 'short desc',
+                cartDesc: 'cart desc',
+                longDesc: `<p class="mb-4">
+                    We didn't invent the remix—but considering the material we get to sample, this one's a no-brainer. We took elements from the AJ6, 7, and 8, making them into a completely new shoe that celebrates MJ's first 3-peat championship run. With leather, textile, and nubuck details, these sneakers honour one legacy while encouraging you to cement your own.
+                    </p>
+                    <p class="mb-4">
+                    <b class="text-xl font-bold">Benefits</b>
+                    </p>
+                    <ul class="list-disc pl-5 mb-4">
+                    <li class="mb-2">The upper is a mix of AJ6 and AJ7 elements: The tongue top and modified overlay reference the AJ6 while the semi-bootie lining homages the AJ7.</li>
+                    <li class="mb-2">The embroidered Nike Air heel logo references the AJ6 and the moulded heel detail comes from the AJ8.</li>
+                    <li class="mb-2">The outsole design is a nod to the AJ6.</li>
+                    <li class="mb-2">Encapsulated Nike Air-Sole unit provides lightweight cushioning.</li>
+                    </ul>
+                    <p class="mb-4">
+                    <b class="text-xl font-bold">Product details</b>
+                    </p>
+                    <ul class="list-disc pl-5 mb-4">
+                    <li class="mb-2">Embroidered Jumpman logo</li>
+                    <li class="mb-2">Colour Shown: White/Black/Yellow Ochre</li>
+                    </ul>`,
+                price: 82.83,
+                mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/432e60d3-724d-4b03-9063-fe712c21704b/jumpman-mvp-shoes-JV1HCs.png',
+                categoryId: 1,
+                gender: 1,
+                importedDate: new Date('2024-06-22'),
+            },
+
+            
             {
                 name: 'Nike Go Flyase',
                 shortDesc: 'short desc',
