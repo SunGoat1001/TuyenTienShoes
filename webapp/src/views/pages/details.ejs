@@ -298,7 +298,136 @@
     }
 
     .product-details {
+<<<<<<< HEAD
       margin-top: 0;
+=======
+        width: 100%;
+        max-width: 455px;
+        margin-left: 16px;
+    }
+
+    @media (max-width: 431px) {
+        .product-details {
+            margin-left: 0px;
+        }
+
+        .product-images-mobile {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .product-images {
+            display: none;
+        }
+    }
+
+    @media (min-width: 431px) {
+        .product-images-mobile {
+            display: none;
+        }
+    }
+
+    .rating {
+        padding: 2px 0;
+        font-size: 1.25rem;
+    }
+
+    .product-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .price {
+        margin: 12px 0;
+        font-size: 1.125rem;
+    }
+
+    .color-selection {
+        margin-bottom: 16px;
+    }
+
+    .colors {
+        display: flex;
+        gap: 8px;
+    }
+
+    .color {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .size-selection {
+        margin-top: 16px;
+    }
+
+    .sizes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .sizes label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .sizes input {
+        display: none;
+    }
+
+    .sizes span {
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sizes input:checked + span {
+        border-color: black;
+    }
+
+    .rounded-lg.bg-gray-100.text-gray-300 {
+        cursor: not-allowed;
+    }
+
+    .add-to-cart {
+        width: 100%;
+        padding: 16px;
+        margin-top: 16px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    @media (min-width: 768px) {
+        .product-display {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .product-images {
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        .main-image {
+            margin-left: 0;
+        }
+
+        .product-details {
+            margin-top: 0;
+        }
+>>>>>>> main
     }
   }
 </style>
@@ -470,6 +599,7 @@
 
 
 <main class="overflow-x-hidden">
+<<<<<<< HEAD
   <div class="flex justify-center max-[431px]:container mt-36 max-[431px]:mt-28">
     <div class="product-display">
       <div class="product-images">
@@ -618,6 +748,158 @@
       </div>
     </section>
   </div>
+=======
+    <div class="flex justify-center max-[431px]:container mt-36 max-[431px]:mt-28">
+        <div class="product-display">
+            <div class="product-images">
+                <% product.images.forEach(image=> { %>
+                    <div class="thumbnail">
+                        <img src="<%= image %>" alt="<%= product.name %>" />
+                    </div>
+                    <% }) %>
+            </div>
+
+            <div class="main-image max-[431px]:p-4">
+                <img src="<%= product.mainImageUrl %>" alt="<%= product.name %>" />
+            </div>
+
+            <div class="product-images-mobile">
+                <% product.images.forEach(image=> { %>
+                    <div class="thumbnail">
+                        <img src="<%= image %>" alt="<%= product.name %>" />
+                    </div>
+                    <% }) %>
+            </div>
+
+            <div class="product-details max-[431px]:p-4">
+                <div class="rating">
+                    <% for (let i=0; i < 5; i++) { %>
+                        <% if (i < Math.floor(averageRating)) { %>
+                            <i class="bx bxs-star text-yellow-400"></i>
+                            <% } else if (i < averageRating) { %>
+                                <i class="bx bxs-star-half text-yellow-400"></i>
+                                <% } else { %>
+                                    <i class="bx bx-star text-yellow-400"></i>
+                                    <% } %>
+                                        <% } %>
+                                            <b>(<%= totalReviews %>)</b>
+                </div>
+                <h1 class="product-title">
+                    <%= product.name %>
+                </h1>
+                <div class="price">
+                    <strong>Price</strong><br />
+                    $<%= product.price %>
+                </div>
+                <hr />
+                <!-- Color Selection -->
+                <div class="color-selection">
+                    <strong>Color</strong>
+                    <div class="colors">
+                        <% relatedColors.forEach(colorObj => { %>
+                            <a href="/products/<%= colorObj.productId %>"
+                                class="color bg-<%= colorObj.color.toLowerCase() %>-500"></a>
+                        <% }) %>
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="size-selection">
+                    <strong>Select size:</strong>
+                    <div class="sizes">
+                        <% const availableSizes=new Set(sizes); %>
+                            <% [37.5, 38, 38.5, 39, 40, 40.5, 41, 42, 42.5, 43].forEach(size=> { %>
+                                <% if (availableSizes.has(size)) { %>
+                                    <label>
+                                        <input type="radio" name="size" value="<%= size %>" />
+                                        <span>
+                                            <%= size %>
+                                        </span>
+                                    </label>
+                                    <% } else { %>
+                                        <label class="rounded-lg bg-gray-100 text-gray-300">
+                                            <input type="radio" name="size" value="<%= size %>" disabled />
+                                            <span>
+                                                <%= size %>
+                                            </span>
+                                        </label>
+                                        <% } %>
+                                            <% }) %>
+                    </div>
+                </div>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="w-[1280px] m-auto max-[431px]:container">
+        <div class="tabs max-[431px]:flex-row">
+            <button class="tab_btn active">Description</button>
+            <button class="tab_btn">Reviews <span>(<%= totalReviews %>)</span></button>
+            <div class="line" style="width: 90px;"></div>
+        </div>
+        <div class="content active">
+            <%- product.longDesc %>
+        </div>
+        <div class="content reviews">
+            <% product.reviews.forEach(review=> { %>
+                <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
+                    <div class="star mb-2">
+                        <% for (let i=0; i < review.rating; i++) { %>
+                            <i class="bx bxs-star"></i>
+                            <% } %>
+                                <% for (let i=0; i < (5 - review.rating); i++) { %>
+                                    <i class="bx bx-star"></i>
+                                    <% } %>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2">
+                        <%= review.title %>
+                    </h4>
+                    <span class="italic text-gray-400 mb-4 block">
+                        <span class="font-medium">
+                            <%= review.reviewerName %>
+                        </span> no
+                        <span class="font-medium">
+                            <%= new Date(review.reviewDate).toLocaleDateString() %>
+                        </span>
+                    </span>
+                    <p class="mb-4">
+                        <%= review.reviewDesc %>
+                    </p>
+                </article>
+                <% }) %>
+        </div>
+    </div>
+    <div class="max-w-[1160px] mx-auto p-6">
+        <h4 class="text-3xl font-semibold mb-3">You also might like</h4>
+        <section class="py-10">
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list flex">
+                        <% randomProducts.forEach(product=> { %>
+                            <li class="splide__slide mx-2 mb-8 flex-shrink-0">
+                                <div>
+                                    <a href="/products/<%= product.id %>">
+                                        <div>
+                                            <img class="w-full h-auto object-cover rounded-lg"
+                                                src="<%= product.mainImageUrl %>" alt="Image of <%= product.name %>" />
+                                        </div>
+                                        <div class="mt-2">
+                                            <h4 class="font-semibold text-lg">
+                                                <%= product.name %>
+                                            </h4>
+                                            <h4 class="font-medium text-lg">$<%= product.price %>
+                                            </h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+>>>>>>> main
 
 </main>
 
@@ -699,6 +981,7 @@
       scrollbarThumb.style.left = `${thumbPosition}px`;
     };
 
+<<<<<<< HEAD
     imageList.addEventListener("scroll", () => {
       updateScrollThumbPosition();
       handleSlideButtons();
@@ -709,6 +992,8 @@
 
   window.addEventListener("resize", initSlider);
   window.addEventListener("load", initSlider);
+=======
+>>>>>>> main
 </script>
 
 <!-- CHANGE IMAGE WHEN MOVEOVER -->
@@ -756,9 +1041,18 @@
     line.style.left = activeTab.offsetLeft + "px";
   });
 
+<<<<<<< HEAD
   document.addEventListener('DOMContentLoaded', () => {
     const activeTab = document.querySelector('.tab_btn.active');
     line.style.width = activeTab.offsetWidth + "px";
     line.style.left = activeTab.offsetLeft + "px";
   });
 </script>
+=======
+    document.addEventListener('DOMContentLoaded', () => {
+        const activeTab = document.querySelector('.tab_btn.active');
+        line.style.width = activeTab.offsetWidth + "px";
+        line.style.left = activeTab.offsetLeft + "px";
+    });
+</script>
+>>>>>>> main

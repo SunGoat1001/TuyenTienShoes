@@ -104,8 +104,123 @@
         <div class="text-2xl underline underline-offset-4">
           <a href="/newarrivals">WOMEN</a>
         </div>
+<<<<<<< HEAD
         <div class="px-7 text-2xl underline underline-offset-4">
           <a href="/newarrivals">MAN</a>
+=======
+        <div class="absolute inset-0 bg-black opacity-15"></div>
+        <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-4">
+            <p class="text-2xl font-medium">TTS</p>
+            <h1 class="text-3xl font-bold max-sm:text-xl">UNLEASH YOUR POTENTIAL WITH EVERY STEP</h1>
+            <p class="w-3/5 text-xl">Every world is on your feet</p>
+            <div class="absolute bottom-20 flex justify-between w-[250px]">
+                <div class="text-2xl underline underline-offset-4">
+                    <a href="/newarrivals">WOMEN</a>
+                </div>
+                <div class="px-7 text-2xl underline underline-offset-4">
+                    <a href="/newarrivals">MAN</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PRODUC LIMITED -->
+    <section class="w-full flex flex-col items-center h-[40rem] mt-14">
+        <span class="font-bold text-3xl">LIMITED IN STOCK</span>
+        <div class="flex justify-between mx-auto max-lg:w-full max-xl:w-[90%]">
+            <div class="mt-16 max-sm:hidden">
+                <div class="w-64 h-40 flex flex-col justify-center items-center mb-20">
+                    <span class="text-xl font-semibold mb-2">UPPER</span>
+                    <span class="text-center">Cow print fabric in black and white,
+                        yellow Nike Swoosh with green outline resembling melting ice cream.</span>
+                </div>
+                <div class="w-64 h-40 flex flex-col justify-center items-center">
+                    <span class="text-xl font-semibold mb-2">MIDSOLE AND OUTSOLE</span>
+                    <span class="text-center">White midsole, green outsole for added traction and durability.</span>
+                </div>
+            </div>
+            <img src="/asset/img/homepage/ShoesLIMITED.png" alt=""
+                class="w-[35rem] h-[25rem] max-lg:w-[31rem] max-sm:ml-14 max-[431px]:ml-0 max-[431px]:h-[22rem]">
+            <div class="mt-16 max-sm:hidden">
+                <div class="w-64 h-40 flex flex-col justify-center items-center mb-20">
+                    <span class="text-xl font-semibold mb-2">TONGUE AND LINING</span>
+                    <span class="text-center">The tongue features the iconic Ben & Jerry's logo,
+                        while the rainbow-patterned lining reflects the vibrant colors of their ice cream
+                        packaging.</span>
+                </div>
+                <div class="w-64 h-40 flex flex-col justify-center items-center">
+                    <span class="text-xl font-semibold mb-2">HEEL</span>
+                    <span class="text-center">White cloud patterns on a blue background, prominent embroidered Nike
+                        logo.</span>
+                </div>
+            </div>
+        </div>
+        <span class="font-semibold text-xl max-[431px]:text-center">Nike Dunk Low x Ben & Jerry’s “Chunky
+            Dunky”</span>
+        <button class="w-44 h-12 bg-black text-white font-semibold rounded-full mt-5 hover:opacity-70">BUY
+            NOW</button>
+    </section>
+    <!-- PRODUCT -->
+    <section class="py-10 col">
+        <span class="font-bold text-3xl mb-5">NEW ARRIVALS</span>
+        <div class="container1 container2 mt-5">
+            <div class="relative ">
+                <button id="prev-slide"
+                    class="w-12 h-12 slide-button material-symbols-rounded hidden absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-white rounded-full z-10">
+                </button>
+                <ul class="image-list space-x-4 overflow-hidden">
+                    <% products.forEach(product=> { %>
+                        <a href="/products/<%= product.id %>">
+                            <li class="shadow-lg">
+                                <div class="w-[400px] h-[500px] flex flex-col bg-white">
+                                    <div>
+                                        <img src="<%= product.mainImageUrl ? product.mainImageUrl : 'default-image-url.jpg' %>"
+                                            alt="<%= product.name %>" class="h-[400px] w-full object-cover">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="font-bold text-xl m-2">
+                                            <%= product.name %>
+                                        </span>
+                                        <span class="font-medium ml-2">$<%= product.price %></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </a>
+                        <% }) %>
+                </ul>
+                <button id="next-slide"
+                    class="w-12 h-12 slide-button material-symbols-rounded absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-white rounded-full z-10">
+                    >
+                </button>
+            </div>
+            <div class="mt-4 h-6 relative">
+                <div class="absolute inset-0 rounded-full flex items-center">
+                    <div class="scrollbar-thumb h-full rounded-full w-1/2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women, Man -->
+    <div class="relative w-full h-[800px]">
+        <div class="absolute flex w-full h-full bg-cover">
+            <img src="/asset/img/homepage/Women.jpg" alt="" class="w-1/2 object-cover max-sm:hidden">
+            <img src="/asset/img/homepage/Men.jpg" alt="" class="w-1/2 object-cover max-sm:w-full">
+        </div>
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full space-y-4">
+            <h1 class="text-5xl font-bold">GET TRAVEL READY</h1>
+            <p class="text-center text-lg">Versatile style plus packable design equals <br> shoes that are always
+                good
+                to go.</p>
+            <div class="absolute bottom-20 flex justify-between w-[250px]">
+                <div class="text-2xl underline underline-offset-4">
+                    <a href="/newarrivals">WOMEN</a>
+                </div>
+                <div class="px-7 text-2xl underline underline-offset-4">
+                    <a href="/newarrivals">MAN</a>
+                </div>
+            </div>
+>>>>>>> main
         </div>
       </div>
     </div>
@@ -306,6 +421,7 @@
       scrollbarThumb.style.left = `${thumbPosition}px`;
     };
 
+<<<<<<< HEAD
     imageList.addEventListener("scroll", () => {
       updateScrollThumbPosition();
       handleSlideButtons();
@@ -316,4 +432,6 @@
 
   window.addEventListener("resize", initSlider);
   window.addEventListener("load", initSlider);
+=======
+>>>>>>> main
 </script>

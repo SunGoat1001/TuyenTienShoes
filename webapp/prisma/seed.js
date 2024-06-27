@@ -576,7 +576,7 @@ async function main() {
                 title: 'Very Fast Delivery',
                 reviewerName: 'John Doe',
                 reviewDate: new Date('2024-06-10'),
-                reviewDesc: 'I am very satisfied with the delivery speed of TuyenTien shop. The product arrived immediately after the payment was completed. CEO Ngoc Tien is truly commendable.',
+                reviewDesc: 'I am very satisfied with the delivery speed of TuyenTien shop. The product arrived immediately after the payment was completed.',
             },
             {
                 productId: createdProducts[0].id,
@@ -584,7 +584,7 @@ async function main() {
                 title: 'Good product, very comfortable',
                 reviewerName: 'John Dan',
                 reviewDate: new Date('2024-06-10'),
-                reviewDesc: 'The product is good and looks nice. It’s very comfortable to wear. However, I could only admire it from afar, so I’m giving it 4 stars.',
+                reviewDesc: 'The product is good and looks nice. It’s very comfortable to wear.',
             },
             {
                 productId: createdProducts[0].id,
@@ -601,22 +601,6 @@ async function main() {
                 reviewerName: 'Bob Johnson',
                 reviewDate: new Date('2024-06-12'),
                 reviewDesc: 'I bought these shoes because I heard the CEO designed them with great care. Truly, they are the work of a genius, designed with a deep understanding of what makes great shoes!',
-            },
-            {
-                productId: createdProducts[0].id,
-                rating: 4,
-                title: 'Makes me run fast',
-                reviewerName: 'Mike Lee',
-                reviewDate: new Date('2024-06-13'),
-                reviewDesc: 'Wearing these shoes makes me feel like I can run as fast as Usain Bolt. However, I still lost a race against my neighbor’s dog, so I’m giving it 4 stars.',
-            },
-            {
-                productId: createdProducts[0].id,
-                rating: 5,
-                title: 'Great shoes, highly recommend',
-                reviewerName: 'Sarah Brown',
-                reviewDate: new Date('2024-06-14'),
-                reviewDesc: 'I heard the CEO wears these shoes every day. If he can run a company in these, I can definitely manage my household tasks.',
             },
             {
                 productId: createdProducts[0].id,
@@ -644,19 +628,11 @@ async function main() {
             },
             {
                 productId: createdProducts[0].id,
-                rating: 5,
-                title: 'Great for everything',
-                reviewerName: 'Daniel Gray',
-                reviewDate: new Date('2024-06-18'),
-                reviewDesc: 'I have done housework, shopping, and even run a marathon in these shoes. They’re amazing!',
-            },
-            {
-                productId: createdProducts[0].id,
                 rating: 4,
                 title: 'Great for dancing',
                 reviewerName: 'Laura Blue',
                 reviewDate: new Date('2024-06-19'),
-                reviewDesc: 'After wearing these shoes, I’ve been dancing all day. They are fantastic, but they don’t clean the house on their own, so I’m giving them 4 stars.',
+                reviewDesc: 'After wearing these shoes, I’ve been dancing all day. They are fantastic!',
             },
             {
                 productId: createdProducts[0].id,
