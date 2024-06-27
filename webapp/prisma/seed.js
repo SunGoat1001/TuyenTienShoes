@@ -140,32 +140,32 @@ async function main() {
                 name: 'Air Jordan 1 Low',
                 shortDesc: 'Short description',
                 cartDesc: '',
-                longDesc: `<p class="mb-4">
-                    <b class="text-xl font-bold">ALWAYS FRESH.</b>
-                    </p>
-                    <p class="mb-4">
-                    Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's
-                    familiar yet always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks ensure you'll
-                    always be on point.
-                    </p>
-                    <p class="mb-4">
-                    <b class="text-xl font-bold">Benefits</b>
-                    </p>
-                    <ul class="list-disc pl-5 mb-4">
-                    <li class="mb-2">Encapsulated Air-Sole unit provides lightweight cushioning.</li>
-                    <li class="mb-2">Genuine leather in the upper offers durability and a premium look.</li>
-                    <li class="mb-2">Solid rubber outsole enhances traction on a variety of surfaces.</li>
-                    <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
-                    <li class="mb-2">Style: 553558-161</li>
-                    <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
-                    </ul>
-                    <p class="mb-4">
-                    <b class="text-xl font-bold">Tried and True</b>
-                    </p>
-                    <p>
-                    A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
-                    comfort. A rubber outsole supplies durable traction on a variety of surfaces.
-                    </p>`,
+                    longDesc: `<p class="mb-4">
+                        <b class="text-xl font-bold">ALWAYS FRESH.</b>
+                        </p>
+                        <p class="mb-4">
+                        Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's
+                        familiar yet always fresh. With an iconic design that pairs perfectly with any 'fit, these kicks ensure you'll
+                        always be on point.
+                        </p>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Benefits</b>
+                        </p>
+                        <ul class="list-disc pl-5 mb-4">
+                        <li class="mb-2">Encapsulated Air-Sole unit provides lightweight cushioning.</li>
+                        <li class="mb-2">Genuine leather in the upper offers durability and a premium look.</li>
+                        <li class="mb-2">Solid rubber outsole enhances traction on a variety of surfaces.</li>
+                        <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+                        <li class="mb-2">Style: 553558-161</li>
+                        <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+                        </ul>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Tried and True</b>
+                        </p>
+                        <p>
+                        A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
+                        comfort. A rubber outsole supplies durable traction on a variety of surfaces.
+                        </p>`,
                 price: 120.00,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/i1-7b457df1-d698-455e-ba39-694868991933/air-jordan-1-low-shoes-nGLZR9.png',
                 categoryId: 1,
@@ -206,7 +206,7 @@ async function main() {
                 cartDesc: 'cart desc',
                 longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
                 price: 21.09,
-                mainImageUrl: '',
+                mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b6aa977d-3ad0-4f95-970f-2cae9a69dea5/air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.png',
                 categoryId: 1,
                 gender: 1,
                 importedDate: new Date('2024-06-14'),
@@ -219,7 +219,7 @@ async function main() {
                 cartDesc: 'cart desc',
                 longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
                 price: 21.09,
-                mainImageUrl: '',
+                mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c76e2119-acb7-4944-9085-d4f5ae2bda4a/go-flyease-easy-on-off-shoes-3svRCL.png',
                 categoryId: 4,
                 gender: 1,
                 importedDate: new Date('2024-06-05'),
@@ -232,7 +232,7 @@ async function main() {
                 cartDesc: 'cart desc',
                 longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
                 price: 31.88,
-                mainImageUrl: '',
+                mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c935bd3-ff96-449d-b28c-2e9c0bd0564e/infinityrn-4-road-running-shoes-9fcndR.png',
                 categoryId: 2,
                 gender: 1,
                 importedDate: new Date('2024-06-25'),
@@ -300,15 +300,55 @@ async function main() {
                 importedDate: new Date('2024-06-22'),
             },
 
-            // Id 12:
+            // Id 12:  
             {
-                name: 'Nike Go Flyase',
+                name: 'Air Jordan 1 Mid SE',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
                 longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
                 price: 21.09,
-                mainImageUrl: '',
+                mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ac668959-a9ca-4711-b40c-3997706a7db2/air-jordan-1-mid-se-older-shoes-ZMGf1Z.png',
                 categoryId: 4,
+                gender: 1,
+                importedDate: new Date('2024-06-05'),
+            },
+
+               // Id 13:  
+            {
+                name: 'Nike Manoa Leather',
+                shortDesc: 'short desc',
+                cartDesc: 'cart desc',
+                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                price: 21.09,
+                mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/99e98f0c-b4f2-47eb-a312-e63cf800f9db/manoa-leather-boot-bXlwh8.png',
+                categoryId: 5,
+                gender: 1,
+                importedDate: new Date('2024-06-05'),
+            },
+
+
+                // Id 14:  Air Jordan 9 G
+            {
+                name: 'Air Jordan 9 G',
+                shortDesc: 'short desc',
+                cartDesc: 'cart desc',
+                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                price: 21.09,
+                mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e97dde71-d2e5-439f-95a8-da0d76a70f03/air-jordan-9-g-golf-shoes-Fp9GL3.png',
+                categoryId: 6,
+                gender: 1,
+                importedDate: new Date('2024-06-05'),
+            },
+
+             // Id 15:  
+            {
+                name: 'Nike Icon Classic',
+                shortDesc: 'short desc',
+                cartDesc: 'cart desc',
+                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                price: 21.09,
+                mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/dbf324ca-7619-4463-bc47-bc8d0783ce45/icon-classic-sandals-Jrc3kN.png',
+                categoryId: 7,
                 gender: 1,
                 importedDate: new Date('2024-06-05'),
             },
@@ -376,7 +416,84 @@ async function main() {
             { productId: createdProducts[5].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/492a846d-9a10-45f6-9c84-594d1deb10a6/sb-zoom-pogo-plus-premium-skate-shoes-RvSjsf.png' },
             { productId: createdProducts[5].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c65cb12b-36f9-49b8-aab8-041bf9db924d/sb-zoom-pogo-plus-premium-skate-shoes-RvSjsf.png' },
             { productId: createdProducts[5].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/141f7c51-47a5-4708-b6c8-77eee3a1517f/sb-zoom-pogo-plus-premium-skate-shoes-RvSjsf.png' },
+        
+            // Air Jordan XXXVIII Low PF
+            { productId: createdProducts[6].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b6aa977d-3ad0-4f95-970f-2cae9a69dea5/air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.png' },
+            { productId: createdProducts[6].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/f9e68907-f299-4fb5-b23f-b6dbcdb9ab18/air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.png' },
+            { productId: createdProducts[6].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e139052a-5ee9-492f-84e8-4bb9dd6c92ca/air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.png' },
+            { productId: createdProducts[6].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b3d5bcb9-36a9-4a17-893a-6ac47ce99cbc/air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.png' },
+            { productId: createdProducts[6].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/05d7d05a-af40-455c-9a32-576a7c94f375/air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.png' },
+            { productId: createdProducts[6].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/2a17d6e6-adc2-4e9f-a4f2-7fc4900a4837/air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.png' },
+        
+            // Nike Go FlyEase
+            { productId: createdProducts[7].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c76e2119-acb7-4944-9085-d4f5ae2bda4a/go-flyease-easy-on-off-shoes-3svRCL.png' },
+            { productId: createdProducts[7].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e38ad395-18da-4d12-8b76-9336e12f7ab6/go-flyease-easy-on-off-shoes-3svRCL.png' },
+            { productId: createdProducts[7].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/75d6eab9-270c-485d-8edc-851408f5f86a/go-flyease-easy-on-off-shoes-3svRCL.png' },
+            { productId: createdProducts[7].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/bbe6f776-12d9-43b3-a8d0-338a95180a0c/go-flyease-easy-on-off-shoes-3svRCL.png' },
+            { productId: createdProducts[7].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0af510b3-6532-46c9-a315-95405e03ae52/go-flyease-easy-on-off-shoes-3svRCL.png' },
+            { productId: createdProducts[7].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4face735-6dae-4db4-8456-99936374addf/go-flyease-easy-on-off-shoes-3svRCL.png' },
+       
+            // Nike InfinityRN 4
+            { productId: createdProducts[8].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c935bd3-ff96-449d-b28c-2e9c0bd0564e/infinityrn-4-road-running-shoes-9fcndR.png' },
+            { productId: createdProducts[8].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c935bd3-ff96-449d-b28c-2e9c0bd0564e/infinityrn-4-road-running-shoes-9fcndR.png' },
+            { productId: createdProducts[8].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5cc2d6a3-4d02-4020-9ec4-eebb6c217348/infinityrn-4-road-running-shoes-9fcndR.png' },
+            { productId: createdProducts[8].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/389ff347-7b98-4440-9ebc-f4285ac2f2e9/infinityrn-4-road-running-shoes-9fcndR.png' },
+            { productId: createdProducts[8].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7eaa8289-a14d-4465-a2b2-2eb87763df61/infinityrn-4-road-running-shoes-9fcndR.png' },
+            { productId: createdProducts[8].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fcb59c30-eec2-43db-bea6-ad84a4e8f57c/infinityrn-4-road-running-shoes-9fcndR.png' },
+            
+            // Nike Jumpman MVP Yellow
+            { productId: createdProducts[9].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d97678bb-9f78-4df6-a45a-7810508450c7/jumpman-mvp-shoes-JV1HCs.png' },
+            { productId: createdProducts[9].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/c75232e0-333f-4c99-acfe-1e3d5eccface/jumpman-mvp-shoes-JV1HCs.png' }, 
+            { productId: createdProducts[9].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/17eb36b4-16b7-4c46-b5d2-e4d8d816adde/jumpman-mvp-shoes-JV1HCs.png' },
+            { productId: createdProducts[9].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9e885989-b42e-45a5-b899-fd5e6303d9e8/jumpman-mvp-shoes-JV1HCs.png' },
+            { productId: createdProducts[9].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/585af017-7418-48f6-beac-52558962d2ba/jumpman-mvp-shoes-JV1HCs.png' },
+            { productId: createdProducts[9].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/2439052d-33d0-4093-8a55-6fdd0e86da42/jumpman-mvp-shoes-JV1HCs.png' },    
+            
+           // Nike Jumpman MVP Green
+           { productId: createdProducts[10].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/432e60d3-724d-4b03-9063-fe712c21704b/jumpman-mvp-shoes-JV1HCs.png' },
+           { productId: createdProducts[10].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1ddf63a5-887a-4d6e-b24a-8ba23e63308d/jumpman-mvp-shoes-JV1HCs.png' },
+           { productId: createdProducts[10].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/60a149ca-6b41-49e7-8bd2-32d9b7db13d8/jumpman-mvp-shoes-JV1HCs.png' },
+           { productId: createdProducts[10].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/21733f8b-0668-4b72-975c-daed423f059b/jumpman-mvp-shoes-JV1HCs.png' },
+           { productId: createdProducts[10].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d93f310d-e891-43b0-97c6-7227e99bf8d1/jumpman-mvp-shoes-JV1HCs.png' },
+           { productId: createdProducts[10].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/123be174-680f-4af4-93e3-60d54efea681/jumpman-mvp-shoes-JV1HCs.png' }, 
+  
+    
+
+                //Air Jordan 1 Mid SE 
+            { productId: createdProducts[11].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ac668959-a9ca-4711-b40c-3997706a7db2/air-jordan-1-mid-se-older-shoes-ZMGf1Z.png' },
+            { productId: createdProducts[11].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/abe9b6b1-2f2e-4d1b-99e5-465b8020b7fa/air-jordan-1-mid-se-older-shoes-ZMGf1Z.png' },
+            { productId: createdProducts[11].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/0637f6bf-34e8-477f-9711-ee4ab7e2a2ad/air-jordan-1-mid-se-older-shoes-ZMGf1Z.png' },
+            { productId: createdProducts[11].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/5390494e-3281-498a-ab4a-7369c1e90515/air-jordan-1-mid-se-older-shoes-ZMGf1Z.png' },
+            { productId: createdProducts[11].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/f99612e1-0dcb-474d-980d-7676a1eaf4ec/air-jordan-1-mid-se-older-shoes-ZMGf1Z.png' },
+            { productId: createdProducts[11].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/39b6360a-f4d8-4e40-8612-4fc17816d088/air-jordan-1-mid-se-older-shoes-ZMGf1Z.png' },
+        
+                  
+           //Nike Manoa Leather   
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/99e98f0c-b4f2-47eb-a312-e63cf800f9db/manoa-leather-boot-bXlwh8.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0acdf6b5-25c5-46e3-bd79-3abc7212cbca/manoa-leather-boot-bXlwh8.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2e06c9c6-c31c-4a47-aba3-0bb413c540b5/manoa-leather-boot-bXlwh8.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e2ed9909-de5f-4215-8615-44e125684982/manoa-leather-boot-bXlwh8.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0ba41250-8d50-4810-aa65-0024f0fc8b52/manoa-leather-boot-bXlwh8.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0ba41250-8d50-4810-aa65-0024f0fc8b52/manoa-leather-boot-bXlwh8.png' }, 
+        
+
+           //Air Jordan 9 G  
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e97dde71-d2e5-439f-95a8-da0d76a70f03/air-jordan-9-g-golf-shoes-Fp9GL3.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/648e777e-7a3f-4c1e-9abd-f7e5e8abc278/air-jordan-9-g-golf-shoes-Fp9GL3.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/03eb932f-004a-446e-b8f3-5e35a1ffbbee/air-jordan-9-g-golf-shoes-Fp9GL3.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b3878f91-1bf5-472c-8968-698f22d87052/air-jordan-9-g-golf-shoes-Fp9GL3.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/f0755c31-f4a4-4c23-8a67-641d5bb8c009/air-jordan-9-g-golf-shoes-Fp9GL3.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d6fbfc06-16d8-49a4-b12b-a576ae1a3005/air-jordan-9-g-golf-shoes-Fp9GL3.png' },
+        
+               //Nike Icon Classic 
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/dbf324ca-7619-4463-bc47-bc8d0783ce45/icon-classic-sandals-Jrc3kN.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6b048870-8025-4898-894f-c9a38c30f1b9/icon-classic-sandals-Jrc3kN.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6b048870-8025-4898-894f-c9a38c30f1b9/icon-classic-sandals-Jrc3kN.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f862bef-3cc2-44c1-b5b9-0ee33a6da58b/icon-classic-sandals-Jrc3kN.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/36c6a94c-21d1-4f1f-b6f7-ab30fab9e54c/icon-classic-sandals-Jrc3kN.png' },
+           { productId: createdProducts[12].id, imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2e942fdd-25c7-4523-b2ec-43068e35bb20/icon-classic-sandals-Jrc3kN.png' },
         ],
+        
     });
 
     // Insert ProductVariants data
