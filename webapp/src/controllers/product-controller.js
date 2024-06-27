@@ -2,6 +2,95 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 const getNewArrivals = async (req, res) => {
+    const { search, sort, category, gender, size, color, price } = req.query;
+
+    let where = {};
+    let orderBy = {};
+
+    // Search by name
+    if (search) {
+        where.name = {
+            contains: search,
+        };
+    }
+
+    // Sort products
+    if (sort) {
+        if (sort === 'newestfirst') {
+            orderBy = { importedDate: 'desc' };
+        } else if (sort === 'highestprice') {
+            orderBy = { price: 'desc' };
+        } else if (sort === 'lowestprice') {
+            orderBy = { price: 'asc' };
+        }
+    }
+
+    // Filter by category
+    if (category) {
+        where.categoryId = Number(category);
+    }
+
+    // Filter by gender
+    if (gender) {
+        where.gender = Number(gender);
+    }
+
+    // Filter by size
+    if (size) {
+        where.variants = {
+            some: {
+                size: Number(size),
+            },
+        };
+    }
+
+    // Filter by color
+    if (color) {
+        where.variants = {
+            some: {
+                color: color,
+            },
+        };
+    }
+
+    // Filter by price
+    if (price) {
+        let priceRange;
+        if (price === 'low') {
+            priceRange = { lte: 50 };
+        } else if (price === 'low-mid') {
+            priceRange = { gte: 50, lte: 100 };
+        } else if (price === 'mid') {
+            priceRange = { gte: 100, lte: 150 };
+        } else if (price === 'high') {
+            priceRange = { gte: 150 };
+        }
+        where.price = priceRange;
+    }
+
+    const products = await prisma.product.findMany({
+        where,
+        include: {
+            images: true,
+            category: true,
+            variants: true,
+            reviews: true,
+            related: true,
+            order_items: true,
+            related_from: true
+        },
+        orderBy,
+    });
+
+    return res.render('pages/search', {
+        products,
+        search,
+        category
+    }); 
+};
+
+const getMan = async (req, res) => {
+    // TODO: Fetch products from the database
     try {
         const products = await prisma.product.findMany({
             include: {
@@ -25,18 +114,34 @@ const getNewArrivals = async (req, res) => {
     }
 };
 
-const getMan = async (req, res) => {
-    // TODO: Fetch products from the database
-    return res.render('pages/search');
-};
-
 const getWomen = async (req, res) => {
     // TODO: Fetch products from the database
-    return res.render('pages/search');
+    try {
+        const products = await prisma.product.findMany({
+            include: {
+                images: true,
+                category: true,
+                variants: true,
+                reviews: true,
+                related: true,
+                order_items: true,
+                related_from: true
+            },
+            orderBy: {
+                importedDate: "desc"
+            },
+        });
+
+        return res.render('pages/search', { products });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send('Internal Server Error');
+    }
 };
 
 const getProductById = async (req, res) => {
     const { id } = req.params;
+
 
     // Fetch the product along with its variants and images
     const product = await prisma.product.findUnique({
@@ -111,7 +216,9 @@ const getProductById = async (req, res) => {
 
     // console.log(relatedColors);
     return res.render('pages/details', { product: { ...product, images }, sizes, randomProducts, totalReviews, averageRating, relatedColors: relatedColorsInfo });
-};
+    };
+
+
 
 
 

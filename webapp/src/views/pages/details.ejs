@@ -228,6 +228,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    border: 1px solid lightgray;
     cursor: pointer;
   }
 
@@ -518,7 +519,7 @@
           <strong>Color</strong>
           <div class="colors">
             <% relatedColors.forEach(colorObj=> { %>
-            <a href="/products/<%= colorObj.productId %>" class="color bg-<%= colorObj.color.toLowerCase() %>-500"></a>
+            <a href="/products/<%= colorObj.productId %>" class="color bg-<%= colorObj.color.toLowerCase() %>-500 bg-<%= colorObj.color.toLowerCase() %>"></a>
             <% }) %>
           </div>
         </div>
@@ -618,7 +619,6 @@
       </div>
     </section>
   </div>
-
 </main>
 
 <!-- Slide bar -->

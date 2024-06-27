@@ -75,16 +75,17 @@
   <!-- NAV -->
 
   <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
-    <div class="col flex justify-between items-center h-16">
-      <a href="./index.html">
-        <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div>
-      </a>
-      <nav class="flex text-sm font-bold max-sm:hidden">
-        <a href="./women.html" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
-        <a href="./man.html" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
-        <a href="./newarrivals.html" class="p-5 hover:underline underline-offset-4 focus:underline">NEW ARRIVALS</a>
-        <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
-      </nav>
+        <div class="col flex justify-between items-center h-16">
+            <a href="./index.html">
+                <div class="bg-[url('./asset/img/LogoNAV.png')] bg-cover h-16 w-16" aria-label="Home"></div>
+            </a>
+            <nav class="flex text-sm font-bold max-sm:hidden">
+                <a href="./women.html" class="p-5 hover:underline underline-offset-4 focus:underline">WOMAN</a>
+                <a href="./man.html" class="p-5 hover:underline underline-offset-4 focus:underline">MAN</a>
+                <a href="./newarrivals.html" class="p-5 hover:underline underline-offset-4 focus:underline">NEW
+                    ARRIVALS</a>
+                <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
+            </nav>
       <!-- CART -->
       <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out"
         onclick="toggleDrawer()"></div>
@@ -138,7 +139,10 @@
           </nav>
         </div>
       </div>
-      <button class="drawer-toggle p-3 text-2xl" onclick="toggleDrawer()"><i class='bx bx-shopping-bag'></i></button>
+      <button class="drawer-toggle p-3 text-2xl" onclick="toggleDrawer()">
+        <i class='bx bx-shopping-bag'></i>
+        <span id="cart-count" class="absolute top-1 right-10 bg-black text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">0</span>
+      </button>
       <!-- Menu Mobile -->
       <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
     </div>
@@ -318,42 +322,6 @@
         </p>
       </div>
       <div class="content reviews">
-        <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-          <div class="star mb-2">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <h4 class="text-lg font-semibold mb-2">Tốc độ giao hàng siêu ánh sáng</h4>
-          <span class="italic text-gray-400 mb-4 block"><span class="font-medium">E lờn mớt</span> no
-            <span class="font-medium">Jun 14, 2024</span></span>
-          <p class="mb-4">
-            Tôi đang ở sao hoả và thật sự rất bất ngờ với tốc độ giao hàng
-            thần tốc của shop TuyenTien ở trái đất, hàng tới tiền tay trong
-            1 "block" sau khi vừa hoàn tất thanh toán. Thật sự rất hợp với
-            phong cách làm việc 5 phút của tôi. Quả thực CEO Ngọc Tiến là
-            một người văn võ song toàn, ngàn năm có 1
-          </p>
-        </article>
-        <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-          <div class="star mb-2">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star-half text-yellow-400"></i>
-          </div>
-          <h4 class="text-lg font-semibold mb-2">Sản phẩm tốt và chuẩn như sách giáo khoa</h4>
-          <span class="italic text-gray-400 mb-4 block"><span class="font-medium">Ngọc Tờ rinh</span> no
-            <span class="font-medium">Jun 12, 2024</span></span>
-          <p class="mb-4">
-            Sản phẩm tốt và đẹp, đeo rất thoải mái. Ngoài ra, CEO Ngọc Tiến
-            rất đẹp trai nữa. Tiếc là chỉ có thể đứng ngắm nhìn từ xa nên
-            đánh giá 4.5 thôi
-          </p>
-        </article>
         <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
           <div class="star mb-2">
             <i class="bx bxs-star"></i>
@@ -654,79 +622,6 @@
     overlay.classList.toggle('opacity-100');
   }
 </script>
-<!-- AUTO CALC -->
-<script>
-  function addToCart() {
-    // Lấy thông tin sản phẩm
-    const productTitle = document.querySelector('.product-title').innerText;
-    const productPrice = document.querySelector('.price').innerText.split('\n')[1].trim();
-    const selectedColorElement = document.querySelector('.color.bg-red-500') || document.querySelector('.color-selected');
-    const selectedColor = selectedColorElement ? selectedColorElement.getAttribute('data-color') : '';
-    const selectedSizeElement = document.querySelector('input[name="size"]:checked');
-    const selectedSize = selectedSizeElement ? selectedSizeElement.value : '';
-  
-    // Kiểm tra nếu không chọn màu hoặc kích thước
-    if (!selectedColor || !selectedSize) {
-      alert('Please select a color and size.');
-      return;
-    }
-  
-    // Tạo phần tử mới cho sản phẩm trong giỏ hàng
-    const productContainer = document.getElementById('productContainer');
-    const productElement = document.createElement('div');
-    productElement.classList.add('relative', 'flex', 'w-full', 'h-[8.25rem]', 'mt-5', 'border-b-2', 'border-gray-200');
-  
-    productElement.innerHTML = `
-      <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt="" class="w-[6.5rem] h-[6.5rem] mt-3 object-cover">
-      <div class="flex flex-col mt-3 ml-3">
-        <span class="font-semibold text-xl">${productTitle}</span>
-        <span>Color: ${selectedColor}</span>
-        <span>Size: ${selectedSize}</span>
-        <button id="deleteProductBtn" class="absolute right-0 top-3 text-2xl" onclick="deleteProduct(this)"><i class='bx bx-x'></i></button>
-        <span>Quantity: <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" class="h-7 w-10" onchange="updateTotal()"></span>
-        <span class="absolute right-0 bottom-3" id="productPrice">${productPrice}</span>
-      </div>
-    `;
-  
-    // Thêm phần tử mới vào giỏ hàng
-    productContainer.appendChild(productElement);
-  
-    // Cập nhật tổng giá trị giỏ hàng
-    updateTotal();
-  
-    // Mở giỏ hàng
-    toggleDrawer();
-  }
-  
-  function deleteProduct(element) {
-    // Xóa sản phẩm khỏi giỏ hàng
-    const productElement = element.parentElement.parentElement;
-    productElement.remove();
-  
-    // Cập nhật tổng giá trị giỏ hàng
-    updateTotal();
-  }
-  
-  function updateTotal() {
-    const productElements = document.querySelectorAll('#productContainer > div');
-    let totalPrice = 0;
-  
-    productElements.forEach(element => {
-      const priceElement = element.querySelector('#productPrice');
-      const quantityElement = element.querySelector('#quantity');
-      
-      if (priceElement && quantityElement) {
-        const price = parseFloat(priceElement.innerText.replace('$', '').trim());
-        const quantity = parseInt(quantityElement.value);
-        totalPrice += price * quantity;
-      }
-    });
-  
-    // Hiển thị tổng giá trị
-    document.getElementById('subtotal').innerText = `$${totalPrice.toFixed(2)}`;
-  }
-</script>
-
 <!-- REMOVE PRODUCT FROM CART -->
 <script>
   var deleteButton = document.getElementById('deleteProductBtn');
