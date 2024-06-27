@@ -312,7 +312,34 @@ async function main() {
                 name: 'Nike Go Flyase',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                longDesc: `<p class="mb-4">
+                        <b class="text-xl font-bold">ALWAYS FRESH.</b>
+                        </p>
+                        <p class="mb-4">
+                       Get grounded, stay grounded. The AJ XXXVIII is all about groundwork—we're talking about your running, your cutting
+                       , your turn-around jumpers—with low-to-the-court cushioning and a secure upper that helps support every move.
+                        It's also designed with sustainability in mind, with at least 20% recycled content by weight
+                        . So you can hit 'em with that windscreen-wiper fake and feel good about more than just sinking a bucket for your team.
+                        </p>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Benefits</b>
+                        </p>
+                        <ul class="list-disc pl-5 mb-4">
+                        <li class="mb-2">Court mobility</li>
+                        <li class="mb-2">Strength in security</li>
+                        <li class="mb-2">Heritage details</li>
+                         <li class="mb-2">Waste not, want not</li>
+                        <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+                        <li class="mb-2">Style: 553558-161</li>
+                        <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+                        </ul>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Tried and True</b>
+                        </p>
+                        <p>
+                       You want quicker cuts, speedier sprints and all-over court control
+                       . The low-to-the-court Zoom Air Strobel unit helps you get there.
+                        </p>`,
                 price: 21.09,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c76e2119-acb7-4944-9085-d4f5ae2bda4a/go-flyease-easy-on-off-shoes-3svRCL.png',
                 categoryId: 4,
@@ -325,7 +352,34 @@ async function main() {
                 name: 'InfinityRN4',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                longDesc: `<p class="mb-4">
+                        <b class="text-xl font-bold">ALWAYS FRESH.</b>
+                        </p>
+                        <p class="mb-4">
+                       Get grounded, stay grounded. The AJ XXXVIII is all about groundwork—we're talking about your running, your cutting
+                       , your turn-around jumpers—with low-to-the-court cushioning and a secure upper that helps support every move.
+                        It's also designed with sustainability in mind, with at least 20% recycled content by weight
+                        . So you can hit 'em with that windscreen-wiper fake and feel good about more than just sinking a bucket for your team.
+                        </p>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Benefits</b>
+                        </p>
+                        <ul class="list-disc pl-5 mb-4">
+                        <li class="mb-2">Court mobility</li>
+                        <li class="mb-2">Strength in security</li>
+                        <li class="mb-2">Heritage details</li>
+                         <li class="mb-2">Waste not, want not</li>
+                        <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+                        <li class="mb-2">Style: 553558-161</li>
+                        <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+                        </ul>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Tried and True</b>
+                        </p>
+                        <p>
+                       You want quicker cuts, speedier sprints and all-over court control
+                       . The low-to-the-court Zoom Air Strobel unit helps you get there.
+                        </p>`,
                 price: 31.88,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c935bd3-ff96-449d-b28c-2e9c0bd0564e/infinityrn-4-road-running-shoes-9fcndR.png',
                 categoryId: 2,
