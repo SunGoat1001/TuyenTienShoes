@@ -1,760 +1,764 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
 
 <style>
-    .tab_btn.active {
-        color: #7360ff
+  .tab_btn.active {
+    color: #7360ff
+  }
+
+  .content.active {
+    display: inline-block;
+    animation: moving .5s ease
+  }
+
+  @keyframes moving {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
     }
 
-    .content.active {
-        display: inline-block;
-        animation: moving .5s ease
+    to {
+      transform: translateX(0px);
+      opacity: 1;
     }
+  }
 
-    @keyframes moving {
-        from {
-            transform: translateX(50px);
-            opacity: 0;
-        }
+  .image-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
 
-        to {
-            transform: translateX(0px);
-            opacity: 1;
-        }
-    }
+  .image-list::-webkit-scrollbar {
+    display: none;
+  }
 
-    .image-list {
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
-    }
+  .scrollbar-thumb {
+    transition: height 0.3s ease;
+  }
 
-    .image-list::-webkit-scrollbar {
-        display: none;
-    }
+  .scrollbar-thumb:hover {
+    height: 8px;
+  }
 
-    .scrollbar-thumb {
-        transition: height 0.3s ease;
-    }
+  .container {
+    max-width: 1110px;
+    margin: auto;
+    padding: 0 15px;
+  }
 
-    .scrollbar-thumb:hover {
-        height: 8px;
-    }
+  .tabs {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid rgba(229, 229, 229, 1);
+    position: relative;
+    font-weight: bold;
+    font-size: 1.125rem;
+    /* 18px */
+    padding: 15px;
+  }
 
-    .container {
-        max-width: 1110px;
-        margin: auto;
-        padding: 0 15px;
-    }
+  .tab_btn {
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: color 0.3s;
+  }
 
+  .tab_btn.active {
+    color: #7360ff;
+  }
+
+  .line {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    height: 5px;
+    background-color: #7360ff;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .content {
+    display: none;
+    border: 1px solid #e5e5e5;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 24px 0;
+  }
+
+  .content.active {
+    display: block;
+  }
+
+  .reviews article {
+    padding: 16px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .reviews .last {
+    border-bottom: none;
+  }
+
+  .star {
+    color: #ffc107;
+  }
+
+  @media (max-width: 768px) {
     .tabs {
-        display: flex;
-        justify-content: space-evenly;
-        border-bottom: 2px solid rgba(229, 229, 229, 1);
-        position: relative;
-        font-weight: bold;
-        font-size: 1.125rem;
-        /* 18px */
-        padding: 15px;
+      flex-direction: column;
+      align-items: center;
     }
 
     .tab_btn {
-        cursor: pointer;
-        padding: 10px 15px;
-        transition: color 0.3s;
-    }
-
-    .tab_btn.active {
-        color: #7360ff;
+      width: 100%;
+      text-align: center;
     }
 
     .line {
-        position: absolute;
-        top: 52px;
-        left: 0;
-        height: 5px;
-        background-color: #7360ff;
-        border-radius: 10px;
-        transition: all 0.3s ease-in-out;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+    }
+  }
+
+  .container {
+
+    justify-content: center;
+    margin-top: 36px;
+    padding: 0 16px;
+  }
+
+  .product-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 12px;
+    margin-left: 2px;
+    cursor: pointer;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .main-image {
+    width: 100%;
+    max-width: 535px;
+    height: 620px;
+  }
+
+  .main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .product-details {
+    width: 100%;
+    max-width: 455px;
+    margin-left: 16px;
+  }
+
+  @media (max-width: 431px) {
+    .product-details {
+      margin-left: 0px;
     }
 
-    .content {
-        display: none;
-        border: 1px solid #e5e5e5;
-        padding: 24px;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        margin: 24px 0;
-    }
-
-    .content.active {
-        display: block;
-    }
-
-    .reviews article {
-        padding: 16px;
-        border-bottom: 1px solid #e5e5e5;
-    }
-
-    .reviews .last {
-        border-bottom: none;
-    }
-
-    .star {
-        color: #ffc107;
-    }
-
-    @media (max-width: 768px) {
-        .tabs {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .tab_btn {
-            width: 100%;
-            text-align: center;
-        }
-
-        .line {
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 3px;
-        }
-    }
-
-    .container {
-
-        justify-content: center;
-        margin-top: 36px;
-        padding: 0 16px;
-    }
-
-    .product-display {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 1200px;
-        width: 100%;
-        gap: 16px;
+    .product-images-mobile {
+      display: flex;
+      flex-direction: row;
     }
 
     .product-images {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        padding-left: 12px;
-        margin-left: 2px;
-        cursor: pointer;
+      display: none;
+    }
+  }
+
+  @media (min-width: 431px) {
+    .product-images-mobile {
+      display: none;
+    }
+  }
+
+  .rating {
+    padding: 2px 0;
+    font-size: 1.25rem;
+  }
+
+  .product-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .price {
+    margin: 12px 0;
+    font-size: 1.125rem;
+  }
+
+  .color-selection {
+    margin-bottom: 16px;
+  }
+
+  .colors {
+    display: flex;
+    gap: 8px;
+  }
+
+  .color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .size-selection {
+    margin-top: 16px;
+  }
+
+  .sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sizes label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .sizes input {
+    display: none;
+  }
+
+  .sizes span {
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sizes input:checked+span {
+    border-color: black;
+  }
+
+  .rounded-lg.bg-gray-100.text-gray-300 {
+    cursor: not-allowed;
+  }
+
+  .add-to-cart {
+    width: 100%;
+    padding: 16px;
+    margin-top: 16px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 768px) {
+    .product-display {
+      flex-direction: row;
+      align-items: flex-start;
     }
 
-    .thumbnail {
-        width: 80px;
-        height: 80px;
-    }
-
-    .thumbnail img {
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
+    .product-images {
+      padding-left: 0;
+      margin-left: 0;
     }
 
     .main-image {
-        width: 100%;
-        max-width: 535px;
-        height: 620px;
-    }
-
-    .main-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
+      margin-left: 0;
     }
 
     .product-details {
-        width: 100%;
-        max-width: 455px;
-        margin-left: 16px;
+      margin-top: 0;
     }
-
-    @media (max-width: 431px) {
-        .product-details {
-            margin-left: 0px;
-        }
-
-        .product-images-mobile {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .product-images {
-            display: none;
-        }
-    }
-
-    @media (min-width: 431px) {
-        .product-images-mobile {
-            display: none;
-        }
-    }
-
-    .rating {
-        padding: 2px 0;
-        font-size: 1.25rem;
-    }
-
-    .product-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-    }
-
-    .price {
-        margin: 12px 0;
-        font-size: 1.125rem;
-    }
-
-    .color-selection {
-        margin-bottom: 16px;
-    }
-
-    .colors {
-        display: flex;
-        gap: 8px;
-    }
-
-    .color {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .size-selection {
-        margin-top: 16px;
-    }
-
-    .sizes {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .sizes label {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    .sizes input {
-        display: none;
-    }
-
-    .sizes span {
-        display: inline-block;
-        width: 80px;
-        height: 40px;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .sizes input:checked + span {
-        border-color: black;
-    }
-
-    .rounded-lg.bg-gray-100.text-gray-300 {
-        cursor: not-allowed;
-    }
-
-    .add-to-cart {
-        width: 100%;
-        padding: 16px;
-        margin-top: 16px;
-        background-color: black;
-        color: white;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        border-radius: 8px;
-    }
-
-    @media (min-width: 768px) {
-        .product-display {
-            flex-direction: row;
-            align-items: flex-start;
-        }
-
-        .product-images {
-            padding-left: 0;
-            margin-left: 0;
-        }
-
-        .main-image {
-            margin-left: 0;
-        }
-
-        .product-details {
-            margin-top: 0;
-        }
-    }
+  }
 </style>
 
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-    .col {
-        width: 95%;
-        margin: auto;
+  .col {
+    width: 95%;
+    margin: auto;
+  }
+
+  * {
+    font-family: "Inter", Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #wrapper {
+    animation: slide 20s infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
     }
 
-    * {
-        font-family: "Inter", Courier, monospace;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    25% {
+      transform: translateY(0);
     }
 
-    #wrapper {
-        animation: slide 20s infinite;
+    35% {
+      transform: translateY(-100%);
     }
 
-    @keyframes slide {
-        0% {
-            transform: translateY(0);
-        }
-
-        25% {
-            transform: translateY(0);
-        }
-
-        35% {
-            transform: translateY(-100%);
-        }
-
-        45% {
-            transform: translateY(-100%);
-        }
-
-        55% {
-            transform: translateY(-200%);
-        }
-
-        75% {
-            transform: translateY(-200%);
-        }
-
-        85% {
-            transform: translateY(-100%);
-        }
-
-        90% {
-            transform: translateY(-100%);
-        }
-
-        100% {
-            transform: translateY(0);
-        }
+    45% {
+      transform: translateY(-100%);
     }
 
-    .image-list {
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
+    55% {
+      transform: translateY(-200%);
     }
 
-    .image-list::-webkit-scrollbar {
-        display: none;
+    75% {
+      transform: translateY(-200%);
     }
 
-    .scrollbar-thumb {
-        transition: height 0.3s ease;
+    85% {
+      transform: translateY(-100%);
     }
 
-    .scrollbar-thumb:hover {
-        height: 8px;
+    90% {
+      transform: translateY(-100%);
     }
 
-    body {
-        font-family: Arial, sans-serif;
+    100% {
+      transform: translateY(0);
     }
+  }
 
-    .container {
-        max-width: 1110px;
-        margin: auto;
-        padding: 0 15px;
-    }
+  .image-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
 
+  .image-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-thumb {
+    transition: height 0.3s ease;
+  }
+
+  .scrollbar-thumb:hover {
+    height: 8px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    max-width: 1110px;
+    margin: auto;
+    padding: 0 15px;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid rgba(229, 229, 229, 1);
+    position: relative;
+    font-weight: bold;
+    font-size: 1.125rem;
+    /* 18px */
+    padding: 15px;
+  }
+
+  .tab_btn {
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: color 0.3s;
+  }
+
+  .tab_btn.active {
+    color: #7360ff;
+  }
+
+  .line {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    height: 5px;
+    background-color: #7360ff;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .content {
+    display: none;
+    border: 1px solid #e5e5e5;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 24px 0;
+  }
+
+  .content.active {
+    display: block;
+  }
+
+  .reviews article {
+    padding: 16px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .reviews .last {
+    border-bottom: none;
+  }
+
+  .star {
+    color: #ffc107;
+  }
+
+  @media (max-width: 768px) {
     .tabs {
-        display: flex;
-        justify-content: space-evenly;
-        border-bottom: 2px solid rgba(229, 229, 229, 1);
-        position: relative;
-        font-weight: bold;
-        font-size: 1.125rem;
-        /* 18px */
-        padding: 15px;
+      flex-direction: column;
+      align-items: center;
     }
 
     .tab_btn {
-        cursor: pointer;
-        padding: 10px 15px;
-        transition: color 0.3s;
-    }
-
-    .tab_btn.active {
-        color: #7360ff;
+      width: 100%;
+      text-align: center;
     }
 
     .line {
-        position: absolute;
-        top: 52px;
-        left: 0;
-        height: 5px;
-        background-color: #7360ff;
-        border-radius: 10px;
-        transition: all 0.3s ease-in-out;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 3px;
     }
-
-    .content {
-        display: none;
-        border: 1px solid #e5e5e5;
-        padding: 24px;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        margin: 24px 0;
-    }
-
-    .content.active {
-        display: block;
-    }
-
-    .reviews article {
-        padding: 16px;
-        border-bottom: 1px solid #e5e5e5;
-    }
-
-    .reviews .last {
-        border-bottom: none;
-    }
-
-    .star {
-        color: #ffc107;
-    }
-
-    @media (max-width: 768px) {
-        .tabs {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .tab_btn {
-            width: 100%;
-            text-align: center;
-        }
-
-        .line {
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 3px;
-        }
-    }
+  }
 </style>
 
 
 
 <main class="overflow-x-hidden">
-    <div class="flex justify-center max-[431px]:container mt-36 max-[431px]:mt-28">
-        <div class="product-display">
-            <div class="product-images">
-                <% product.images.forEach(image=> { %>
-                    <div class="thumbnail">
-                        <img src="<%= image %>" alt="<%= product.name %>" />
-                    </div>
-                    <% }) %>
-            </div>
-
-            <div class="main-image max-[431px]:p-4">
-                <img src="<%= product.mainImageUrl %>" alt="<%= product.name %>" />
-            </div>
-
-            <div class="product-images-mobile">
-                <% product.images.forEach(image=> { %>
-                    <div class="thumbnail">
-                        <img src="<%= image %>" alt="<%= product.name %>" />
-                    </div>
-                    <% }) %>
-            </div>
-
-            <div class="product-details max-[431px]:p-4">
-                <div class="rating">
-                    <% for (let i=0; i < 5; i++) { %>
-                        <% if (i < Math.floor(averageRating)) { %>
-                            <i class="bx bxs-star text-yellow-400"></i>
-                            <% } else if (i < averageRating) { %>
-                                <i class="bx bxs-star-half text-yellow-400"></i>
-                                <% } else { %>
-                                    <i class="bx bx-star text-yellow-400"></i>
-                                    <% } %>
-                                        <% } %>
-                                            <b>(<%= totalReviews %>)</b>
-                </div>
-                <h1 class="product-title">
-                    <%= product.name %>
-                </h1>
-                <div class="price">
-                    <strong>Price</strong><br />
-                    $<%= product.price %>
-                </div>
-                <hr />
-                <!-- Color Selection -->
-                <div class="color-selection">
-                    <strong>Color</strong>
-                    <div class="colors">
-                        <% relatedColors.forEach(colorObj => { %>
-                            <a href="/products/<%= colorObj.productId %>"
-                                class="color bg-<%= colorObj.color.toLowerCase() %>-500"></a>
-                        <% }) %>
-                    </div>
-                </div>
-
-                <!-- Size Selection -->
-                <div class="size-selection">
-                    <strong>Select size:</strong>
-                    <div class="sizes">
-                        <% const availableSizes=new Set(sizes); %>
-                            <% [37.5, 38, 38.5, 39, 40, 40.5, 41, 42, 42.5, 43].forEach(size=> { %>
-                                <% if (availableSizes.has(size)) { %>
-                                    <label>
-                                        <input type="radio" name="size" value="<%= size %>" />
-                                        <span>
-                                            <%= size %>
-                                        </span>
-                                    </label>
-                                    <% } else { %>
-                                        <label class="rounded-lg bg-gray-100 text-gray-300">
-                                            <input type="radio" name="size" value="<%= size %>" disabled />
-                                            <span>
-                                                <%= size %>
-                                            </span>
-                                        </label>
-                                        <% } %>
-                                            <% }) %>
-                    </div>
-                </div>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
+  <div class="flex justify-center max-[431px]:container mt-36 max-[431px]:mt-28">
+    <div class="product-display">
+      <div class="product-images">
+        <% product.images.forEach(image=> { %>
+        <div class="thumbnail">
+          <img src="<%= image %>" alt="<%= product.name %>" />
         </div>
+        <% }) %>
+      </div>
+
+      <div class="main-image max-[431px]:p-4">
+        <img src="<%= product.mainImageUrl %>" alt="<%= product.name %>" />
+      </div>
+
+      <div class="product-images-mobile">
+        <% product.images.forEach(image=> { %>
+        <div class="thumbnail">
+          <img src="<%= image %>" alt="<%= product.name %>" />
+        </div>
+        <% }) %>
+      </div>
+
+      <div class="product-details max-[431px]:p-4">
+        <div class="rating">
+          <% for (let i=0; i < 5; i++) { %>
+          <% if (i < Math.floor(averageRating)) { %>
+          <i class="bx bxs-star text-yellow-400"></i>
+          <% } else if (i < averageRating) { %>
+          <i class="bx bxs-star-half text-yellow-400"></i>
+          <% } else { %>
+          <i class="bx bx-star text-yellow-400"></i>
+          <% } %>
+          <% } %>
+          <b>(<%= totalReviews %>)</b>
+        </div>
+        <h1 class="product-title">
+          <%= product.name %>
+        </h1>
+        <div class="price">
+          <strong>Price</strong><br />
+          $<%= product.price %>
+        </div>
+        <hr />
+        <!-- Color Selection -->
+        <div class="color-selection">
+          <strong>Color</strong>
+          <div class="colors">
+            <% relatedColors.forEach(colorObj=> { %>
+            <a href="/products/<%= colorObj.productId %>" class="color bg-<%= colorObj.color.toLowerCase() %>-500"></a>
+            <% }) %>
+          </div>
+        </div>
+
+        <!-- Size Selection -->
+        <div class="size-selection">
+          <strong>Select size:</strong>
+          <div class="sizes">
+            <% const availableSizes=new Set(sizes); %>
+            <% [37.5, 38, 38.5, 39, 40, 40.5, 41, 42, 42.5, 43].forEach(size=> { %>
+            <% if (availableSizes.has(size)) { %>
+            <label>
+              <input type="radio" name="size" value="<%= size %>" />
+              <span>
+                <%= size %>
+              </span>
+            </label>
+            <% } else { %>
+            <label class="rounded-lg bg-gray-100 text-gray-300">
+              <input type="radio" name="size" value="<%= size %>" disabled />
+              <span>
+                <%= size %>
+              </span>
+            </label>
+            <% } %>
+            <% }) %>
+          </div>
+        </div>
+        <button class="add-to-cart onclick=" addToCart()">Add to cart</button>
+      </div>
     </div>
-    <div class="w-[1280px] m-auto max-[431px]:container">
-        <div class="tabs max-[431px]:flex-row">
-            <button class="tab_btn active">Description</button>
-            <button class="tab_btn">Reviews <span>(<%= totalReviews %>)</span></button>
-            <div class="line" style="width: 90px;"></div>
+  </div>
+  <div class="w-[1280px] m-auto max-[431px]:container">
+    <div class="tabs max-[431px]:flex-row">
+      <button class="tab_btn active">Description</button>
+      <button class="tab_btn">Reviews <span>(<%= totalReviews %>)</span></button>
+      <div class="line" style="width: 90px;"></div>
+    </div>
+    <div class="content active">
+      <%- product.longDesc %>
+    </div>
+    <div class="content reviews">
+      <% product.reviews.forEach(review=> { %>
+      <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
+        <div class="star mb-2">
+          <% for (let i=0; i < review.rating; i++) { %>
+          <i class="bx bxs-star"></i>
+          <% } %>
+          <% for (let i=0; i < (5 - review.rating); i++) { %>
+          <i class="bx bx-star"></i>
+          <% } %>
         </div>
-        <div class="content active">
-            <%- product.longDesc %>
-        </div>
-        <div class="content reviews">
-            <% product.reviews.forEach(review=> { %>
-                <article class="p-4 mb-6 border-b border-gray-200 last:border-b-0">
-                    <div class="star mb-2">
-                        <% for (let i=0; i < review.rating; i++) { %>
-                            <i class="bx bxs-star"></i>
-                            <% } %>
-                                <% for (let i=0; i < (5 - review.rating); i++) { %>
-                                    <i class="bx bx-star"></i>
-                                    <% } %>
-                    </div>
-                    <h4 class="text-lg font-semibold mb-2">
-                        <%= review.title %>
+        <h4 class="text-lg font-semibold mb-2">
+          <%= review.title %>
+        </h4>
+        <span class="italic text-gray-400 mb-4 block">
+          <span class="font-medium">
+            <%= review.reviewerName %>
+          </span> no
+          <span class="font-medium">
+            <%= new Date(review.reviewDate).toLocaleDateString() %>
+          </span>
+        </span>
+        <p class="mb-4">
+          <%= review.reviewDesc %>
+        </p>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+  <div class="max-w-[1160px] mx-auto p-6">
+    <h4 class="text-3xl font-semibold mb-3">You also might like</h4>
+    <section class="py-10">
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list flex">
+            <% randomProducts.forEach(product=> { %>
+            <li class="splide__slide mx-2 mb-8 flex-shrink-0">
+              <div>
+                <a href="/products/<%= product.id %>">
+                  <div>
+                    <img class="w-full h-auto object-cover rounded-lg" src="<%= product.mainImageUrl %>" alt="Image of <%= product.name %>" />
+                  </div>
+                  <div class="mt-2">
+                    <h4 class="font-semibold text-lg">
+                      <%= product.name %>
                     </h4>
-                    <span class="italic text-gray-400 mb-4 block">
-                        <span class="font-medium">
-                            <%= review.reviewerName %>
-                        </span> no
-                        <span class="font-medium">
-                            <%= new Date(review.reviewDate).toLocaleDateString() %>
-                        </span>
-                    </span>
-                    <p class="mb-4">
-                        <%= review.reviewDesc %>
-                    </p>
-                </article>
-                <% }) %>
+                    <h4 class="font-medium text-lg">$<%= product.price %>
+                    </h4>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <% }) %>
+          </ul>
         </div>
-    </div>
-    <div class="max-w-[1160px] mx-auto p-6">
-        <h4 class="text-3xl font-semibold mb-3">You also might like</h4>
-        <section class="py-10">
-            <div class="splide">
-                <div class="splide__track">
-                    <ul class="splide__list flex">
-                        <% randomProducts.forEach(product=> { %>
-                            <li class="splide__slide mx-2 mb-8 flex-shrink-0">
-                                <div>
-                                    <a href="/products/<%= product.id %>">
-                                        <div>
-                                            <img class="w-full h-auto object-cover rounded-lg"
-                                                src="<%= product.mainImageUrl %>" alt="Image of <%= product.name %>" />
-                                        </div>
-                                        <div class="mt-2">
-                                            <h4 class="font-semibold text-lg">
-                                                <%= product.name %>
-                                            </h4>
-                                            <h4 class="font-medium text-lg">$<%= product.price %>
-                                            </h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <% }) %>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </div>
+      </div>
+    </section>
+  </div>
 
 </main>
 
 <!-- Slide bar -->
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var splide = new Splide(".splide", {
-            perPage: 4,
-            focus: 0,
-            omitEnd: true,
-            gap: '1rem',
-            breakpoints: {
-                640: {
-                    perPage: 1,
-                },
-                768: {
-                    perPage: 2,
-                },
-                1024: {
-                    perPage: 3,
-                }
-            }
-        });
-
-        splide.mount();
+  document.addEventListener("DOMContentLoaded", function() {
+    var splide = new Splide(".splide", {
+      perPage: 4,
+      focus: 0,
+      omitEnd: true,
+      gap: '1rem',
+      breakpoints: {
+        640: {
+          perPage: 1,
+        },
+        768: {
+          perPage: 2,
+        },
+        1024: {
+          perPage: 3,
+        }
+      }
     });
+
+    splide.mount();
+  });
 </script>
 <script>
-    const initSlider = () => {
-        const imageList = document.querySelector(".image-list");
-        const slideButtons = document.querySelectorAll(".slide-button");
-        const sliderScrollbar = document.querySelector(".container1 .relative > div");
-        const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-        let startX = 0;
-        let thumbPosition = 0;
+  const initSlider = () => {
+    const imageList = document.querySelector(".image-list");
+    const slideButtons = document.querySelectorAll(".slide-button");
+    const sliderScrollbar = document.querySelector(".container1 .relative > div");
+    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    let startX = 0;
+    let thumbPosition = 0;
 
-        scrollbarThumb.addEventListener("dragstart", (e) => {
-            startX = e.clientX;
-            thumbPosition = scrollbarThumb.offsetLeft;
+    scrollbarThumb.addEventListener("dragstart", (e) => {
+      startX = e.clientX;
+      thumbPosition = scrollbarThumb.offsetLeft;
+    });
+
+    scrollbarThumb.addEventListener("drag", (e) => {
+      const deltaX = e.clientX - startX;
+      const newThumbPosition = thumbPosition + deltaX;
+      const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
+      const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+      const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+      scrollbarThumb.style.left = `${boundedPosition}px`;
+      imageList.scrollLeft = scrollPosition;
+    });
+
+    scrollbarThumb.addEventListener("dragend", () => {
+      startX = 0;
+      thumbPosition = 0;
+    });
+
+    slideButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const direction = button.id === "prev-slide" ? -1 : 1;
+        const scrollAmount = imageList.clientWidth * direction;
+        imageList.scrollBy({
+          left: scrollAmount,
+          behavior: "smooth"
         });
+      });
+    });
 
-        scrollbarThumb.addEventListener("drag", (e) => {
-            const deltaX = e.clientX - startX;
-            const newThumbPosition = thumbPosition + deltaX;
-            const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
-            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-
-            scrollbarThumb.style.left = `${boundedPosition}px`;
-            imageList.scrollLeft = scrollPosition;
-        });
-
-        scrollbarThumb.addEventListener("dragend", () => {
-            startX = 0;
-            thumbPosition = 0;
-        });
-
-        slideButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                const direction = button.id === "prev-slide" ? -1 : 1;
-                const scrollAmount = imageList.clientWidth * direction;
-                imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-            });
-        });
-
-        const handleSlideButtons = () => {
-            slideButtons[0].classList.toggle("hidden", imageList.scrollLeft <= 0);
-            slideButtons[1].classList.toggle("hidden", imageList.scrollLeft >= maxScrollLeft);
-        };
-
-        const updateScrollThumbPosition = () => {
-            const scrollPosition = imageList.scrollLeft;
-            const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-            scrollbarThumb.style.left = `${thumbPosition}px`;
-        };
-
-        imageList.addEventListener("scroll", () => {
-            updateScrollThumbPosition();
-            handleSlideButtons();
-        });
-
-        handleSlideButtons();
+    const handleSlideButtons = () => {
+      slideButtons[0].classList.toggle("hidden", imageList.scrollLeft <= 0);
+      slideButtons[1].classList.toggle("hidden", imageList.scrollLeft >= maxScrollLeft);
     };
 
-    window.addEventListener("resize", initSlider);
-    window.addEventListener("load", initSlider);
+    const updateScrollThumbPosition = () => {
+      const scrollPosition = imageList.scrollLeft;
+      const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+      scrollbarThumb.style.left = `${thumbPosition}px`;
+    };
 
+    imageList.addEventListener("scroll", () => {
+      updateScrollThumbPosition();
+      handleSlideButtons();
+    });
+
+    handleSlideButtons();
+  };
+
+  window.addEventListener("resize", initSlider);
+  window.addEventListener("load", initSlider);
 </script>
 
 <!-- CHANGE IMAGE WHEN MOVEOVER -->
 <script>
-    const thumbnails = document.querySelectorAll('.thumbnail img');
-    const mainImage = document.querySelector('.main-image img');
+  const thumbnails = document.querySelectorAll('.thumbnail img');
+  const mainImage = document.querySelector('.main-image img');
 
-    thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('mouseover', function () {
-            mainImage.src = this.src;
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('mouseover', function() {
+      mainImage.src = this.src;
 
-            thumbnails.forEach(thumb => thumb.style.border = 'none');
+      thumbnails.forEach(thumb => thumb.style.border = 'none');
 
-            this.style.border = 'solid 3px #33ccff';
-        });
+      this.style.border = 'solid 3px #33ccff';
     });
+  });
 </script>
 
 <!-- NAV TAB DESCRIBE + REVIEWS -->
 <script>
-    const tabs = document.querySelectorAll('.tab_btn');
-    const all_content = document.querySelectorAll('.content');
-    const line = document.querySelector('.line');
+  const tabs = document.querySelectorAll('.tab_btn');
+  const all_content = document.querySelectorAll('.content');
+  const line = document.querySelector('.line');
 
-    tabs.forEach((tab, index) => {
-        tab.addEventListener('click', (e) => {
-            tabs.forEach(tab => { tab.classList.remove('active') });
-            tab.classList.add('active');
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', (e) => {
+      tabs.forEach(tab => {
+        tab.classList.remove('active')
+      });
+      tab.classList.add('active');
 
-            line.style.width = tab.offsetWidth + "px";
-            line.style.left = tab.offsetLeft + "px";
+      line.style.width = tab.offsetWidth + "px";
+      line.style.left = tab.offsetLeft + "px";
 
-            all_content.forEach(content => { content.classList.remove('active') });
-            all_content[index].classList.add('active');
-        });
+      all_content.forEach(content => {
+        content.classList.remove('active')
+      });
+      all_content[index].classList.add('active');
     });
+  });
 
-    window.addEventListener('resize', () => {
-        const activeTab = document.querySelector('.tab_btn.active');
-        line.style.width = activeTab.offsetWidth + "px";
-        line.style.left = activeTab.offsetLeft + "px";
-    });
+  window.addEventListener('resize', () => {
+    const activeTab = document.querySelector('.tab_btn.active');
+    line.style.width = activeTab.offsetWidth + "px";
+    line.style.left = activeTab.offsetLeft + "px";
+  });
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const activeTab = document.querySelector('.tab_btn.active');
-        line.style.width = activeTab.offsetWidth + "px";
-        line.style.left = activeTab.offsetLeft + "px";
-    });
+  document.addEventListener('DOMContentLoaded', () => {
+    const activeTab = document.querySelector('.tab_btn.active');
+    line.style.width = activeTab.offsetWidth + "px";
+    line.style.left = activeTab.offsetLeft + "px";
+  });
 </script>
