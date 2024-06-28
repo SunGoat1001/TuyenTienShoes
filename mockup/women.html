@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/asset/img/LogoNAV.png">
+    <link rel="icon" type="image/x-icon" href="./asset/img/LogoNAV.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>TienTuyenShoes</title>
@@ -100,30 +100,38 @@
             <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
         </div>
     </header>
+    <div class="fixed top-16 z-40 w-full h-7 flex justify-center items-center bg-black">
+        <strong class="text-white text-xs">ENJOY OUR GREAT INTERNATIONAL SHIPPING RATES</strong>
+    </div>
     <!-- Background -->
-    <img src="/asset/img/background.jpg" alt="" class="relative w-full h-96 object-cover">
-    <div class="absolute top-52 z-40 w-full text-center text-white flex flex-col items-center justify-center space-y-4">
-        <p class="text-3xl font-medium">WOMEN'S SHOES</p>
+    <div class="w-full h-80 mt-7">
+        <div class="h-full w-1/2 m-auto flex flex-col justify-center items-center max-[431px]:w-full">
+            <span class="text-7xl my-6 font-bold max-[431px]:text-center max-[431px]:text-[40px]">WOMEN'S SHOES</span>
+            <span class="text-center text-lg px-16 font-medium text-gray-500 max-[431px]:p-0">Explore our latest arrivals! We've just
+                updated with fresh fashion trends,
+                from everyday outfits to stylish accessories, ready to make you stand out anywhere, anytime.</span>
+        </div>
     </div>
     <!-- PRODUCT -->
-    <div class="w-[80%] m-auto h-14 flex border-[1.5px] border-gray-300 mt-5">
-        <div
-            class="h-full w-60 px-2 flex items-center font-medium justify-between border-r-[1.5px] border-gray-300 bg-white">
-            <span id="filterText">Hide Filters</span>
-            <button><i class='bx bx-filter text-3xl'></i></button>
+    <div class="col h-14 flex justify-between mt-5">
+        <div id="filterContainer" class="h-full flex items-center font-medium justify-between cursor-pointer">
+            <button><i class='bx bx-filter text-2xl'></i></button>
+            <strong id="filterText" class="text-sm">SHOW FILTERS</strong>
         </div>
-        <div class="w-[1100px] h-full px-2 flex items-center font-medium border-r-[1.5px] border-gray-300 bg-white">
-            <span>20 Results</span>
+        <div class="h-full flex items-center space-x-2">
+            <input id="searchInput" type="text" placeholder="Search..." class="w-[450px] border rounded p-3 text-sm max-[431px]:hidden">
+            <button id="searchButton"><i
+                    class='bx bx-search p-3 rounded-full text-white text-center bg-black'></i></button>
         </div>
-        <select name="" id="" class="w-60 px-2 h-full flex items-center font-medium">
-            <option value="revevance">REVEANCE</option>
+        <select name="" id="" class="h-full flex items-center font-bold">
+            <option value="revevance">SORT BY</option>
             <option value="lowestprice">LOWEST PRICE</option>
             <option value="highestprice">HIGHEST PRICE</option>
             <option value="newestfirst">NEWEST FIRST</option>
         </select>
     </div>
-    <section class="w-[80%] h-full m-auto flex max-[431px]:m-0">
-        <div id="filterPanel" class="w-60 h-full mt-3 max-[431px]:hidden">
+    <section class="col h-full m-auto mb-10 mt-4 flex max-[431px]:m-0">
+        <div id="filterPanel" class="w-60 h-full max-[431px]:hidden hidden pr-4">
             <div class="w-full flex flex-col border-y-[1.5px] border-black">
                 <div class="toggle-button flex justify-between cursor-pointer">
                     <span class="text-xl font-medium my-3">Shoes</span>
@@ -133,12 +141,10 @@
                     <a href="">Jordan</a>
                     <a href="">Running</a>
                     <a href="">Skate</a>
-                    <a href="">Vertebrae</a>
-                    <a href="">MVP</a>
+                    <a href="">Lifestyle</a>
+                    <a href="">Boots</a>
                     <a href="">Golf</a>
-                    <a href="">Court</a>
                     <a href="">Sandals</a>
-                    <a href="">Excee</a>
                 </div>
             </div>
             <div class="w-full flex flex-col border-b-[1.5px] border-black">
@@ -148,7 +154,7 @@
                 </div>
                 <div class="w-full h-auto text-lg font-medium mb-2 hidden">
                     <input type="checkbox" id="men" name="men" value="Men" class="h-6 w-6">
-                    <label for="men"> Men</label><br>
+                    <label for="men"> Man</label><br>
                     <input type="checkbox" id="women" name="women" value="Women" class="h-6 w-6">
                     <label for="women"> Women</label><br>
                     <input type="checkbox" id="unisex" name="unisex" value="Unisex" class="h-6 w-6">
@@ -218,104 +224,179 @@
                 </div>
             </div>
         </div>
-        <div class="w-[80.5rem] h-full block ml-1 space-y-2 max-[431px]:m-0">
-            <div class="w-[80.5rem] flex space-x-2 max-[431px]:flex-col max-[431px]:w-0 max-[431px]:space-x-0">
-                <a href="" class="flex flex-col">
-                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
-                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
-                            class="w-[27.5rem] h-[28.5rem] object-cover">
-                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
-                        <span class="text-gray-500">Men's / Women's Shoes</span>
-                        <a href=""><span class="underline text-gray-500">More color</span></a>
-                        <span class="font-semibold text-lg mt-3">$29.99</span>
-                    </div>
-                </a>
-                <a href="" class="flex flex-col">
-                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
-                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
-                            class="w-[27.5rem] h-[28.5rem] object-cover">
-                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
-                        <span class="text-gray-500">Men's / Women's Shoes</span>
-                        <a href=""><span class="underline text-gray-500">More color</span></a>
-                        <span class="font-semibold text-lg mt-3">$29.99</span>
-                    </div>
-                </a>
-                <a href="" class="flex flex-col">
-                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
-                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
-                            class="w-[27.5rem] h-[28.5rem] object-cover">
-                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
-                        <span class="text-gray-500">Men's / Women's Shoes</span>
-                        <a href=""><span class="underline text-gray-500">More color</span></a>
-                        <span class="font-semibold text-lg mt-3">$29.99</span>
-                    </div>
-                </a>
+        <div id="productContainer" class="w-full h-full mb-20 max-[431px]:m-0 max-[431px]:ml-3 grid grid-cols-4 gap-3 max-[431px]:grid-cols-1">
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <a href="./details.html">
+                        <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9.jpg" alt=""
+                            class="w-full h-auto object-cover">
+                        <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9 (4).jpg" alt=""
+                            class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                    </a>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
+            </div>           
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T.jpg" alt=""
+                        class="w-full h-auto object-cover">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T (1).jpg" alt=""
+                        class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
             </div>
-            <div class="w-[80.5rem] flex space-x-2 max-[431px]:flex-col max-[431px]:w-0 max-[431px]:space-x-0">
-                <a href="" class="flex flex-col">
-                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
-                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
-                            class="w-[27.5rem] h-[28.5rem] object-cover">
-                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
-                        <span class="text-gray-500">Men's / Women's Shoes</span>
-                        <a href=""><span class="underline text-gray-500">More color</span></a>
-                        <span class="font-semibold text-lg mt-3">$29.99</span>
-                    </div>
-                </a>
-                <a href="" class="flex flex-col">
-                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
-                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
-                            class="w-[27.5rem] h-[28.5rem] object-cover">
-                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
-                        <span class="text-gray-500">Men's / Women's Shoes</span>
-                        <a href=""><span class="underline text-gray-500">More color</span></a>
-                        <span class="font-semibold text-lg mt-3">$29.99</span>
-                    </div>
-                </a>
-                <a href="" class="flex flex-col">
-                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
-                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
-                            class="w-[27.5rem] h-[28.5rem] object-cover">
-                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
-                        <span class="text-gray-500">Men's / Women's Shoes</span>
-                        <a href=""><span class="underline text-gray-500">More color</span></a>
-                        <span class="font-semibold text-lg mt-3">$29.99</span>
-                    </div>
-                </a>
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-older-shoes-xLzJc6.png" alt=""
+                        class="w-full h-auto object-cover">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-older-shoes-xLzJc6 (4).png" alt=""
+                        class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
             </div>
-            <div class="w-[80.5rem] flex space-x-2 max-[431px]:flex-col max-[431px]:w-0 max-[431px]:space-x-0">
-                <a href="" class="flex flex-col">
-                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
-                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
-                            class="w-[27.5rem] h-[28.5rem] object-cover">
-                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
-                        <span class="text-gray-500">Men's / Women's Shoes</span>
-                        <a href=""><span class="underline text-gray-500">More color</span></a>
-                        <span class="font-semibold text-lg mt-3">$29.99</span>
-                    </div>
-                </a>
-                <a href="" class="flex flex-col">
-                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
-                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
-                            class="w-[27.5rem] h-[28.5rem] object-cover">
-                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
-                        <span class="text-gray-500">Men's / Women's Shoes</span>
-                        <a href=""><span class="underline text-gray-500">More color</span></a>
-                        <span class="font-semibold text-lg mt-3">$29.99</span>
-                    </div>
-                </a>
-                <a href="" class="flex flex-col">
-                    <div class="w-[427px] h-[622px] flex flex-col max-[431px]:p-4">
-                        <img src="https://i.pinimg.com/564x/82/7e/3a/827e3aacabbdc670a6760c1b2fe776e8.jpg" alt=""
-                            class="w-[27.5rem] h-[28.5rem] object-cover">
-                        <span class="text-xl font-medium mt-2">Air Jordan 1 Low Guava Ice</span>
-                        <span class="text-gray-500">Men's / Women's Shoes</span>
-                        <a href=""><span class="underline text-gray-500">More color</span></a>
-                        <span class="font-semibold text-lg mt-3">$29.99</span>
-                    </div>
-                </a>
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-WSkjPL.png" alt=""
+                        class="w-full h-auto object-cover">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-WSkjPL (3).png" alt=""
+                        class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
+            </div>
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-xmgzfl.jpg" alt=""
+                        class="w-full h-auto object-cover">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-xmgzfl (1).png" alt=""
+                        class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
+            </div>
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T.jpg" alt=""
+                        class="w-full h-auto object-cover">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T (7).png" alt=""
+                        class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
+            </div>
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-lFCSjp.jpg" alt=""
+                        class="w-full h-auto object-cover">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-lFCSjp (1).png" alt=""
+                        class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
+            </div>
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9.jpg" alt=""
+                        class="w-full h-auto object-cover">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9 (4).jpg" alt=""
+                        class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
+            </div>
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-zTWr01.png" alt=""
+                        class="w-full h-auto object-cover">
+                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-zTWr01 (2).png" alt=""
+                        class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
+            </div>
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <img src="./asset/img/product/Shoes/air-jordan-9-g-golf-shoes-nNqtwL.png" alt=""
+                        class="w-full h-auto object-cover">
+                    <img src="./asset/img/product/Shoes/air-jordan-9-g-golf-shoes-nNqtwL (4).png" alt=""
+                        class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
+            </div>
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <img src="./asset/img/product/Shoes/air-jordan-i-high-g-golf-shoes-qKzTBg (1).png" alt=""
+                        class="w-full h-auto object-cover">
+                    <img src="./asset/img/product/Shoes/air-jordan-i-high-g-golf-shoes-qKzTBg (1).jpg" alt=""
+                        class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
+            </div>
+            <div class="w-full h-auto flex-col max-[431px]:p-4">
+                <div class="relative w-full h-auto">
+                    <img src="./asset/img/product/Shoes/air-max-270-shoes-2V5C4p.png" alt=""
+                        class="w-full h-auto object-cover">
+                    <img src="./asset/img/product/Shoes/air-max-270-shoes-2V5C4p (3).png" alt=""
+                        class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
+                    <span class="text-gray-500">Men's / Women's Shoes</span>
+                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                    <span class="font-semibold text-lg mt-3">$59.99</span>
+                </div>
             </div>
         </div>
+        
     </section>
     <!-- FOOTER -->
     <footer class="w-full h-96 max-[431px]:h-auto bg-black">
@@ -414,20 +495,21 @@
 <!-- Filter hidden -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const filterButton = document.querySelector('.bx-filter');
+        const filterContainer = document.getElementById('filterContainer');
         const filterPanel = document.getElementById('filterPanel');
         const filterText = document.getElementById('filterText');
 
-        filterButton.addEventListener('click', function () {
+        filterContainer.addEventListener('click', function () {
             if (filterPanel.style.display === 'none') {
                 filterPanel.style.display = 'block';
-                filterText.textContent = 'Hide Filters';
+                filterText.textContent = 'HIDE FILTERS';
             } else {
                 filterPanel.style.display = 'none';
-                filterText.textContent = 'Show Filters';
+                filterText.textContent = 'SHOW FILTERS';
             }
         });
     });
+
 </script>
 <!-- Accordion hidden -->
 <script>
