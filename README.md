@@ -1,14 +1,25 @@
 # Shoes Website TuyenTien
+![Home page screenshot](./WebOverview.png)
 
 # Overview
 Our Nike shoe sales project offers authentic products like Air Max, Air Jordan, and Flyknit. We not only sell shoes but also build a community for sports enthusiasts, helping customers share experiences and stay updated on new trends. With excellent customer service, we ensure a great shopping experience.
 
 # Technologies
-Our project utilizes advanced technologies to ensure optimal performance and user experience:
-  - **NodeJS**: is used on the server side to handle requests quickly and efficiently.
-  - **Vite**: supports fast development and building of the user interface with instant module reloading.
-  - **Tailwind CSS**: enables the creation of modern, responsive UI designs without extensive custom CSS.
-  - **XAMPP**: provides a comprehensive development environment for PHP and MySQL, making it easy to set up and use.
+This project is built with robust and modern technologies to ensure high performance and scalability:
+- EJS templates for rendering HTML pages.
+- Prisma ORM for database access.
+- MySQL database.
+- Environment variables using dotenv.
+- Tailwind CSS for styling.
+- ESLint and Prettier for code linting and formatting.
+- Nodemon for auto-reloading the server during development.
+- Winston for logging.
+- Express-validator for request validation.
+- Helmet for securing the app by setting various HTTP headers.
+- Compression for compressing the response data.
+- Morgan for logging HTTP requests.
+- Vite for building the frontend assets. Support - HMR (Hot Module Replacement) in development mode.
+- Build the frontend assets with npm run build.
 
 # Our production
 https://sungoat1001.github.io/TuyenTienShoes/
