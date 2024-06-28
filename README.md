@@ -13,7 +13,7 @@ Our project utilizes advanced technologies to ensure optimal performance and use
 # Our production
 https://sungoat1001.github.io/TuyenTienShoes/
 
-# Team member
+# Contributors
 
 - Le Pham Ngoc Tien - 22090007
 - Huynh Anh Tien - 22090016
@@ -24,3 +24,4 @@ https://sungoat1001.github.io/TuyenTienShoes/
 1. [wireframe](./wireframe/README.md)
 2. [planning](./planning/README.md)
 3. [mockup](./mockup/)
+4. [database](./database/)
