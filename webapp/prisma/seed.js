@@ -178,7 +178,47 @@ async function main() {
                 name: 'Nike React Infinity 3',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "",
+                longDesc: `<p class="mb-4">
+  <b class="text-xl font-bold">Stay on Your Feet.</b>
+</p>
+<p class="mb-4">
+  Stay on your feet with soft and supportive cushioning, built to help keep you on the run. A wider forefoot and higher foam stacks help shield you from recurring attrition, giving you the peace of mind to pound the pavement every day. The springy responsiveness will surprise you too, adding an element of pure speed to one of our most tested shoes to help you go longer, faster, and further than ever.
+</p>
+<p class="mb-4">
+  <b class="text-xl font-bold">Colour Refresh</b>
+</p>
+<p class="mb-4">
+  We updated the Swoosh design and added a couple of extra shielding skins to drive the new colour block, so that you can stay upright in style.
+</p>
+<p class="mb-4">
+  <b class="text-xl font-bold">Smooth Ride</b>
+</p>
+<p class="mb-4">
+  Nike React technology is a lightweight, durable foam that delivers a smooth, responsive ride. Shaped like a rocker, the foam provides support for the three phases of a runner's stride. It offers flexibility when your foot rises off the ground, a smooth ride when your foot is moving forwards and cushioning at ground contact.
+</p>
+<p class="mb-4">
+  <b class="text-xl font-bold">Adjusted Tongue</b>
+</p>
+<p class="mb-4">
+  Fully adjustable Flyknit tongue can be pulled out for a style perspective or toggled and tailored to different types of runs. It works with Flywire to create that just-right sensation of comfort and security. Non-knit collar is made from super-soft foam that complements the Flyknit.
+</p>
+<p class="mb-4">
+  <b class="text-xl font-bold">Breathable at All Times</b>
+</p>
+<p class="mb-4">
+  An advanced Flyknit upper provides breathability where you need it most. It's strong and durable, helping to keep your foot secure with every mile. Flywire technology offers extra support and stability through the midfoot.
+</p>
+<p class="mb-4">
+  <b class="text-xl font-bold">More Benefits</b>
+</p>
+<ul class="list-disc pl-5 mb-4">
+  <li class="mb-2">Increased rubber on the outsole helps deliver traction and durability.</li>
+  <li class="mb-2">Cushioned collar provides soft comfort.</li>
+  <li class="mb-2">A wide shape provides a more stable ride, helping release energy with every step.</li>
+  <li class="mb-2">Colour Shown: Oatmeal/Oxygen Purple/Diffused Blue/White</li>
+  <li class="mb-2">Style: DZ3016-101</li>
+  <li class="mb-2">Country/Region of Origin: Vietnam</li>
+</ul>`,
                 price: 389.99,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/96bb6586-fe27-44a5-b4d7-b13f500ea206/react-infinity-3-womens-road-running-shoes-XpNmlR.png',
                 categoryId: 2,
@@ -191,7 +231,35 @@ async function main() {
                 name: 'Nike SB Zoom Pogo Plus Premium',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                longDesc: `<p class="mb-4">
+          <b class="text-xl font-bold">ALWAYS FRESH.</b>
+        </p>
+        <p class="mb-4">
+ The Zoom Pogo delivers a serious boost to any skate session. 
+ With a broken-in fit straight out of the box and mixed materials that age to perfection, 
+ they bring comfort you have to feel to believe. Oh, and the raised taping increases control for the perfect flick,
+  while Zoom Air cushioning delivers the ultimate boardfeel.
+        </p>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Benefits</b>
+        </p>
+        <ul class="list-disc pl-5 mb-4">
+          <li class="mb-2">Canvas in the upper breaks in beautifully, while suede accents add durability where you need it.</li>
+          <li class="mb-2">Vulcanised construction fuses the sole to the upper for a flexible, broken-in feel.</li>
+          <li class="mb-2">Raised taping and reinforced toe area deliver durability and excellent board control.</li>
+          <li class="mb-2">Rubber outsole helps keep up during the toughest skate sessions.</li>
+           <li class="mb-2">Snappy and responsive, Zoom Air cushioning helps provide a quick-off-the-ground sensation.</li>
+          <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+          <li class="mb-2">Style: 553558-161</li>
+          <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+        </ul>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Tried and True</b>
+        </p>
+        <p>
+          Snappy and responsive, Zoom Air cushioning helps provide a quick-off-the-ground sensation. 
+          It uses stretched tensile fibres knit inside a pressurised Nike Air unit, giving athletes everywhere a chance to find their fast.
+        </p>`,
                 price: 85.49,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d45cfbff-7b7f-4e04-bc79-b28011263026/sb-zoom-pogo-plus-premium-skate-shoes-RvSjsf.png',
                 categoryId: 3,
@@ -204,7 +272,34 @@ async function main() {
                 name: 'Air Jordan XXXVIII Low PF',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                longDesc: `<p class="mb-4">
+                        <b class="text-xl font-bold">ALWAYS FRESH.</b>
+                        </p>
+                        <p class="mb-4">
+                       Get grounded, stay grounded. The AJ XXXVIII is all about groundwork—we're talking about your running, your cutting
+                       , your turn-around jumpers—with low-to-the-court cushioning and a secure upper that helps support every move.
+                        It's also designed with sustainability in mind, with at least 20% recycled content by weight
+                        . So you can hit 'em with that windscreen-wiper fake and feel good about more than just sinking a bucket for your team.
+                        </p>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Benefits</b>
+                        </p>
+                        <ul class="list-disc pl-5 mb-4">
+                        <li class="mb-2">Court mobility</li>
+                        <li class="mb-2">Strength in security</li>
+                        <li class="mb-2">Heritage details</li>
+                         <li class="mb-2">Waste not, want not</li>
+                        <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+                        <li class="mb-2">Style: 553558-161</li>
+                        <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+                        </ul>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Tried and True</b>
+                        </p>
+                        <p>
+                       You want quicker cuts, speedier sprints and all-over court control
+                       . The low-to-the-court Zoom Air Strobel unit helps you get there.
+                        </p>`,
                 price: 21.09,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b6aa977d-3ad0-4f95-970f-2cae9a69dea5/air-jordan-xxxviii-low-pf-basketball-shoes-2lBnKn.png',
                 categoryId: 1,
@@ -217,7 +312,34 @@ async function main() {
                 name: 'Nike Go Flyase',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                longDesc: `<p class="mb-4">
+                        <b class="text-xl font-bold">ALWAYS FRESH.</b>
+                        </p>
+                        <p class="mb-4">
+                       Get grounded, stay grounded. The AJ XXXVIII is all about groundwork—we're talking about your running, your cutting
+                       , your turn-around jumpers—with low-to-the-court cushioning and a secure upper that helps support every move.
+                        It's also designed with sustainability in mind, with at least 20% recycled content by weight
+                        . So you can hit 'em with that windscreen-wiper fake and feel good about more than just sinking a bucket for your team.
+                        </p>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Benefits</b>
+                        </p>
+                        <ul class="list-disc pl-5 mb-4">
+                        <li class="mb-2">Court mobility</li>
+                        <li class="mb-2">Strength in security</li>
+                        <li class="mb-2">Heritage details</li>
+                         <li class="mb-2">Waste not, want not</li>
+                        <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+                        <li class="mb-2">Style: 553558-161</li>
+                        <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+                        </ul>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Tried and True</b>
+                        </p>
+                        <p>
+                       You want quicker cuts, speedier sprints and all-over court control
+                       . The low-to-the-court Zoom Air Strobel unit helps you get there.
+                        </p>`,
                 price: 21.09,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c76e2119-acb7-4944-9085-d4f5ae2bda4a/go-flyease-easy-on-off-shoes-3svRCL.png',
                 categoryId: 4,
@@ -230,7 +352,34 @@ async function main() {
                 name: 'InfinityRN4',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                longDesc: `<p class="mb-4">
+                        <b class="text-xl font-bold">ALWAYS FRESH.</b>
+                        </p>
+                        <p class="mb-4">
+                       Get grounded, stay grounded. The AJ XXXVIII is all about groundwork—we're talking about your running, your cutting
+                       , your turn-around jumpers—with low-to-the-court cushioning and a secure upper that helps support every move.
+                        It's also designed with sustainability in mind, with at least 20% recycled content by weight
+                        . So you can hit 'em with that windscreen-wiper fake and feel good about more than just sinking a bucket for your team.
+                        </p>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Benefits</b>
+                        </p>
+                        <ul class="list-disc pl-5 mb-4">
+                        <li class="mb-2">Court mobility</li>
+                        <li class="mb-2">Strength in security</li>
+                        <li class="mb-2">Heritage details</li>
+                         <li class="mb-2">Waste not, want not</li>
+                        <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+                        <li class="mb-2">Style: 553558-161</li>
+                        <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+                        </ul>
+                        <p class="mb-4">
+                        <b class="text-xl font-bold">Tried and True</b>
+                        </p>
+                        <p>
+                       You want quicker cuts, speedier sprints and all-over court control
+                       . The low-to-the-court Zoom Air Strobel unit helps you get there.
+                        </p>`,
                 price: 31.88,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c935bd3-ff96-449d-b28c-2e9c0bd0564e/infinityrn-4-road-running-shoes-9fcndR.png',
                 categoryId: 2,
@@ -305,7 +454,31 @@ async function main() {
                 name: 'Air Jordan 1 Mid SE',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                longDesc: `<p class="mb-4">
+          <b class="text-xl font-bold">ALWAYS FRESH.</b>
+        </p>
+        <p class="mb-4">
+          You never know where self-belief might take you. Inspired by the texture and colours of a passport, 
+          and the stamps MJ collected on his world tours, this AJ1 is a fresh reminder to dream big. 
+          Keep the included luggage tag as an adornment for your shoes (or your suitcase).
+        </p>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Benefits</b>
+        </p>
+        <ul class="list-disc pl-5 mb-4">
+          <li class="mb-2">Nike Air technology absorbs impact for cushioning with every step.</li>
+          <li class="mb-2">Mix of materials in the upper prioritises comfort and durability.</li>
+          <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+          <li class="mb-2">Style: 553558-161</li>
+          <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+        </ul>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Tried and True</b>
+        </p>
+        <p>
+          A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
+          comfort. A rubber outsole supplies durable traction on a variety of surfaces.
+        </p>`,
                 price: 21.09,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ac668959-a9ca-4711-b40c-3997706a7db2/air-jordan-1-mid-se-older-shoes-ZMGf1Z.png',
                 categoryId: 4,
@@ -318,7 +491,36 @@ async function main() {
                 name: 'Nike Manoa Leather',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                longDesc: `<p class="mb-4">
+          <b class="text-xl font-bold">ALWAYS FRESH.</b>
+        </p>
+        <p class="mb-4">
+          The Nike Manoa is the perfect match when dressing for winter.Featuring crisp leather on the upper,
+           a thick padded collar and rugged tread, it helps you style for the season
+           .The webbing pull tab and round laces add details ready for the outdoors.
+        </p>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Benefits</b>
+        </p>
+        <ul class="list-disc pl-5 mb-4">
+          <li class="mb-2">Leather in the upper is durable and is designed to help keep out the cold and wet.</li>
+          <li class="mb-2">Gusseted tongue is designed to help keep debris out of the boot while letting you
+           mix up how you wear them—laced or unlaced.</li>
+           <li class="mb-2">Round laces with metal eyelets are easy to grab with gloved hands
+           , let you personalise your comfort and add to the rugged, outdoorsy look.</li>
+           <li class="mb-2">The foam midsole provides lightweight cushioning that lasts.</li>
+           <li class="mb-2">Rugged rubber outsole with large lugs delivers long-lasting durability and traction.</li>
+          <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+          <li class="mb-2">Style: 553558-161</li>
+          <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+        </ul>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Tried and True</b>
+        </p>
+        <p>
+          A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
+          comfort. A rubber outsole supplies durable traction on a variety of surfaces.
+        </p>`,
                 price: 21.09,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/99e98f0c-b4f2-47eb-a312-e63cf800f9db/manoa-leather-boot-bXlwh8.png',
                 categoryId: 5,
@@ -332,7 +534,37 @@ async function main() {
                 name: 'Air Jordan 9 G',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                longDesc: `<p class="mb-4">
+          <b class="text-xl font-bold">ALWAYS FRESH.</b>
+        </p>
+        <p class="mb-4">
+          Welcome to the links, legend. We drew direct inspiration from the '93 classic released during MJ's first year in retirement and gave it a golf update
+          . A memory foam insole and synthetic leather tongue highlight a low-top design worthy of statues
+          , swing-throughs and clean ball strikes that ultimately land gently on the green.
+        </p>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Benefits</b>
+        </p>
+        <ul class="list-disc pl-5 mb-4">
+          <li class="mb-2">We upgraded the insole to a memory foam that sits directly under your foot for extra cushioning
+          , made to walk 18 holes or more. The full-length foam offers the soft, supportive ride you've come to expect 
+          in Jordan Golf.</li>
+          <li class="mb-2">The synthetic leather tongue offers comfort against your ankle
+          . It's easy to clean after a wade through the rough or tall grass.</li>
+           <li class="mb-2">The waterproof layers help keep your feet dry and warm when the elements turn.</li>
+           <li class="mb-2">A strong plastic plate comes with 7 removable Champs spikes to give you traction for the course.</li>
+           <li class="mb-2">Rugged rubber outsole with large lugs delivers long-lasting durability and traction.</li>
+          <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+          <li class="mb-2">Style: 553558-161</li>
+          <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+        </ul>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Tried and True</b>
+        </p>
+        <p>
+          A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
+          comfort. A rubber outsole supplies durable traction on a variety of surfaces.
+        </p>`,
                 price: 21.09,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e97dde71-d2e5-439f-95a8-da0d76a70f03/air-jordan-9-g-golf-shoes-Fp9GL3.png',
                 categoryId: 6,
@@ -345,7 +577,36 @@ async function main() {
                 name: 'Nike Icon Classic',
                 shortDesc: 'short desc',
                 cartDesc: 'cart desc',
-                longDesc: "Still 1 of our most tested shoes, the Nike React Infinity 3 has soft and supportive cushioning. Its soft, stable feel with a smooth ride will carry you through routes, long and short. A breathable upper is made to feel contained, yet flexible. We even added more cushioning to the collar for a soft feel. Keep running, we've got you.",
+                longDesc: `<p class="mb-4">
+          <b class="text-xl font-bold">ALWAYS FRESH.</b>
+        </p>
+        <p class="mb-4">
+          The Nike Manoa is the perfect match when dressing for winter.Featuring crisp leather on the upper,
+           a thick padded collar and rugged tread, it helps you style for the season
+           .The webbing pull tab and round laces add details ready for the outdoors.
+        </p>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Benefits</b>
+        </p>
+        <ul class="list-disc pl-5 mb-4">
+          <li class="mb-2">Leather in the upper is durable and is designed to help keep out the cold and wet.</li>
+          <li class="mb-2">Gusseted tongue is designed to help keep debris out of the boot while letting you
+           mix up how you wear them—laced or unlaced.</li>
+           <li class="mb-2">Round laces with metal eyelets are easy to grab with gloved hands
+           , let you personalise your comfort and add to the rugged, outdoorsy look.</li>
+           <li class="mb-2">The foam midsole provides lightweight cushioning that lasts.</li>
+           <li class="mb-2">Rugged rubber outsole with large lugs delivers long-lasting durability and traction.</li>
+          <li class="mb-2">Colour Shown: White/Varsity Red/White/Black</li>
+          <li class="mb-2">Style: 553558-161</li>
+          <li class="mb-2">Country/Region of Origin: Vietnam, Indonesia</li>
+        </ul>
+        <p class="mb-4">
+          <b class="text-xl font-bold">Tried and True</b>
+        </p>
+        <p>
+          A timeless rubber cupsole teams up with a plush sockliner and encapsulated Nike Air cushioning for all-day
+          comfort. A rubber outsole supplies durable traction on a variety of surfaces.
+        </p>`,
                 price: 21.09,
                 mainImageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/dbf324ca-7619-4463-bc47-bc8d0783ce45/icon-classic-sandals-Jrc3kN.png',
                 categoryId: 7,
