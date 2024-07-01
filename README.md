@@ -35,7 +35,8 @@ https://sungoat1001.github.io/TuyenTienShoes/
 1. [wireframe](./wireframe/README.md)
 2. [planning](./planning/README.md)
 3. [mockup](./mockup/)
-4. [database](./database/)
+4. [screenshot](./screenshot/)
+5. [database](./database/)
 
 ## Video demo
 [![Watch the video](TienTuyenShoes.png)](TienTuyenShoes%20-%20Google%20Chrome%20-%201%20July%202024.mp4)
