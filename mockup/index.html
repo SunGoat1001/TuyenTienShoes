@@ -79,6 +79,7 @@
 </style>
 
 <body class="bg-[#F7F6F3] overflow-x-hidden">
+
     <!-- NAV -->
     <header class="bg-white fixed top-0 w-full z-50 shadow-sm">
         <div class="col flex justify-between items-center h-16">
@@ -92,10 +93,12 @@
                     ARRIVALS</a>
                 <a href="./contact.html" class="p-5 hover:underline underline-offset-4 focus:underline">CONTACT</a>
             </nav>
+
             <!-- CART -->
             <div id="overlay"
                 class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-1000 ease-in-out"
-                onclick="toggleDrawer()"></div>
+                onclick="toggleDrawer()">
+            </div>
             <div id="drawer"
                 class="fixed top-0 right-[-500px] w-[500px] h-full bg-white transition-all duration-500 z-10 max-[431px]:w-[300px]">
                 <div class="p-5 flex flex-col justify-center items-center max-sm:hidden">
@@ -132,6 +135,7 @@
                                 class="bg-black hover:bg-opacity-80 text-xl text-white w-full h-[70px]">Order</button></a>
                     </div>
                 </div>
+
                 <!-- Responsive Navbar mobile -->
                 <div class="p-5 flex flex-col justify-center items-center">
                     <button class="text-4xl absolute top-2 left-2" onclick="toggleDrawer()"><i
@@ -149,6 +153,7 @@
             </div>
             <button class="drawer-toggle p-3 text-2xl" onclick="toggleDrawer()"><i
                     class='bx bx-shopping-bag'></i></button>
+
             <!-- Menu Mobile -->
             <button class="sm:hidden" onclick="toggleDrawer()"><i class='bx bx-menu max-sm:text-4xl'></i></button>
         </div>
@@ -163,7 +168,8 @@
             <strong class="text-white text-xs">EXCITING PROMOTIONS - LIMITED QUANTITIES!</strong>
         </marquee>
     </div>
-    <!-- HEADER -->
+
+    <!-- BACKGROUND -->
     <section class="relative w-full mt-16" style="height: 927px;">
         <div class="absolute w-full h-full overflow-hidden">
             <div id="wrapper" class="w-full h-full">
@@ -202,6 +208,7 @@
             </div>
         </div>
     </section>
+
     <!-- PRODUC LIMITED -->
     <section class="w-full flex flex-col items-center h-[40rem] mt-14">
         <span class="font-bold text-3xl">LIMITED IN STOCK</span>
@@ -583,6 +590,7 @@
     window.addEventListener("load", initSlider);
 
 </script>
+
 <!-- CART -->
 <script>
     function toggleDrawer() {
@@ -595,6 +603,7 @@
         overlay.classList.toggle('opacity-100');
     }
 </script>
+
 <!-- REMOVE PRODUCT FROM CART -->
 <script>
     var deleteButton = document.getElementById('deleteProductBtn');
@@ -603,6 +612,7 @@
         productContainer.remove();
     });
 </script>
+
 <!-- AUTO CALC -->
 <script>
     function updateTotal() {

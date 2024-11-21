@@ -1,10 +1,20 @@
-.tab_btn.active {
-    color: #7360ff
-}
-
 .content.active {
     display: inline-block;
     animation: moving .5s ease
+}
+
+.content {
+  display: none;
+  border: 1px solid #e5e5e5;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 24px 0;
+}
+
+.content.active {
+  display: block;
 }
 
 @keyframes moving {
@@ -73,29 +83,6 @@
     background-color: #7360ff;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-  }
-
-  .content {
-    display: none;
-    border: 1px solid #e5e5e5;
-    padding: 24px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 24px 0;
-  }
-
-  .content.active {
-    display: block;
-  }
-
-  .reviews article {
-    padding: 16px;
-    border-bottom: 1px solid #e5e5e5;
-  }
-
-  .reviews .last {
-    border-bottom: none;
   }
 
   .star {
@@ -285,10 +272,10 @@
       padding-left: 0;
       margin-left: 0;
     }
-
-    .main-image {
+/* 
+    /* .main-image {
       margin-left: 0;
-    }
+    } */ */
 
     .product-details {
       margin-top: 0;
